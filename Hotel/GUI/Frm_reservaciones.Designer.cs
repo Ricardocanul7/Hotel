@@ -38,6 +38,8 @@
             this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
             this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.btn_chekout = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,9 @@
             this.btn_habitaciones.ImageScalingSize = new System.Drawing.Size(42, 42);
             this.btn_habitaciones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_habitaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
             this.lbl_logo,
+            this.toolStripSeparator4,
             this.btn_reservarhab,
             this.toolStripSeparator1,
             this.btn_consultar_res,
@@ -59,7 +63,7 @@
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.btn_habitaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_habitaciones.Size = new System.Drawing.Size(800, 64);
+            this.btn_habitaciones.Size = new System.Drawing.Size(938, 64);
             this.btn_habitaciones.TabIndex = 1;
             this.btn_habitaciones.Text = "Menu";
             // 
@@ -125,11 +129,24 @@
             this.btn_chekout.Size = new System.Drawing.Size(107, 61);
             this.btn_chekout.Text = "Check out";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(204, 61);
+            this.toolStripLabel1.Text = "RESERVACIONES";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
+            // 
             // Frm_reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(938, 450);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_reservaciones";
@@ -153,5 +170,7 @@
         private System.Windows.Forms.ToolStripButton btn_checkin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btn_chekout;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
