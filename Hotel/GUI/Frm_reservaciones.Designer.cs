@@ -38,7 +38,7 @@
             this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
             this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.btn_chekout = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.lbl_reservaciones_title = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.btn_habitaciones.ImageScalingSize = new System.Drawing.Size(42, 42);
             this.btn_habitaciones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_habitaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
+            this.lbl_reservaciones_title,
             this.lbl_logo,
             this.toolStripSeparator4,
             this.btn_reservarhab,
@@ -129,13 +129,13 @@
             this.btn_chekout.Size = new System.Drawing.Size(107, 61);
             this.btn_chekout.Text = "Check out";
             // 
-            // toolStripLabel1
+            // lbl_reservaciones_title
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(204, 61);
-            this.toolStripLabel1.Text = "RESERVACIONES";
+            this.lbl_reservaciones_title.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lbl_reservaciones_title.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbl_reservaciones_title.Name = "lbl_reservaciones_title";
+            this.lbl_reservaciones_title.Size = new System.Drawing.Size(204, 61);
+            this.lbl_reservaciones_title.Text = "RESERVACIONES";
             // 
             // toolStripSeparator4
             // 
@@ -170,7 +170,7 @@
         private System.Windows.Forms.ToolStripButton btn_checkin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btn_chekout;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel lbl_reservaciones_title;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
