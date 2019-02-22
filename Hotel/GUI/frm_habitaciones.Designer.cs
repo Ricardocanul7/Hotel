@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_habitaciones));
             this.label5 = new System.Windows.Forms.Label();
             this.txt_hab_descripcion = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -301,7 +300,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_hab_descripcion);
             this.Controls.Add(this.label5);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_habitaciones";
             this.Text = "frm_habitaciones";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

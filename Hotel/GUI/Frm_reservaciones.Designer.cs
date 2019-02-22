@@ -1,16 +1,16 @@
-﻿namespace Hotel
+﻿namespace Hotel.GUI
 {
-    partial class Frm_menu
+    partial class Frm_reservaciones
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,26 +20,24 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_reservaciones));
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
-            this.btn_habitciones = new System.Windows.Forms.ToolStripButton();
-            this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
-            this.btn_empleados = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.btn_caja = new System.Windows.Forms.ToolStripButton();
+            this.btn_reservarhab = new System.Windows.Forms.ToolStripButton();
+            this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
+            this.btn_checkin = new System.Windows.Forms.ToolStripButton();
+            this.btn_chekout = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,21 +48,19 @@
             this.btn_habitaciones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_habitaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_logo,
-            this.btn_habitciones,
+            this.btn_reservarhab,
             this.toolStripSeparator1,
-            this.btn_reservaciones,
+            this.btn_consultar_res,
             this.toolStripSeparator2,
-            this.btn_empleados,
+            this.btn_checkin,
             this.toolStripSeparator3,
-            this.toolStripButton2,
-            this.toolStripSeparator4,
-            this.btn_caja});
+            this.btn_chekout});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.btn_habitaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_habitaciones.Size = new System.Drawing.Size(849, 64);
-            this.btn_habitaciones.TabIndex = 0;
+            this.btn_habitaciones.Size = new System.Drawing.Size(800, 64);
+            this.btn_habitaciones.TabIndex = 1;
             this.btn_habitaciones.Text = "Menu";
             // 
             // toolStripSeparator1
@@ -82,11 +78,6 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 64);
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
-            // 
             // lbl_logo
             // 
             this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -101,57 +92,49 @@
             this.lbl_logo.Text = "Aquí va el LOGO";
             this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // btn_habitciones
+            // btn_reservarhab
             // 
-            this.btn_habitciones.Image = global::Hotel.Properties.Resources._039_bed;
-            this.btn_habitciones.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_habitciones.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btn_habitciones.Name = "btn_habitciones";
-            this.btn_habitciones.Size = new System.Drawing.Size(122, 61);
-            this.btn_habitciones.Text = "Habitaciones";
+            this.btn_reservarhab.Image = global::Hotel.Properties.Resources._025_hotel_bell;
+            this.btn_reservarhab.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_reservarhab.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_reservarhab.Name = "btn_reservarhab";
+            this.btn_reservarhab.Size = new System.Drawing.Size(156, 61);
+            this.btn_reservarhab.Text = "Reservar habitación";
             // 
-            // btn_reservaciones
+            // btn_consultar_res
             // 
-            this.btn_reservaciones.Image = global::Hotel.Properties.Resources._020_bell_ring;
-            this.btn_reservaciones.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_reservaciones.Name = "btn_reservaciones";
-            this.btn_reservaciones.Size = new System.Drawing.Size(127, 61);
-            this.btn_reservaciones.Text = "Reservaciones";
+            this.btn_consultar_res.Image = global::Hotel.Properties.Resources._027_information;
+            this.btn_consultar_res.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_consultar_res.Name = "btn_consultar_res";
+            this.btn_consultar_res.Size = new System.Drawing.Size(127, 61);
+            this.btn_consultar_res.Text = "Reservaciones";
             // 
-            // btn_empleados
+            // btn_checkin
             // 
-            this.btn_empleados.Image = global::Hotel.Properties.Resources._022_reception;
-            this.btn_empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_empleados.Name = "btn_empleados";
-            this.btn_empleados.Size = new System.Drawing.Size(111, 61);
-            this.btn_empleados.Text = "Empleados";
+            this.btn_checkin.Image = global::Hotel.Properties.Resources._005_check_in;
+            this.btn_checkin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_checkin.Name = "btn_checkin";
+            this.btn_checkin.Size = new System.Drawing.Size(99, 61);
+            this.btn_checkin.Text = "Check in";
             // 
-            // toolStripButton2
+            // btn_chekout
             // 
-            this.toolStripButton2.Image = global::Hotel.Properties.Resources._031_broom;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(135, 61);
-            this.toolStripButton2.Text = "Mantenimiento";
+            this.btn_chekout.Image = global::Hotel.Properties.Resources._004_hotel_stroller;
+            this.btn_chekout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_chekout.Name = "btn_chekout";
+            this.btn_chekout.Size = new System.Drawing.Size(107, 61);
+            this.btn_chekout.Text = "Check out";
             // 
-            // btn_caja
-            // 
-            this.btn_caja.Image = global::Hotel.Properties.Resources._024_safety_box;
-            this.btn_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_caja.Name = "btn_caja";
-            this.btn_caja.Size = new System.Drawing.Size(76, 61);
-            this.btn_caja.Text = "Caja";
-            this.btn_caja.ToolTipText = "Caja";
-            // 
-            // Frm_menu
+            // Frm_reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Frm_menu";
-            this.Text = "Sistema Hotelero";
+            this.Name = "Frm_reservaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Reservaciones";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
             this.ResumeLayout(false);
@@ -162,16 +145,13 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip btn_habitaciones;
-        private System.Windows.Forms.ToolStripButton btn_habitciones;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_reservaciones;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btn_empleados;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton btn_caja;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripLabel lbl_logo;
+        private System.Windows.Forms.ToolStripButton btn_reservarhab;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btn_consultar_res;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btn_checkin;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btn_chekout;
     }
 }
-

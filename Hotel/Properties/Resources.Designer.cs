@@ -63,6 +63,26 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _004_hotel_stroller {
+            get {
+                object obj = ResourceManager.GetObject("004-hotel-stroller", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _005_check_in {
+            get {
+                object obj = ResourceManager.GetObject("005-check-in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _020_bell_ring {
             get {
                 object obj = ResourceManager.GetObject("020-bell-ring", resourceCulture);
@@ -86,6 +106,26 @@ namespace Hotel.Properties {
         internal static System.Drawing.Bitmap _024_safety_box {
             get {
                 object obj = ResourceManager.GetObject("024-safety-box", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _025_hotel_bell {
+            get {
+                object obj = ResourceManager.GetObject("025-hotel-bell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _027_information {
+            get {
+                object obj = ResourceManager.GetObject("027-information", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
