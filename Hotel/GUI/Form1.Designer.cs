@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_menu));
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +50,6 @@
             this.btn_habitaciones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_habitaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_logo,
-            this.toolStripSeparator5,
             this.toolStripButton1,
             this.toolStripSeparator1,
             this.btn_reservaciones,
@@ -71,24 +69,23 @@
             // 
             // lbl_logo
             // 
+            this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lbl_logo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl_logo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.lbl_logo.Image = global::Hotel.Properties.Resources.GardSoft_logo;
+            this.lbl_logo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl_logo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.lbl_logo.Name = "lbl_logo";
+            this.lbl_logo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_logo.Size = new System.Drawing.Size(200, 61);
             this.lbl_logo.Text = "Aquí va el LOGO";
             this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 64);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = global::Hotel.Properties.Resources._039_bed;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(122, 61);
             this.toolStripButton1.Text = "Habitaciones";
@@ -175,7 +172,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripLabel lbl_logo;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }
 
