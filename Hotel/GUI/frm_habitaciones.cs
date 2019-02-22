@@ -16,10 +16,5 @@ namespace Hotel.GUI
         {
             InitializeComponent();
         }
-
-        private void frm_habitaciones_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

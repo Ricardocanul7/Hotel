@@ -108,5 +108,8 @@
   <ItemGroup>
     <None Include="Recursos\Iconos\024-safety-box.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\GardSoft_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

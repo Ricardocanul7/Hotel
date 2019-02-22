@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_habitaciones));
             this.label5 = new System.Windows.Forms.Label();
             this.txt_hab_descripcion = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -80,7 +81,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(150, 31);
+            this.label6.Location = new System.Drawing.Point(118, 36);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(261, 40);
             this.label6.TabIndex = 10;
@@ -89,7 +90,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hotel.Properties.Resources._039_bed;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -300,9 +301,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_hab_descripcion);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_habitaciones";
             this.Text = "frm_habitaciones";
-            this.Load += new System.EventHandler(this.frm_habitaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
