@@ -8,8 +8,15 @@ namespace Hotel.BO
 {
     class UsuarioBO
     {
+        private int id_usuario;
         protected string email;
         protected string password;
+
+        public int Id_usuario
+        {
+            get { return Id_usuario; }
+            set { Id_usuario = value; }
+        }
 
         public string Email
         {
