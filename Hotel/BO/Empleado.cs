@@ -8,11 +8,18 @@ namespace Hotel.BO
 {
     class Empleado
     {
+        private int id_empleado;
         private string nombre;
         private string apellido;
         private string direccion;
         private string telefono;
         private string horario;
+
+        public int Id_empleado
+        {
+            get { return id_empleado; }
+            set { id_empleado = value; }
+        }
 
         public string Nombre
         {
