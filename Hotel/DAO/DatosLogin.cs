@@ -8,5 +8,8 @@ namespace Hotel.DAO
 {
     public static class DatosLogin
     {
+        public static int Id_usuario { get; set; }
+        public static string Email { get; set; }
+        public static string Password { get; set; }
     }
 }
