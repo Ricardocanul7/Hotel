@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Conexion.cs" />
+    <Compile Include="DAO\DatosLogin.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
