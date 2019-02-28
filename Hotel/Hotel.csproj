@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BO\Empleado.cs" />
+    <Compile Include="BO\Habitacion.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
