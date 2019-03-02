@@ -59,9 +59,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DatosLogin.cs" />
+    <Compile Include="DAO\EmpleadoDAO.cs" />
+    <Compile Include="DAO\EmpresaDAO.cs" />
     <Compile Include="DAO\HabitacionDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
