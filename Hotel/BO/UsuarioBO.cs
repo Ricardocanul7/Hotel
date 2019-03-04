@@ -14,8 +14,8 @@ namespace Hotel.BO
 
         public int Id_usuario
         {
-            get { return Id_usuario; }
-            set { Id_usuario = value; }
+            get { return id_usuario; }
+            set { id_usuario = value; }
         }
 
         public string Email
