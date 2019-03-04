@@ -61,14 +61,35 @@
   <ItemGroup>
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DatosLogin.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_habitaciones.Designer.cs">
+      <DependentUpon>frm_habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Frm_reservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_reservaciones.Designer.cs">
+      <DependentUpon>Frm_reservaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_habitaciones.resx">
+      <DependentUpon>frm_habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_reservaciones.resx">
+      <DependentUpon>Frm_reservaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -91,6 +113,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BO\" />
+    <Folder Include="DAO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\039-bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\020-bell-ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\022-reception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\031-broom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\024-safety-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\GardSoft_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\025-hotel-bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\027-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\005-check-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\004-hotel-stroller.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
