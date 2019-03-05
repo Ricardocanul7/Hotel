@@ -147,13 +147,14 @@
             this.btn_login.TabIndex = 5;
             this.btn_login.Text = "LOGIN";
             this.btn_login.UseSelectable = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(121, 98);
+            this.pictureBox2.Location = new System.Drawing.Point(139, 98);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -161,9 +162,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(121, 141);
+            this.pictureBox3.Location = new System.Drawing.Point(139, 141);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(52, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(34, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;

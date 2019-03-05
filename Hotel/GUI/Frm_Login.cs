@@ -16,5 +16,16 @@ namespace Hotel.GUI
         {
             InitializeComponent();
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            /** Validar usuario y contraseña */ //PENDIENTE
+
+            // CODIGO PROVISIONAL
+            Frm_menu menu = new Frm_menu();
+            menu.Owner = this;
+            this.Hide();
+            menu.Show();
+        }
     }
 }
