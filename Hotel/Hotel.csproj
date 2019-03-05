@@ -102,6 +102,12 @@
     <Compile Include="GUI\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Frm_menu_empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_menu_empleados.Designer.cs">
+      <DependentUpon>Frm_menu_empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_reservaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_menu_empleados.resx">
+      <DependentUpon>Frm_menu_empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_reservaciones.resx">
       <DependentUpon>Frm_reservaciones.cs</DependentUpon>
@@ -187,6 +196,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Iconos\cama_ocupada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\035-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\036-edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
