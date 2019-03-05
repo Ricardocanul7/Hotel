@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.GUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_menu());
+            Application.Run(new Frm_Login());
         }
     }
 }
