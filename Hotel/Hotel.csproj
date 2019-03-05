@@ -123,8 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BO\" />
-    <Folder Include="DAO\" />
+    <None Include="Recursos\Iconos\cama_limpieza.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Iconos\039-bed.png" />
@@ -155,6 +154,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Iconos\004-hotel-stroller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\cama_libre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\cama_ocupada.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
