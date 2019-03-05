@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_menu));
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
             this.btn_habitciones = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_empleados = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_caja = new System.Windows.Forms.ToolStripButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,26 +93,6 @@
             this.btn_habitaciones.TabIndex = 0;
             this.btn_habitaciones.Text = "Menu";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 64);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
-            // 
             // lbl_logo
             // 
             this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -136,6 +116,11 @@
             this.btn_habitciones.Size = new System.Drawing.Size(122, 61);
             this.btn_habitciones.Text = "Habitaciones";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
+            // 
             // btn_reservaciones
             // 
             this.btn_reservaciones.Image = global::Hotel.Properties.Resources._020_bell_ring;
@@ -143,6 +128,12 @@
             this.btn_reservaciones.Name = "btn_reservaciones";
             this.btn_reservaciones.Size = new System.Drawing.Size(127, 61);
             this.btn_reservaciones.Text = "Reservaciones";
+            this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
             // 
             // btn_empleados
             // 
@@ -152,6 +143,11 @@
             this.btn_empleados.Size = new System.Drawing.Size(111, 61);
             this.btn_empleados.Text = "Empleados";
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 64);
+            // 
             // toolStripButton2
             // 
             this.toolStripButton2.Image = global::Hotel.Properties.Resources._031_broom;
@@ -159,6 +155,11 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(135, 61);
             this.toolStripButton2.Text = "Mantenimiento";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
             // 
             // btn_caja
             // 

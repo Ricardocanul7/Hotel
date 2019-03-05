@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,11 @@ namespace Hotel
             InitializeComponent();
         }
 
-        
+        private void btn_reservaciones_Click(object sender, EventArgs e)
+        {
+            Frm_reservaciones form_reservas = new Frm_reservaciones();
+            form_reservas.Owner = this;
+            form_reservas.Show();
+        }
     }
 }
