@@ -24,5 +24,10 @@ namespace Hotel
             form_reservas.Owner = this;
             form_reservas.Show();
         }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            this.Owner.Dispose();
+        }
     }
 }
