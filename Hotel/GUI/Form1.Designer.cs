@@ -30,32 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_menu));
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
-            this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
-            this.btn_habitciones = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_empleados = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_caja = new System.Windows.Forms.ToolStripButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_hab_01 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,6 +49,23 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dbt_hab_01 = new System.Windows.Forms.Button();
+            this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
+            this.btn_habitciones = new System.Windows.Forms.ToolStripButton();
+            this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
+            this.btn_empleados = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btn_caja = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,82 +93,25 @@
             this.btn_habitaciones.TabIndex = 0;
             this.btn_habitaciones.Text = "Menu";
             // 
-            // lbl_logo
-            // 
-            this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lbl_logo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_logo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.lbl_logo.Image = global::Hotel.Properties.Resources.GardSoft_logo;
-            this.lbl_logo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_logo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.lbl_logo.Name = "lbl_logo";
-            this.lbl_logo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_logo.Size = new System.Drawing.Size(200, 61);
-            this.lbl_logo.Text = "Aquí va el LOGO";
-            this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btn_habitciones
-            // 
-            this.btn_habitciones.Image = global::Hotel.Properties.Resources._039_bed;
-            this.btn_habitciones.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_habitciones.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btn_habitciones.Name = "btn_habitciones";
-            this.btn_habitciones.Size = new System.Drawing.Size(122, 61);
-            this.btn_habitciones.Text = "Habitaciones";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
-            // 
-            // btn_reservaciones
-            // 
-            this.btn_reservaciones.Image = global::Hotel.Properties.Resources._020_bell_ring;
-            this.btn_reservaciones.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_reservaciones.Name = "btn_reservaciones";
-            this.btn_reservaciones.Size = new System.Drawing.Size(127, 61);
-            this.btn_reservaciones.Text = "Reservaciones";
-            this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
             // 
-            // btn_empleados
-            // 
-            this.btn_empleados.Image = global::Hotel.Properties.Resources._022_reception;
-            this.btn_empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_empleados.Name = "btn_empleados";
-            this.btn_empleados.Size = new System.Drawing.Size(111, 61);
-            this.btn_empleados.Text = "Empleados";
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 64);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::Hotel.Properties.Resources._031_broom;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(135, 61);
-            this.toolStripButton2.Text = "Mantenimiento";
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
-            // 
-            // btn_caja
-            // 
-            this.btn_caja.Image = global::Hotel.Properties.Resources._024_safety_box;
-            this.btn_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_caja.Name = "btn_caja";
-            this.btn_caja.Size = new System.Drawing.Size(76, 61);
-            this.btn_caja.Text = "Caja";
-            this.btn_caja.ToolTipText = "Caja";
             // 
             // label4
             // 
@@ -211,6 +154,127 @@
             this.label1.Size = new System.Drawing.Size(215, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "DISPONIBILIDAD";
+            // 
+            // lbl_hab_01
+            // 
+            this.lbl_hab_01.BackColor = System.Drawing.Color.Green;
+            this.lbl_hab_01.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_hab_01.Location = new System.Drawing.Point(300, 165);
+            this.lbl_hab_01.Name = "lbl_hab_01";
+            this.lbl_hab_01.Size = new System.Drawing.Size(75, 19);
+            this.lbl_hab_01.TabIndex = 32;
+            this.lbl_hab_01.Text = "Disponible";
+            this.lbl_hab_01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Brown;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(381, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 19);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Ocupado";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Green;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(462, 165);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 19);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Disponible";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Green;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(543, 165);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 19);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Disponible";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Green;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(381, 288);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 19);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Disponible";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Green;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(462, 288);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 19);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Disponible";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Green;
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(300, 407);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 19);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Disponible";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Brown;
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label12.Location = new System.Drawing.Point(543, 288);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 19);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Ocupado";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Brown;
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label14.Location = new System.Drawing.Point(462, 407);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 19);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Ocupado";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Orange;
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Location = new System.Drawing.Point(300, 288);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 19);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "En Limpieza";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Orange;
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label15.Location = new System.Drawing.Point(381, 407);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 19);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "En Limpieza";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button10
             // 
@@ -352,140 +416,76 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // dbt_hab_01
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Image = global::Hotel.Properties.Resources.cama_libre;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(300, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 64);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Cabaña ST 01";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.dbt_hab_01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.dbt_hab_01.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dbt_hab_01.Image = global::Hotel.Properties.Resources.cama_libre;
+            this.dbt_hab_01.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.dbt_hab_01.Location = new System.Drawing.Point(300, 98);
+            this.dbt_hab_01.Name = "dbt_hab_01";
+            this.dbt_hab_01.Size = new System.Drawing.Size(75, 64);
+            this.dbt_hab_01.TabIndex = 17;
+            this.dbt_hab_01.Text = "Cabaña ST 01";
+            this.dbt_hab_01.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.dbt_hab_01.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lbl_logo
             // 
-            this.label5.BackColor = System.Drawing.Color.Green;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(300, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Disponible";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lbl_logo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_logo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.lbl_logo.Image = global::Hotel.Properties.Resources.GardSoft_logo;
+            this.lbl_logo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_logo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.lbl_logo.Name = "lbl_logo";
+            this.lbl_logo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_logo.Size = new System.Drawing.Size(200, 61);
+            this.lbl_logo.Text = "Aquí va el LOGO";
+            this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // label6
+            // btn_habitciones
             // 
-            this.label6.BackColor = System.Drawing.Color.Brown;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(381, 165);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 19);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Ocupado";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_habitciones.Image = global::Hotel.Properties.Resources._039_bed;
+            this.btn_habitciones.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_habitciones.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_habitciones.Name = "btn_habitciones";
+            this.btn_habitciones.Size = new System.Drawing.Size(122, 61);
+            this.btn_habitciones.Text = "Habitaciones";
             // 
-            // label7
+            // btn_reservaciones
             // 
-            this.label7.BackColor = System.Drawing.Color.Green;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(462, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 19);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Disponible";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_reservaciones.Image = global::Hotel.Properties.Resources._020_bell_ring;
+            this.btn_reservaciones.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_reservaciones.Name = "btn_reservaciones";
+            this.btn_reservaciones.Size = new System.Drawing.Size(127, 61);
+            this.btn_reservaciones.Text = "Reservaciones";
+            this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
             // 
-            // label8
+            // btn_empleados
             // 
-            this.label8.BackColor = System.Drawing.Color.Green;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(543, 165);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 19);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Disponible";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_empleados.Image = global::Hotel.Properties.Resources._022_reception;
+            this.btn_empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_empleados.Name = "btn_empleados";
+            this.btn_empleados.Size = new System.Drawing.Size(111, 61);
+            this.btn_empleados.Text = "Empleados";
             // 
-            // label9
+            // toolStripButton2
             // 
-            this.label9.BackColor = System.Drawing.Color.Green;
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(381, 288);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 19);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Disponible";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolStripButton2.Image = global::Hotel.Properties.Resources._031_broom;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(135, 61);
+            this.toolStripButton2.Text = "Mantenimiento";
             // 
-            // label10
+            // btn_caja
             // 
-            this.label10.BackColor = System.Drawing.Color.Green;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(462, 288);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 19);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Disponible";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Green;
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(300, 407);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 19);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Disponible";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Brown;
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Location = new System.Drawing.Point(543, 288);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 19);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Ocupado";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Brown;
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label14.Location = new System.Drawing.Point(462, 407);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 19);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Ocupado";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Orange;
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(300, 288);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 19);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "En Limpieza";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Orange;
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.Location = new System.Drawing.Point(381, 407);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 19);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "En Limpieza";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_caja.Image = global::Hotel.Properties.Resources._024_safety_box;
+            this.btn_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_caja.Name = "btn_caja";
+            this.btn_caja.Size = new System.Drawing.Size(76, 61);
+            this.btn_caja.Text = "Caja";
+            this.btn_caja.ToolTipText = "Caja";
             // 
             // Frm_menu
             // 
@@ -502,7 +502,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_hab_01);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -517,7 +517,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dbt_hab_01);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_menu";
@@ -556,8 +556,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button dbt_hab_01;
+        private System.Windows.Forms.Label lbl_hab_01;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

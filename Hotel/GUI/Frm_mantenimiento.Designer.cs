@@ -1,6 +1,6 @@
 ﻿namespace Hotel.GUI
 {
-    partial class Frm_menu_empleados
+    partial class Frm_mantenimiento
     {
         /// <summary>
         /// Required designer variable.
@@ -33,13 +33,14 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.Dgr_empleados = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
-            this.btn_nvoempleado = new System.Windows.Forms.ToolStripButton();
-            this.btn_actua_empleado = new System.Windows.Forms.ToolStripButton();
+            this.btn_nvoproveedor = new System.Windows.Forms.ToolStripButton();
+            this.btn_consultar_proveedor = new System.Windows.Forms.ToolStripButton();
+            this.btn_prog_mantenimiento = new System.Windows.Forms.ToolStripButton();
+            this.Dgr_mantenimiento = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_habitaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgr_empleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgr_mantenimiento)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_habitaciones
@@ -51,16 +52,17 @@
             this.lbl_reservaciones_title,
             this.lbl_logo,
             this.toolStripSeparator4,
-            this.btn_nvoempleado,
+            this.btn_nvoproveedor,
             this.toolStripSeparator1,
-            this.btn_actua_empleado,
-            this.toolStripSeparator2});
+            this.btn_consultar_proveedor,
+            this.toolStripSeparator2,
+            this.btn_prog_mantenimiento});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.btn_habitaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_habitaciones.Size = new System.Drawing.Size(800, 64);
-            this.btn_habitaciones.TabIndex = 2;
+            this.btn_habitaciones.Size = new System.Drawing.Size(966, 64);
+            this.btn_habitaciones.TabIndex = 3;
             this.btn_habitaciones.Text = "Menu";
             // 
             // lbl_reservaciones_title
@@ -68,8 +70,8 @@
             this.lbl_reservaciones_title.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lbl_reservaciones_title.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.lbl_reservaciones_title.Name = "lbl_reservaciones_title";
-            this.lbl_reservaciones_title.Size = new System.Drawing.Size(157, 61);
-            this.lbl_reservaciones_title.Text = "EMPLEADOS";
+            this.lbl_reservaciones_title.Size = new System.Drawing.Size(222, 61);
+            this.lbl_reservaciones_title.Text = "MANTENIMIENTO";
             // 
             // toolStripSeparator4
             // 
@@ -86,23 +88,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
             // 
-            // Dgr_empleados
-            // 
-            this.Dgr_empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgr_empleados.Location = new System.Drawing.Point(12, 67);
-            this.Dgr_empleados.Name = "Dgr_empleados";
-            this.Dgr_empleados.Size = new System.Drawing.Size(745, 285);
-            this.Dgr_empleados.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(546, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "<< Aquí van las tablas de los empleados";
-            // 
             // lbl_logo
             // 
             this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -117,36 +102,62 @@
             this.lbl_logo.Text = "Aquí va el LOGO";
             this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // btn_nvoempleado
+            // btn_nvoproveedor
             // 
-            this.btn_nvoempleado.Image = global::Hotel.Properties.Resources._025_hotel_bell;
-            this.btn_nvoempleado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_nvoempleado.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btn_nvoempleado.Name = "btn_nvoempleado";
-            this.btn_nvoempleado.Size = new System.Drawing.Size(144, 61);
-            this.btn_nvoempleado.Text = "Nuevo Empleado";
+            this.btn_nvoproveedor.Image = global::Hotel.Properties.Resources.add;
+            this.btn_nvoproveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_nvoproveedor.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_nvoproveedor.Name = "btn_nvoproveedor";
+            this.btn_nvoproveedor.Size = new System.Drawing.Size(145, 61);
+            this.btn_nvoproveedor.Text = "Nuevo Proveedor";
             // 
-            // btn_actua_empleado
+            // btn_consultar_proveedor
             // 
-            this.btn_actua_empleado.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_actua_empleado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_actua_empleado.Name = "btn_actua_empleado";
-            this.btn_actua_empleado.Size = new System.Drawing.Size(161, 61);
-            this.btn_actua_empleado.Text = "Actualizar Empleado";
+            this.btn_consultar_proveedor.Image = global::Hotel.Properties.Resources._021_phone;
+            this.btn_consultar_proveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_consultar_proveedor.Name = "btn_consultar_proveedor";
+            this.btn_consultar_proveedor.Size = new System.Drawing.Size(118, 61);
+            this.btn_consultar_proveedor.Text = "Proveedores";
             // 
-            // Frm_menu_empleados
+            // btn_prog_mantenimiento
+            // 
+            this.btn_prog_mantenimiento.Image = global::Hotel.Properties.Resources._031_broom;
+            this.btn_prog_mantenimiento.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_prog_mantenimiento.Name = "btn_prog_mantenimiento";
+            this.btn_prog_mantenimiento.Size = new System.Drawing.Size(194, 61);
+            this.btn_prog_mantenimiento.Text = "Programar Mantenimiento";
+            // 
+            // Dgr_mantenimiento
+            // 
+            this.Dgr_mantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgr_mantenimiento.Location = new System.Drawing.Point(16, 118);
+            this.Dgr_mantenimiento.Name = "Dgr_mantenimiento";
+            this.Dgr_mantenimiento.Size = new System.Drawing.Size(938, 163);
+            this.Dgr_mantenimiento.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 24);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mantenimiento programado:";
+            // 
+            // Frm_mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(966, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Dgr_empleados);
+            this.Controls.Add(this.Dgr_mantenimiento);
             this.Controls.Add(this.btn_habitaciones);
-            this.Name = "Frm_menu_empleados";
-            this.Text = "Frm_menu_empleados";
+            this.Name = "Frm_mantenimiento";
+            this.Text = "Frm_mantenimiento";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgr_empleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgr_mantenimiento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,11 +169,12 @@
         private System.Windows.Forms.ToolStripLabel lbl_reservaciones_title;
         private System.Windows.Forms.ToolStripLabel lbl_logo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton btn_nvoempleado;
+        private System.Windows.Forms.ToolStripButton btn_nvoproveedor;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_actua_empleado;
+        private System.Windows.Forms.ToolStripButton btn_consultar_proveedor;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.DataGridView Dgr_empleados;
+        private System.Windows.Forms.ToolStripButton btn_prog_mantenimiento;
+        private System.Windows.Forms.DataGridView Dgr_mantenimiento;
         private System.Windows.Forms.Label label1;
     }
 }

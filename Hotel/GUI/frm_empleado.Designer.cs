@@ -44,9 +44,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_cance_empleado = new System.Windows.Forms.Button();
-            this.btn_guar_empleado = new System.Windows.Forms.Button();
+            this.btn_mod_empleado = new System.Windows.Forms.Button();
+            this.btn_borrar_empleado = new System.Windows.Forms.Button();
+            this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -199,41 +199,41 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Tipo:";
             // 
-            // button1
+            // btn_mod_empleado
             // 
-            this.button1.Image = global::Hotel.Properties.Resources._036_edit;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(218, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 47);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Modificar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_mod_empleado.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_mod_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_mod_empleado.Location = new System.Drawing.Point(218, 296);
+            this.btn_mod_empleado.Name = "btn_mod_empleado";
+            this.btn_mod_empleado.Size = new System.Drawing.Size(102, 47);
+            this.btn_mod_empleado.TabIndex = 15;
+            this.btn_mod_empleado.Text = "Modificar";
+            this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_mod_empleado.UseVisualStyleBackColor = true;
             // 
-            // btn_cance_empleado
+            // btn_borrar_empleado
             // 
-            this.btn_cance_empleado.Image = global::Hotel.Properties.Resources.close;
-            this.btn_cance_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cance_empleado.Location = new System.Drawing.Point(427, 296);
-            this.btn_cance_empleado.Name = "btn_cance_empleado";
-            this.btn_cance_empleado.Size = new System.Drawing.Size(93, 47);
-            this.btn_cance_empleado.TabIndex = 14;
-            this.btn_cance_empleado.Text = "Eliminar";
-            this.btn_cance_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_cance_empleado.UseVisualStyleBackColor = true;
+            this.btn_borrar_empleado.Image = global::Hotel.Properties.Resources.close;
+            this.btn_borrar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_borrar_empleado.Location = new System.Drawing.Point(427, 296);
+            this.btn_borrar_empleado.Name = "btn_borrar_empleado";
+            this.btn_borrar_empleado.Size = new System.Drawing.Size(93, 47);
+            this.btn_borrar_empleado.TabIndex = 14;
+            this.btn_borrar_empleado.Text = "Eliminar";
+            this.btn_borrar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_borrar_empleado.UseVisualStyleBackColor = true;
             // 
-            // btn_guar_empleado
+            // btn_guardar_empleado
             // 
-            this.btn_guar_empleado.Image = global::Hotel.Properties.Resources._035_save;
-            this.btn_guar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guar_empleado.Location = new System.Drawing.Point(326, 296);
-            this.btn_guar_empleado.Name = "btn_guar_empleado";
-            this.btn_guar_empleado.Size = new System.Drawing.Size(95, 47);
-            this.btn_guar_empleado.TabIndex = 13;
-            this.btn_guar_empleado.Text = "       Guardar";
-            this.btn_guar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_guar_empleado.UseVisualStyleBackColor = true;
+            this.btn_guardar_empleado.Image = global::Hotel.Properties.Resources._035_save;
+            this.btn_guardar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar_empleado.Location = new System.Drawing.Point(326, 296);
+            this.btn_guardar_empleado.Name = "btn_guardar_empleado";
+            this.btn_guardar_empleado.Size = new System.Drawing.Size(95, 47);
+            this.btn_guardar_empleado.TabIndex = 13;
+            this.btn_guardar_empleado.Text = "       Guardar";
+            this.btn_guardar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_guardar_empleado.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -250,9 +250,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 355);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_cance_empleado);
-            this.Controls.Add(this.btn_guar_empleado);
+            this.Controls.Add(this.btn_mod_empleado);
+            this.Controls.Add(this.btn_borrar_empleado);
+            this.Controls.Add(this.btn_guardar_empleado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
@@ -281,9 +281,9 @@
         private System.Windows.Forms.TextBox txt_nom_empleado;
         private System.Windows.Forms.TextBox txt_idempleado;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btn_guar_empleado;
-        private System.Windows.Forms.Button btn_cance_empleado;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_guardar_empleado;
+        private System.Windows.Forms.Button btn_borrar_empleado;
+        private System.Windows.Forms.Button btn_mod_empleado;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
