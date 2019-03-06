@@ -40,10 +40,10 @@
             this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
             this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.btn_chekout = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_habitaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_habitaciones
@@ -145,13 +145,13 @@
             this.btn_chekout.Size = new System.Drawing.Size(107, 61);
             this.btn_chekout.Text = "Check out";
             // 
-            // dataGridView1
+            // Grd_Reservaciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(897, 353);
-            this.dataGridView1.TabIndex = 2;
+            this.Grd_Reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grd_Reservaciones.Location = new System.Drawing.Point(13, 68);
+            this.Grd_Reservaciones.Name = "Grd_Reservaciones";
+            this.Grd_Reservaciones.Size = new System.Drawing.Size(897, 353);
+            this.Grd_Reservaciones.TabIndex = 2;
             // 
             // label1
             // 
@@ -168,7 +168,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Grd_Reservaciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_reservaciones";
@@ -176,7 +176,7 @@
             this.Text = "Reservaciones";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +195,7 @@
         private System.Windows.Forms.ToolStripButton btn_chekout;
         private System.Windows.Forms.ToolStripLabel lbl_reservaciones_title;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Grd_Reservaciones;
         private System.Windows.Forms.Label label1;
     }
 }
