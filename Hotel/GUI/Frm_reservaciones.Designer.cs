@@ -31,16 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_reservaciones));
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.lbl_reservaciones_title = new System.Windows.Forms.ToolStripLabel();
-            this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_reservarhab = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
+            this.btn_reservarhab = new System.Windows.Forms.ToolStripButton();
+            this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
+            this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.btn_chekout = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_habitaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_habitaciones
@@ -75,6 +78,26 @@
             this.lbl_reservaciones_title.Size = new System.Drawing.Size(204, 61);
             this.lbl_reservaciones_title.Text = "RESERVACIONES";
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 64);
+            // 
             // lbl_logo
             // 
             this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -89,11 +112,6 @@
             this.lbl_logo.Text = "Aquí va el LOGO";
             this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
-            // 
             // btn_reservarhab
             // 
             this.btn_reservarhab.Image = global::Hotel.Properties.Resources._025_hotel_bell;
@@ -103,11 +121,6 @@
             this.btn_reservarhab.Size = new System.Drawing.Size(156, 61);
             this.btn_reservarhab.Text = "Reservar habitación";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
-            // 
             // btn_consultar_res
             // 
             this.btn_consultar_res.Image = global::Hotel.Properties.Resources._027_information;
@@ -115,11 +128,6 @@
             this.btn_consultar_res.Name = "btn_consultar_res";
             this.btn_consultar_res.Size = new System.Drawing.Size(127, 61);
             this.btn_consultar_res.Text = "Reservaciones";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
             // 
             // btn_checkin
             // 
@@ -129,11 +137,6 @@
             this.btn_checkin.Size = new System.Drawing.Size(99, 61);
             this.btn_checkin.Text = "Check in";
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 64);
-            // 
             // btn_chekout
             // 
             this.btn_chekout.Image = global::Hotel.Properties.Resources._004_hotel_stroller;
@@ -142,11 +145,30 @@
             this.btn_chekout.Size = new System.Drawing.Size(107, 61);
             this.btn_chekout.Text = "Check out";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 68);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(897, 353);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(624, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "<< Aquí se visualizara la tabla de reservaiones actuales";
+            // 
             // Frm_reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_reservaciones";
@@ -154,6 +176,7 @@
             this.Text = "Reservaciones";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +195,7 @@
         private System.Windows.Forms.ToolStripButton btn_chekout;
         private System.Windows.Forms.ToolStripLabel lbl_reservaciones_title;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
     }
 }
