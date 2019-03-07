@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Hotel.BO
 {
-    class ClienteBO
+    class EmpresaBO
     {
-        private int id_cliente;
         private string nombre;
-
-        public int Id_cliente
-        {
-            get { return id_cliente; }
-            set { id_cliente = value; }
-        }
+        private string rfc;
 
         public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
+        }
+
+        public string RFC
+        {
+            get { return rfc; }
+            set { rfc = value; }
         }
     }
 }
