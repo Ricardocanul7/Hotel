@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\ClienteBO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DatosLogin.cs" />
@@ -75,8 +76,8 @@
     <Compile Include="DAO\EmpresaDAO.cs" />
     <Compile Include="DAO\HabitacionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
-    <Compile Include="BO\Empleado.cs" />
-    <Compile Include="BO\Habitacion.cs" />
+    <Compile Include="BO\EmpleadoBO.cs" />
+    <Compile Include="BO\HabitacionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>

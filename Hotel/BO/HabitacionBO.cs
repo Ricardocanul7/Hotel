@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.BO
 {
-    class Habitacion
+    class HabitacionBO
     {
         private int num_habitacion;
         private string estado;
