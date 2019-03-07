@@ -30,14 +30,14 @@
         {
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.lbl_reservaciones_title = new System.Windows.Forms.ToolStripLabel();
+            this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_nvoempleado = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_actua_empleado = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Dgr_empleados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
-            this.btn_nvoempleado = new System.Windows.Forms.ToolStripButton();
-            this.btn_actua_empleado = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgr_empleados)).BeginInit();
             this.SuspendLayout();
@@ -71,15 +71,46 @@
             this.lbl_reservaciones_title.Size = new System.Drawing.Size(157, 61);
             this.lbl_reservaciones_title.Text = "EMPLEADOS";
             // 
+            // lbl_logo
+            // 
+            this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lbl_logo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_logo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.lbl_logo.Image = global::Hotel.Properties.Resources.GardSoft_logo;
+            this.lbl_logo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_logo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.lbl_logo.Name = "lbl_logo";
+            this.lbl_logo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_logo.Size = new System.Drawing.Size(200, 61);
+            this.lbl_logo.Text = "Aquí va el LOGO";
+            this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
             // 
+            // btn_nvoempleado
+            // 
+            this.btn_nvoempleado.Image = global::Hotel.Properties.Resources._025_hotel_bell;
+            this.btn_nvoempleado.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_nvoempleado.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_nvoempleado.Name = "btn_nvoempleado";
+            this.btn_nvoempleado.Size = new System.Drawing.Size(144, 61);
+            this.btn_nvoempleado.Text = "Nuevo Empleado";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
+            // 
+            // btn_actua_empleado
+            // 
+            this.btn_actua_empleado.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_actua_empleado.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_actua_empleado.Name = "btn_actua_empleado";
+            this.btn_actua_empleado.Size = new System.Drawing.Size(161, 61);
+            this.btn_actua_empleado.Text = "Actualizar Empleado";
             // 
             // toolStripSeparator2
             // 
@@ -103,37 +134,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "<< Aquí van las tablas de los empleados";
             // 
-            // lbl_logo
-            // 
-            this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lbl_logo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_logo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.lbl_logo.Image = global::Hotel.Properties.Resources.GardSoft_logo;
-            this.lbl_logo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_logo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.lbl_logo.Name = "lbl_logo";
-            this.lbl_logo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_logo.Size = new System.Drawing.Size(200, 61);
-            this.lbl_logo.Text = "Aquí va el LOGO";
-            this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btn_nvoempleado
-            // 
-            this.btn_nvoempleado.Image = global::Hotel.Properties.Resources._025_hotel_bell;
-            this.btn_nvoempleado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_nvoempleado.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btn_nvoempleado.Name = "btn_nvoempleado";
-            this.btn_nvoempleado.Size = new System.Drawing.Size(144, 61);
-            this.btn_nvoempleado.Text = "Nuevo Empleado";
-            // 
-            // btn_actua_empleado
-            // 
-            this.btn_actua_empleado.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_actua_empleado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_actua_empleado.Name = "btn_actua_empleado";
-            this.btn_actua_empleado.Size = new System.Drawing.Size(161, 61);
-            this.btn_actua_empleado.Text = "Actualizar Empleado";
-            // 
             // Frm_menu_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,7 +143,7 @@
             this.Controls.Add(this.Dgr_empleados);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_menu_empleados";
-            this.Text = "Frm_menu_empleados";
+            this.Text = "Menu Empleados";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgr_empleados)).EndInit();

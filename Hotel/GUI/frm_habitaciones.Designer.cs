@@ -301,7 +301,7 @@
             this.Controls.Add(this.txt_hab_descripcion);
             this.Controls.Add(this.label5);
             this.Name = "frm_habitaciones";
-            this.Text = "frm_habitaciones";
+            this.Text = "Alta habitaciones";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

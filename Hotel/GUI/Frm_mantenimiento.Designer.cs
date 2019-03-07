@@ -30,12 +30,12 @@
         {
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.lbl_reservaciones_title = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lbl_logo = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_nvoproveedor = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_consultar_proveedor = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_prog_mantenimiento = new System.Windows.Forms.ToolStripButton();
             this.Dgr_mantenimiento = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,21 +73,6 @@
             this.lbl_reservaciones_title.Size = new System.Drawing.Size(222, 61);
             this.lbl_reservaciones_title.Text = "MANTENIMIENTO";
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
-            // 
             // lbl_logo
             // 
             this.lbl_logo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -102,6 +87,11 @@
             this.lbl_logo.Text = "Aquí va el LOGO";
             this.lbl_logo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
+            // 
             // btn_nvoproveedor
             // 
             this.btn_nvoproveedor.Image = global::Hotel.Properties.Resources.add;
@@ -111,6 +101,11 @@
             this.btn_nvoproveedor.Size = new System.Drawing.Size(145, 61);
             this.btn_nvoproveedor.Text = "Nuevo Proveedor";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
+            // 
             // btn_consultar_proveedor
             // 
             this.btn_consultar_proveedor.Image = global::Hotel.Properties.Resources._021_phone;
@@ -118,6 +113,11 @@
             this.btn_consultar_proveedor.Name = "btn_consultar_proveedor";
             this.btn_consultar_proveedor.Size = new System.Drawing.Size(118, 61);
             this.btn_consultar_proveedor.Text = "Proveedores";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
             // 
             // btn_prog_mantenimiento
             // 
@@ -154,7 +154,7 @@
             this.Controls.Add(this.Dgr_mantenimiento);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_mantenimiento";
-            this.Text = "Frm_mantenimiento";
+            this.Text = "Mantenimiento";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgr_mantenimiento)).EndInit();
