@@ -23,7 +23,7 @@ namespace Hotel.GUI
 
             // CODIGO PROVISIONAL
             Main_Window menu = new Main_Window();
-            menu.Owner = this;
+            menu.VentanaHija(this);
             this.Hide();
             menu.Show();
         }

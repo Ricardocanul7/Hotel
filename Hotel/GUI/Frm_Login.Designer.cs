@@ -46,7 +46,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hotel.Properties.Resources.GardSoft_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(325, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(196, 64);
             this.pictureBox1.TabIndex = 0;
@@ -58,7 +58,7 @@
             this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(44, 23);
             this.htmlLabel1.AutoSize = false;
             this.htmlLabel1.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel1.Location = new System.Drawing.Point(67, 105);
+            this.htmlLabel1.Location = new System.Drawing.Point(117, 120);
             this.htmlLabel1.Name = "htmlLabel1";
             this.htmlLabel1.Size = new System.Drawing.Size(48, 23);
             this.htmlLabel1.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(59, 23);
             this.htmlLabel2.AutoSize = false;
             this.htmlLabel2.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel2.Location = new System.Drawing.Point(53, 148);
+            this.htmlLabel2.Location = new System.Drawing.Point(103, 163);
             this.htmlLabel2.Name = "htmlLabel2";
             this.htmlLabel2.Size = new System.Drawing.Size(62, 23);
             this.htmlLabel2.TabIndex = 2;
@@ -91,7 +91,7 @@
             this.txt_correo.CustomButton.UseSelectable = true;
             this.txt_correo.CustomButton.Visible = false;
             this.txt_correo.Lines = new string[0];
-            this.txt_correo.Location = new System.Drawing.Point(177, 105);
+            this.txt_correo.Location = new System.Drawing.Point(227, 120);
             this.txt_correo.MaxLength = 32767;
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.PasswordChar = '\0';
@@ -121,7 +121,7 @@
             this.txt_password.CustomButton.UseSelectable = true;
             this.txt_password.CustomButton.Visible = false;
             this.txt_password.Lines = new string[0];
-            this.txt_password.Location = new System.Drawing.Point(177, 148);
+            this.txt_password.Location = new System.Drawing.Point(227, 163);
             this.txt_password.MaxLength = 32767;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '\0';
@@ -140,7 +140,7 @@
             // 
             this.btn_login.BackColor = System.Drawing.Color.Blue;
             this.btn_login.ForeColor = System.Drawing.Color.Black;
-            this.btn_login.Location = new System.Drawing.Point(311, 237);
+            this.btn_login.Location = new System.Drawing.Point(361, 223);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(75, 23);
             this.btn_login.Style = MetroFramework.MetroColorStyle.Blue;
@@ -152,7 +152,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(139, 98);
+            this.pictureBox2.Location = new System.Drawing.Point(189, 113);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(139, 141);
+            this.pictureBox3.Location = new System.Drawing.Point(189, 156);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
