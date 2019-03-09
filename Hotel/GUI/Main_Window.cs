@@ -16,6 +16,7 @@ namespace Hotel.GUI
         public Main_Window()
         {
             InitializeComponent();
+            InicializarPantallaInicial();
         }
 
         protected override void OnClosed(EventArgs e)
@@ -26,6 +27,15 @@ namespace Hotel.GUI
         public void VentanaHija(object frm_Login)
         {
             loginWindow = (Frm_Login)frm_Login;
+        }
+
+        public void InicializarPantallaInicial()
+        {
+            var ventana = new Frm_menu();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
         }
     }
 }
