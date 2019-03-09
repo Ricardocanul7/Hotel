@@ -75,6 +75,8 @@
             this.btn_config.BackColor = System.Drawing.Color.Black;
             this.btn_config.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_config.FlatAppearance.BorderSize = 0;
+            this.btn_config.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btn_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_config.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_config.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -90,6 +92,8 @@
             this.btn_inicio.BackColor = System.Drawing.Color.Black;
             this.btn_inicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_inicio.FlatAppearance.BorderSize = 0;
+            this.btn_inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_inicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
