@@ -22,7 +22,7 @@ namespace Hotel.GUI
             /** Validar usuario y contraseña */ //PENDIENTE
 
             // CODIGO PROVISIONAL
-            Frm_menu menu = new Frm_menu();
+            Main_Window menu = new Main_Window();
             menu.Owner = this;
             this.Hide();
             menu.Show();
