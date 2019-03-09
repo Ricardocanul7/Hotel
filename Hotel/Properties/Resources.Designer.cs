@@ -269,5 +269,15 @@ namespace Hotel.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_InterfaceExpendet_09_592608 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_InterfaceExpendet-09_592608", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
