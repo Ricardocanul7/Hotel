@@ -151,7 +151,7 @@
             // 
             this.panel_logo.BackColor = System.Drawing.Color.Silver;
             this.panel_logo.BackgroundImage = global::Hotel.Properties.Resources.GardSoft_logo;
-            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
             this.panel_logo.Name = "panel_logo";
