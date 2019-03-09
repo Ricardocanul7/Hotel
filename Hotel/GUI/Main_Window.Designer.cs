@@ -116,6 +116,7 @@
             this.btn_inicio.TabIndex = 3;
             this.btn_inicio.Text = "INICIO";
             this.btn_inicio.UseVisualStyleBackColor = false;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // panel_user_info
             // 
