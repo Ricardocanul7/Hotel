@@ -82,6 +82,10 @@ namespace Hotel.GUI
             lbl_titulo.Text = "MANTENIMIENTO";
         }
 
-        
+        private void btn_habitaciones_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            AbrirPantallaInicial();
+        }
     }
 }
