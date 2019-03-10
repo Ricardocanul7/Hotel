@@ -55,6 +55,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dbt_hab_01 = new System.Windows.Forms.Button();
+            this.MenuStrip_principal = new System.Windows.Forms.ToolStrip();
+            this.btn_agregar_habitaciones = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.MenuStrip_principal.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -374,11 +378,43 @@
             this.dbt_hab_01.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.dbt_hab_01.UseVisualStyleBackColor = true;
             // 
+            // MenuStrip_principal
+            // 
+            this.MenuStrip_principal.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.MenuStrip_principal.ImageScalingSize = new System.Drawing.Size(42, 42);
+            this.MenuStrip_principal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MenuStrip_principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_agregar_habitaciones,
+            this.toolStripSeparator1});
+            this.MenuStrip_principal.Location = new System.Drawing.Point(0, 0);
+            this.MenuStrip_principal.Name = "MenuStrip_principal";
+            this.MenuStrip_principal.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.MenuStrip_principal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MenuStrip_principal.Size = new System.Drawing.Size(849, 49);
+            this.MenuStrip_principal.TabIndex = 43;
+            this.MenuStrip_principal.Text = "Menu";
+            // 
+            // btn_agregar_habitaciones
+            // 
+            this.btn_agregar_habitaciones.Image = global::Hotel.Properties.Resources._039_bed;
+            this.btn_agregar_habitaciones.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_agregar_habitaciones.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_agregar_habitaciones.Name = "btn_agregar_habitaciones";
+            this.btn_agregar_habitaciones.Size = new System.Drawing.Size(167, 46);
+            this.btn_agregar_habitaciones.Text = "Agregar Habitaciones";
+            this.btn_agregar_habitaciones.Click += new System.EventHandler(this.btn_agregar_habitaciones_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
+            // 
             // Frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 450);
+            this.Controls.Add(this.MenuStrip_principal);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
@@ -409,6 +445,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_menu";
             this.Text = "Sistema Hotelero";
+            this.MenuStrip_principal.ResumeLayout(false);
+            this.MenuStrip_principal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,6 +479,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ToolStrip MenuStrip_principal;
+        private System.Windows.Forms.ToolStripButton btn_agregar_habitaciones;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
