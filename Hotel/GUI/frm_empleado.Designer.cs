@@ -30,6 +30,9 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbo_tipoempleado = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbo_Horario = new System.Windows.Forms.ComboBox();
             this.txt_tele_empleado = new System.Windows.Forms.TextBox();
             this.txt_direcc_empleado = new System.Windows.Forms.TextBox();
             this.txt_apell_empleado = new System.Windows.Forms.TextBox();
@@ -41,9 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btn_mod_empleado = new System.Windows.Forms.Button();
             this.btn_borrar_empleado = new System.Windows.Forms.Button();
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
@@ -64,9 +64,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbo_tipoempleado);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbo_Horario);
             this.groupBox1.Controls.Add(this.txt_tele_empleado);
             this.groupBox1.Controls.Add(this.txt_direcc_empleado);
             this.groupBox1.Controls.Add(this.txt_apell_empleado);
@@ -84,6 +84,41 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Empleado";
+            // 
+            // cbo_tipoempleado
+            // 
+            this.cbo_tipoempleado.FormattingEnabled = true;
+            this.cbo_tipoempleado.Items.AddRange(new object[] {
+            "Mantenimiento",
+            "Limpieza",
+            "Administrador",
+            "Recepcionista",
+            "Guardias "});
+            this.cbo_tipoempleado.Location = new System.Drawing.Point(83, 153);
+            this.cbo_tipoempleado.Name = "cbo_tipoempleado";
+            this.cbo_tipoempleado.Size = new System.Drawing.Size(190, 21);
+            this.cbo_tipoempleado.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 156);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Tipo:";
+            // 
+            // cbo_Horario
+            // 
+            this.cbo_Horario.FormattingEnabled = true;
+            this.cbo_Horario.Items.AddRange(new object[] {
+            "8 am - 4 pm",
+            "4pm - 12 am",
+            "12 am - 8 am"});
+            this.cbo_Horario.Location = new System.Drawing.Point(357, 122);
+            this.cbo_Horario.Name = "cbo_Horario";
+            this.cbo_Horario.Size = new System.Drawing.Size(121, 21);
+            this.cbo_Horario.TabIndex = 11;
             // 
             // txt_tele_empleado
             // 
@@ -174,31 +209,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Empleado:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(357, 122);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(83, 153);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 21);
-            this.comboBox2.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 156);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Tipo:";
-            // 
             // btn_mod_empleado
             // 
             this.btn_mod_empleado.Image = global::Hotel.Properties.Resources._036_edit;
@@ -234,6 +244,7 @@
             this.btn_guardar_empleado.Text = "       Guardar";
             this.btn_guardar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_empleado.UseVisualStyleBackColor = true;
+            this.btn_guardar_empleado.Click += new System.EventHandler(this.Guardar_Empleados);
             // 
             // pictureBox1
             // 
@@ -284,8 +295,8 @@
         private System.Windows.Forms.Button btn_guardar_empleado;
         private System.Windows.Forms.Button btn_borrar_empleado;
         private System.Windows.Forms.Button btn_mod_empleado;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbo_tipoempleado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_Horario;
     }
 }

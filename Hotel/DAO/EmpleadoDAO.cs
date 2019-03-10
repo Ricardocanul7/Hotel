@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Hotel.BO;
 
 namespace Hotel.DAO
 {
@@ -13,7 +14,7 @@ namespace Hotel.DAO
            -Eliminar
            -Buscar  */
 
-        public bool Agregar()
+        public bool Agregar(EmpleadoBO empleado)
         {
             return true;
         }
