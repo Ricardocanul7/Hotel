@@ -36,6 +36,7 @@ namespace Hotel.GUI
             ventana.Dock = DockStyle.Fill;
             this.panel_principal.Controls.Add(ventana);
             ventana.Show();
+            lbl_titulo.Text = "Inicio";
         }
 
         private void btn_inicio_Click(object sender, EventArgs e)
