@@ -34,12 +34,57 @@ namespace Hotel.GUI
             var ventana = new Frm_menu();
             ventana.TopLevel = false;
             ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
             this.panel_principal.Controls.Add(ventana);
             ventana.Show();
+            lbl_titulo.Text = "INICIO";
         }
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
+            this.panel_principal.Controls.Clear();
+            AbrirPantallaInicial();
+        }
+
+        private void btn_empleados_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_menu_empleados();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "EMPLEADOS";
+        } 
+
+        private void btn_reservaciones_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_reservaciones();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "RESERVACIONES";
+        }
+
+        private void btn_mantenimiento_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_mantenimiento();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "MANTENIMIENTO";
+        }
+
+        private void btn_habitaciones_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
             AbrirPantallaInicial();
         }
     }
