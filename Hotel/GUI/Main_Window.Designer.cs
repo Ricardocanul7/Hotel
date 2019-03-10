@@ -190,11 +190,12 @@
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lbl_titulo.Location = new System.Drawing.Point(22, 15);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(65, 25);
+            this.lbl_titulo.Size = new System.Drawing.Size(86, 25);
             this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "Titulo";
+            this.lbl_titulo.Text = "TITULO";
             // 
             // panel_MenuStrip
             // 
@@ -250,6 +251,7 @@
             this.btn_reservaciones.Name = "btn_reservaciones";
             this.btn_reservaciones.Size = new System.Drawing.Size(127, 46);
             this.btn_reservaciones.Text = "Reservaciones";
+            this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
             // 
             // toolStripSeparator2
             // 
@@ -263,6 +265,7 @@
             this.btn_empleados.Name = "btn_empleados";
             this.btn_empleados.Size = new System.Drawing.Size(111, 46);
             this.btn_empleados.Text = "Empleados";
+            this.btn_empleados.Click += new System.EventHandler(this.btn_empleados_Click);
             // 
             // toolStripSeparator3
             // 
