@@ -16,5 +16,11 @@ namespace Hotel.GUI
         {
             InitializeComponent();
         }
+
+        private void btn_nvoempleado_Click(object sender, EventArgs e)
+        {
+            frm_empleado form_agregarEmpleado = new frm_empleado();
+            form_agregarEmpleado.Show();
+        }
     }
 }

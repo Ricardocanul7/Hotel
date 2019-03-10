@@ -66,13 +66,13 @@
             this.lbl_reservaciones_title.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lbl_reservaciones_title.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.lbl_reservaciones_title.Name = "lbl_reservaciones_title";
-            this.lbl_reservaciones_title.Size = new System.Drawing.Size(157, 61);
+            this.lbl_reservaciones_title.Size = new System.Drawing.Size(157, 46);
             this.lbl_reservaciones_title.Text = "EMPLEADOS";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 49);
             // 
             // btn_nvoempleado
             // 
@@ -80,26 +80,27 @@
             this.btn_nvoempleado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_nvoempleado.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_nvoempleado.Name = "btn_nvoempleado";
-            this.btn_nvoempleado.Size = new System.Drawing.Size(144, 61);
+            this.btn_nvoempleado.Size = new System.Drawing.Size(144, 46);
             this.btn_nvoempleado.Text = "Nuevo Empleado";
+            this.btn_nvoempleado.Click += new System.EventHandler(this.btn_nvoempleado_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
             // 
             // btn_actua_empleado
             // 
             this.btn_actua_empleado.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_actua_empleado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_actua_empleado.Name = "btn_actua_empleado";
-            this.btn_actua_empleado.Size = new System.Drawing.Size(161, 61);
+            this.btn_actua_empleado.Size = new System.Drawing.Size(161, 46);
             this.btn_actua_empleado.Text = "Actualizar Empleado";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 49);
             // 
             // Dgr_empleados
             // 

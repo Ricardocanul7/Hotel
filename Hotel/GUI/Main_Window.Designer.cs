@@ -47,7 +47,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_empleados = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btn_mantenimiento = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_caja = new System.Windows.Forms.ToolStripButton();
             this.panel_principal = new System.Windows.Forms.Panel();
@@ -219,7 +219,7 @@
             this.toolStripSeparator2,
             this.btn_empleados,
             this.toolStripSeparator3,
-            this.toolStripButton2,
+            this.btn_mantenimiento,
             this.toolStripSeparator4,
             this.btn_caja});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
@@ -272,13 +272,14 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 49);
             // 
-            // toolStripButton2
+            // btn_mantenimiento
             // 
-            this.toolStripButton2.Image = global::Hotel.Properties.Resources._031_broom;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(135, 46);
-            this.toolStripButton2.Text = "Mantenimiento";
+            this.btn_mantenimiento.Image = global::Hotel.Properties.Resources._031_broom;
+            this.btn_mantenimiento.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_mantenimiento.Name = "btn_mantenimiento";
+            this.btn_mantenimiento.Size = new System.Drawing.Size(135, 46);
+            this.btn_mantenimiento.Text = "Mantenimiento";
+            this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click);
             // 
             // toolStripSeparator4
             // 
@@ -349,7 +350,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btn_empleados;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btn_mantenimiento;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btn_caja;
         private System.Windows.Forms.Panel panel_principal;
