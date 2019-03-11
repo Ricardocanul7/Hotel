@@ -31,7 +31,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_descripHab = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_precioPA = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,10 +50,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_hab_guardar = new System.Windows.Forms.Button();
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -83,16 +83,6 @@
             this.label6.Size = new System.Drawing.Size(261, 40);
             this.label6.TabIndex = 10;
             this.label6.Text = "HABITACIONES";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hotel.Properties.Resources._039_bed;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -133,7 +123,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 30);
+            this.label7.Location = new System.Drawing.Point(46, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 18;
@@ -178,7 +168,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 30);
+            this.label10.Location = new System.Drawing.Point(46, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 18;
@@ -202,9 +192,9 @@
             // cbo_tipohab
             // 
             this.cbo_tipohab.FormattingEnabled = true;
-            this.cbo_tipohab.Location = new System.Drawing.Point(151, 100);
+            this.cbo_tipohab.Location = new System.Drawing.Point(125, 100);
             this.cbo_tipohab.Name = "cbo_tipohab";
-            this.cbo_tipohab.Size = new System.Drawing.Size(241, 21);
+            this.cbo_tipohab.Size = new System.Drawing.Size(269, 21);
             this.cbo_tipohab.TabIndex = 15;
             // 
             // label4
@@ -268,6 +258,16 @@
             this.btn_hab_limpiar.UseVisualStyleBackColor = true;
             this.btn_hab_limpiar.Click += new System.EventHandler(this.btn_hab_limpiar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel.Properties.Resources._039_bed;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,13 +284,13 @@
             this.Controls.Add(this.label5);
             this.Name = "frm_habitaciones";
             this.Text = "Alta habitaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
