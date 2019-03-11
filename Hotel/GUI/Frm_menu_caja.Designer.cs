@@ -138,7 +138,7 @@
             this.Controls.Add(this.Grd_Reservaciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_menu_caja";
-            this.Text = "Frm_menu_caja";
+            this.Text = "Caja";
             ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).EndInit();
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
