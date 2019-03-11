@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="BO\ClienteBO.cs" />
     <Compile Include="BO\EmpresaBO.cs" />
+    <Compile Include="BO\ReservasBO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DatosLogin.cs" />

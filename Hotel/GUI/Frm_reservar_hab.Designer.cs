@@ -30,8 +30,8 @@
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Cmb_numpax = new System.Windows.Forms.ComboBox();
-            this.Cmb_habitaciones = new System.Windows.Forms.ComboBox();
-            this.Cmb_tipohab = new System.Windows.Forms.ComboBox();
+            this.cbo_habitaciones = new System.Windows.Forms.ComboBox();
+            this.cbo_tipohab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,13 +40,13 @@
             this.Txt_id_cliente = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.Txt_telefono_cliente = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.Txt_apellido_cliente = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.Txt_apell_cliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Txt_nombre_cliente = new System.Windows.Forms.TextBox();
+            this.Txt_nom_cliente = new System.Windows.Forms.TextBox();
             this.Txt_email_cliente = new System.Windows.Forms.Label();
-            this.Txt_direccion_cliente = new System.Windows.Forms.TextBox();
+            this.Txt_dir_cliente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -84,8 +84,8 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.Cmb_numpax);
-            this.groupBox3.Controls.Add(this.Cmb_habitaciones);
-            this.groupBox3.Controls.Add(this.Cmb_tipohab);
+            this.groupBox3.Controls.Add(this.cbo_habitaciones);
+            this.groupBox3.Controls.Add(this.cbo_tipohab);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
@@ -99,31 +99,31 @@
             // Cmb_numpax
             // 
             this.Cmb_numpax.FormattingEnabled = true;
-            this.Cmb_numpax.Location = new System.Drawing.Point(119, 62);
+            this.Cmb_numpax.Location = new System.Drawing.Point(119, 100);
             this.Cmb_numpax.Name = "Cmb_numpax";
             this.Cmb_numpax.Size = new System.Drawing.Size(83, 21);
             this.Cmb_numpax.TabIndex = 17;
             // 
-            // Cmb_habitaciones
+            // cbo_habitaciones
             // 
-            this.Cmb_habitaciones.FormattingEnabled = true;
-            this.Cmb_habitaciones.Location = new System.Drawing.Point(119, 28);
-            this.Cmb_habitaciones.Name = "Cmb_habitaciones";
-            this.Cmb_habitaciones.Size = new System.Drawing.Size(241, 21);
-            this.Cmb_habitaciones.TabIndex = 16;
+            this.cbo_habitaciones.FormattingEnabled = true;
+            this.cbo_habitaciones.Location = new System.Drawing.Point(119, 28);
+            this.cbo_habitaciones.Name = "cbo_habitaciones";
+            this.cbo_habitaciones.Size = new System.Drawing.Size(241, 21);
+            this.cbo_habitaciones.TabIndex = 16;
             // 
-            // Cmb_tipohab
+            // cbo_tipohab
             // 
-            this.Cmb_tipohab.FormattingEnabled = true;
-            this.Cmb_tipohab.Location = new System.Drawing.Point(119, 100);
-            this.Cmb_tipohab.Name = "Cmb_tipohab";
-            this.Cmb_tipohab.Size = new System.Drawing.Size(241, 21);
-            this.Cmb_tipohab.TabIndex = 15;
+            this.cbo_tipohab.FormattingEnabled = true;
+            this.cbo_tipohab.Location = new System.Drawing.Point(119, 63);
+            this.cbo_tipohab.Name = "cbo_tipohab";
+            this.cbo_tipohab.Size = new System.Drawing.Size(241, 21);
+            this.cbo_tipohab.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 100);
+            this.label4.Location = new System.Drawing.Point(15, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 14;
@@ -132,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 66);
+            this.label2.Location = new System.Drawing.Point(15, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 10;
@@ -162,13 +162,13 @@
             this.groupBox1.Controls.Add(this.Txt_id_cliente);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.Txt_telefono_cliente);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.Txt_apellido_cliente);
+            this.groupBox1.Controls.Add(this.txt_email);
+            this.groupBox1.Controls.Add(this.Txt_apell_cliente);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.Txt_nombre_cliente);
+            this.groupBox1.Controls.Add(this.Txt_nom_cliente);
             this.groupBox1.Controls.Add(this.Txt_email_cliente);
-            this.groupBox1.Controls.Add(this.Txt_direccion_cliente);
+            this.groupBox1.Controls.Add(this.Txt_dir_cliente);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(12, 240);
@@ -201,19 +201,19 @@
             this.Txt_telefono_cliente.Size = new System.Drawing.Size(272, 20);
             this.Txt_telefono_cliente.TabIndex = 20;
             // 
-            // textBox4
+            // txt_email
             // 
-            this.textBox4.Location = new System.Drawing.Point(88, 128);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(272, 20);
-            this.textBox4.TabIndex = 19;
+            this.txt_email.Location = new System.Drawing.Point(88, 128);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(272, 20);
+            this.txt_email.TabIndex = 19;
             // 
-            // Txt_apellido_cliente
+            // Txt_apell_cliente
             // 
-            this.Txt_apellido_cliente.Location = new System.Drawing.Point(88, 75);
-            this.Txt_apellido_cliente.Name = "Txt_apellido_cliente";
-            this.Txt_apellido_cliente.Size = new System.Drawing.Size(272, 20);
-            this.Txt_apellido_cliente.TabIndex = 18;
+            this.Txt_apell_cliente.Location = new System.Drawing.Point(88, 75);
+            this.Txt_apell_cliente.Name = "Txt_apell_cliente";
+            this.Txt_apell_cliente.Size = new System.Drawing.Size(272, 20);
+            this.Txt_apell_cliente.TabIndex = 18;
             // 
             // label9
             // 
@@ -233,12 +233,12 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Teléfono:";
             // 
-            // Txt_nombre_cliente
+            // Txt_nom_cliente
             // 
-            this.Txt_nombre_cliente.Location = new System.Drawing.Point(88, 49);
-            this.Txt_nombre_cliente.Name = "Txt_nombre_cliente";
-            this.Txt_nombre_cliente.Size = new System.Drawing.Size(272, 20);
-            this.Txt_nombre_cliente.TabIndex = 15;
+            this.Txt_nom_cliente.Location = new System.Drawing.Point(88, 49);
+            this.Txt_nom_cliente.Name = "Txt_nom_cliente";
+            this.Txt_nom_cliente.Size = new System.Drawing.Size(272, 20);
+            this.Txt_nom_cliente.TabIndex = 15;
             // 
             // Txt_email_cliente
             // 
@@ -249,12 +249,12 @@
             this.Txt_email_cliente.TabIndex = 14;
             this.Txt_email_cliente.Text = "Email:";
             // 
-            // Txt_direccion_cliente
+            // Txt_dir_cliente
             // 
-            this.Txt_direccion_cliente.Location = new System.Drawing.Point(88, 101);
-            this.Txt_direccion_cliente.Name = "Txt_direccion_cliente";
-            this.Txt_direccion_cliente.Size = new System.Drawing.Size(272, 20);
-            this.Txt_direccion_cliente.TabIndex = 11;
+            this.Txt_dir_cliente.Location = new System.Drawing.Point(88, 101);
+            this.Txt_dir_cliente.Name = "Txt_dir_cliente";
+            this.Txt_dir_cliente.Size = new System.Drawing.Size(272, 20);
+            this.Txt_dir_cliente.TabIndex = 11;
             // 
             // label7
             // 
@@ -518,6 +518,7 @@
             this.btn_guardar_res.Text = "       Guardar";
             this.btn_guardar_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_res.UseVisualStyleBackColor = true;
+            this.btn_guardar_res.Click += new System.EventHandler(this.btn_guardar_res_Click);
             // 
             // pictureBox1
             // 
@@ -545,7 +546,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Name = "Frm_reservar_hab";
-            this.Text = "Reserva Habitaciones";
+            this.Text = " ";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -564,23 +565,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox Cmb_tipohab;
+        private System.Windows.Forms.ComboBox cbo_tipohab;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox Cmb_habitaciones;
+        private System.Windows.Forms.ComboBox cbo_habitaciones;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Txt_nombre_cliente;
+        private System.Windows.Forms.TextBox Txt_nom_cliente;
         private System.Windows.Forms.Label Txt_email_cliente;
-        private System.Windows.Forms.TextBox Txt_direccion_cliente;
+        private System.Windows.Forms.TextBox Txt_dir_cliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox Cmb_numpax;
         private System.Windows.Forms.TextBox Txt_telefono_cliente;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox Txt_apellido_cliente;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox Txt_apell_cliente;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
