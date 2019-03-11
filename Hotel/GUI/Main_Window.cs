@@ -31,6 +31,7 @@ namespace Hotel.GUI
 
         public void AbrirPantallaInicial()
         {
+            this.WindowState = FormWindowState.Maximized;
             var ventana = new Frm_menu();
             ventana.TopLevel = false;
             ventana.Dock = DockStyle.Fill;
