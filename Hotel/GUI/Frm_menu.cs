@@ -29,5 +29,11 @@ namespace Hotel
         {
             this.Owner.Dispose();
         }
+
+        private void btn_agregar_habitaciones_Click(object sender, EventArgs e)
+        {
+            frm_habitaciones frm_agregar_habit = new frm_habitaciones();
+            frm_agregar_habit.Show();
+        }
     }
 }
