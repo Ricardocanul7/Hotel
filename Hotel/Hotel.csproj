@@ -250,5 +250,14 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_InterfaceExpendet-09_592608.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\018-power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\logo_xs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

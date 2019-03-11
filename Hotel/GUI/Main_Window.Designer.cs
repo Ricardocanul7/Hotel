@@ -34,30 +34,30 @@
             this.btn_inicio = new System.Windows.Forms.Button();
             this.panel_user_info = new System.Windows.Forms.Panel();
             this.lbl_nombre_usuario = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
-            this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_titulo = new System.Windows.Forms.Panel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel_MenuStrip = new System.Windows.Forms.Panel();
             this.MenuStrip_principal = new System.Windows.Forms.ToolStrip();
-            this.btn_habitaciones = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_empleados = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_mantenimiento = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_caja = new System.Windows.Forms.ToolStripButton();
             this.panel_principal = new System.Windows.Forms.Panel();
+            this.btn_habitaciones = new System.Windows.Forms.ToolStripButton();
+            this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
+            this.btn_empleados = new System.Windows.Forms.ToolStripButton();
+            this.btn_mantenimiento = new System.Windows.Forms.ToolStripButton();
+            this.btn_caja = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel_izquierdo.SuspendLayout();
             this.panel_user_info.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_titulo.SuspendLayout();
             this.panel_MenuStrip.SuspendLayout();
             this.MenuStrip_principal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,48 +139,12 @@
             this.lbl_nombre_usuario.TabIndex = 1;
             this.lbl_nombre_usuario.Text = "Juanito L.";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Hotel.Properties.Resources.iconfinder_InterfaceExpendet_09_592608;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 89);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_cerrar_sesion
-            // 
-            this.btn_cerrar_sesion.BackColor = System.Drawing.Color.Crimson;
-            this.btn_cerrar_sesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_cerrar_sesion.FlatAppearance.BorderSize = 0;
-            this.btn_cerrar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cerrar_sesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_cerrar_sesion.Location = new System.Drawing.Point(0, 488);
-            this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
-            this.btn_cerrar_sesion.Size = new System.Drawing.Size(200, 41);
-            this.btn_cerrar_sesion.TabIndex = 1;
-            this.btn_cerrar_sesion.Text = "CERRAR SESIÓN";
-            this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
-            // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.Silver;
-            this.panel_logo.BackgroundImage = global::Hotel.Properties.Resources.GardSoft_logo;
-            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(200, 54);
-            this.panel_logo.TabIndex = 0;
-            // 
             // panel_titulo
             // 
-            this.panel_titulo.BackColor = System.Drawing.Color.Silver;
+            this.panel_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(115)))));
             this.panel_titulo.Controls.Add(this.lbl_titulo);
             this.panel_titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_titulo.Location = new System.Drawing.Point(220, 60);
             this.panel_titulo.Name = "panel_titulo";
             this.panel_titulo.Size = new System.Drawing.Size(875, 54);
@@ -189,11 +153,11 @@
             // lbl_titulo
             // 
             this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.Goldenrod;
             this.lbl_titulo.Location = new System.Drawing.Point(22, 15);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(86, 25);
+            this.lbl_titulo.Size = new System.Drawing.Size(77, 25);
             this.lbl_titulo.TabIndex = 0;
             this.lbl_titulo.Text = "TITULO";
             // 
@@ -209,6 +173,7 @@
             // 
             // MenuStrip_principal
             // 
+            this.MenuStrip_principal.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.MenuStrip_principal.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MenuStrip_principal.ImageScalingSize = new System.Drawing.Size(42, 42);
             this.MenuStrip_principal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -230,6 +195,34 @@
             this.MenuStrip_principal.TabIndex = 1;
             this.MenuStrip_principal.Text = "Menu";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 49);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 49);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 49);
+            // 
+            // panel_principal
+            // 
+            this.panel_principal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_principal.Location = new System.Drawing.Point(220, 165);
+            this.panel_principal.Name = "panel_principal";
+            this.panel_principal.Size = new System.Drawing.Size(875, 478);
+            this.panel_principal.TabIndex = 3;
+            // 
             // btn_habitaciones
             // 
             this.btn_habitaciones.Image = global::Hotel.Properties.Resources._039_bed;
@@ -240,11 +233,6 @@
             this.btn_habitaciones.Text = "Habitaciones";
             this.btn_habitaciones.Click += new System.EventHandler(this.btn_habitaciones_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
-            // 
             // btn_reservaciones
             // 
             this.btn_reservaciones.Image = global::Hotel.Properties.Resources._020_bell_ring;
@@ -253,11 +241,6 @@
             this.btn_reservaciones.Size = new System.Drawing.Size(127, 46);
             this.btn_reservaciones.Text = "Reservaciones";
             this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 49);
             // 
             // btn_empleados
             // 
@@ -268,11 +251,6 @@
             this.btn_empleados.Text = "Empleados";
             this.btn_empleados.Click += new System.EventHandler(this.btn_empleados_Click);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 49);
-            // 
             // btn_mantenimiento
             // 
             this.btn_mantenimiento.Image = global::Hotel.Properties.Resources._031_broom;
@@ -281,11 +259,6 @@
             this.btn_mantenimiento.Size = new System.Drawing.Size(135, 46);
             this.btn_mantenimiento.Text = "Mantenimiento";
             this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 49);
             // 
             // btn_caja
             // 
@@ -296,13 +269,45 @@
             this.btn_caja.Text = "Caja";
             this.btn_caja.ToolTipText = "Caja";
             // 
-            // panel_principal
+            // pictureBox1
             // 
-            this.panel_principal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_principal.Location = new System.Drawing.Point(220, 165);
-            this.panel_principal.Name = "panel_principal";
-            this.panel_principal.Size = new System.Drawing.Size(875, 478);
-            this.panel_principal.TabIndex = 3;
+            this.pictureBox1.BackgroundImage = global::Hotel.Properties.Resources.iconfinder_InterfaceExpendet_09_592608;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 89);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_cerrar_sesion
+            // 
+            this.btn_cerrar_sesion.BackColor = System.Drawing.Color.Crimson;
+            this.btn_cerrar_sesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_cerrar_sesion.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cerrar_sesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_cerrar_sesion.Image = global::Hotel.Properties.Resources._018_power;
+            this.btn_cerrar_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cerrar_sesion.Location = new System.Drawing.Point(0, 488);
+            this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
+            this.btn_cerrar_sesion.Size = new System.Drawing.Size(200, 41);
+            this.btn_cerrar_sesion.TabIndex = 1;
+            this.btn_cerrar_sesion.Text = "CERRAR SESIÓN";
+            this.btn_cerrar_sesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
+            // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(115)))));
+            this.panel_logo.BackgroundImage = global::Hotel.Properties.Resources.logo_xs;
+            this.panel_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(200, 54);
+            this.panel_logo.TabIndex = 0;
             // 
             // Main_Window
             // 
@@ -319,13 +324,13 @@
             this.panel_izquierdo.ResumeLayout(false);
             this.panel_user_info.ResumeLayout(false);
             this.panel_user_info.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_titulo.ResumeLayout(false);
             this.panel_titulo.PerformLayout();
             this.panel_MenuStrip.ResumeLayout(false);
             this.panel_MenuStrip.PerformLayout();
             this.MenuStrip_principal.ResumeLayout(false);
             this.MenuStrip_principal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
