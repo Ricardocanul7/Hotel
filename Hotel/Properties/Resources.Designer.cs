@@ -123,9 +123,29 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _023_ladder {
+            get {
+                object obj = ResourceManager.GetObject("023-ladder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _024_safety_box {
             get {
                 object obj = ResourceManager.GetObject("024-safety-box", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _024_safety_box1 {
+            get {
+                object obj = ResourceManager.GetObject("024-safety-box1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

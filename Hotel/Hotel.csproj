@@ -110,6 +110,12 @@
     <Compile Include="GUI\Frm_mantenimiento.Designer.cs">
       <DependentUpon>Frm_mantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Frm_menu_caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_menu_caja.Designer.cs">
+      <DependentUpon>Frm_menu_caja.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_menu_empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_mantenimiento.resx">
       <DependentUpon>Frm_mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_menu_caja.resx">
+      <DependentUpon>Frm_menu_caja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu_empleados.resx">
       <DependentUpon>Frm_menu_empleados.cs</DependentUpon>
@@ -261,6 +270,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Iconos\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\023-ladder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\024-safety-box.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
