@@ -35,6 +35,7 @@
             this.btn_nvoproveedor = new System.Windows.Forms.ToolStripButton();
             this.btn_consultar_proveedor = new System.Windows.Forms.ToolStripButton();
             this.btn_prog_mantenimiento = new System.Windows.Forms.ToolStripButton();
+            this.panel_mantenimiento = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Dgr_mantenimiento)).BeginInit();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
@@ -82,8 +83,9 @@
             this.btn_nvoproveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_nvoproveedor.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_nvoproveedor.Name = "btn_nvoproveedor";
-            this.btn_nvoproveedor.Size = new System.Drawing.Size(119, 22);
-            this.btn_nvoproveedor.Text = "Nuevo Proveedor";
+            this.btn_nvoproveedor.Size = new System.Drawing.Size(109, 22);
+            this.btn_nvoproveedor.Text = "Nueva Empresa";
+            this.btn_nvoproveedor.Click += new System.EventHandler(this.Nueva_Empresa_Click);
             // 
             // btn_consultar_proveedor
             // 
@@ -101,11 +103,19 @@
             this.btn_prog_mantenimiento.Size = new System.Drawing.Size(168, 22);
             this.btn_prog_mantenimiento.Text = "Programar Mantenimiento";
             // 
+            // panel_mantenimiento
+            // 
+            this.panel_mantenimiento.Location = new System.Drawing.Point(0, 25);
+            this.panel_mantenimiento.Name = "panel_mantenimiento";
+            this.panel_mantenimiento.Size = new System.Drawing.Size(966, 425);
+            this.panel_mantenimiento.TabIndex = 5;
+            // 
             // Frm_mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 450);
+            this.Controls.Add(this.panel_mantenimiento);
             this.Controls.Add(this.Dgr_mantenimiento);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_mantenimiento";
@@ -126,5 +136,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btn_prog_mantenimiento;
         private System.Windows.Forms.ToolStrip btn_habitaciones;
+        private System.Windows.Forms.Panel panel_mantenimiento;
     }
 }

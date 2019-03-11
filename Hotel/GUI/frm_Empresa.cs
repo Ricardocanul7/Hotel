@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Hotel.GUI
 {
-    public partial class Frm_mantenimiento : Form
+    public partial class frm_Empresa : MetroFramework.Forms.MetroForm
     {
-        public Frm_mantenimiento()
+        public frm_Empresa()
         {
             InitializeComponent();
         }
 
-        private void Nueva_Empresa_Click(object sender, EventArgs e)
-        {
-            this.panel_mantenimiento.Controls.Clear();
-            var ventana = new frm_Empresa();
-            ventana.Show();
 
-        }
+   
     }
 }
