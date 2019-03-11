@@ -19,11 +19,34 @@ namespace Hotel.GUI
         public frm_clientes()
         {
             InitializeComponent();
+            txt_idcliente.Enabled = false;
         }
 
         private void Guardar_clientes(object sender, EventArgs e)
         {
+            cliente.Nombre = txt_nom_cliente.Text;
+            cliente.Apellidos = txt_apell_clinte.Text;
+            cliente.Direccion = txt_direcc_cliente.Text;
+            cliente.Telefono = txt_tele_cliente.Text;
 
+            clientes.Agregar(cliente);
+
+            limpiar();
+        }
+        public void limpiar()
+        {
+            txt_apell_clinte.Clear();
+            txt_direcc_cliente.Clear();
+            txt_nom_cliente.Clear();
+            txt_tele_cliente.Clear();
+        }
+
+        private void Modificar_clientes(object sender, EventArgs e)
+        {
+            txt_nom_cliente.Text = cliente.Nombre;
+            txt_apell_clinte.Text = cliente.Apellidos;
+            txt_direcc_cliente.Text = cliente.Direccion;
+            txt_tele_cliente.Text = cliente.Telefono;
         }
     }
 }

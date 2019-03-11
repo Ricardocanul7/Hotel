@@ -133,6 +133,7 @@
             this.btn_mod_cliente.Text = "Modificar";
             this.btn_mod_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_cliente.UseVisualStyleBackColor = true;
+            this.btn_mod_cliente.Click += new System.EventHandler(this.Modificar_clientes);
             // 
             // label1
             // 
