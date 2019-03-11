@@ -15,7 +15,7 @@ namespace Hotel.GUI
     public partial class frm_empleado : Form
     {
         EmpleadoBO empleado = new EmpleadoBO();
-        EmpleadoDAO empleadosc = new EmpleadoDAO();
+        EmpleadoDAO empleados = new EmpleadoDAO();
 
         public frm_empleado()
         {
@@ -45,7 +45,7 @@ namespace Hotel.GUI
             empleado.Horario = cbo_Horario.Text;
             empleado.Tipo = cbo_tipoempleado.Text;
 
-            empleadosc.Agregar(empleado);
+            empleados.Agregar(empleado);
 
             Limpiar();
 
@@ -60,6 +60,16 @@ namespace Hotel.GUI
             cbo_Horario.Items.Clear();
             cbo_tipoempleado.Items.Clear();
         
+        }
+
+        private void Modificar_empleados(object sender, EventArgs e)
+        {
+            txt_nom_empleado.Text = empleado.Nombre;
+            txt_direcc_empleado.Text = empleado.Direccion;
+            txt_tele_empleado.Text = empleado.Telefono;
+            txt_apell_empleado.Text = empleado.Apellido;
+
+            empleados.Modificar(empleado);
         }
     }
 }
