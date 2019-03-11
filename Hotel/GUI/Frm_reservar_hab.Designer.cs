@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Cmb_numpax = new System.Windows.Forms.ComboBox();
+            this.cbo_nump = new System.Windows.Forms.ComboBox();
             this.cbo_habitaciones = new System.Windows.Forms.ComboBox();
             this.cbo_tipohab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.Cmb_numpax);
+            this.groupBox3.Controls.Add(this.cbo_nump);
             this.groupBox3.Controls.Add(this.cbo_habitaciones);
             this.groupBox3.Controls.Add(this.cbo_tipohab);
             this.groupBox3.Controls.Add(this.label4);
@@ -96,13 +96,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
             // 
-            // Cmb_numpax
+            // cbo_nump
             // 
-            this.Cmb_numpax.FormattingEnabled = true;
-            this.Cmb_numpax.Location = new System.Drawing.Point(119, 100);
-            this.Cmb_numpax.Name = "Cmb_numpax";
-            this.Cmb_numpax.Size = new System.Drawing.Size(83, 21);
-            this.Cmb_numpax.TabIndex = 17;
+            this.cbo_nump.FormattingEnabled = true;
+            this.cbo_nump.Location = new System.Drawing.Point(119, 100);
+            this.cbo_nump.Name = "cbo_nump";
+            this.cbo_nump.Size = new System.Drawing.Size(83, 21);
+            this.cbo_nump.TabIndex = 17;
             // 
             // cbo_habitaciones
             // 
@@ -578,7 +578,7 @@
         private System.Windows.Forms.TextBox Txt_dir_cliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox Cmb_numpax;
+        private System.Windows.Forms.ComboBox cbo_nump;
         private System.Windows.Forms.TextBox Txt_telefono_cliente;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox Txt_apell_cliente;
