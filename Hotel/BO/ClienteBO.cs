@@ -10,6 +10,10 @@ namespace Hotel.BO
     {
         private int id_cliente;
         private string nombre;
+        private string direccion;
+        private string apellidos;
+        private string telefono;
+
 
         public int Id_cliente
         {
@@ -21,6 +25,24 @@ namespace Hotel.BO
         {
             get { return nombre; }
             set { nombre = value; }
+        }
+
+        public string Apellidos
+        {
+            get { return apellidos; }
+            set { apellidos = value; }
+        }
+
+        public string Direccion
+        {
+            get { return direccion; }
+            set { direccion = value; }
+        }
+
+        public string Telefono
+        {
+            get { return telefono; }
+            set { telefono = value; }
         }
     }
 }
