@@ -21,6 +21,19 @@ namespace Hotel.GUI
         {
             InitializeComponent();
             txt_idempleado.Enabled = false;
+
+            cbo_Horario.Items.Add("8 am - 4 pm");
+            cbo_Horario.Items.Add("4 pm - 12 pm");
+            cbo_Horario.Items.Add("12 am - 8 am");
+            cbo_Horario.SelectedIndex = 0;
+
+            cbo_tipoempleado.Items.Add("Administrador");
+            cbo_tipoempleado.Items.Add("Recepcionista");
+            cbo_tipoempleado.Items.Add("Mantenimiento");
+            cbo_tipoempleado.Items.Add("Limpieza");
+            cbo_tipoempleado.Items.Add("Guardias");
+            cbo_tipoempleado.SelectedIndex = 0;
+
         }
 
         private void Guardar_Empleados(object sender, EventArgs e)
