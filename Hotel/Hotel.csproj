@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="BO\ClienteBO.cs" />
     <Compile Include="BO\EmpresaBO.cs" />
+    <Compile Include="BO\ReservasBO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DatosLogin.cs" />
@@ -80,6 +81,12 @@
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
+    <Compile Include="GUI\frm_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_clientes.Designer.cs">
+      <DependentUpon>frm_clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +149,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frm_clientes.resx">
+      <DependentUpon>frm_clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu.resx">
       <DependentUpon>Frm_menu.cs</DependentUpon>
     </EmbeddedResource>

@@ -19,7 +19,7 @@ namespace Hotel.DAO
             return true;
         }
 
-        public bool Modificar()
+        public bool Modificar(EmpleadoBO empleado)
         {
             return true;
         }

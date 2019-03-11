@@ -220,6 +220,7 @@
             this.btn_mod_empleado.Text = "Modificar";
             this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_empleado.UseVisualStyleBackColor = true;
+            this.btn_mod_empleado.Click += new System.EventHandler(this.Modificar_empleados);
             // 
             // btn_borrar_empleado
             // 
