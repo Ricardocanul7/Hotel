@@ -31,6 +31,7 @@ namespace Hotel.GUI
 
         public void AbrirPantallaInicial()
         {
+            this.WindowState = FormWindowState.Maximized;
             var ventana = new Frm_menu();
             ventana.TopLevel = false;
             ventana.Dock = DockStyle.Fill;
@@ -86,6 +87,19 @@ namespace Hotel.GUI
         {
             this.panel_principal.Controls.Clear();
             AbrirPantallaInicial();
+        }
+
+        private void btn_caja_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_menu_caja();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "CAJA";
+
         }
     }
 }
