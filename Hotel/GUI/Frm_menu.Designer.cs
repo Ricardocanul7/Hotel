@@ -45,8 +45,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.MenuStrip_principal = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_agregar_habitaciones = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -58,6 +58,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dbt_hab_01 = new System.Windows.Forms.Button();
+            this.btn_modificar_hab = new System.Windows.Forms.ToolStripButton();
+            this.btn_eliminar_hab = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_buscar_hab = new System.Windows.Forms.ToolStripButton();
+            this.txt_buscar_hab = new System.Windows.Forms.ToolStripTextBox();
             this.MenuStrip_principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -230,7 +236,13 @@
             this.MenuStrip_principal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MenuStrip_principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_agregar_habitaciones,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.btn_modificar_hab,
+            this.toolStripSeparator2,
+            this.btn_eliminar_hab,
+            this.toolStripSeparator3,
+            this.btn_buscar_hab,
+            this.txt_buscar_hab});
             this.MenuStrip_principal.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip_principal.Name = "MenuStrip_principal";
             this.MenuStrip_principal.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -238,11 +250,6 @@
             this.MenuStrip_principal.Size = new System.Drawing.Size(849, 25);
             this.MenuStrip_principal.TabIndex = 43;
             this.MenuStrip_principal.Text = "Menu";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // btn_agregar_habitaciones
             // 
@@ -253,6 +260,11 @@
             this.btn_agregar_habitaciones.Size = new System.Drawing.Size(141, 22);
             this.btn_agregar_habitaciones.Text = "Agregar Habitaciones";
             this.btn_agregar_habitaciones.Click += new System.EventHandler(this.btn_agregar_habitaciones_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // button10
             // 
@@ -408,6 +420,45 @@
             this.dbt_hab_01.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.dbt_hab_01.UseVisualStyleBackColor = true;
             // 
+            // btn_modificar_hab
+            // 
+            this.btn_modificar_hab.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_modificar_hab.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_modificar_hab.Name = "btn_modificar_hab";
+            this.btn_modificar_hab.Size = new System.Drawing.Size(139, 22);
+            this.btn_modificar_hab.Text = "Modificar Habitación";
+            // 
+            // btn_eliminar_hab
+            // 
+            this.btn_eliminar_hab.Image = global::Hotel.Properties.Resources.close;
+            this.btn_eliminar_hab.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_eliminar_hab.Name = "btn_eliminar_hab";
+            this.btn_eliminar_hab.Size = new System.Drawing.Size(131, 22);
+            this.btn_eliminar_hab.Text = "Eliminar Habitación";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_buscar_hab
+            // 
+            this.btn_buscar_hab.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar_hab.Image")));
+            this.btn_buscar_hab.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_buscar_hab.Name = "btn_buscar_hab";
+            this.btn_buscar_hab.Size = new System.Drawing.Size(123, 22);
+            this.btn_buscar_hab.Text = "Buscar Habitación";
+            // 
+            // txt_buscar_hab
+            // 
+            this.txt_buscar_hab.Name = "txt_buscar_hab";
+            this.txt_buscar_hab.Size = new System.Drawing.Size(100, 25);
+            // 
             // Frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,6 +532,12 @@
         private System.Windows.Forms.ToolStrip MenuStrip_principal;
         private System.Windows.Forms.ToolStripButton btn_agregar_habitaciones;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btn_modificar_hab;
+        private System.Windows.Forms.ToolStripButton btn_eliminar_hab;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btn_buscar_hab;
+        private System.Windows.Forms.ToolStripTextBox txt_buscar_hab;
     }
 }
 

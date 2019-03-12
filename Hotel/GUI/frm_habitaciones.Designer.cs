@@ -48,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombrehab = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_hab_guardar = new System.Windows.Forms.Button();
+            this.btn_hab_agregar = new System.Windows.Forms.Button();
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -238,15 +238,15 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre:";
             // 
-            // btn_hab_guardar
+            // btn_hab_agregar
             // 
-            this.btn_hab_guardar.Location = new System.Drawing.Point(368, 466);
-            this.btn_hab_guardar.Name = "btn_hab_guardar";
-            this.btn_hab_guardar.Size = new System.Drawing.Size(75, 23);
-            this.btn_hab_guardar.TabIndex = 24;
-            this.btn_hab_guardar.Text = "Guardar";
-            this.btn_hab_guardar.UseVisualStyleBackColor = true;
-            this.btn_hab_guardar.Click += new System.EventHandler(this.btn_hab_guardar_Click);
+            this.btn_hab_agregar.Location = new System.Drawing.Point(368, 466);
+            this.btn_hab_agregar.Name = "btn_hab_agregar";
+            this.btn_hab_agregar.Size = new System.Drawing.Size(75, 23);
+            this.btn_hab_agregar.TabIndex = 24;
+            this.btn_hab_agregar.Text = "Agregar";
+            this.btn_hab_agregar.UseVisualStyleBackColor = true;
+            this.btn_hab_agregar.Click += new System.EventHandler(this.btn_hab_guardar_Click);
             // 
             // btn_hab_limpiar
             // 
@@ -274,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 501);
             this.Controls.Add(this.btn_hab_limpiar);
-            this.Controls.Add(this.btn_hab_guardar);
+            this.Controls.Add(this.btn_hab_agregar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -317,7 +317,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nombrehab;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_hab_guardar;
+        private System.Windows.Forms.Button btn_hab_agregar;
         private System.Windows.Forms.Button btn_hab_limpiar;
     }
 }
