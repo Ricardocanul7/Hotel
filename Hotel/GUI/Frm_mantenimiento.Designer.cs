@@ -32,10 +32,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
+            this.panel_mantenimiento = new System.Windows.Forms.Panel();
             this.btn_nvoproveedor = new System.Windows.Forms.ToolStripButton();
             this.btn_consultar_proveedor = new System.Windows.Forms.ToolStripButton();
             this.btn_prog_mantenimiento = new System.Windows.Forms.ToolStripButton();
-            this.panel_mantenimiento = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Dgr_mantenimiento)).BeginInit();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,13 @@
             this.btn_habitaciones.TabIndex = 3;
             this.btn_habitaciones.Text = "Menu";
             // 
+            // panel_mantenimiento
+            // 
+            this.panel_mantenimiento.Location = new System.Drawing.Point(0, 25);
+            this.panel_mantenimiento.Name = "panel_mantenimiento";
+            this.panel_mantenimiento.Size = new System.Drawing.Size(966, 425);
+            this.panel_mantenimiento.TabIndex = 5;
+            // 
             // btn_nvoproveedor
             // 
             this.btn_nvoproveedor.Image = global::Hotel.Properties.Resources.add;
@@ -92,8 +99,9 @@
             this.btn_consultar_proveedor.Image = global::Hotel.Properties.Resources._021_phone;
             this.btn_consultar_proveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_consultar_proveedor.Name = "btn_consultar_proveedor";
-            this.btn_consultar_proveedor.Size = new System.Drawing.Size(92, 22);
-            this.btn_consultar_proveedor.Text = "Proveedores";
+            this.btn_consultar_proveedor.Size = new System.Drawing.Size(115, 22);
+            this.btn_consultar_proveedor.Text = "Buscar Empresas";
+            this.btn_consultar_proveedor.Click += new System.EventHandler(this.Buscar_empresas_click);
             // 
             // btn_prog_mantenimiento
             // 
@@ -102,13 +110,6 @@
             this.btn_prog_mantenimiento.Name = "btn_prog_mantenimiento";
             this.btn_prog_mantenimiento.Size = new System.Drawing.Size(168, 22);
             this.btn_prog_mantenimiento.Text = "Programar Mantenimiento";
-            // 
-            // panel_mantenimiento
-            // 
-            this.panel_mantenimiento.Location = new System.Drawing.Point(0, 25);
-            this.panel_mantenimiento.Name = "panel_mantenimiento";
-            this.panel_mantenimiento.Size = new System.Drawing.Size(966, 425);
-            this.panel_mantenimiento.TabIndex = 5;
             // 
             // Frm_mantenimiento
             // 

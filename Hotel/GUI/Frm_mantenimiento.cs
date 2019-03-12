@@ -24,5 +24,12 @@ namespace Hotel.GUI
             ventana.Show();
 
         }
+
+        private void Buscar_empresas_click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            var ventana = new frm_buscar_empresa();
+            ventana.Show();
+        }
     }
 }
