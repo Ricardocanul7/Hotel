@@ -81,12 +81,6 @@
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
-    <Compile Include="GUI\frm_buscar_empresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frm_buscar_empresa.Designer.cs">
-      <DependentUpon>frm_buscar_empresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frm_clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,9 +155,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\frm_buscar_empresa.resx">
-      <DependentUpon>frm_buscar_empresa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_clientes.resx">
       <DependentUpon>frm_clientes.cs</DependentUpon>
     </EmbeddedResource>
