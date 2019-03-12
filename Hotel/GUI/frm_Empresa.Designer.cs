@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_nombre_empresa = new System.Windows.Forms.TextBox();
+            this.txt_rfc_empresa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_rfc_empresa = new System.Windows.Forms.TextBox();
-            this.txt_nombre_empresa = new System.Windows.Forms.TextBox();
             this.btn_borrar_empresa = new System.Windows.Forms.Button();
             this.btn_mod_empresa = new System.Windows.Forms.Button();
             this.btn_guardar_empresa = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,20 @@
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la Empresa:";
+            // 
+            // txt_nombre_empresa
+            // 
+            this.txt_nombre_empresa.Location = new System.Drawing.Point(119, 59);
+            this.txt_nombre_empresa.Name = "txt_nombre_empresa";
+            this.txt_nombre_empresa.Size = new System.Drawing.Size(232, 20);
+            this.txt_nombre_empresa.TabIndex = 16;
+            // 
+            // txt_rfc_empresa
+            // 
+            this.txt_rfc_empresa.Location = new System.Drawing.Point(120, 31);
+            this.txt_rfc_empresa.Name = "txt_rfc_empresa";
+            this.txt_rfc_empresa.Size = new System.Drawing.Size(232, 20);
+            this.txt_rfc_empresa.TabIndex = 15;
             // 
             // label4
             // 
@@ -73,16 +87,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hotel.Properties.Resources.add;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -92,20 +96,6 @@
             this.label6.Size = new System.Drawing.Size(166, 40);
             this.label6.TabIndex = 31;
             this.label6.Text = "EMPRESA";
-            // 
-            // txt_rfc_empresa
-            // 
-            this.txt_rfc_empresa.Location = new System.Drawing.Point(120, 31);
-            this.txt_rfc_empresa.Name = "txt_rfc_empresa";
-            this.txt_rfc_empresa.Size = new System.Drawing.Size(232, 20);
-            this.txt_rfc_empresa.TabIndex = 15;
-            // 
-            // txt_nombre_empresa
-            // 
-            this.txt_nombre_empresa.Location = new System.Drawing.Point(119, 59);
-            this.txt_nombre_empresa.Name = "txt_nombre_empresa";
-            this.txt_nombre_empresa.Size = new System.Drawing.Size(232, 20);
-            this.txt_nombre_empresa.TabIndex = 16;
             // 
             // btn_borrar_empresa
             // 
@@ -130,6 +120,7 @@
             this.btn_mod_empresa.Text = "Modificar";
             this.btn_mod_empresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_empresa.UseVisualStyleBackColor = true;
+            this.btn_mod_empresa.Click += new System.EventHandler(this.Modifica_empresa);
             // 
             // btn_guardar_empresa
             // 
@@ -142,6 +133,17 @@
             this.btn_guardar_empresa.Text = "       Guardar";
             this.btn_guardar_empresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_empresa.UseVisualStyleBackColor = true;
+            this.btn_guardar_empresa.Click += new System.EventHandler(this.Guardar_click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel.Properties.Resources.add;
+            this.pictureBox1.Location = new System.Drawing.Point(105, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_Empresa
             // 
