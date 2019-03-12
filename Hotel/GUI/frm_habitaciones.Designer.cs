@@ -250,7 +250,7 @@
             // 
             // btn_hab_limpiar
             // 
-            this.btn_hab_limpiar.Location = new System.Drawing.Point(287, 466);
+            this.btn_hab_limpiar.Location = new System.Drawing.Point(292, 466);
             this.btn_hab_limpiar.Name = "btn_hab_limpiar";
             this.btn_hab_limpiar.Size = new System.Drawing.Size(75, 23);
             this.btn_hab_limpiar.TabIndex = 25;
@@ -283,7 +283,6 @@
             this.Controls.Add(this.txt_descripHab);
             this.Controls.Add(this.label5);
             this.Name = "frm_habitaciones";
-            this.Text = "Alta habitaciones";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

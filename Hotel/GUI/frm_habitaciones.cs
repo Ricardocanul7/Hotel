@@ -11,7 +11,7 @@ using Hotel.BO;
 
 namespace Hotel.GUI
 {
-    public partial class frm_habitaciones : Form
+    public partial class frm_habitaciones : MetroFramework.Forms.MetroForm
     {
         HabitacionBO habitacionBO;
         public frm_habitaciones()
