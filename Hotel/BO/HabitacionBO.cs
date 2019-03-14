@@ -8,15 +8,23 @@ namespace Hotel.BO
 {
     class HabitacionBO
     {
+        private int num_habitacion;
         private string nombre_hab;
         private int max_adultos;
         private int max_ninios;
         private string tipo_hab;
         private double precioN;
-        private double precioPA;
-        private double precioTA;
-        private double precioPATA;
+        private double precioPA; //PA=persona adicional
+        private double precioTA; //TA=temporada alta
+        private double precioPATA; //PATA=persona adicional temporada alta
         private string descripHab;
+        private EmpleadoBO empleadoBO;
+
+        public int Num_habitacion
+        {
+            get { return num_habitacion; }
+            set { num_habitacion = value; }
+        }
 
         public string Nombre_hab
         {
@@ -48,19 +56,19 @@ namespace Hotel.BO
             set { precioN = value; }
         }
 
-        public double PrecioPA
+        public double PrecioPA //PA=persona adicional
         {
             get { return precioPA; }
             set { precioPA = value; }
         }
 
-        public double PrecioTA
+        public double PrecioTA //TA=temporada alta
         {
             get { return precioTA; }
             set { precioTA = value; }
         }
 
-        public double PrecioPATA
+        public double PrecioPATA //PATA=persona adicional temporada alta
         {
             get { return precioPATA; }
             set { precioPATA = value; }
@@ -70,6 +78,12 @@ namespace Hotel.BO
         {
             get { return descripHab; }
             set { descripHab = value; }
+        }
+
+        public EmpleadoBO EmpleadoBO
+        {
+            get { return empleadoBO; }
+            set { empleadoBO = value; }
         }
     }
 }
