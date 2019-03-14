@@ -44,6 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_guardar_cliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +54,7 @@
             // 
             this.btn_borrar_cliente.Image = global::Hotel.Properties.Resources.close;
             this.btn_borrar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_cliente.Location = new System.Drawing.Point(397, 290);
+            this.btn_borrar_cliente.Location = new System.Drawing.Point(470, 290);
             this.btn_borrar_cliente.Name = "btn_borrar_cliente";
             this.btn_borrar_cliente.Size = new System.Drawing.Size(93, 47);
             this.btn_borrar_cliente.TabIndex = 20;
@@ -62,43 +64,43 @@
             // 
             // txt_tele_cliente
             // 
-            this.txt_tele_cliente.Location = new System.Drawing.Point(83, 123);
+            this.txt_tele_cliente.Location = new System.Drawing.Point(97, 150);
             this.txt_tele_cliente.Name = "txt_tele_cliente";
-            this.txt_tele_cliente.Size = new System.Drawing.Size(190, 20);
+            this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
             this.txt_tele_cliente.TabIndex = 10;
             // 
             // txt_direcc_cliente
             // 
-            this.txt_direcc_cliente.Location = new System.Drawing.Point(83, 92);
+            this.txt_direcc_cliente.Location = new System.Drawing.Point(97, 120);
             this.txt_direcc_cliente.Name = "txt_direcc_cliente";
-            this.txt_direcc_cliente.Size = new System.Drawing.Size(395, 20);
+            this.txt_direcc_cliente.Size = new System.Drawing.Size(428, 20);
             this.txt_direcc_cliente.TabIndex = 9;
             // 
             // txt_apell_clinte
             // 
-            this.txt_apell_clinte.Location = new System.Drawing.Point(316, 57);
+            this.txt_apell_clinte.Location = new System.Drawing.Point(97, 87);
             this.txt_apell_clinte.Name = "txt_apell_clinte";
             this.txt_apell_clinte.Size = new System.Drawing.Size(162, 20);
             this.txt_apell_clinte.TabIndex = 8;
             // 
             // txt_nom_cliente
             // 
-            this.txt_nom_cliente.Location = new System.Drawing.Point(83, 57);
+            this.txt_nom_cliente.Location = new System.Drawing.Point(97, 57);
             this.txt_nom_cliente.Name = "txt_nom_cliente";
-            this.txt_nom_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_nom_cliente.Size = new System.Drawing.Size(428, 20);
             this.txt_nom_cliente.TabIndex = 7;
             // 
             // txt_idcliente
             // 
-            this.txt_idcliente.Location = new System.Drawing.Point(87, 28);
+            this.txt_idcliente.Location = new System.Drawing.Point(97, 28);
             this.txt_idcliente.Name = "txt_idcliente";
-            this.txt_idcliente.Size = new System.Drawing.Size(98, 20);
+            this.txt_idcliente.Size = new System.Drawing.Size(162, 20);
             this.txt_idcliente.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 126);
+            this.label5.Location = new System.Drawing.Point(39, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 4;
@@ -107,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 95);
+            this.label4.Location = new System.Drawing.Point(36, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 3;
@@ -116,17 +118,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 60);
+            this.label3.Location = new System.Drawing.Point(5, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Apellidos:";
+            this.label3.Text = "Apellido paterno:";
             // 
             // btn_mod_cliente
             // 
             this.btn_mod_cliente.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_mod_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_cliente.Location = new System.Drawing.Point(183, 290);
+            this.btn_mod_cliente.Location = new System.Drawing.Point(362, 290);
             this.btn_mod_cliente.Name = "btn_mod_cliente";
             this.btn_mod_cliente.Size = new System.Drawing.Size(102, 47);
             this.btn_mod_cliente.TabIndex = 21;
@@ -138,7 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 28);
+            this.label1.Location = new System.Drawing.Point(35, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 0;
@@ -148,17 +150,19 @@
             // 
             this.groupBox1.Controls.Add(this.txt_tele_cliente);
             this.groupBox1.Controls.Add(this.txt_direcc_cliente);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txt_apell_clinte);
             this.groupBox1.Controls.Add(this.txt_nom_cliente);
             this.groupBox1.Controls.Add(this.txt_idcliente);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 95);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(496, 189);
+            this.groupBox1.Size = new System.Drawing.Size(551, 189);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Cliente";
@@ -166,7 +170,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Location = new System.Drawing.Point(39, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -186,7 +190,7 @@
             // 
             this.btn_guardar_cliente.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_cliente.Location = new System.Drawing.Point(291, 290);
+            this.btn_guardar_cliente.Location = new System.Drawing.Point(261, 290);
             this.btn_guardar_cliente.Name = "btn_guardar_cliente";
             this.btn_guardar_cliente.Size = new System.Drawing.Size(95, 47);
             this.btn_guardar_cliente.TabIndex = 19;
@@ -205,11 +209,27 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(269, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Apellido materno:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(363, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(162, 20);
+            this.textBox1.TabIndex = 8;
+            // 
             // frm_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 342);
+            this.ClientSize = new System.Drawing.Size(599, 374);
             this.Controls.Add(this.btn_borrar_cliente);
             this.Controls.Add(this.btn_mod_cliente);
             this.Controls.Add(this.groupBox1);
@@ -244,5 +264,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_guardar_cliente;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }
