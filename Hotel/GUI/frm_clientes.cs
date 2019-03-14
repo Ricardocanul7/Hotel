@@ -19,7 +19,7 @@ namespace Hotel.GUI
         public frm_clientes()
         {
             InitializeComponent();
-            txt_idcliente.Enabled = true;
+            txt_idcliente.Enabled = false;
             //DataTable datos = clientedao.Buscar();
             // Creo una nueva fila al datatable
            /* DataRow dr = datos.NewRow();
