@@ -42,6 +42,7 @@ namespace Hotel.GUI
             clientedao.Agregar(clientebo);
 
             limpiar();
+            Grd_clientes.DataSource = clientedao.Buscar();
         }
         public void limpiar()
         {
@@ -55,6 +56,7 @@ namespace Hotel.GUI
 
         private void Modificar_clientes(object sender, EventArgs e)
         {
+            txt_idcliente.Enabled = true;
             txt_nom_cliente.Text = clientebo.Cliente_nombre;
             txt_apaterno_cliente.Text = clientebo.Cliente_apaterno;
             txt_amaterno_cliente.Text = clientebo.Cliente_amaterno;
