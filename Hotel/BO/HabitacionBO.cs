@@ -9,7 +9,8 @@ namespace Hotel.BO
     class HabitacionBO
     {
         private string nombre_hab;
-        private int numx_per;
+        private int max_adultos;
+        private int max_ninios;
         private string tipo_hab;
         private double precioN;
         private double precioPA;
@@ -23,10 +24,16 @@ namespace Hotel.BO
             set { nombre_hab = value; }
         }
 
-        public int Numx_per
+        public int Max_adultos
         {
-            get { return numx_per; }
-            set { numx_per = value; }
+            get { return max_adultos; }
+            set { max_adultos = value; }
+        }
+
+        public int Max_ninios
+        {
+            get { return max_ninios; }
+            set { max_ninios = value; }
         }
 
         public string Tipo_hab
