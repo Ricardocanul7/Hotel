@@ -14,39 +14,56 @@ namespace Hotel.GUI
 {
     public partial class frm_clientes : Form
     {
-        ClienteBO cliente = new ClienteBO();
-        ClienteDAO clientes = new ClienteDAO();
+        ClienteBO clientebo = new ClienteBO();
+        ClienteDAO clientedao = new ClienteDAO();
         public frm_clientes()
         {
             InitializeComponent();
-            txt_idcliente.Enabled = false;
+            txt_idcliente.Enabled = true;
+            //DataTable datos = clientedao.Buscar();
+            // Creo una nueva fila al datatable
+           /* DataRow dr = datos.NewRow();
+            dr["cliente_nombre"] = "Seleccionar";
+            dr["cliente_id"] = 0;*/
+            Grd_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Grd_clientes.ReadOnly = true;
+            Grd_clientes.AllowUserToAddRows = false;
+            
         }
+
+        
 
         private void Guardar_clientes(object sender, EventArgs e)
         {
-            cliente.Nombre = txt_nom_cliente.Text;
-            cliente.Apellidos = txt_apell_clinte.Text;
-            cliente.Direccion = txt_direcc_cliente.Text;
-            cliente.Telefono = txt_tele_cliente.Text;
+            clientebo.Cliente_nombre = txt_nom_cliente.Text;
+            clientebo.Cliente_apaterno = txt_apaterno_cliente.Text;
+            clientebo.Cliente_amaterno = txt_amaterno_cliente.Text;
+            clientebo.Cliente_direccion = txt_direcc_cliente.Text;
+            clientebo.Cliente_email = txt_email_cliente.Text;
+            clientebo.Cliente_telefono= txt_tele_cliente.Text;
 
-            clientes.Agregar(cliente);
+            clientedao.Agregar(clientebo);
 
             limpiar();
         }
         public void limpiar()
         {
-            txt_apell_clinte.Clear();
-            txt_direcc_cliente.Clear();
             txt_nom_cliente.Clear();
+            txt_apaterno_cliente.Clear();
+            txt_amaterno_cliente.Clear();
+            txt_direcc_cliente.Clear();
+            txt_email_cliente.Clear();
             txt_tele_cliente.Clear();
         }
 
         private void Modificar_clientes(object sender, EventArgs e)
         {
-            txt_nom_cliente.Text = cliente.Nombre;
-            txt_apell_clinte.Text = cliente.Apellidos;
-            txt_direcc_cliente.Text = cliente.Direccion;
-            txt_tele_cliente.Text = cliente.Telefono;
+            txt_nom_cliente.Text = clientebo.Cliente_nombre;
+            txt_apaterno_cliente.Text = clientebo.Cliente_apaterno;
+            txt_amaterno_cliente.Text = clientebo.Cliente_amaterno;
+            txt_direcc_cliente.Text = clientebo.Cliente_direccion;
+            txt_email_cliente.Text = clientebo.Cliente_email;
+            txt_email_cliente.Text = clientebo.Cliente_telefono;
         }
     }
 }

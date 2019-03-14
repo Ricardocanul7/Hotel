@@ -28,46 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_borrar_cliente = new System.Windows.Forms.Button();
-            this.txt_tele_cliente = new System.Windows.Forms.TextBox();
+            this.txt_email_cliente = new System.Windows.Forms.TextBox();
             this.txt_direcc_cliente = new System.Windows.Forms.TextBox();
-            this.txt_apell_clinte = new System.Windows.Forms.TextBox();
+            this.txt_apaterno_cliente = new System.Windows.Forms.TextBox();
             this.txt_nom_cliente = new System.Windows.Forms.TextBox();
             this.txt_idcliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_mod_cliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_amaterno_cliente = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_tele_cliente = new System.Windows.Forms.TextBox();
+            this.btn_borrar_cliente = new System.Windows.Forms.Button();
+            this.btn_mod_cliente = new System.Windows.Forms.Button();
             this.btn_guardar_cliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Grd_clientes = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grd_clientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_borrar_cliente
+            // txt_email_cliente
             // 
-            this.btn_borrar_cliente.Image = global::Hotel.Properties.Resources.close;
-            this.btn_borrar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_cliente.Location = new System.Drawing.Point(470, 290);
-            this.btn_borrar_cliente.Name = "btn_borrar_cliente";
-            this.btn_borrar_cliente.Size = new System.Drawing.Size(93, 47);
-            this.btn_borrar_cliente.TabIndex = 20;
-            this.btn_borrar_cliente.Text = "Eliminar";
-            this.btn_borrar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_borrar_cliente.UseVisualStyleBackColor = true;
-            // 
-            // txt_tele_cliente
-            // 
-            this.txt_tele_cliente.Location = new System.Drawing.Point(97, 150);
-            this.txt_tele_cliente.Name = "txt_tele_cliente";
-            this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
-            this.txt_tele_cliente.TabIndex = 10;
+            this.txt_email_cliente.Location = new System.Drawing.Point(97, 150);
+            this.txt_email_cliente.Name = "txt_email_cliente";
+            this.txt_email_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_email_cliente.TabIndex = 10;
             // 
             // txt_direcc_cliente
             // 
@@ -76,12 +68,12 @@
             this.txt_direcc_cliente.Size = new System.Drawing.Size(428, 20);
             this.txt_direcc_cliente.TabIndex = 9;
             // 
-            // txt_apell_clinte
+            // txt_apaterno_cliente
             // 
-            this.txt_apell_clinte.Location = new System.Drawing.Point(97, 87);
-            this.txt_apell_clinte.Name = "txt_apell_clinte";
-            this.txt_apell_clinte.Size = new System.Drawing.Size(162, 20);
-            this.txt_apell_clinte.TabIndex = 8;
+            this.txt_apaterno_cliente.Location = new System.Drawing.Point(97, 87);
+            this.txt_apaterno_cliente.Name = "txt_apaterno_cliente";
+            this.txt_apaterno_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_apaterno_cliente.TabIndex = 8;
             // 
             // txt_nom_cliente
             // 
@@ -100,11 +92,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 153);
+            this.label5.Location = new System.Drawing.Point(56, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Telefono:";
+            this.label5.Text = "Email:";
             // 
             // label4
             // 
@@ -124,19 +116,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellido paterno:";
             // 
-            // btn_mod_cliente
-            // 
-            this.btn_mod_cliente.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_mod_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_cliente.Location = new System.Drawing.Point(362, 290);
-            this.btn_mod_cliente.Name = "btn_mod_cliente";
-            this.btn_mod_cliente.Size = new System.Drawing.Size(102, 47);
-            this.btn_mod_cliente.TabIndex = 21;
-            this.btn_mod_cliente.Text = "Modificar";
-            this.btn_mod_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_mod_cliente.UseVisualStyleBackColor = true;
-            this.btn_mod_cliente.Click += new System.EventHandler(this.Modificar_clientes);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -149,10 +128,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txt_tele_cliente);
+            this.groupBox1.Controls.Add(this.txt_email_cliente);
             this.groupBox1.Controls.Add(this.txt_direcc_cliente);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.txt_apell_clinte);
+            this.groupBox1.Controls.Add(this.txt_amaterno_cliente);
+            this.groupBox1.Controls.Add(this.txt_apaterno_cliente);
             this.groupBox1.Controls.Add(this.txt_nom_cliente);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txt_idcliente);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
@@ -186,6 +167,63 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "CLIENTES";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(269, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Apellido materno:";
+            // 
+            // txt_amaterno_cliente
+            // 
+            this.txt_amaterno_cliente.Location = new System.Drawing.Point(363, 86);
+            this.txt_amaterno_cliente.Name = "txt_amaterno_cliente";
+            this.txt_amaterno_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_amaterno_cliente.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(305, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Telefono:";
+            // 
+            // txt_tele_cliente
+            // 
+            this.txt_tele_cliente.Location = new System.Drawing.Point(363, 150);
+            this.txt_tele_cliente.Name = "txt_tele_cliente";
+            this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_tele_cliente.TabIndex = 10;
+            // 
+            // btn_borrar_cliente
+            // 
+            this.btn_borrar_cliente.Image = global::Hotel.Properties.Resources.close;
+            this.btn_borrar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_borrar_cliente.Location = new System.Drawing.Point(470, 290);
+            this.btn_borrar_cliente.Name = "btn_borrar_cliente";
+            this.btn_borrar_cliente.Size = new System.Drawing.Size(93, 47);
+            this.btn_borrar_cliente.TabIndex = 20;
+            this.btn_borrar_cliente.Text = "Eliminar";
+            this.btn_borrar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_borrar_cliente.UseVisualStyleBackColor = true;
+            // 
+            // btn_mod_cliente
+            // 
+            this.btn_mod_cliente.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_mod_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_mod_cliente.Location = new System.Drawing.Point(362, 290);
+            this.btn_mod_cliente.Name = "btn_mod_cliente";
+            this.btn_mod_cliente.Size = new System.Drawing.Size(102, 47);
+            this.btn_mod_cliente.TabIndex = 21;
+            this.btn_mod_cliente.Text = "Modificar";
+            this.btn_mod_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_mod_cliente.UseVisualStyleBackColor = true;
+            this.btn_mod_cliente.Click += new System.EventHandler(this.Modificar_clientes);
+            // 
             // btn_guardar_cliente
             // 
             this.btn_guardar_cliente.Image = global::Hotel.Properties.Resources._035_save;
@@ -209,27 +247,21 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // label7
+            // Grd_clientes
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(269, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Apellido materno:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(363, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 8;
+            this.Grd_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grd_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Grd_clientes.Location = new System.Drawing.Point(0, 343);
+            this.Grd_clientes.Name = "Grd_clientes";
+            this.Grd_clientes.Size = new System.Drawing.Size(599, 208);
+            this.Grd_clientes.TabIndex = 22;
             // 
             // frm_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 374);
+            this.ClientSize = new System.Drawing.Size(599, 551);
+            this.Controls.Add(this.Grd_clientes);
             this.Controls.Add(this.btn_borrar_cliente);
             this.Controls.Add(this.btn_mod_cliente);
             this.Controls.Add(this.groupBox1);
@@ -241,6 +273,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grd_clientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,9 +282,9 @@
         #endregion
 
         private System.Windows.Forms.Button btn_borrar_cliente;
-        private System.Windows.Forms.TextBox txt_tele_cliente;
+        private System.Windows.Forms.TextBox txt_email_cliente;
         private System.Windows.Forms.TextBox txt_direcc_cliente;
-        private System.Windows.Forms.TextBox txt_apell_clinte;
+        private System.Windows.Forms.TextBox txt_apaterno_cliente;
         private System.Windows.Forms.TextBox txt_nom_cliente;
         private System.Windows.Forms.TextBox txt_idcliente;
         private System.Windows.Forms.Label label5;
@@ -264,7 +297,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_guardar_cliente;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_amaterno_cliente;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_tele_cliente;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView Grd_clientes;
     }
 }
