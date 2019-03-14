@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbo_nump = new System.Windows.Forms.ComboBox();
+            this.cbo_max_adult = new System.Windows.Forms.ComboBox();
             this.cbo_habitaciones = new System.Windows.Forms.ComboBox();
             this.cbo_tipohab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,6 +73,8 @@
             this.btn_borrar_res = new System.Windows.Forms.Button();
             this.btn_guardar_res = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbo_max_ninios = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,7 +85,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbo_nump);
+            this.groupBox3.Controls.Add(this.cbo_max_ninios);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.cbo_max_adult);
             this.groupBox3.Controls.Add(this.cbo_habitaciones);
             this.groupBox3.Controls.Add(this.cbo_tipohab);
             this.groupBox3.Controls.Add(this.label4);
@@ -91,18 +95,18 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(12, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(392, 136);
+            this.groupBox3.Size = new System.Drawing.Size(392, 182);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
             // 
-            // cbo_nump
+            // cbo_max_adult
             // 
-            this.cbo_nump.FormattingEnabled = true;
-            this.cbo_nump.Location = new System.Drawing.Point(119, 100);
-            this.cbo_nump.Name = "cbo_nump";
-            this.cbo_nump.Size = new System.Drawing.Size(83, 21);
-            this.cbo_nump.TabIndex = 17;
+            this.cbo_max_adult.FormattingEnabled = true;
+            this.cbo_max_adult.Location = new System.Drawing.Point(119, 100);
+            this.cbo_max_adult.Name = "cbo_max_adult";
+            this.cbo_max_adult.Size = new System.Drawing.Size(83, 21);
+            this.cbo_max_adult.TabIndex = 17;
             // 
             // cbo_habitaciones
             // 
@@ -134,9 +138,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Num. Personas";
+            this.label2.Text = "Num. Adultos";
             // 
             // label1
             // 
@@ -171,7 +175,7 @@
             this.groupBox1.Controls.Add(this.Txt_dir_cliente);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(12, 240);
+            this.groupBox1.Location = new System.Drawing.Point(12, 277);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(392, 192);
             this.groupBox1.TabIndex = 31;
@@ -351,9 +355,9 @@
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(410, 304);
+            this.groupBox4.Location = new System.Drawing.Point(410, 294);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(341, 128);
+            this.groupBox4.Size = new System.Drawing.Size(392, 175);
             this.groupBox4.TabIndex = 46;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Precio";
@@ -475,7 +479,7 @@
             // 
             this.btn_imprimir_res.Image = global::Hotel.Properties.Resources._049_notes1;
             this.btn_imprimir_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_imprimir_res.Location = new System.Drawing.Point(656, 450);
+            this.btn_imprimir_res.Location = new System.Drawing.Point(710, 488);
             this.btn_imprimir_res.Name = "btn_imprimir_res";
             this.btn_imprimir_res.Size = new System.Drawing.Size(95, 47);
             this.btn_imprimir_res.TabIndex = 45;
@@ -487,7 +491,7 @@
             // 
             this.btn_mod_res.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_mod_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_res.Location = new System.Drawing.Point(435, 450);
+            this.btn_mod_res.Location = new System.Drawing.Point(489, 488);
             this.btn_mod_res.Name = "btn_mod_res";
             this.btn_mod_res.Size = new System.Drawing.Size(102, 47);
             this.btn_mod_res.TabIndex = 44;
@@ -499,7 +503,7 @@
             // 
             this.btn_borrar_res.Image = global::Hotel.Properties.Resources.close;
             this.btn_borrar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_res.Location = new System.Drawing.Point(327, 450);
+            this.btn_borrar_res.Location = new System.Drawing.Point(381, 488);
             this.btn_borrar_res.Name = "btn_borrar_res";
             this.btn_borrar_res.Size = new System.Drawing.Size(93, 47);
             this.btn_borrar_res.TabIndex = 43;
@@ -511,7 +515,7 @@
             // 
             this.btn_guardar_res.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_res.Location = new System.Drawing.Point(551, 450);
+            this.btn_guardar_res.Location = new System.Drawing.Point(605, 488);
             this.btn_guardar_res.Name = "btn_guardar_res";
             this.btn_guardar_res.Size = new System.Drawing.Size(95, 47);
             this.btn_guardar_res.TabIndex = 42;
@@ -530,11 +534,28 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Num. Niños";
+            // 
+            // cbo_max_ninios
+            // 
+            this.cbo_max_ninios.FormattingEnabled = true;
+            this.cbo_max_ninios.Location = new System.Drawing.Point(119, 139);
+            this.cbo_max_ninios.Name = "cbo_max_ninios";
+            this.cbo_max_ninios.Size = new System.Drawing.Size(83, 21);
+            this.cbo_max_ninios.TabIndex = 19;
+            // 
             // Frm_reservar_hab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 509);
+            this.ClientSize = new System.Drawing.Size(830, 569);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btn_imprimir_res);
             this.Controls.Add(this.btn_mod_res);
@@ -578,7 +599,7 @@
         private System.Windows.Forms.TextBox Txt_dir_cliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbo_nump;
+        private System.Windows.Forms.ComboBox cbo_max_adult;
         private System.Windows.Forms.TextBox Txt_telefono_cliente;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox Txt_apell_cliente;
@@ -609,5 +630,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox Txt_id_cliente;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox cbo_max_ninios;
+        private System.Windows.Forms.Label label3;
     }
 }

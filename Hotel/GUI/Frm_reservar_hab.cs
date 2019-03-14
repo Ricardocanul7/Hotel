@@ -53,8 +53,9 @@ namespace Hotel.GUI
 
             habitacionBO.Nombre_hab = cbo_habitaciones.Text;
             habitacionBO.Tipo_hab = cbo_tipohab.Text;
-            habitacionBO.Numx_per = Convert.ToInt32(cbo_nump.Text);
-            clienteBO.Id_cliente = Convert.ToInt32(Txt_id_cliente);
+            habitacionBO.Max_adultos = Convert.ToInt32(cbo_max_adult.Text);
+            habitacionBO.Max_ninios = Convert.ToInt32(cbo_max_ninios.Text);
+            clienteBO.Id_cliente = Convert.ToInt32(Txt_id_cliente.Text);
             clienteBO.Nombre = Txt_nom_cliente.Text;
             clienteBO.Apellidos = Txt_apell_cliente.Text;
             clienteBO.Direccion = Txt_dir_cliente.Text;
