@@ -38,12 +38,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txt_tele_cliente = new System.Windows.Forms.TextBox();
             this.txt_amaterno_cliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_tele_cliente = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btn_borrar_cliente = new System.Windows.Forms.Button();
             this.btn_mod_cliente = new System.Windows.Forms.Button();
             this.btn_guardar_cliente = new System.Windows.Forms.Button();
@@ -148,6 +148,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Cliente";
             // 
+            // txt_tele_cliente
+            // 
+            this.txt_tele_cliente.Location = new System.Drawing.Point(363, 150);
+            this.txt_tele_cliente.Name = "txt_tele_cliente";
+            this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_tele_cliente.TabIndex = 10;
+            // 
+            // txt_amaterno_cliente
+            // 
+            this.txt_amaterno_cliente.Location = new System.Drawing.Point(363, 86);
+            this.txt_amaterno_cliente.Name = "txt_amaterno_cliente";
+            this.txt_amaterno_cliente.Size = new System.Drawing.Size(162, 20);
+            this.txt_amaterno_cliente.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(305, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Telefono:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(269, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Apellido materno:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -166,38 +198,6 @@
             this.label6.Size = new System.Drawing.Size(162, 40);
             this.label6.TabIndex = 17;
             this.label6.Text = "CLIENTES";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(269, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Apellido materno:";
-            // 
-            // txt_amaterno_cliente
-            // 
-            this.txt_amaterno_cliente.Location = new System.Drawing.Point(363, 86);
-            this.txt_amaterno_cliente.Name = "txt_amaterno_cliente";
-            this.txt_amaterno_cliente.Size = new System.Drawing.Size(162, 20);
-            this.txt_amaterno_cliente.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(305, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Telefono:";
-            // 
-            // txt_tele_cliente
-            // 
-            this.txt_tele_cliente.Location = new System.Drawing.Point(363, 150);
-            this.txt_tele_cliente.Name = "txt_tele_cliente";
-            this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
-            this.txt_tele_cliente.TabIndex = 10;
             // 
             // btn_borrar_cliente
             // 
@@ -255,6 +255,8 @@
             this.Grd_clientes.Name = "Grd_clientes";
             this.Grd_clientes.Size = new System.Drawing.Size(599, 208);
             this.Grd_clientes.TabIndex = 22;
+            this.Grd_clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grd_clientes_CellContentClick);
+            this.Grd_clientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
             // 
             // frm_clientes
             // 

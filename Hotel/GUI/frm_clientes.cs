@@ -20,18 +20,30 @@ namespace Hotel.GUI
         {
             InitializeComponent();
             txt_idcliente.Enabled = false;
-            //DataTable datos = clientedao.Buscar();
+            DataTable datos = clientedao.Buscar();
             // Creo una nueva fila al datatable
-           /* DataRow dr = datos.NewRow();
+           DataRow dr = datos.NewRow();
             dr["cliente_nombre"] = "Seleccionar";
-            dr["cliente_id"] = 0;*/
+            dr["cliente_id"] = 0;
             Grd_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Grd_clientes.ReadOnly = true;
             Grd_clientes.AllowUserToAddRows = false;
             
         }
 
-        
+        private ClienteBO RecuperarInformacion()
+        {
+            int id = 0;
+
+            int.TryParse(txt_idcliente.Text, out id);
+
+            ClienteBO clientebo = new ClienteBO();
+            clientebo.Cliente_id = id;
+            clientebo.Cliente_nombre = txt_nom_cliente.Text;
+
+            return clientebo;
+        }
+
 
         private void Guardar_clientes(object sender, EventArgs e)
         {
@@ -41,8 +53,6 @@ namespace Hotel.GUI
             clientebo.Cliente_direccion = txt_direcc_cliente.Text;
             clientebo.Cliente_email = txt_email_cliente.Text;
             clientebo.Cliente_telefono= txt_tele_cliente.Text;
-
-            clientedao.Agregar(clientebo);
 
             limpiar();
         }
@@ -64,6 +74,23 @@ namespace Hotel.GUI
             txt_direcc_cliente.Text = clientebo.Cliente_direccion;
             txt_email_cliente.Text = clientebo.Cliente_email;
             txt_email_cliente.Text = clientebo.Cliente_telefono;
+        }
+
+        private void Grd_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void seleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowSelected = e.RowIndex;
+
+            clientebo.Cliente_id= int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
+
+            clientebo.Cliente_nombre= Grd_clientes.Rows[rowSelected].Cells["cliente_nombre"].Value.ToString();
+
+            txt_idcliente.Text = clientebo.Cliente_id.ToString();
+            txt_nom_cliente.Text = clientebo.Cliente_nombre;
         }
     }
 }
