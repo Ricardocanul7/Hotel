@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel.BO;
+using Hotel.DAO;
 
 namespace Hotel.GUI
 {
     public partial class frm_habitaciones : MetroFramework.Forms.MetroForm
     {
         HabitacionBO habitacionBO;
+        HabitacionDAO habitacionDAO;
         public frm_habitaciones()
         {
             InitializeComponent();
             habitacionBO = new HabitacionBO();
+            habitacionDAO = new HabitacionDAO();
 
             cbo_tipohab.Items.Add("SELECCIONAR");
             cbo_tipohab.Items.Add("CABAÑA");
@@ -33,6 +36,22 @@ namespace Hotel.GUI
 
         private void btn_hab_guardar_Click(object sender, EventArgs e)
         {
+            if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
+            {
+                MessageBox.Show("Registro Agregado");
+            }
+            else
+            {
+                MessageBox.Show("Algo salio mal");
+            }
+        }
+
+        private HabitacionBO RecuperarInformacion()
+        {
+            int id = 0;
+            int.TryParse(txt_num_habitacion.Text, out id);
+
+            habitacionBO.Num_habitacion = id;
             habitacionBO.Nombre_hab = txt_nombrehab.Text;
             habitacionBO.Max_adultos = Convert.ToInt32(txt_max_adultos.Text);
             habitacionBO.Max_ninios = Convert.ToInt32(txt_max_ninios.Text);
@@ -42,6 +61,8 @@ namespace Hotel.GUI
             habitacionBO.PrecioTA = Convert.ToDouble(txt_precioTA.Text);
             habitacionBO.PrecioPATA = Convert.ToDouble(txt_precioPATA.Text);
             habitacionBO.DescripHab = txt_descripHab.Text;
+
+            return habitacionBO;
         }
 
         private void btn_hab_limpiar_Click(object sender, EventArgs e)
