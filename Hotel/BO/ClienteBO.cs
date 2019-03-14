@@ -13,6 +13,7 @@ namespace Hotel.BO
         private string direccion;
         private string apellidos;
         private string telefono;
+        private string email;
 
 
         public int Id_cliente
@@ -43,6 +44,12 @@ namespace Hotel.BO
         {
             get { return telefono; }
             set { telefono = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
         }
     }
 }
