@@ -87,6 +87,12 @@
     <Compile Include="GUI\frm_clientes.Designer.cs">
       <DependentUpon>frm_clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_Empresa.Designer.cs">
+      <DependentUpon>frm_Empresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frm_clientes.resx">
       <DependentUpon>frm_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_Empresa.resx">
+      <DependentUpon>frm_Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu.resx">
       <DependentUpon>Frm_menu.cs</DependentUpon>
