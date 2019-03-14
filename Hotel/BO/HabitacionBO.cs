@@ -56,19 +56,19 @@ namespace Hotel.BO
             set { precioN = value; }
         }
 
-        public double PrecioPA
+        public double PrecioPA //PA=persona adicional
         {
             get { return precioPA; }
             set { precioPA = value; }
         }
 
-        public double PrecioTA
+        public double PrecioTA //TA=temporada alta
         {
             get { return precioTA; }
             set { precioTA = value; }
         }
 
-        public double PrecioPATA
+        public double PrecioPATA //PATA=persona adicional temporada alta
         {
             get { return precioPATA; }
             set { precioPATA = value; }
