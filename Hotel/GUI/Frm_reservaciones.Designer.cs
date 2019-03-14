@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_reservaciones));
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
+            this.btn_reservarhab = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_chekout = new System.Windows.Forms.ToolStripButton();
             this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_reservarhab = new System.Windows.Forms.ToolStripButton();
-            this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
-            this.btn_checkin = new System.Windows.Forms.ToolStripButton();
-            this.btn_chekout = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
             this.SuspendLayout();
@@ -63,20 +63,54 @@
             this.btn_habitaciones.TabIndex = 1;
             this.btn_habitaciones.Text = "Menu";
             // 
+            // btn_reservarhab
+            // 
+            this.btn_reservarhab.Image = global::Hotel.Properties.Resources._025_hotel_bell;
+            this.btn_reservarhab.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_reservarhab.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_reservarhab.Name = "btn_reservarhab";
+            this.btn_reservarhab.Size = new System.Drawing.Size(130, 22);
+            this.btn_reservarhab.Text = "Reservar habitación";
+            this.btn_reservarhab.Click += new System.EventHandler(this.btn_reservarhab_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_consultar_res
+            // 
+            this.btn_consultar_res.Image = global::Hotel.Properties.Resources._027_information;
+            this.btn_consultar_res.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_consultar_res.Name = "btn_consultar_res";
+            this.btn_consultar_res.Size = new System.Drawing.Size(101, 22);
+            this.btn_consultar_res.Text = "Reservaciones";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // btn_checkin
+            // 
+            this.btn_checkin.Image = global::Hotel.Properties.Resources._005_check_in;
+            this.btn_checkin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_checkin.Name = "btn_checkin";
+            this.btn_checkin.Size = new System.Drawing.Size(73, 22);
+            this.btn_checkin.Text = "Check in";
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_chekout
+            // 
+            this.btn_chekout.Image = global::Hotel.Properties.Resources._004_hotel_stroller;
+            this.btn_chekout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_chekout.Name = "btn_chekout";
+            this.btn_chekout.Size = new System.Drawing.Size(81, 22);
+            this.btn_chekout.Text = "Check out";
             // 
             // Grd_Reservaciones
             // 
@@ -95,39 +129,6 @@
             this.label1.Size = new System.Drawing.Size(269, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "<< Aquí se visualizara la tabla de reservaiones actuales";
-            // 
-            // btn_reservarhab
-            // 
-            this.btn_reservarhab.Image = global::Hotel.Properties.Resources._025_hotel_bell;
-            this.btn_reservarhab.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_reservarhab.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btn_reservarhab.Name = "btn_reservarhab";
-            this.btn_reservarhab.Size = new System.Drawing.Size(130, 22);
-            this.btn_reservarhab.Text = "Reservar habitación";
-            // 
-            // btn_consultar_res
-            // 
-            this.btn_consultar_res.Image = global::Hotel.Properties.Resources._027_information;
-            this.btn_consultar_res.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_consultar_res.Name = "btn_consultar_res";
-            this.btn_consultar_res.Size = new System.Drawing.Size(101, 22);
-            this.btn_consultar_res.Text = "Reservaciones";
-            // 
-            // btn_checkin
-            // 
-            this.btn_checkin.Image = global::Hotel.Properties.Resources._005_check_in;
-            this.btn_checkin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_checkin.Name = "btn_checkin";
-            this.btn_checkin.Size = new System.Drawing.Size(73, 22);
-            this.btn_checkin.Text = "Check in";
-            // 
-            // btn_chekout
-            // 
-            this.btn_chekout.Image = global::Hotel.Properties.Resources._004_hotel_stroller;
-            this.btn_chekout.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_chekout.Name = "btn_chekout";
-            this.btn_chekout.Size = new System.Drawing.Size(81, 22);
-            this.btn_chekout.Text = "Check out";
             // 
             // Frm_reservaciones
             // 

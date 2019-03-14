@@ -17,5 +17,13 @@ namespace Hotel.GUI
             InitializeComponent();
         }
 
+        private void btn_reservarhab_Click(object sender, EventArgs e)
+        {
+            Frm_reservar_hab reservar_Hab = new Frm_reservar_hab();
+            if(reservar_Hab.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
     }
 }
