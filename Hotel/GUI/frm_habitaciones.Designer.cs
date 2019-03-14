@@ -53,6 +53,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_max_ninios = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_num_habitacion = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -178,6 +180,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_num_habitacion);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txt_max_ninios);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.cbo_tipohab);
@@ -230,7 +234,7 @@
             // 
             this.txt_nombrehab.Location = new System.Drawing.Point(68, 29);
             this.txt_nombrehab.Name = "txt_nombrehab";
-            this.txt_nombrehab.Size = new System.Drawing.Size(326, 20);
+            this.txt_nombrehab.Size = new System.Drawing.Size(174, 20);
             this.txt_nombrehab.TabIndex = 9;
             // 
             // label1
@@ -288,6 +292,23 @@
             this.txt_max_ninios.Size = new System.Drawing.Size(63, 20);
             this.txt_max_ninios.TabIndex = 17;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(278, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Número:";
+            // 
+            // txt_num_habitacion
+            // 
+            this.txt_num_habitacion.Enabled = false;
+            this.txt_num_habitacion.Location = new System.Drawing.Point(331, 29);
+            this.txt_num_habitacion.Name = "txt_num_habitacion";
+            this.txt_num_habitacion.Size = new System.Drawing.Size(63, 20);
+            this.txt_num_habitacion.TabIndex = 19;
+            // 
             // frm_habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +362,7 @@
         private System.Windows.Forms.Button btn_hab_limpiar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_max_ninios;
+        private System.Windows.Forms.TextBox txt_num_habitacion;
+        private System.Windows.Forms.Label label11;
     }
 }
