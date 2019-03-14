@@ -35,7 +35,7 @@
             this.cbo_Horario = new System.Windows.Forms.ComboBox();
             this.txt_tele_empleado = new System.Windows.Forms.TextBox();
             this.txt_direcc_empleado = new System.Windows.Forms.TextBox();
-            this.txt_apell_empleado = new System.Windows.Forms.TextBox();
+            this.txt_apellidomaterno = new System.Windows.Forms.TextBox();
             this.txt_nom_empleado = new System.Windows.Forms.TextBox();
             this.txt_idempleado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@
             this.btn_borrar_empleado = new System.Windows.Forms.Button();
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_apellidoparteno = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,12 +66,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_apellidoparteno);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cbo_tipoempleado);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cbo_Horario);
             this.groupBox1.Controls.Add(this.txt_tele_empleado);
             this.groupBox1.Controls.Add(this.txt_direcc_empleado);
-            this.groupBox1.Controls.Add(this.txt_apell_empleado);
+            this.groupBox1.Controls.Add(this.txt_apellidomaterno);
             this.groupBox1.Controls.Add(this.txt_nom_empleado);
             this.groupBox1.Controls.Add(this.txt_idempleado);
             this.groupBox1.Controls.Add(this.label7);
@@ -78,9 +82,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(24, 101);
+            this.groupBox1.Location = new System.Drawing.Point(12, 101);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(496, 189);
+            this.groupBox1.Size = new System.Drawing.Size(528, 189);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Empleado";
@@ -94,7 +98,7 @@
             "Administrador",
             "Recepcionista",
             "Guardias "});
-            this.cbo_tipoempleado.Location = new System.Drawing.Point(83, 153);
+            this.cbo_tipoempleado.Location = new System.Drawing.Point(99, 151);
             this.cbo_tipoempleado.Name = "cbo_tipoempleado";
             this.cbo_tipoempleado.Size = new System.Drawing.Size(190, 21);
             this.cbo_tipoempleado.TabIndex = 13;
@@ -102,11 +106,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 156);
+            this.label8.Location = new System.Drawing.Point(62, 154);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 12;
             this.label8.Text = "Tipo:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cbo_Horario
             // 
@@ -115,42 +120,42 @@
             "8 am - 4 pm",
             "4pm - 12 am",
             "12 am - 8 am"});
-            this.cbo_Horario.Location = new System.Drawing.Point(357, 122);
+            this.cbo_Horario.Location = new System.Drawing.Point(373, 120);
             this.cbo_Horario.Name = "cbo_Horario";
             this.cbo_Horario.Size = new System.Drawing.Size(121, 21);
             this.cbo_Horario.TabIndex = 11;
             // 
             // txt_tele_empleado
             // 
-            this.txt_tele_empleado.Location = new System.Drawing.Point(83, 123);
+            this.txt_tele_empleado.Location = new System.Drawing.Point(99, 121);
             this.txt_tele_empleado.Name = "txt_tele_empleado";
             this.txt_tele_empleado.Size = new System.Drawing.Size(190, 20);
             this.txt_tele_empleado.TabIndex = 10;
             // 
             // txt_direcc_empleado
             // 
-            this.txt_direcc_empleado.Location = new System.Drawing.Point(83, 92);
+            this.txt_direcc_empleado.Location = new System.Drawing.Point(99, 90);
             this.txt_direcc_empleado.Name = "txt_direcc_empleado";
             this.txt_direcc_empleado.Size = new System.Drawing.Size(395, 20);
             this.txt_direcc_empleado.TabIndex = 9;
             // 
-            // txt_apell_empleado
+            // txt_apellidomaterno
             // 
-            this.txt_apell_empleado.Location = new System.Drawing.Point(316, 57);
-            this.txt_apell_empleado.Name = "txt_apell_empleado";
-            this.txt_apell_empleado.Size = new System.Drawing.Size(162, 20);
-            this.txt_apell_empleado.TabIndex = 8;
+            this.txt_apellidomaterno.Location = new System.Drawing.Point(366, 55);
+            this.txt_apellidomaterno.Name = "txt_apellidomaterno";
+            this.txt_apellidomaterno.Size = new System.Drawing.Size(162, 20);
+            this.txt_apellidomaterno.TabIndex = 8;
             // 
             // txt_nom_empleado
             // 
-            this.txt_nom_empleado.Location = new System.Drawing.Point(83, 57);
+            this.txt_nom_empleado.Location = new System.Drawing.Point(366, 26);
             this.txt_nom_empleado.Name = "txt_nom_empleado";
             this.txt_nom_empleado.Size = new System.Drawing.Size(162, 20);
             this.txt_nom_empleado.TabIndex = 7;
             // 
             // txt_idempleado
             // 
-            this.txt_idempleado.Location = new System.Drawing.Point(83, 28);
+            this.txt_idempleado.Location = new System.Drawing.Point(99, 26);
             this.txt_idempleado.Name = "txt_idempleado";
             this.txt_idempleado.Size = new System.Drawing.Size(162, 20);
             this.txt_idempleado.TabIndex = 6;
@@ -158,7 +163,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(299, 125);
+            this.label7.Location = new System.Drawing.Point(315, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 5;
@@ -167,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 126);
+            this.label5.Location = new System.Drawing.Point(41, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 4;
@@ -176,7 +181,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 95);
+            this.label4.Location = new System.Drawing.Point(38, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 3;
@@ -185,16 +190,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 60);
+            this.label3.Location = new System.Drawing.Point(274, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Apellidos:";
+            this.label3.Text = "Apellidos Materno:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Location = new System.Drawing.Point(307, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -203,7 +208,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Location = new System.Drawing.Point(22, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 0;
@@ -257,6 +262,22 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // txt_apellidoparteno
+            // 
+            this.txt_apellidoparteno.Location = new System.Drawing.Point(99, 55);
+            this.txt_apellidoparteno.Name = "txt_apellidoparteno";
+            this.txt_apellidoparteno.Size = new System.Drawing.Size(162, 20);
+            this.txt_apellidoparteno.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Apellido Paterno:";
+            // 
             // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +310,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_tele_empleado;
         private System.Windows.Forms.TextBox txt_direcc_empleado;
-        private System.Windows.Forms.TextBox txt_apell_empleado;
+        private System.Windows.Forms.TextBox txt_apellidomaterno;
         private System.Windows.Forms.TextBox txt_nom_empleado;
         private System.Windows.Forms.TextBox txt_idempleado;
         private System.Windows.Forms.Label label7;
@@ -299,5 +320,7 @@
         private System.Windows.Forms.ComboBox cbo_tipoempleado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbo_Horario;
+        private System.Windows.Forms.TextBox txt_apellidoparteno;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -14,13 +14,11 @@ namespace Hotel.GUI
 {
     public partial class frm_empleado : Form
     {
-        EmpleadoBO empleado = new EmpleadoBO();
-        EmpleadoDAO empleados = new EmpleadoDAO();
-
+        EmpleadoBO empleadoBO = new EmpleadoBO();
+        EmpleadoDAO empleadoDAO = new EmpleadoDAO();
         public frm_empleado()
         {
             InitializeComponent();
-            txt_idempleado.Enabled = false;
 
             cbo_Horario.Items.Add("8 am - 4 pm");
             cbo_Horario.Items.Add("4 pm - 12 pm");
@@ -38,21 +36,35 @@ namespace Hotel.GUI
 
         private void Guardar_Empleados(object sender, EventArgs e)
         {
-            empleado.Nombre = txt_nom_empleado.Text;
-            empleado.Apellido = txt_apell_empleado.Text;
-            empleado.Direccion = txt_direcc_empleado.Text;
-            empleado.Telefono = txt_tele_empleado.Text;
-            empleado.Horario = cbo_Horario.Text;
-            empleado.Tipo = cbo_tipoempleado.Text;
+            if(empleadoDAO.Agregar(RecuperarInformacion()) == 1)
+            {
+                MessageBox.Show("Se ha Agregado el Empleado");
+            }
+            else
+            {
+                MessageBox.Show("Ha sucedido un error");
+            }  
+        }
+        internal EmpleadoBO RecuperarInformacion()
+        {
+            EmpleadoBO empleadoBO = new EmpleadoBO();
+            EmpleadoDAO empleadoDAO = new EmpleadoDAO();
 
-            empleados.Agregar(empleado);
+            empleadoBO.Id_empleado = Convert.ToInt32(txt_idempleado.Text);
+            empleadoBO.Nombre = txt_nom_empleado.Text;
+            empleadoBO.Apellido_Petem = txt_apellidoparteno.Text;
+            empleadoBO.Apellido_Matem = txt_apellidomaterno.Text;
+            empleadoBO.Direccion = txt_direcc_empleado.Text;
+            empleadoBO.Telefono = txt_tele_empleado.Text;
+            empleadoBO.Horario = cbo_Horario.Text;
+            empleadoBO.Tipo = cbo_tipoempleado.Text;
 
-            Limpiar();
 
+            return empleadoBO;
         }
         public void Limpiar()
         {
-            txt_apell_empleado.Clear();
+            txt_apellidomaterno.Clear();
             txt_direcc_empleado.Clear();
             txt_idempleado.Clear();
             txt_nom_empleado.Clear();
@@ -64,12 +76,13 @@ namespace Hotel.GUI
 
         private void Modificar_empleados(object sender, EventArgs e)
         {
-            txt_nom_empleado.Text = empleado.Nombre;
-            txt_direcc_empleado.Text = empleado.Direccion;
-            txt_tele_empleado.Text = empleado.Telefono;
-            txt_apell_empleado.Text = empleado.Apellido;
 
-            empleados.Modificar(empleado);
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
