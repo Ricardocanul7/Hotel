@@ -8,41 +8,55 @@ namespace Hotel.BO
 {
     class ClienteBO
     {
-        private int id_cliente;
-        private string nombre;
-        private string direccion;
-        private string apellidos;
-        private string telefono;
+        private int cliente_id;
+        private string cliente_nombre;
+        private string cliente_apaterno;
+        private string cliente_amaterno;
+        private string cliente_direccion;
+        private string cliente_email;
+        private string cliente_telefono;
 
 
-        public int Id_cliente
+        public int Cliente_id
         {
-            get { return id_cliente; }
-            set { id_cliente = value; }
+            get { return cliente_id; }
+            set { cliente_id = value; }
         }
 
-        public string Nombre
+        public string Cliente_nombre
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return cliente_nombre; }
+            set { cliente_nombre = value; }
         }
 
-        public string Apellidos
+        public string Cliente_apaterno
         {
-            get { return apellidos; }
-            set { apellidos = value; }
+            get { return cliente_apaterno; }
+            set { cliente_apaterno = value; }
         }
 
-        public string Direccion
+        public string Cliente_amaterno
         {
-            get { return direccion; }
-            set { direccion = value; }
+            get { return cliente_amaterno; }
+            set { cliente_amaterno = value; }
         }
 
-        public string Telefono
+        public string Cliente_direccion
         {
-            get { return telefono; }
-            set { telefono = value; }
+            get { return cliente_direccion; }
+            set { cliente_direccion = value; }
+        }
+
+        public string Cliente_email
+        {
+            get { return cliente_email; }
+            set { cliente_email = value; }
+        }
+
+        public string Cliente_telefono
+        {
+            get { return cliente_telefono; }
+            set { cliente_telefono = value; }
         }
     }
 }
