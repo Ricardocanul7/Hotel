@@ -44,7 +44,7 @@ CREATE TABLE cliente(
 );
 
 CREATE TABLE reservacion(
-  folio_reserva int not null,
+  folio_reserva int not null AUTO_INCREMENT,
   num_habitacion int not null,
   fecha_entrada DATETIME not null,
   fecha_salida DATETIME not null,
