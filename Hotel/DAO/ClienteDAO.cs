@@ -9,14 +9,18 @@ namespace Hotel.DAO
 {
     class ClienteDAO
     {
-        /*  -Agregar
-           -Modificar
-           -Eliminar
-           -Buscar  */
-
-        public bool Agregar(ClienteBO cliente)
+        Conexion Miconexion;
+        public ClienteDAO()
         {
-            return true;
+            Miconexion = new Conexion();
+        }
+
+        public int Agregar(ClienteBO clientebo)
+        {
+            string ComandoSQL = string.Format("INSERT INTO clientes (cliente_id, cliente_nombre, cliente_apaterno, cliente_amaterno, cliente_direccion, cliente_email, cliente_telefono)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", clientebo.Cliente_id, clientebo.Cliente_nombre, clientebo.Cliente_apaterno, clientebo.Cliente_amaterno, clientebo.Cliente_direccion, clientebo.Cliente_email, clientebo.Cliente_telefono);
+
+            return Miconexion.EjecutarComando(ComandoSQL);
+
         }
 
         public bool Modificar(ClienteBO cliente)
@@ -28,10 +32,18 @@ namespace Hotel.DAO
         {
             return true;
         }
-
-        public bool Buscar()
+        /*public DataTable Buscar()
         {
-            return true;
-        }
+            string ComandoSQL = string.Format("SELECT * FROM cliente");
+            return Miconexion.EjecutarSentencia(ComandoSQL);
+
+        }*/
+        /*  -Agregar
+           -Modificar
+           -Eliminar
+           -Buscar  */
+
+       
+
     }
 }
