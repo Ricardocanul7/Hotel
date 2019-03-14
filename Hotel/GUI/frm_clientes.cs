@@ -20,15 +20,12 @@ namespace Hotel.GUI
         {
             InitializeComponent();
             txt_idcliente.Enabled = false;
-            //DataTable datos = clientedao.Buscar();
-            // Creo una nueva fila al datatable
-           /* DataRow dr = datos.NewRow();
-            dr["cliente_nombre"] = "Seleccionar";
-            dr["cliente_id"] = 0;*/
+            DataTable datos = clientedao.Buscar();
             Grd_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Grd_clientes.ReadOnly = true;
             Grd_clientes.AllowUserToAddRows = false;
-            
+            Grd_clientes.DataSource= clientedao.Buscar();
+
         }
 
         

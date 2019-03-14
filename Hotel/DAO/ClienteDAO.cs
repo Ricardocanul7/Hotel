@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using Hotel.BO;
 
 namespace Hotel.DAO
@@ -32,12 +33,12 @@ namespace Hotel.DAO
         {
             return true;
         }
-        /*public DataTable Buscar()
+        public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT * FROM cliente");
+            string ComandoSQL = string.Format("SELECT * FROM clientes");
             return Miconexion.EjecutarSentencia(ComandoSQL);
 
-        }*/
+        }
         /*  -Agregar
            -Modificar
            -Eliminar
