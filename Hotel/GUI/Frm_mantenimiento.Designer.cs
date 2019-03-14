@@ -101,7 +101,6 @@
             this.btn_consultar_proveedor.Name = "btn_consultar_proveedor";
             this.btn_consultar_proveedor.Size = new System.Drawing.Size(115, 22);
             this.btn_consultar_proveedor.Text = "Buscar Empresas";
-            this.btn_consultar_proveedor.Click += new System.EventHandler(this.Buscar_empresas_click);
             // 
             // btn_prog_mantenimiento
             // 
