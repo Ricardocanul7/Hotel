@@ -8,90 +8,46 @@ namespace Hotel.BO
 {
     class ReservasBO
     {
-        private string nombre_hab;
-        private string tipo_hab;
-        private int numx_per;
-        private int id_cliente;
-        private string nom_cliente;
-        private string apell_cliente;
-        private string dir_cliente;
-        private string email;
-        private string tel_cliente;
-        private string fecha_ent;
-        private string fecha_sal;
-        private string det_reserva;
+        private int folio_reserva;
+        private HabitacionBO habitacion;
+        private DateTime fecha_entrada;
+        private DateTime fecha_salida;
+        private string detalles;
+        private ClienteBO cliente;
 
-
-        public string Nombre_hab
-        {
-            get { return nombre_hab; }
-            set { nombre_hab = value; }
+        public int Folio_reserva {
+            get { return folio_reserva; }
+            set { folio_reserva = value; }
         }
 
-        public string Tipo_hab
+        public HabitacionBO Habitacion
         {
-            get { return tipo_hab; }
-            set { tipo_hab = value; }
+            get { return habitacion; }
+            set { habitacion = value; }
         }
 
-        public int Numx_per
+        public DateTime Fecha_entrada
         {
-            get { return numx_per; }
-            set { numx_per = value; }
+            get { return fecha_entrada; }
+            set { fecha_entrada = value; }
         }
 
-        public int Id_cliente
+        public DateTime Fecha_salida
         {
-            get { return id_cliente; }
-            set { id_cliente = value; }
+            get { return fecha_salida; }
+            set { fecha_salida = value; }
         }
 
-        public string Nom_cliente
+        public string Detalles
         {
-            get { return nom_cliente; }
-            set { nom_cliente = value; }
+            get { return detalles; }
+            set { detalles = value; }
         }
 
-        public string Apell_cliente
+        public ClienteBO Cliente
         {
-            get { return apell_cliente; }
-            set { apell_cliente = value; }
-        }
-
-        public string Dir_cliente
-        {
-            get { return dir_cliente; }
-            set { dir_cliente = value; }
-        }
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
-
-        public string Tel_cliente
-        {
-            get { return tel_cliente; }
-            set { tel_cliente = value; }
-        }
-
-        public string Fecha_ent
-        {
-            get { return fecha_ent; }
-            set { fecha_ent = value; }
-        }
-
-        public string Fecha_sal
-        {
-            get { return fecha_sal; }
-            set { fecha_sal = value; }
-        }
-
-        public string Det_reserva
-        {
-            get { return det_reserva; }
-            set { det_reserva = value; }
+            get { return cliente; }
+            set { cliente = value; }
         }
     }
 }
