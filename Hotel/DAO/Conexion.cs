@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hotel.DAO
 {
@@ -17,8 +18,8 @@ namespace Hotel.DAO
         {
             string servidor = "localhost";
             string userid = "root";
-            string pass = "password";
-            string bd = "proyecto";
+            string pass = "12345";
+            string bd = "db_hotel";
 
             conn = new MySqlConnection("Server=" + servidor + "; User ID=" + userid
                                         + "; Persist Security info=true; password=" + pass +
@@ -47,8 +48,9 @@ namespace Hotel.DAO
                 this.CerrarConexion();
                 return 1;
             }
-            catch (MySqlException)
+            catch (MySqlException error)
             {
+                MessageBox.Show(error.Message);
                 return 0;
             }
             finally
