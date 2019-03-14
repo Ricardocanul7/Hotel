@@ -16,5 +16,20 @@ namespace Hotel.GUI
         {
             InitializeComponent();
         }
+
+        private void Nueva_Empresa_Click(object sender, EventArgs e)
+        {
+            this.panel_mantenimiento.Controls.Clear();
+            var ventana = new frm_Empresa();
+            ventana.Show();
+
+        }
+
+        private void Buscar_empresas_click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            var ventana = new frm_buscar_empresa();
+            ventana.Show();
+        }
     }
 }

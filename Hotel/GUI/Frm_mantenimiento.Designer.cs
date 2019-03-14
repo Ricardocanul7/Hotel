@@ -32,6 +32,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
+            this.panel_mantenimiento = new System.Windows.Forms.Panel();
             this.btn_nvoproveedor = new System.Windows.Forms.ToolStripButton();
             this.btn_consultar_proveedor = new System.Windows.Forms.ToolStripButton();
             this.btn_prog_mantenimiento = new System.Windows.Forms.ToolStripButton();
@@ -76,22 +77,31 @@
             this.btn_habitaciones.TabIndex = 3;
             this.btn_habitaciones.Text = "Menu";
             // 
+            // panel_mantenimiento
+            // 
+            this.panel_mantenimiento.Location = new System.Drawing.Point(0, 25);
+            this.panel_mantenimiento.Name = "panel_mantenimiento";
+            this.panel_mantenimiento.Size = new System.Drawing.Size(966, 425);
+            this.panel_mantenimiento.TabIndex = 5;
+            // 
             // btn_nvoproveedor
             // 
             this.btn_nvoproveedor.Image = global::Hotel.Properties.Resources.add;
             this.btn_nvoproveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_nvoproveedor.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_nvoproveedor.Name = "btn_nvoproveedor";
-            this.btn_nvoproveedor.Size = new System.Drawing.Size(119, 22);
-            this.btn_nvoproveedor.Text = "Nuevo Proveedor";
+            this.btn_nvoproveedor.Size = new System.Drawing.Size(109, 22);
+            this.btn_nvoproveedor.Text = "Nueva Empresa";
+            this.btn_nvoproveedor.Click += new System.EventHandler(this.Nueva_Empresa_Click);
             // 
             // btn_consultar_proveedor
             // 
             this.btn_consultar_proveedor.Image = global::Hotel.Properties.Resources._021_phone;
             this.btn_consultar_proveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_consultar_proveedor.Name = "btn_consultar_proveedor";
-            this.btn_consultar_proveedor.Size = new System.Drawing.Size(92, 22);
-            this.btn_consultar_proveedor.Text = "Proveedores";
+            this.btn_consultar_proveedor.Size = new System.Drawing.Size(115, 22);
+            this.btn_consultar_proveedor.Text = "Buscar Empresas";
+            this.btn_consultar_proveedor.Click += new System.EventHandler(this.Buscar_empresas_click);
             // 
             // btn_prog_mantenimiento
             // 
@@ -106,6 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 450);
+            this.Controls.Add(this.panel_mantenimiento);
             this.Controls.Add(this.Dgr_mantenimiento);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_mantenimiento";
@@ -126,5 +137,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btn_prog_mantenimiento;
         private System.Windows.Forms.ToolStrip btn_habitaciones;
+        private System.Windows.Forms.Panel panel_mantenimiento;
     }
 }
