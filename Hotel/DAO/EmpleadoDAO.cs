@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hotel.BO;
+using System.Data;
 
 
 namespace Hotel.DAO
@@ -38,10 +39,11 @@ namespace Hotel.DAO
         {
             return true;
         }
-
-        public bool Buscar()
+        public DataTable Buscar()
         {
-            return true;
+            string ComandoSQL = string.Format("SELECT * FROM empleado");
+            return Miconexion.EjecutarSentencia(ComandoSQL);
+
         }
     }
 }

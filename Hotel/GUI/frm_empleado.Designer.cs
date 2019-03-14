@@ -30,6 +30,8 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_apellidoparteno = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.cbo_tipoempleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbo_Horario = new System.Windows.Forms.ComboBox();
@@ -44,12 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_mod_empleado = new System.Windows.Forms.Button();
-            this.btn_borrar_empleado = new System.Windows.Forms.Button();
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_apellidoparteno = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +86,22 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Empleado";
+            // 
+            // txt_apellidoparteno
+            // 
+            this.txt_apellidoparteno.Location = new System.Drawing.Point(99, 55);
+            this.txt_apellidoparteno.Name = "txt_apellidoparteno";
+            this.txt_apellidoparteno.Size = new System.Drawing.Size(162, 20);
+            this.txt_apellidoparteno.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Apellido Paterno:";
             // 
             // cbo_tipoempleado
             // 
@@ -214,36 +228,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Empleado:";
             // 
-            // btn_mod_empleado
-            // 
-            this.btn_mod_empleado.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_mod_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_empleado.Location = new System.Drawing.Point(218, 296);
-            this.btn_mod_empleado.Name = "btn_mod_empleado";
-            this.btn_mod_empleado.Size = new System.Drawing.Size(102, 47);
-            this.btn_mod_empleado.TabIndex = 15;
-            this.btn_mod_empleado.Text = "Modificar";
-            this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_mod_empleado.UseVisualStyleBackColor = true;
-            this.btn_mod_empleado.Click += new System.EventHandler(this.Modificar_empleados);
-            // 
-            // btn_borrar_empleado
-            // 
-            this.btn_borrar_empleado.Image = global::Hotel.Properties.Resources.close;
-            this.btn_borrar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_empleado.Location = new System.Drawing.Point(427, 296);
-            this.btn_borrar_empleado.Name = "btn_borrar_empleado";
-            this.btn_borrar_empleado.Size = new System.Drawing.Size(93, 47);
-            this.btn_borrar_empleado.TabIndex = 14;
-            this.btn_borrar_empleado.Text = "Eliminar";
-            this.btn_borrar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_borrar_empleado.UseVisualStyleBackColor = true;
-            // 
             // btn_guardar_empleado
             // 
             this.btn_guardar_empleado.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_empleado.Location = new System.Drawing.Point(326, 296);
+            this.btn_guardar_empleado.Location = new System.Drawing.Point(445, 296);
             this.btn_guardar_empleado.Name = "btn_guardar_empleado";
             this.btn_guardar_empleado.Size = new System.Drawing.Size(95, 47);
             this.btn_guardar_empleado.TabIndex = 13;
@@ -262,29 +251,11 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // txt_apellidoparteno
-            // 
-            this.txt_apellidoparteno.Location = new System.Drawing.Point(99, 55);
-            this.txt_apellidoparteno.Name = "txt_apellidoparteno";
-            this.txt_apellidoparteno.Size = new System.Drawing.Size(162, 20);
-            this.txt_apellidoparteno.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 58);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Apellido Paterno:";
-            // 
             // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 355);
-            this.Controls.Add(this.btn_mod_empleado);
-            this.Controls.Add(this.btn_borrar_empleado);
             this.Controls.Add(this.btn_guardar_empleado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
@@ -315,8 +286,6 @@
         private System.Windows.Forms.TextBox txt_idempleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_guardar_empleado;
-        private System.Windows.Forms.Button btn_borrar_empleado;
-        private System.Windows.Forms.Button btn_mod_empleado;
         private System.Windows.Forms.ComboBox cbo_tipoempleado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbo_Horario;
