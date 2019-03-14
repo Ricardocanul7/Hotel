@@ -26,10 +26,15 @@ CREATE TABLE habitacion (
     tipo varchar(35) not null,
     descripcion text not null,
     estado varchar(35) not null,
-    id_empleado int,
+    PRIMARY KEY(num_habitacion)
+);
+
+CREATE TABLE limpieza_hab(
+    num_habitacion int not null,
+    id_empleado int not null,
     PRIMARY KEY(num_habitacion),
     FOREIGN KEY(id_empleado)
-        REFERENCES empleado(id_empleado)
+      REFERENCES empleado(id_empleado)
 );
 
 CREATE TABLE cliente(
