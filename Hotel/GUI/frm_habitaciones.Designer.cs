@@ -44,13 +44,15 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbo_tipohab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_numx_per = new System.Windows.Forms.TextBox();
+            this.txt_max_adultos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombrehab = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_hab_agregar = new System.Windows.Forms.Button();
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_max_ninios = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -176,9 +178,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_max_ninios);
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.cbo_tipohab);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txt_numx_per);
+            this.groupBox3.Controls.Add(this.txt_max_adultos);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.txt_nombrehab);
             this.groupBox3.Controls.Add(this.label1);
@@ -206,21 +210,21 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Tipo de habitación:";
             // 
-            // txt_numx_per
+            // txt_max_adultos
             // 
-            this.txt_numx_per.Location = new System.Drawing.Point(125, 63);
-            this.txt_numx_per.Name = "txt_numx_per";
-            this.txt_numx_per.Size = new System.Drawing.Size(63, 20);
-            this.txt_numx_per.TabIndex = 13;
+            this.txt_max_adultos.Location = new System.Drawing.Point(88, 63);
+            this.txt_max_adultos.Name = "txt_max_adultos";
+            this.txt_max_adultos.Size = new System.Drawing.Size(63, 20);
+            this.txt_max_adultos.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Num. Max. personas";
+            this.label3.Text = "Max. adultos";
             // 
             // txt_nombrehab
             // 
@@ -268,6 +272,22 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(184, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Max. niños";
+            // 
+            // txt_max_ninios
+            // 
+            this.txt_max_ninios.Location = new System.Drawing.Point(248, 63);
+            this.txt_max_ninios.Name = "txt_max_ninios";
+            this.txt_max_ninios.Size = new System.Drawing.Size(63, 20);
+            this.txt_max_ninios.TabIndex = 17;
+            // 
             // frm_habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,11 +333,13 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cbo_tipohab;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_numx_per;
+        private System.Windows.Forms.TextBox txt_max_adultos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nombrehab;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_hab_agregar;
         private System.Windows.Forms.Button btn_hab_limpiar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_max_ninios;
     }
 }

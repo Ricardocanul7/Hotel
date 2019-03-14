@@ -34,7 +34,8 @@ namespace Hotel.GUI
         private void btn_hab_guardar_Click(object sender, EventArgs e)
         {
             habitacionBO.Nombre_hab = txt_nombrehab.Text;
-            habitacionBO.Numx_per = Convert.ToInt32(txt_numx_per.Text);
+            habitacionBO.Max_adultos = Convert.ToInt32(txt_max_adultos.Text);
+            habitacionBO.Max_ninios = Convert.ToInt32(txt_max_ninios.Text);
             habitacionBO.Tipo_hab = cbo_tipohab.Text;
             habitacionBO.PrecioN = Convert.ToDouble(txt_precioN.Text);
             habitacionBO.PrecioPA = Convert.ToDouble(txt_precioPA.Text);
@@ -46,7 +47,8 @@ namespace Hotel.GUI
         private void btn_hab_limpiar_Click(object sender, EventArgs e)
         {
             txt_nombrehab.Clear();
-            txt_numx_per.Clear();
+            txt_max_adultos.Clear();
+            txt_max_ninios.Clear();
             cbo_tipohab.SelectedIndex = 0;
             txt_precioN.Clear();
             txt_precioPA.Clear();
