@@ -32,12 +32,12 @@ namespace Hotel.DAO
         {
             return true;
         }
-        /*public DataTable Buscar()
+        public System.Data.DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT * FROM cliente");
+            string ComandoSQL = string.Format("SELECT * FROM clientes");
             return Miconexion.EjecutarSentencia(ComandoSQL);
 
-        }*/
+        }
         /*  -Agregar
            -Modificar
            -Eliminar
