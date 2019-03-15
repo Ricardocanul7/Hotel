@@ -25,11 +25,11 @@ namespace Hotel.GUI
             Grd_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Grd_clientes.ReadOnly = true;
             Grd_clientes.AllowUserToAddRows = false;
-            Grd_clientes.DataSource= clientedao.Buscar();
+            Grd_clientes.DataSource = clientedao.Buscar();
 
         }
 
-        
+
 
         private void Guardar_clientes(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Hotel.GUI
             clientebo.Cliente_amaterno = txt_amaterno_cliente.Text;
             clientebo.Cliente_direccion = txt_direcc_cliente.Text;
             clientebo.Cliente_email = txt_email_cliente.Text;
-            clientebo.Cliente_telefono= txt_tele_cliente.Text;
+            clientebo.Cliente_telefono = txt_tele_cliente.Text;
 
             clientedao.Agregar(clientebo);
 
@@ -64,10 +64,10 @@ namespace Hotel.GUI
             txt_email_cliente.Text = clientebo.Cliente_email;
             txt_email_cliente.Text = clientebo.Cliente_telefono;
 
-        
+
             Miconexion.CerrarConexion();
             clientedao.Modificar(clientebo);
-            
+
 
             limpiar();
             Grd_clientes.DataSource = clientedao.Buscar();
@@ -82,7 +82,7 @@ namespace Hotel.GUI
         {
             int rowSelected = e.RowIndex;
 
-            clientebo.Cliente_id= int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
+            clientebo.Cliente_id = int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
 
             clientebo.Cliente_nombre = Grd_clientes.Rows[rowSelected].Cells["cliente_nombre"].Value.ToString();
             clientebo.Cliente_apaterno = Grd_clientes.Rows[rowSelected].Cells["cliente_apaterno"].Value.ToString();
@@ -104,7 +104,7 @@ namespace Hotel.GUI
 
         private void btn_borrar_cliente_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

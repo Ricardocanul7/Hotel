@@ -46,7 +46,7 @@ namespace Hotel.DAO
            -Eliminar
            -Buscar  */
 
-       
+
 
     }
 }

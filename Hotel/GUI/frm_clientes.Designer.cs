@@ -43,6 +43,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+
+
+
             this.btn_borrar_cliente = new System.Windows.Forms.Button();
             this.btn_mod_cliente = new System.Windows.Forms.Button();
             this.btn_guardar_cliente = new System.Windows.Forms.Button();
@@ -185,6 +188,9 @@
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombres:";
+
+
+
             // 
             // btn_borrar_cliente
             // 
@@ -233,8 +239,6 @@
             this.Grd_clientes.Name = "Grd_clientes";
             this.Grd_clientes.Size = new System.Drawing.Size(599, 208);
             this.Grd_clientes.TabIndex = 22;
-            this.Grd_clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grd_clientes_CellContentClick);
-            this.Grd_clientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
             // 
             // frm_clientes
             // 
