@@ -44,7 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
 
-            
+
 
             this.btn_borrar_cliente = new System.Windows.Forms.Button();
             this.btn_mod_cliente = new System.Windows.Forms.Button();
