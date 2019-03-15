@@ -18,7 +18,6 @@ namespace Hotel.BO
         private double precioTA; //TA=temporada alta
         private double precioPATA; //PATA=persona adicional temporada alta
         private string descripHab;
-        private EmpleadoBO empleadoBO;
 
         public int Num_habitacion
         {
@@ -78,12 +77,6 @@ namespace Hotel.BO
         {
             get { return descripHab; }
             set { descripHab = value; }
-        }
-
-        public EmpleadoBO EmpleadoBO
-        {
-            get { return empleadoBO; }
-            set { empleadoBO = value; }
         }
     }
 }
