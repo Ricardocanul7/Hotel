@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbo_max_ninios = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbo_max_adult = new System.Windows.Forms.ComboBox();
             this.cbo_habitaciones = new System.Windows.Forms.ComboBox();
             this.cbo_tipohab = new System.Windows.Forms.ComboBox();
@@ -37,11 +39,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_apelli_matern_cli = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.Txt_id_cliente = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.Txt_telefono_cliente = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
-            this.Txt_apell_cliente = new System.Windows.Forms.TextBox();
+            this.Txt_apell_patern_cliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Txt_nom_cliente = new System.Windows.Forms.TextBox();
@@ -73,8 +77,6 @@
             this.btn_borrar_res = new System.Windows.Forms.Button();
             this.btn_guardar_res = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbo_max_ninios = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,6 +101,23 @@
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
+            // 
+            // cbo_max_ninios
+            // 
+            this.cbo_max_ninios.FormattingEnabled = true;
+            this.cbo_max_ninios.Location = new System.Drawing.Point(119, 139);
+            this.cbo_max_ninios.Name = "cbo_max_ninios";
+            this.cbo_max_ninios.Size = new System.Drawing.Size(83, 21);
+            this.cbo_max_ninios.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Num. Niños";
             // 
             // cbo_max_adult
             // 
@@ -154,20 +173,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(93, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(348, 40);
+            this.label6.Size = new System.Drawing.Size(345, 39);
             this.label6.TabIndex = 26;
             this.label6.Text = "Reservar Habitación";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_apelli_matern_cli);
+            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.Txt_id_cliente);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.Txt_telefono_cliente);
             this.groupBox1.Controls.Add(this.txt_email);
-            this.groupBox1.Controls.Add(this.Txt_apell_cliente);
+            this.groupBox1.Controls.Add(this.Txt_apell_patern_cliente);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.Txt_nom_cliente);
@@ -177,14 +198,30 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(12, 277);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 192);
+            this.groupBox1.Size = new System.Drawing.Size(392, 236);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
+            // txt_apelli_matern_cli
+            // 
+            this.txt_apelli_matern_cli.Location = new System.Drawing.Point(119, 105);
+            this.txt_apelli_matern_cli.Name = "txt_apelli_matern_cli";
+            this.txt_apelli_matern_cli.Size = new System.Drawing.Size(241, 20);
+            this.txt_apelli_matern_cli.TabIndex = 24;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(17, 108);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(88, 13);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "Apellido materno:";
+            // 
             // Txt_id_cliente
             // 
-            this.Txt_id_cliente.Location = new System.Drawing.Point(88, 23);
+            this.Txt_id_cliente.Location = new System.Drawing.Point(119, 23);
             this.Txt_id_cliente.Name = "Txt_id_cliente";
             this.Txt_id_cliente.Size = new System.Drawing.Size(80, 20);
             this.Txt_id_cliente.TabIndex = 22;
@@ -200,38 +237,38 @@
             // 
             // Txt_telefono_cliente
             // 
-            this.Txt_telefono_cliente.Location = new System.Drawing.Point(88, 157);
+            this.Txt_telefono_cliente.Location = new System.Drawing.Point(119, 194);
             this.Txt_telefono_cliente.Name = "Txt_telefono_cliente";
-            this.Txt_telefono_cliente.Size = new System.Drawing.Size(272, 20);
+            this.Txt_telefono_cliente.Size = new System.Drawing.Size(241, 20);
             this.Txt_telefono_cliente.TabIndex = 20;
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(88, 128);
+            this.txt_email.Location = new System.Drawing.Point(119, 165);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(272, 20);
+            this.txt_email.Size = new System.Drawing.Size(241, 20);
             this.txt_email.TabIndex = 19;
             // 
-            // Txt_apell_cliente
+            // Txt_apell_patern_cliente
             // 
-            this.Txt_apell_cliente.Location = new System.Drawing.Point(88, 75);
-            this.Txt_apell_cliente.Name = "Txt_apell_cliente";
-            this.Txt_apell_cliente.Size = new System.Drawing.Size(272, 20);
-            this.Txt_apell_cliente.TabIndex = 18;
+            this.Txt_apell_patern_cliente.Location = new System.Drawing.Point(119, 75);
+            this.Txt_apell_patern_cliente.Name = "Txt_apell_patern_cliente";
+            this.Txt_apell_patern_cliente.Size = new System.Drawing.Size(241, 20);
+            this.Txt_apell_patern_cliente.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(17, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Apellidos:";
+            this.label9.Text = "Apellido paterno:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 157);
+            this.label5.Location = new System.Drawing.Point(17, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 16;
@@ -239,15 +276,15 @@
             // 
             // Txt_nom_cliente
             // 
-            this.Txt_nom_cliente.Location = new System.Drawing.Point(88, 49);
+            this.Txt_nom_cliente.Location = new System.Drawing.Point(119, 49);
             this.Txt_nom_cliente.Name = "Txt_nom_cliente";
-            this.Txt_nom_cliente.Size = new System.Drawing.Size(272, 20);
+            this.Txt_nom_cliente.Size = new System.Drawing.Size(241, 20);
             this.Txt_nom_cliente.TabIndex = 15;
             // 
             // Txt_email_cliente
             // 
             this.Txt_email_cliente.AutoSize = true;
-            this.Txt_email_cliente.Location = new System.Drawing.Point(17, 131);
+            this.Txt_email_cliente.Location = new System.Drawing.Point(17, 168);
             this.Txt_email_cliente.Name = "Txt_email_cliente";
             this.Txt_email_cliente.Size = new System.Drawing.Size(35, 13);
             this.Txt_email_cliente.TabIndex = 14;
@@ -255,15 +292,15 @@
             // 
             // Txt_dir_cliente
             // 
-            this.Txt_dir_cliente.Location = new System.Drawing.Point(88, 101);
+            this.Txt_dir_cliente.Location = new System.Drawing.Point(119, 138);
             this.Txt_dir_cliente.Name = "Txt_dir_cliente";
-            this.Txt_dir_cliente.Size = new System.Drawing.Size(272, 20);
+            this.Txt_dir_cliente.Size = new System.Drawing.Size(241, 20);
             this.Txt_dir_cliente.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 104);
+            this.label7.Location = new System.Drawing.Point(17, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 10;
@@ -288,7 +325,7 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(410, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 202);
+            this.groupBox2.Size = new System.Drawing.Size(392, 224);
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la reservación";
@@ -355,7 +392,7 @@
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(410, 294);
+            this.groupBox4.Location = new System.Drawing.Point(410, 316);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(392, 175);
             this.groupBox4.TabIndex = 46;
@@ -479,7 +516,7 @@
             // 
             this.btn_imprimir_res.Image = global::Hotel.Properties.Resources._049_notes1;
             this.btn_imprimir_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_imprimir_res.Location = new System.Drawing.Point(710, 488);
+            this.btn_imprimir_res.Location = new System.Drawing.Point(711, 519);
             this.btn_imprimir_res.Name = "btn_imprimir_res";
             this.btn_imprimir_res.Size = new System.Drawing.Size(95, 47);
             this.btn_imprimir_res.TabIndex = 45;
@@ -491,7 +528,7 @@
             // 
             this.btn_mod_res.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_mod_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_res.Location = new System.Drawing.Point(489, 488);
+            this.btn_mod_res.Location = new System.Drawing.Point(490, 519);
             this.btn_mod_res.Name = "btn_mod_res";
             this.btn_mod_res.Size = new System.Drawing.Size(102, 47);
             this.btn_mod_res.TabIndex = 44;
@@ -503,7 +540,7 @@
             // 
             this.btn_borrar_res.Image = global::Hotel.Properties.Resources.close;
             this.btn_borrar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_res.Location = new System.Drawing.Point(381, 488);
+            this.btn_borrar_res.Location = new System.Drawing.Point(382, 519);
             this.btn_borrar_res.Name = "btn_borrar_res";
             this.btn_borrar_res.Size = new System.Drawing.Size(93, 47);
             this.btn_borrar_res.TabIndex = 43;
@@ -515,7 +552,7 @@
             // 
             this.btn_guardar_res.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_res.Location = new System.Drawing.Point(605, 488);
+            this.btn_guardar_res.Location = new System.Drawing.Point(606, 519);
             this.btn_guardar_res.Name = "btn_guardar_res";
             this.btn_guardar_res.Size = new System.Drawing.Size(95, 47);
             this.btn_guardar_res.TabIndex = 42;
@@ -534,28 +571,11 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Num. Niños";
-            // 
-            // cbo_max_ninios
-            // 
-            this.cbo_max_ninios.FormattingEnabled = true;
-            this.cbo_max_ninios.Location = new System.Drawing.Point(119, 139);
-            this.cbo_max_ninios.Name = "cbo_max_ninios";
-            this.cbo_max_ninios.Size = new System.Drawing.Size(83, 21);
-            this.cbo_max_ninios.TabIndex = 19;
-            // 
             // Frm_reservar_hab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 569);
+            this.ClientSize = new System.Drawing.Size(830, 588);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btn_imprimir_res);
             this.Controls.Add(this.btn_mod_res);
@@ -602,7 +622,7 @@
         private System.Windows.Forms.ComboBox cbo_max_adult;
         private System.Windows.Forms.TextBox Txt_telefono_cliente;
         private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.TextBox Txt_apell_cliente;
+        private System.Windows.Forms.TextBox Txt_apell_patern_cliente;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -632,5 +652,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox cbo_max_ninios;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_apelli_matern_cli;
+        private System.Windows.Forms.Label label18;
     }
 }

@@ -55,12 +55,13 @@ namespace Hotel.GUI
             habitacionBO.Tipo_hab = cbo_tipohab.Text;
             habitacionBO.Max_adultos = Convert.ToInt32(cbo_max_adult.Text);
             habitacionBO.Max_ninios = Convert.ToInt32(cbo_max_ninios.Text);
-            clienteBO.Id_cliente = Convert.ToInt32(Txt_id_cliente.Text);
-            clienteBO.Nombre = Txt_nom_cliente.Text;
-            clienteBO.Apellidos = Txt_apell_cliente.Text;
-            clienteBO.Direccion = Txt_dir_cliente.Text;
-            clienteBO.Email = txt_email.Text;
-            clienteBO.Telefono = Txt_telefono_cliente.Text;
+            clienteBO.Cliente_id = Convert.ToInt32(Txt_id_cliente.Text);
+            clienteBO.Cliente_nombre = Txt_nom_cliente.Text;
+            clienteBO.Cliente_apaterno = Txt_apell_patern_cliente.Text;
+            clienteBO.Cliente_amaterno = txt_apelli_matern_cli.Text;
+            clienteBO.Cliente_direccion = Txt_dir_cliente.Text;
+            clienteBO.Cliente_email = txt_email.Text;
+            clienteBO.Cliente_telefono = Txt_telefono_cliente.Text;
 
 
             reservasBO.Cliente = clienteBO;
