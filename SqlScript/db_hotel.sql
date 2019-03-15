@@ -38,13 +38,13 @@ CREATE TABLE limpieza_hab(
 );
 
 CREATE TABLE cliente(
-  id_cliente int not null AUTO_INCREMENT,
-  nombre varchar(35) not null,
-  apellido_patern varchar(35) not null,
-  apellido_matern varchar(35) not null,
-  direccion varchar(100) not null,
-  email varchar(80) not null,
-  telefono varchar(20) not null,
+  cliente_id int not null AUTO_INCREMENT,
+  cliente_nombre varchar(45) not null,
+  cliente_apaterno varchar(45) not null,
+  cliente_amaterno varchar(45) not null,
+  cliente_direccion varchar(100) not null,
+  cliente_email varchar(60) not null,
+  cliente_telefono varchar(45) not null,
   PRIMARY KEY(id_cliente)
 );
 
