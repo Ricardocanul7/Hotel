@@ -45,7 +45,7 @@ CREATE TABLE cliente(
   cliente_direccion varchar(100) not null,
   cliente_email varchar(60) not null,
   cliente_telefono varchar(45) not null,
-  PRIMARY KEY(id_cliente)
+  PRIMARY KEY(cliente_id)
 );
 
 CREATE TABLE reservacion(
