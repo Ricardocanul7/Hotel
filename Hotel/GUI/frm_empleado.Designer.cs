@@ -49,11 +49,8 @@
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_mod_empleado = new System.Windows.Forms.Button();
-            this.btn_borrar_empleado = new System.Windows.Forms.Button();
-            this.dgv_empleados = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_empleados)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -258,55 +255,28 @@
             // 
             this.btn_mod_empleado.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_mod_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_empleado.Location = new System.Drawing.Point(233, 296);
+            this.btn_mod_empleado.Location = new System.Drawing.Point(332, 296);
             this.btn_mod_empleado.Name = "btn_mod_empleado";
             this.btn_mod_empleado.Size = new System.Drawing.Size(102, 47);
             this.btn_mod_empleado.TabIndex = 19;
             this.btn_mod_empleado.Text = "Modificar";
             this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_empleado.UseVisualStyleBackColor = true;
-            this.btn_mod_empleado.Click += new System.EventHandler(this.Modificar_empleados);
-            // 
-            // btn_borrar_empleado
-            // 
-            this.btn_borrar_empleado.Image = global::Hotel.Properties.Resources.close;
-            this.btn_borrar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_empleado.Location = new System.Drawing.Point(341, 296);
-            this.btn_borrar_empleado.Name = "btn_borrar_empleado";
-            this.btn_borrar_empleado.Size = new System.Drawing.Size(93, 47);
-            this.btn_borrar_empleado.TabIndex = 18;
-            this.btn_borrar_empleado.Text = "Eliminar";
-            this.btn_borrar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_borrar_empleado.UseVisualStyleBackColor = true;
-            this.btn_borrar_empleado.Click += new System.EventHandler(this.Eliminar_empleados);
-            // 
-            // dgv_empleados
-            // 
-            this.dgv_empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_empleados.Location = new System.Drawing.Point(28, 368);
-            this.dgv_empleados.Name = "dgv_empleados";
-            this.dgv_empleados.Size = new System.Drawing.Size(497, 101);
-            this.dgv_empleados.TabIndex = 20;
-            this.dgv_empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila);
             // 
             // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 500);
-            this.Controls.Add(this.dgv_empleados);
+            this.ClientSize = new System.Drawing.Size(552, 360);
             this.Controls.Add(this.btn_mod_empleado);
             this.Controls.Add(this.btn_guardar_empleado);
-            this.Controls.Add(this.btn_borrar_empleado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frm_empleado";
-            this.Text = "Nuevo Empleado";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_empleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +304,5 @@
         private System.Windows.Forms.TextBox txt_apellidoparteno;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_mod_empleado;
-        private System.Windows.Forms.Button btn_borrar_empleado;
-        private System.Windows.Forms.DataGridView dgv_empleados;
     }
 }
