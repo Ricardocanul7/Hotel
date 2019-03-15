@@ -24,9 +24,11 @@ namespace Hotel.DAO
 
         }
 
-        public bool Modificar(ClienteBO cliente)
+        public int Modificar(ClienteBO clientebo)
         {
-            return true;
+            String ComandoSQL = string.Format("UPDATE clientes SET cliente_nombre='{1}', cliente_apaterno='{2}', cliente_amaterno='{3}', cliente_direccion='{4}', cliente_email='{5}', cliente_telefono='{6}'  WHERE cliente_id={0}", clientebo.Cliente_id, clientebo.Cliente_nombre, clientebo.Cliente_apaterno, clientebo.Cliente_amaterno, clientebo.Cliente_direccion, clientebo.Cliente_email, clientebo.Cliente_telefono);
+            return Miconexion.EjecutarComando(ComandoSQL);
+
         }
 
         public bool Eliminar()

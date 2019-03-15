@@ -197,6 +197,7 @@
             this.btn_borrar_cliente.Text = "Eliminar";
             this.btn_borrar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_borrar_cliente.UseVisualStyleBackColor = true;
+            this.btn_borrar_cliente.Click += new System.EventHandler(this.btn_borrar_cliente_Click);
             // 
             // btn_mod_cliente
             // 
@@ -232,6 +233,8 @@
             this.Grd_clientes.Name = "Grd_clientes";
             this.Grd_clientes.Size = new System.Drawing.Size(599, 208);
             this.Grd_clientes.TabIndex = 22;
+            this.Grd_clientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grd_clientes_CellContentClick);
+            this.Grd_clientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
             // 
             // frm_clientes
             // 
