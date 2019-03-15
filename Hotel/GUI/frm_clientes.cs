@@ -14,39 +14,97 @@ namespace Hotel.GUI
 {
     public partial class frm_clientes : Form
     {
-        ClienteBO cliente = new ClienteBO();
-        ClienteDAO clientes = new ClienteDAO();
+        ClienteBO clientebo = new ClienteBO();
+        ClienteDAO clientedao = new ClienteDAO();
+        Conexion Miconexion = new Conexion();
         public frm_clientes()
         {
             InitializeComponent();
             txt_idcliente.Enabled = false;
+            DataTable datos = clientedao.Buscar();
+            Grd_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Grd_clientes.ReadOnly = true;
+            Grd_clientes.AllowUserToAddRows = false;
+            Grd_clientes.DataSource = clientedao.Buscar();
+
         }
+
+
 
         private void Guardar_clientes(object sender, EventArgs e)
         {
-            cliente.Nombre = txt_nom_cliente.Text;
-            cliente.Apellidos = txt_apell_clinte.Text;
-            cliente.Direccion = txt_direcc_cliente.Text;
-            cliente.Telefono = txt_tele_cliente.Text;
+            clientebo.Cliente_nombre = txt_nom_cliente.Text;
+            clientebo.Cliente_apaterno = txt_apaterno_cliente.Text;
+            clientebo.Cliente_amaterno = txt_amaterno_cliente.Text;
+            clientebo.Cliente_direccion = txt_direcc_cliente.Text;
+            clientebo.Cliente_email = txt_email_cliente.Text;
+            clientebo.Cliente_telefono = txt_tele_cliente.Text;
 
-            clientes.Agregar(cliente);
+            clientedao.Agregar(clientebo);
 
             limpiar();
+            Grd_clientes.DataSource = clientedao.Buscar();
         }
         public void limpiar()
         {
-            txt_apell_clinte.Clear();
-            txt_direcc_cliente.Clear();
             txt_nom_cliente.Clear();
+            txt_apaterno_cliente.Clear();
+            txt_amaterno_cliente.Clear();
+            txt_direcc_cliente.Clear();
+            txt_email_cliente.Clear();
             txt_tele_cliente.Clear();
         }
 
         private void Modificar_clientes(object sender, EventArgs e)
         {
-            txt_nom_cliente.Text = cliente.Nombre;
-            txt_apell_clinte.Text = cliente.Apellidos;
-            txt_direcc_cliente.Text = cliente.Direccion;
-            txt_tele_cliente.Text = cliente.Telefono;
+            txt_nom_cliente.Text = clientebo.Cliente_nombre;
+            txt_apaterno_cliente.Text = clientebo.Cliente_apaterno;
+            txt_amaterno_cliente.Text = clientebo.Cliente_amaterno;
+            txt_direcc_cliente.Text = clientebo.Cliente_direccion;
+            txt_email_cliente.Text = clientebo.Cliente_email;
+            txt_email_cliente.Text = clientebo.Cliente_telefono;
+
+
+            Miconexion.CerrarConexion();
+            clientedao.Modificar(clientebo);
+
+
+            limpiar();
+            Grd_clientes.DataSource = clientedao.Buscar();
+        }
+
+        private void Grd_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void seleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowSelected = e.RowIndex;
+
+            clientebo.Cliente_id = int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
+
+            clientebo.Cliente_nombre = Grd_clientes.Rows[rowSelected].Cells["cliente_nombre"].Value.ToString();
+            clientebo.Cliente_apaterno = Grd_clientes.Rows[rowSelected].Cells["cliente_apaterno"].Value.ToString();
+            clientebo.Cliente_amaterno = Grd_clientes.Rows[rowSelected].Cells["cliente_amaterno"].Value.ToString();
+            clientebo.Cliente_direccion = Grd_clientes.Rows[rowSelected].Cells["cliente_direccion"].Value.ToString();
+            clientebo.Cliente_email = Grd_clientes.Rows[rowSelected].Cells["cliente_email"].Value.ToString();
+            clientebo.Cliente_telefono = Grd_clientes.Rows[rowSelected].Cells["cliente_telefono"].Value.ToString();
+
+
+            txt_idcliente.Text = clientebo.Cliente_id.ToString();
+            txt_nom_cliente.Text = clientebo.Cliente_nombre;
+            txt_apaterno_cliente.Text = clientebo.Cliente_apaterno;
+            txt_amaterno_cliente.Text = clientebo.Cliente_amaterno;
+            txt_direcc_cliente.Text = clientebo.Cliente_direccion;
+            txt_email_cliente.Text = clientebo.Cliente_email;
+            txt_tele_cliente.Text = clientebo.Cliente_telefono;
+
+        }
+
+        private void btn_borrar_cliente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

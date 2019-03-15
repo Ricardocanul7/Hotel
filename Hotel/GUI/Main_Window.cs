@@ -101,5 +101,18 @@ namespace Hotel.GUI
             lbl_titulo.Text = "CAJA";
 
         }
+
+        private void btn_clientes_Click(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new frm_clientes();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "CLIENTES";
+
+        }
     }
 }

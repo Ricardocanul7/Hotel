@@ -43,11 +43,13 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.panel_principal = new System.Windows.Forms.Panel();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_habitaciones = new System.Windows.Forms.ToolStripButton();
             this.btn_reservaciones = new System.Windows.Forms.ToolStripButton();
             this.btn_empleados = new System.Windows.Forms.ToolStripButton();
             this.btn_mantenimiento = new System.Windows.Forms.ToolStripButton();
             this.btn_caja = new System.Windows.Forms.ToolStripButton();
+            this.btn_clientes = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cerrar_sesion = new System.Windows.Forms.Button();
             this.panel_logo = new System.Windows.Forms.Panel();
@@ -187,6 +189,8 @@
             this.toolStripSeparator3,
             this.btn_mantenimiento,
             this.toolStripSeparator4,
+            this.btn_clientes,
+            this.toolStripSeparator5,
             this.btn_caja});
             this.MenuStrip_principal.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip_principal.Name = "MenuStrip_principal";
@@ -223,6 +227,11 @@
             this.panel_principal.Name = "panel_principal";
             this.panel_principal.Size = new System.Drawing.Size(875, 478);
             this.panel_principal.TabIndex = 3;
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 49);
             // 
             // btn_habitaciones
             // 
@@ -270,6 +279,16 @@
             this.btn_caja.Text = "Caja";
             this.btn_caja.ToolTipText = "Caja";
             this.btn_caja.Click += new System.EventHandler(this.btn_caja_Click);
+            // 
+            // btn_clientes
+            // 
+            this.btn_clientes.Image = global::Hotel.Properties.Resources.team;
+            this.btn_clientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_clientes.Name = "btn_clientes";
+            this.btn_clientes.Size = new System.Drawing.Size(95, 46);
+            this.btn_clientes.Text = "Clientes";
+            this.btn_clientes.ToolTipText = "Caja";
+            this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
             // pictureBox1
             // 
@@ -363,5 +382,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btn_caja;
         private System.Windows.Forms.Panel panel_principal;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton btn_clientes;
     }
 }
