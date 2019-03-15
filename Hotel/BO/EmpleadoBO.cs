@@ -10,7 +10,8 @@ namespace Hotel.BO
     {
         private int id_empleado;
         private string nombre;
-        private string apellido;
+        private string apellido_patem;
+        private string apellido_matem;
         private string direccion;
         private string telefono;
         private string horario;
@@ -28,10 +29,16 @@ namespace Hotel.BO
             set { nombre = value; }
         }
 
-        public string Apellido
+        public string Apellido_Petem
         {
-            get { return apellido; }
-            set { apellido = value; }
+            get { return apellido_patem; }
+            set { apellido_patem = value; }
+        }
+
+        public string Apellido_Matem
+        {
+            get { return apellido_matem; }
+            set { apellido_matem = value; }
         }
 
         public string Direccion
