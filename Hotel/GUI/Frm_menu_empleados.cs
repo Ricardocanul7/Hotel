@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel.DAO;
+using Hotel.BO;
 using System.Data;
 
 namespace Hotel.GUI
@@ -15,6 +16,7 @@ namespace Hotel.GUI
     public partial class Frm_menu_empleados : Form
     {
         EmpleadoDAO empleadoDAO = new EmpleadoDAO();
+        EmpleadoBO empleadoBO = new EmpleadoBO();
 
         private DataTable datos;
         public string nombre = "";
@@ -46,6 +48,7 @@ namespace Hotel.GUI
                 empleados.RowFilter = string.Format("nombre LIKE '%{0}%'", txt_buscarempleados.Text);
             }
             dgv_empleados.DataSource = empleados;
+
         }
 
         private void Seleccionar_empleado(object sender, DataGridViewCellMouseEventArgs e)
@@ -57,5 +60,7 @@ namespace Hotel.GUI
             this.Dispose();
 
         }
+
+
     }
 }

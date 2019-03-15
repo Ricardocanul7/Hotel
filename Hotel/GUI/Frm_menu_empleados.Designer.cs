@@ -37,8 +37,6 @@
             this.txt_buscarempleados = new System.Windows.Forms.ToolStripTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_empleados = new System.Windows.Forms.DataGridView();
-            this.btn_mod_empleado = new System.Windows.Forms.Button();
-            this.btn_borrar_empleado = new System.Windows.Forms.Button();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleados)).BeginInit();
             this.SuspendLayout();
@@ -119,37 +117,11 @@
             this.dgv_empleados.TabIndex = 5;
             this.dgv_empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_empleado);
             // 
-            // btn_mod_empleado
-            // 
-            this.btn_mod_empleado.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_mod_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_empleado.Location = new System.Drawing.Point(549, 396);
-            this.btn_mod_empleado.Name = "btn_mod_empleado";
-            this.btn_mod_empleado.Size = new System.Drawing.Size(102, 47);
-            this.btn_mod_empleado.TabIndex = 17;
-            this.btn_mod_empleado.Text = "Modificar";
-            this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_mod_empleado.UseVisualStyleBackColor = true;
-            // 
-            // btn_borrar_empleado
-            // 
-            this.btn_borrar_empleado.Image = global::Hotel.Properties.Resources.close;
-            this.btn_borrar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_empleado.Location = new System.Drawing.Point(672, 396);
-            this.btn_borrar_empleado.Name = "btn_borrar_empleado";
-            this.btn_borrar_empleado.Size = new System.Drawing.Size(93, 47);
-            this.btn_borrar_empleado.TabIndex = 16;
-            this.btn_borrar_empleado.Text = "Eliminar";
-            this.btn_borrar_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_borrar_empleado.UseVisualStyleBackColor = true;
-            // 
             // Frm_menu_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_mod_empleado);
-            this.Controls.Add(this.btn_borrar_empleado);
             this.Controls.Add(this.dgv_empleados);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_habitaciones);
@@ -173,8 +145,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_empleados;
-        private System.Windows.Forms.Button btn_mod_empleado;
-        private System.Windows.Forms.Button btn_borrar_empleado;
         private System.Windows.Forms.ToolStripTextBox txt_buscarempleados;
     }
 }
