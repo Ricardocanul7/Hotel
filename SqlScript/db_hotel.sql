@@ -59,5 +59,5 @@ CREATE TABLE reservacion(
   FOREIGN KEY(num_habitacion)
     REFERENCES habitacion(num_habitacion),
   FOREIGN KEY(cliente)
-    REFERENCES cliente(id_cliente)
+    REFERENCES cliente(cliente_id)
 );
