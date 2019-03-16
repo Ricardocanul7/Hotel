@@ -31,7 +31,7 @@ namespace Hotel.GUI
             cbo_tipohab.Items.Add("DUPLEX LAG");
 
             cbo_tipohab.SelectedIndex = 0;
-
+            
         }
 
         private void btn_hab_guardar_Click(object sender, EventArgs e)
@@ -39,6 +39,7 @@ namespace Hotel.GUI
             if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
             {
                 MessageBox.Show("Registro Agregado");
+
             }
             else
             {
@@ -76,6 +77,11 @@ namespace Hotel.GUI
             txt_precioTA.Clear();
             txt_precioPATA.Clear();
             txt_descripHab.Clear();
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

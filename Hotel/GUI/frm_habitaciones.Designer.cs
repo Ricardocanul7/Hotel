@@ -42,6 +42,10 @@
             this.txt_precioTA = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_num_habitacion = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_max_ninios = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbo_tipohab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_max_adultos = new System.Windows.Forms.TextBox();
@@ -51,10 +55,7 @@
             this.btn_hab_agregar = new System.Windows.Forms.Button();
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_max_ninios = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_num_habitacion = new System.Windows.Forms.TextBox();
+            this.btn_modificar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -197,6 +198,39 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
             // 
+            // txt_num_habitacion
+            // 
+            this.txt_num_habitacion.Enabled = false;
+            this.txt_num_habitacion.Location = new System.Drawing.Point(331, 29);
+            this.txt_num_habitacion.Name = "txt_num_habitacion";
+            this.txt_num_habitacion.Size = new System.Drawing.Size(63, 20);
+            this.txt_num_habitacion.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(278, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Número:";
+            // 
+            // txt_max_ninios
+            // 
+            this.txt_max_ninios.Location = new System.Drawing.Point(248, 63);
+            this.txt_max_ninios.Name = "txt_max_ninios";
+            this.txt_max_ninios.Size = new System.Drawing.Size(63, 20);
+            this.txt_max_ninios.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(184, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Max. niños";
+            // 
             // cbo_tipohab
             // 
             this.cbo_tipohab.FormattingEnabled = true;
@@ -248,7 +282,7 @@
             // 
             // btn_hab_agregar
             // 
-            this.btn_hab_agregar.Location = new System.Drawing.Point(368, 466);
+            this.btn_hab_agregar.Location = new System.Drawing.Point(37, 466);
             this.btn_hab_agregar.Name = "btn_hab_agregar";
             this.btn_hab_agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_hab_agregar.TabIndex = 24;
@@ -258,7 +292,7 @@
             // 
             // btn_hab_limpiar
             // 
-            this.btn_hab_limpiar.Location = new System.Drawing.Point(292, 466);
+            this.btn_hab_limpiar.Location = new System.Drawing.Point(368, 466);
             this.btn_hab_limpiar.Name = "btn_hab_limpiar";
             this.btn_hab_limpiar.Size = new System.Drawing.Size(75, 23);
             this.btn_hab_limpiar.TabIndex = 25;
@@ -276,44 +310,22 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // btn_modificar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Max. niños";
-            // 
-            // txt_max_ninios
-            // 
-            this.txt_max_ninios.Location = new System.Drawing.Point(248, 63);
-            this.txt_max_ninios.Name = "txt_max_ninios";
-            this.txt_max_ninios.Size = new System.Drawing.Size(63, 20);
-            this.txt_max_ninios.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(278, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Número:";
-            // 
-            // txt_num_habitacion
-            // 
-            this.txt_num_habitacion.Enabled = false;
-            this.txt_num_habitacion.Location = new System.Drawing.Point(331, 29);
-            this.txt_num_habitacion.Name = "txt_num_habitacion";
-            this.txt_num_habitacion.Size = new System.Drawing.Size(63, 20);
-            this.txt_num_habitacion.TabIndex = 19;
+            this.btn_modificar.Location = new System.Drawing.Point(118, 466);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar.TabIndex = 26;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // frm_habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 501);
+            this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_hab_limpiar);
             this.Controls.Add(this.btn_hab_agregar);
             this.Controls.Add(this.groupBox3);
@@ -364,5 +376,6 @@
         private System.Windows.Forms.TextBox txt_max_ninios;
         private System.Windows.Forms.TextBox txt_num_habitacion;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_modificar;
     }
 }
