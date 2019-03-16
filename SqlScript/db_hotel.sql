@@ -143,3 +143,28 @@ CREATE TABLE usuario_transaccion(
   FOREIGN KEY(codigo_transaccion)
     REFERENCES transaccion(codigo_transaccion)
 );
+
+CREATE TABLE recibo_pago(
+  folio_recibo int AUTO_INCREMENT not null,
+  horas_trabajo int not null,
+  pago_hora decimal(10, 2) not null,
+  PRIMARY KEY(folio_recibo)
+);
+
+CREATE TABLE recibo_limpieza(
+  id_empleado int not null,
+  folio_recibo int not null,
+  FOREIGN KEY(id_empleado)
+    REFERENCES empleado(id_empleado),
+  FOREIGN KEY(folio_recibo)
+    REFERENCES recibo_pago(folio_recibo)
+);
+
+CREATE TABLE recibo_mantenimiento(
+  rfc_empresa int not null,
+  folio_recibo int not null,
+  FOREIGN KEY(rfc_empresa)
+    REFERENCES empresa_mmto(rfc_empresa),
+  FOREIGN KEY(folio_recibo)
+    REFERENCES recibo_pago(folio_recibo)
+);
