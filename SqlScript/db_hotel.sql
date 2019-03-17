@@ -161,7 +161,7 @@ CREATE TABLE recibo_limpieza(
 );
 
 CREATE TABLE recibo_mantenimiento(
-  rfc_empresa int not null,
+  rfc_empresa varchar(45) not null,
   folio_recibo int not null,
   FOREIGN KEY(rfc_empresa)
     REFERENCES empresa_mmto(rfc_empresa),
