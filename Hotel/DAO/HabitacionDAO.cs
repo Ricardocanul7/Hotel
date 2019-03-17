@@ -47,5 +47,11 @@ namespace Hotel.DAO
         {
             return true;
         }
+
+        public DataTable BuscarTipoHabitacion()
+        {
+            string commandSQL = "SELECT * from tipo_habitacion";
+            return conexion.EjecutarSentencia(commandSQL);
+        }
     }
 }
