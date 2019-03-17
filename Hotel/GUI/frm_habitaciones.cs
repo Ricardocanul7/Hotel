@@ -22,16 +22,18 @@ namespace Hotel.GUI
             habitacionBO = new HabitacionBO();
             habitacionDAO = new HabitacionDAO();
 
-            cbo_tipohab.Items.Add("SELECCIONAR");
-            cbo_tipohab.Items.Add("CABAÑA");
-            cbo_tipohab.Items.Add("CABAÑA ST");
-            cbo_tipohab.Items.Add("SUITE JAR");
-            cbo_tipohab.Items.Add("SUITE LAG");
-            cbo_tipohab.Items.Add("DUPLEX");
-            cbo_tipohab.Items.Add("DUPLEX LAG");
+            Set_cbo_tipo_habitacion();
+        }
+
+        private void Set_cbo_tipo_habitacion()
+        {
+            DataRow[] rows = habitacionDAO.BuscarTipoHabitacion().Select();
+            for (int i = 0; i < rows.Length; i++)
+            {
+                cbo_tipohab.Items.Add(rows[i][0]);
+            }
 
             cbo_tipohab.SelectedIndex = 0;
-
         }
 
         private void btn_hab_guardar_Click(object sender, EventArgs e)
