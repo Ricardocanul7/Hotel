@@ -42,7 +42,7 @@ namespace Hotel.GUI
             DataView empleados = datos.DefaultView;
             empleados.RowFilter = string.Empty;
 
-            if(txt_buscarempleados.Text != string.Empty)
+            if (txt_buscarempleados.Text != string.Empty)
             {
                 empleados.RowFilter = string.Format("nombre LIKE '%{0}%'", txt_buscarempleados.Text);
             }
@@ -53,13 +53,36 @@ namespace Hotel.GUI
         private void Seleccionar_empleado(object sender, DataGridViewCellMouseEventArgs e)
         {
             int Filaseleccionada = e.RowIndex;
-            nombre = dgv_empleados.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
+            empleadoBO.Nombre = dgv_empleados.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
+            empleadoBO.Id_empleado = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["id_empleado"].Value.ToString());
+            empleadoBO.Apellido_Petem = dgv_empleados.Rows[Filaseleccionada].Cells["apellido_patern"].Value.ToString();
+            empleadoBO.Apellido_Matem = dgv_empleados.Rows[Filaseleccionada].Cells["apellido_matern"].Value.ToString();
+            empleadoBO.Direccion = dgv_empleados.Rows[Filaseleccionada].Cells["direccion"].Value.ToString();
+            empleadoBO.Telefono = dgv_empleados.Rows[Filaseleccionada].Cells["telefono"].Value.ToString();
+            empleadoBO.Horario = dgv_empleados.Rows[Filaseleccionada].Cells["horario"].Value.ToString();
+            empleadoBO.Tipo = dgv_empleados.Rows[Filaseleccionada].Cells["tipo"].Value.ToString();
 
             this.DialogResult = DialogResult.OK;
-            this.Dispose();
+         
 
         }
+        private void Eliminar_Empleado(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
+        "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (empleadoDAO.Eliminar(empleadoBO) == 1)
+                {
+                    MessageBox.Show("El registro se a borrado");
+                }
+                else
+                {
+                    MessageBox.Show("Algo salio mal");
+                }
 
-
+                dgv_empleados.DataSource = empleadoDAO.Buscar();
+            }
+        }
     }
 }
+

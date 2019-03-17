@@ -24,7 +24,7 @@ namespace Hotel.DAO
 
         public int Agregar(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("INSERT INTO empleado (id_empleado, nombre, apellido_patern, apellido_matern, direccion, telefono, horario, tipo)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}');",empleado.Id_empleado, empleado.Nombre, empleado.Apellido_Petem, empleado.Apellido_Matem,empleado.Direccion, empleado.Telefono, empleado.Horario,empleado.Tipo);
+            string ComandoSQL = string.Format("INSERT INTO empleado (nombre, apellido_patern, apellido_matern, direccion, telefono, horario, tipo)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", empleado.Nombre, empleado.Apellido_Petem, empleado.Apellido_Matem,empleado.Direccion, empleado.Telefono, empleado.Horario,empleado.Tipo);
 
             return Miconexion.EjecutarComando(ComandoSQL);
 
@@ -32,7 +32,7 @@ namespace Hotel.DAO
 
         public int Modificar(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("UPDATE empleado SET nombre='{1}', apellido_patern='{2}', apellido_matern='{3},' direccion='{4}', telefono='{5}', horario='{6}', tipo='{7}' WHERE id_empleado = {0} ", empleado.Id_empleado, empleado.Nombre, empleado.Apellido_Petem, empleado.Apellido_Matem, empleado.Direccion, empleado.Telefono, empleado.Horario, empleado.Tipo);
+            string ComandoSQL = string.Format("UPDATE empleado SET nombre='{1}', apellido_patern='{2}', apellido_matern='{3}', direccion='{4}', telefono='{5}', horario='{6}', tipo='{7}' WHERE id_empleado = {0} ", empleado.Id_empleado, empleado.Nombre, empleado.Apellido_Petem, empleado.Apellido_Matem, empleado.Direccion, empleado.Telefono, empleado.Horario, empleado.Tipo);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
 
