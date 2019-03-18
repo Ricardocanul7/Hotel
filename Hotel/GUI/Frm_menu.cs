@@ -82,8 +82,27 @@ namespace Hotel
             habitacionBO.PrecioPA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_baja"].Value.ToString());
             habitacionBO.Tipo_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo"].Value.ToString();
             habitacionBO.DescripHab = dgv_habitaciones.Rows[filaSeleccionar].Cells["descripcion"].Value.ToString();
-            
-            
+
+            this.DialogResult = DialogResult.OK;
+
+        }
+
+        private void btn_eliminar_hab_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
+            "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (habitacionDAO.Eliminar(habitacionBO) == 1)
+                {
+                    MessageBox.Show("El registro se ha borrado");
+                }
+                else
+                {
+                    MessageBox.Show("Algo salio mal");
+                }
+
+                dgv_habitaciones.DataSource = habitacionDAO.Buscar();
+            }
         }
     }
 }
