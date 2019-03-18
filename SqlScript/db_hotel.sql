@@ -2,169 +2,178 @@ CREATE DATABASE db_hotel;
 
 USE db_hotel;
 
-CREATE TABLE puesto_empleado(
-  puesto varchar(45) not null,
-  PRIMARY KEY(puesto)
-);
-
-CREATE TABLE empleado (
-    id_empleado int not null AUTO_INCREMENT,
-    nombre varchar(35) not null,
-    apellido_patern varchar(35) not null,
-    apellido_matern varchar(35) not null,
-    direccion varchar(100) not null,
-    telefono varchar(20) not null,
-    horario varchar(30) not null,
-    puesto varchar(30) not null,
-    PRIMARY KEY(id_empleado),
-    FOREIGN KEY(puesto)
-      REFERENCES puesto_empleado(puesto)
+CREATE TABLE tipo_usuario(
+  tipo_id INT NOT NULL,
+  nombre VARCHAR(45) NOT NULL,
+  PRIMARY KEY(tipo_id)
 );
 
 CREATE TABLE usuario(
-  id_usuario int AUTO_INCREMENT not null,
-  email varchar(80) not null,
-  password varchar(80) not null,
-  PRIMARY KEY(id_usuario)
+  usuario_id INT NOT NULL AUTO_INCREMENT,
+  usuario_tipo INT NOT NULL,
+  nombre VARCHAR(45) NOT NULL,
+  apellido_patern VARCHAR(45) NOT NULL,
+  apellido_matern VARCHAR(45) NOT NULL,
+  email VARCHAR(85) NOT NULL,
+  password VARCHAR(45) NOT NULL,
+  PRIMARY KEY(usuario_id),
+  FOREIGN KEY(usuario_tipo)
+    REFERENCES tipo_usuario(tipo_id)
 );
 
-CREATE TABLE usuario_empleado(
-  id_usuario int not null,
-  id_empleado int not null,
-  PRIMARY KEY(id_usuario, id_empleado),
-  FOREIGN KEY(id_usuario)
-    REFERENCES usuario(id_usuario),
-  FOREIGN KEY(id_empleado)
-    REFERENCES empleado(id_empleado)
+CREATE TABLE puesto_empleado(
+  puesto VARCHAR(45) NOT NULL,
+  PRIMARY KEY(puesto)
+);
+
+CREATE TABLE empleado(
+  empleado_id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(60) NOT NULL,
+  apellido_patern VARCHAR(45) NOT NULL,
+  apellido_matern VARCHAR(45) NOT NULL,
+  direccion VARCHAR(100) NOT NULL,
+  telefono VARCHAR(20) NOT NULL,
+  horario VARCHAR(45) NOT NULL,
+  sueldo DECIMAL NOT NULL,
+  puesto VARCHAR(45) NOT NULL,
+  PRIMARY KEY(empleado_id),
+  FOREIGN KEY(puesto)
+    REFERENCES puesto_empleado(puesto)
 );
 
 CREATE TABLE tipo_habitacion(
-  nombre_tipo varchar(45),
+  nombre_tipo VARCHAR(45) NOT NULL,
   PRIMARY KEY(nombre_tipo)
 );
 
 CREATE TABLE estado_habitacion(
-  desc_estado varchar(45) not null,
-  PRIMARY KEY(desc_estado)
+  estado VARCHAR(45) NOT NULL,
+  PRIMARY KEY(estado)
 );
 
 CREATE TABLE habitacion (
-    num_habitacion int not null AUTO_INCREMENT,
-    nombre varchar(50) not null,
-    max_ninios int not null,
-    max_adultos int not null,
-    precio_alta decimal not null,
-    precio_baja decimal not null,
-    precio_adic_alta decimal not null,
-    precio_adic_baja decimal not null,
-    tipo varchar(45) not null,
-    descripcion text not null,
-    estado varchar(35) not null,
+    num_habitacion INT NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    max_ninios INT NOT NULL,
+    max_adultos INT NOT NULL,
+    precio_alta decimal NOT NULL,
+    precio_baja decimal NOT NULL,
+    precio_adic_alta REAL NOT NULL,
+    precio_adic_baja REAL NOT NULL,
+    tipo_hab VARCHAR(45) NOT NULL,
+    descripcion text NOT NULL,
+    estado_hab VARCHAR(45) NOT NULL,
     PRIMARY KEY(num_habitacion),
-    FOREIGN KEY(tipo)
+    FOREIGN KEY(tipo_hab)
       REFERENCES tipo_habitacion(nombre_tipo),
-    FOREIGN KEY(estado)
-      REFERENCES estado_habitacion(desc_estado)
-);
-
-CREATE TABLE limpieza_hab(
-    num_habitacion int not null,
-    id_empleado int not null,
-    fecha_limpieza DATE not null,
-    PRIMARY KEY(num_habitacion),
-    FOREIGN KEY(num_habitacion)
-      REFERENCES habitacion(num_habitacion),
-    FOREIGN KEY(id_empleado)
-      REFERENCES empleado(id_empleado)
+    FOREIGN KEY(estado_hab)
+      REFERENCES estado_habitacion(estado)
 );
 
 CREATE TABLE cliente(
-  cliente_id int not null AUTO_INCREMENT,
-  cliente_nombre varchar(45) not null,
-  cliente_apaterno varchar(45) not null,
-  cliente_amaterno varchar(45) not null,
-  cliente_direccion varchar(100) not null,
-  cliente_email varchar(60) not null,
-  cliente_telefono varchar(45) not null,
+  cliente_id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  apaterno VARCHAR(45) NOT NULL,
+  amaterno VARCHAR(45) NOT NULL,
+  direccion VARCHAR(100) NOT NULL,
+  email VARCHAR(60) NOT NULL,
+  telefono VARCHAR(45) NOT NULL,
   PRIMARY KEY(cliente_id)
 );
 
 CREATE TABLE reservacion(
-  folio_reserva int not null AUTO_INCREMENT,
-  num_habitacion int not null,
-  fecha_entrada DATETIME not null,
-  fecha_salida DATETIME not null,
+  folio_reserva INT NOT NULL AUTO_INCREMENT,
+  num_habitacion INT NOT NULL,
+  fecha_entrada DATE NOT NULL,
+  fecha_salida DATE NOT NULL,
   detalles TEXT,
-  cliente int not null,
+  cliente_id INT NOT NULL,
   PRIMARY KEY(folio_reserva),
   FOREIGN KEY(num_habitacion)
     REFERENCES habitacion(num_habitacion),
-  FOREIGN KEY(cliente)
+  FOREIGN KEY(cliente_id)
     REFERENCES cliente(cliente_id)
 );
 
-CREATE TABLE empresa_mmto(
-  rfc_empresa varchar(45) not null,
-  nombre_empresa varchar(80) not null,
-  PRIMARY KEY(rfc_empresa)
-);
-
-CREATE TABLE mantenimiento_hab(
-  rfc_empresa varchar(45) not null,
-  num_habitacion int not null,
-  fecha_mant DATE not null,
-  PRIMARY KEY(rfc_empresa, num_habitacion),
-  FOREIGN KEY (rfc_empresa)
-    REFERENCES empresa_mmto(rfc_empresa),
-  FOREIGN KEY (num_habitacion)
-    REFERENCES habitacion(num_habitacion)
+CREATE TABLE corte_caja(
+  corte_id INT NOT NULL AUTO_INCREMENT,
+  monto REAL NOT NULL,
+  fecha DATE NOT NULL,
+  hora TIME NOT NULL,
+  usuario_id INT NOT NULL,
+  PRIMARY KEY(corte_id),
+  FOREIGN KEY(usuario_id)
+    REFERENCES usuario(usuario_id)
 );
 
 CREATE TABLE tipo_transaccion(
-  nombre_transaccion varchar(45) not null,
+  nombre_transaccion VARCHAR(45) NOT NULL,
   PRIMARY KEY(nombre_transaccion)
 );
 
 CREATE TABLE transaccion(
-  codigo_transaccion int AUTO_INCREMENT not null,
-  tipo varchar(45) not null,
-  fecha_transaccion DATE not null,
+  codigo_transaccion INT AUTO_INCREMENT NOT NULL,
+  monto REAL NOT NULL,
+  descripcion TEXT NOT NULL,
+  fecha DATE NOT NULL,
+  tipo VARCHAR(45) NOT NULL,
+  folio_reserva INT NOT NULL,
+  usuario_id INT NOT NULL,
   PRIMARY KEY(codigo_transaccion),
   FOREIGN KEY(tipo)
-    REFERENCES tipo_transaccion(nombre_transaccion)
+    REFERENCES tipo_transaccion(nombre_transaccion),
+  FOREIGN KEY(folio_reserva)
+    REFERENCES reservacion(folio_reserva),
+  FOREIGN KEY(usuario_id)
+    REFERENCES usuario(usuario_id)
 );
 
-CREATE TABLE usuario_transaccion(
-  codigo_transaccion int not null,
-  id_usuario int not null,
-  PRIMARY KEY(codigo_transaccion),
-  FOREIGN KEY(id_usuario)
-    REFERENCES usuario(id_usuario),
-  FOREIGN KEY(codigo_transaccion)
-    REFERENCES transaccion(codigo_transaccion)
+CREATE TABLE proveedor(
+  rfc_proveedor VARCHAR(45) NOT NULL,
+  nombre VARCHAR(80) NOT NULL,
+  precio_porhora REAL NOT NULL,
+  PRIMARY KEY(rfc_proveedor)
 );
 
-CREATE TABLE recibo_pago(
-  folio_recibo int AUTO_INCREMENT not null,
-  horas_trabajo int not null,
-  pago_hora decimal(10, 2) not null,
-  PRIMARY KEY(folio_recibo)
+CREATE TABLE mantenimiento(
+  mantenimiento_id INT NOT NULL AUTO_INCREMENT,
+  fecha DATE NOT NULL,
+  proveedor_rfc VARCHAR(45) NOT NULL,
+  num_habitacion INT NOT NULL,
+  PRIMARY KEY(mantenimiento_id),
+  FOREIGN KEY(proveedor_rfc)
+    REFERENCES proveedor(rfc_proveedor),
+  FOREIGN KEY(num_habitacion)
+    REFERENCES habitacion(num_habitacion)
 );
 
-CREATE TABLE recibo_limpieza(
-  id_empleado int not null,
-  folio_recibo int not null,
-  FOREIGN KEY(id_empleado)
-    REFERENCES empleado(id_empleado),
-  FOREIGN KEY(folio_recibo)
-    REFERENCES recibo_pago(folio_recibo)
+CREATE TABLE limpieza(
+  limpieza_id INT NOT NULL AUTO_INCREMENT,
+  fecha DATE NOT NULL,
+  empleado_id INT NOT NULL,
+  num_habitacion INT NOT NULL,
+  PRIMARY KEY(limpieza_id),
+  FOREIGN KEY(empleado_id)
+    REFERENCES empleado(empleado_id),
+  FOREIGN KEY(num_habitacion)
+    REFERENCES habitacion(num_habitacion)
 );
 
-CREATE TABLE recibo_mantenimiento(
-  rfc_empresa varchar(45) not null,
-  folio_recibo int not null,
-  FOREIGN KEY(rfc_empresa)
-    REFERENCES empresa_mmto(rfc_empresa),
-  FOREIGN KEY(folio_recibo)
-    REFERENCES recibo_pago(folio_recibo)
+CREATE TABLE pago_mantenimiento(
+  folio_recibo INT NOT NULL AUTO_INCREMENT,
+  fecha DATE NOT NULL,
+  num_horas TIME NOT NULL,
+  mantenimiento_id INT NOT NULL,
+  PRIMARY KEY(folio_recibo),
+  FOREIGN KEY(mantenimiento_id)
+    REFERENCES mantenimiento(mantenimiento_id)
+);
+
+CREATE TABLE pago_limpieza(
+  folio_recibo INT NOT NULL AUTO_INCREMENT,
+  fecha DATE NOT NULL,
+  empleado_id INT NOT NULL,
+  PRIMARY KEY(folio_recibo),
+  FOREIGN KEY(empleado_id)
+    REFERENCES empleado(empleado_id)
 );
