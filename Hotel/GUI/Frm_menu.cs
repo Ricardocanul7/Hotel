@@ -72,19 +72,21 @@ namespace Hotel
         private void seleccionarFila(object sender, DataGridViewCellMouseEventArgs e)
         {
             int filaSeleccionar = e.RowIndex;
-            habitacionBO.Num_habitacion = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["num_habitacion"].Value.ToString());
-            habitacionBO.Nombre_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["nombre"].Value.ToString();
-            habitacionBO.Max_ninios = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["max_ninios"].Value.ToString());
-            habitacionBO.Max_adultos = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["max_adultos"].Value.ToString());
-            habitacionBO.PrecioTA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_alta"].Value.ToString());
-            habitacionBO.PrecioN = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_baja"].Value.ToString());
-            habitacionBO.PrecioPATA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_alta"].Value.ToString());
-            habitacionBO.PrecioPA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_baja"].Value.ToString());
-            habitacionBO.Tipo_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo"].Value.ToString();
-            habitacionBO.DescripHab = dgv_habitaciones.Rows[filaSeleccionar].Cells["descripcion"].Value.ToString();
+            if(filaSeleccionar > 0)
+            {
+                habitacionBO.Num_habitacion = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["num_habitacion"].Value.ToString());
+                habitacionBO.Nombre_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["nombre"].Value.ToString();
+                habitacionBO.Max_ninios = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["max_ninios"].Value.ToString());
+                habitacionBO.Max_adultos = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["max_adultos"].Value.ToString());
+                habitacionBO.PrecioTA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_alta"].Value.ToString());
+                habitacionBO.PrecioN = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_baja"].Value.ToString());
+                habitacionBO.PrecioPATA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_alta"].Value.ToString());
+                habitacionBO.PrecioPA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_baja"].Value.ToString());
+                habitacionBO.Tipo_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo"].Value.ToString();
+                habitacionBO.DescripHab = dgv_habitaciones.Rows[filaSeleccionar].Cells["descripcion"].Value.ToString();
 
-            this.DialogResult = DialogResult.OK;
-
+                this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void btn_eliminar_hab_Click(object sender, EventArgs e)
