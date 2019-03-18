@@ -3,7 +3,7 @@ CREATE DATABASE db_hotel;
 USE db_hotel;
 
 CREATE TABLE tipo_usuario(
-  tipo_id INT NOT NULL,
+  tipo_id INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(45) NOT NULL,
   PRIMARY KEY(tipo_id)
 );
