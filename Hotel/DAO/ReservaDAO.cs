@@ -1,6 +1,7 @@
 ﻿using Hotel.BO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,23 @@ namespace Hotel.DAO
             string commandValues = String.Format(" VALUES('{0}', '{1}', '{2}', '{3}', '{4}');", reserva.Habitacion.Num_habitacion, reserva.Fecha_entrada.ToString("yyyy-MM-dd H:mm:ss"), reserva.Fecha_salida.ToString("yyyy-MM-dd H:mm:ss"), reserva.Detalles, reserva.Cliente.Cliente_id);
             string commandSQL = commandCol + commandValues;
             return conn.EjecutarComando(commandSQL);
+        }
+
+        public int Modificar()
+        {
+            return 0;
+        }
+
+        public int Eliminar(ReservasBO reservaBO)
+        {
+            string commandSQL = String.Format("DELETE FROM reservacion WHERE folio_reserva={0}", reservaBO.Folio_reserva);
+            return conn.EjecutarComando(commandSQL);
+        }
+
+        public DataTable Buscar()
+        {
+            string commandSQL = String.Format("SELECT * FROM reservacion");
+            return conn.EjecutarSentencia(commandSQL);
         }
     }
 }

@@ -137,6 +137,7 @@
             // 
             // cbo_tipohab
             // 
+            this.cbo_tipohab.Enabled = false;
             this.cbo_tipohab.FormattingEnabled = true;
             this.cbo_tipohab.Location = new System.Drawing.Point(119, 63);
             this.cbo_tipohab.Name = "cbo_tipohab";

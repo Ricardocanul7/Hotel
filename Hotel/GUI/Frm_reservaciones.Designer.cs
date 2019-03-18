@@ -38,7 +38,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_chekout = new System.Windows.Forms.ToolStripButton();
             this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
             this.SuspendLayout();
@@ -121,21 +120,11 @@
             this.Grd_Reservaciones.Size = new System.Drawing.Size(938, 425);
             this.Grd_Reservaciones.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(624, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "<< Aquí se visualizara la tabla de reservaiones actuales";
-            // 
             // Frm_reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 450);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Grd_Reservaciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -161,6 +150,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btn_chekout;
         private System.Windows.Forms.DataGridView Grd_Reservaciones;
-        private System.Windows.Forms.Label label1;
     }
 }

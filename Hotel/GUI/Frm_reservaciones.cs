@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel.BO;
+using Hotel.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,16 @@ namespace Hotel.GUI
 {
     public partial class Frm_reservaciones : Form
     {
+        ReservaDAO reservaDAO;
+        ReservasBO reservaBO;
+
         public Frm_reservaciones()
         {
             InitializeComponent();
+            reservaDAO = new ReservaDAO();
+            reservaBO = new ReservasBO();
+
+            Grd_Reservaciones.DataSource = reservaDAO.Buscar();
         }
 
         private void btn_reservarhab_Click(object sender, EventArgs e)
