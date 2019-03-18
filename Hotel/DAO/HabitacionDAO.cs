@@ -25,7 +25,7 @@ namespace Hotel.DAO
                 "'{7}', '{8}', '{9}');"
                 , habitacionBO.Nombre_hab, habitacionBO.Max_ninios, habitacionBO.Max_adultos, 
                 habitacionBO.PrecioTA, habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo_hab,
-                habitacionBO.DescripHab, 'D');
+                habitacionBO.DescripHab, habitacionBO.Estado_habitacion);
             return conexion.EjecutarComando(ComandoSQL);
         }
 
@@ -34,7 +34,7 @@ namespace Hotel.DAO
             string ComandoSQL = string.Format("UPDATE habitacion SET nombre='{1}', max_ninios='{2}', max_adultos='{3}', precio_alta='{4}', " +
                 "precio_baja='{5}', precio_adic_alta='{6}', precio_adic_baja='{7}', tipo='{8}', descripcion='{9}', estado='{10}'  WHERE num_habitacion={0}",
                 habitacionBO.Num_habitacion, habitacionBO.Nombre_hab, habitacionBO.Max_ninios, habitacionBO.Max_adultos, habitacionBO.PrecioTA,
-                habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo_hab, habitacionBO.DescripHab, 'M');
+                habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo_hab, habitacionBO.DescripHab, habitacionBO.Estado_habitacion);
             return conexion.EjecutarComando(ComandoSQL);
         }
 
@@ -52,6 +52,12 @@ namespace Hotel.DAO
         public DataTable BuscarTipoHabitacion()
         {
             string commandSQL = "SELECT * from tipo_habitacion";
+            return conexion.EjecutarSentencia(commandSQL);
+        }
+
+        public DataTable BuscarEstadoHabitacion()
+        {
+            string commandSQL = "SELECT * from estado_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
         }
     }
