@@ -38,9 +38,10 @@ namespace Hotel.DAO
             return conexion.EjecutarComando(ComandoSQL);
         }
 
-        public bool Eliminar()
+        public int Eliminar(HabitacionBO habitacionBO)
         {
-            return true;
+            string ComandoSQL = string.Format("DELETE FROM empleado WHERE num_habitacion={0}", habitacionBO.Num_habitacion);
+            return conexion.EjecutarComando(ComandoSQL);
         }
 
         public DataTable Buscar()
