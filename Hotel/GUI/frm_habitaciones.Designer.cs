@@ -56,6 +56,8 @@
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_modificar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbo_estadohab = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -181,6 +183,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cbo_estadohab);
+            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txt_num_habitacion);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txt_max_ninios);
@@ -201,9 +205,9 @@
             // txt_num_habitacion
             // 
             this.txt_num_habitacion.Enabled = false;
-            this.txt_num_habitacion.Location = new System.Drawing.Point(331, 29);
+            this.txt_num_habitacion.Location = new System.Drawing.Point(349, 29);
             this.txt_num_habitacion.Name = "txt_num_habitacion";
-            this.txt_num_habitacion.Size = new System.Drawing.Size(63, 20);
+            this.txt_num_habitacion.Size = new System.Drawing.Size(45, 20);
             this.txt_num_habitacion.TabIndex = 19;
             // 
             // label11
@@ -217,15 +221,15 @@
             // 
             // txt_max_ninios
             // 
-            this.txt_max_ninios.Location = new System.Drawing.Point(248, 63);
+            this.txt_max_ninios.Location = new System.Drawing.Point(349, 63);
             this.txt_max_ninios.Name = "txt_max_ninios";
-            this.txt_max_ninios.Size = new System.Drawing.Size(63, 20);
+            this.txt_max_ninios.Size = new System.Drawing.Size(45, 20);
             this.txt_max_ninios.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 66);
+            this.label2.Location = new System.Drawing.Point(278, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 16;
@@ -234,15 +238,15 @@
             // cbo_tipohab
             // 
             this.cbo_tipohab.FormattingEnabled = true;
-            this.cbo_tipohab.Location = new System.Drawing.Point(125, 100);
+            this.cbo_tipohab.Location = new System.Drawing.Point(125, 63);
             this.cbo_tipohab.Name = "cbo_tipohab";
-            this.cbo_tipohab.Size = new System.Drawing.Size(269, 21);
+            this.cbo_tipohab.Size = new System.Drawing.Size(117, 21);
             this.cbo_tipohab.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 100);
+            this.label4.Location = new System.Drawing.Point(15, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 14;
@@ -250,15 +254,15 @@
             // 
             // txt_max_adultos
             // 
-            this.txt_max_adultos.Location = new System.Drawing.Point(88, 63);
+            this.txt_max_adultos.Location = new System.Drawing.Point(349, 100);
             this.txt_max_adultos.Name = "txt_max_adultos";
-            this.txt_max_adultos.Size = new System.Drawing.Size(63, 20);
+            this.txt_max_adultos.Size = new System.Drawing.Size(45, 20);
             this.txt_max_adultos.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 66);
+            this.label3.Location = new System.Drawing.Point(278, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 12;
@@ -319,6 +323,23 @@
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 103);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Estado de habitación:";
+            // 
+            // cbo_estadohab
+            // 
+            this.cbo_estadohab.FormattingEnabled = true;
+            this.cbo_estadohab.Location = new System.Drawing.Point(125, 100);
+            this.cbo_estadohab.Name = "cbo_estadohab";
+            this.cbo_estadohab.Size = new System.Drawing.Size(117, 21);
+            this.cbo_estadohab.TabIndex = 21;
+            // 
             // frm_habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,5 +397,7 @@
         private System.Windows.Forms.TextBox txt_num_habitacion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.ComboBox cbo_estadohab;
+        private System.Windows.Forms.Label label12;
     }
 }

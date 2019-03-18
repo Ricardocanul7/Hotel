@@ -23,6 +23,7 @@ namespace Hotel.GUI
             habitacionDAO = new HabitacionDAO();
 
             Set_cbo_tipo_habitacion();
+            Set_cbo_estado_habitacion();
         }
 
         private void Set_cbo_tipo_habitacion()
@@ -36,6 +37,17 @@ namespace Hotel.GUI
             cbo_tipohab.SelectedIndex = 0;
         }
 
+        private void Set_cbo_estado_habitacion()
+        {
+            DataRow[] rows = habitacionDAO.BuscarEstadoHabitacion().Select();
+            for (int i = 0; i < rows.Length; i++)
+            {
+                cbo_estadohab.Items.Add(rows[i][0]);
+            }
+
+            cbo_estadohab.SelectedIndex = 0;
+        }
+
         private void btn_hab_guardar_Click(object sender, EventArgs e)
         {
             if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
@@ -46,6 +58,7 @@ namespace Hotel.GUI
             {
                 MessageBox.Show("Algo salio mal");
             }
+            habitacionDAO.Buscar();
         }
 
         private HabitacionBO RecuperarInformacion()
@@ -58,6 +71,7 @@ namespace Hotel.GUI
             habitacionBO.Max_adultos = Convert.ToInt32(txt_max_adultos.Text);
             habitacionBO.Max_ninios = Convert.ToInt32(txt_max_ninios.Text);
             habitacionBO.Tipo_hab = cbo_tipohab.Text;
+            habitacionBO.Estado_habitacion = cbo_estadohab.Text;
             habitacionBO.PrecioN = Convert.ToDouble(txt_precioN.Text);
             habitacionBO.PrecioPA = Convert.ToDouble(txt_precioPA.Text);
             habitacionBO.PrecioTA = Convert.ToDouble(txt_precioTA.Text);
@@ -73,6 +87,7 @@ namespace Hotel.GUI
             txt_max_adultos.Clear();
             txt_max_ninios.Clear();
             cbo_tipohab.SelectedIndex = 0;
+            cbo_estadohab.SelectedIndex = 0;
             txt_precioN.Clear();
             txt_precioPA.Clear();
             txt_precioTA.Clear();
