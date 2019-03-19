@@ -16,6 +16,10 @@ namespace Hotel.GUI
     {
         HabitacionBO habitacionBO;
         HabitacionDAO habitacionDAO;
+        public DataGridView data;
+
+        internal HabitacionBO SetObjectHabitacionBO { get; set; }
+
         public frm_habitaciones()
         {
             InitializeComponent();
@@ -58,7 +62,8 @@ namespace Hotel.GUI
             {
                 MessageBox.Show("Algo salio mal");
             }
-            habitacionDAO.Buscar();
+            data.DataSource = habitacionDAO.Buscar();
+            data.Update();
         }
 
         private HabitacionBO RecuperarInformacion()
@@ -105,7 +110,9 @@ namespace Hotel.GUI
             {
                 MessageBox.Show("Algo salio mal");
             }
-            habitacionDAO.Buscar();
+            data.DataSource = habitacionDAO.Buscar();
+            data.Update();
+                
         }
     }
 }
