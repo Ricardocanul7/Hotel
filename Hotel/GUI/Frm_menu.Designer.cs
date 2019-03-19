@@ -100,6 +100,7 @@
             this.btn_eliminar_hab.Name = "btn_eliminar_hab";
             this.btn_eliminar_hab.Size = new System.Drawing.Size(131, 22);
             this.btn_eliminar_hab.Text = "Eliminar Habitación";
+            this.btn_eliminar_hab.Click += new System.EventHandler(this.btn_eliminar_hab_Click_1);
             // 
             // toolStripSeparator3
             // 
