@@ -25,6 +25,7 @@ namespace Hotel.GUI
 
             dgv_reservaciones.AllowUserToAddRows = false;
             dgv_reservaciones.ReadOnly = true;
+            dgv_reservaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgv_reservaciones.DataSource = reservaDAO.Buscar();
         }
