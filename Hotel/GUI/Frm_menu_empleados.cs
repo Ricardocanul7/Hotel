@@ -35,6 +35,7 @@ namespace Hotel.GUI
         {
             frm_empleado form_agregarEmpleado = new frm_empleado();
             form_agregarEmpleado.Show();
+ 
         }
 
         private void Buscar_empleados_click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace Hotel.GUI
 
             if (txt_buscarempleados.Text != string.Empty)
             {
-                empleados.RowFilter = string.Format("nombre LIKE '%{0}%'", txt_buscarempleados.Text);
+                empleados.RowFilter = string.Format("nombre LIKE '%{0}%', apellido_paterm LIKE '%{0}%'", txt_buscarempleados.Text);
             }
             dgv_empleados.DataSource = empleados;
 
@@ -82,6 +83,18 @@ namespace Hotel.GUI
 
                 dgv_empleados.DataSource = empleadoDAO.Buscar();
             }
+        }
+
+        private void Modicicar_Empleados(object sender, EventArgs e)
+        {
+            if(empleadoDAO.Modificar(empleadoBO) == 1)
+            {
+                frm_empleado form_agregarEmpleado = new frm_empleado();
+                form_agregarEmpleado.Show();
+
+                empleadoDAO.Modificar(empleadoBO);
+            }
+            dgv_empleados.DataSource = empleadoDAO.Buscar();
         }
     }
 }

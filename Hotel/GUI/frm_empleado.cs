@@ -46,6 +46,17 @@ namespace Hotel.GUI
                 MessageBox.Show("Ha sucedido un error");
             }
             Limpiar();
+
+            Frm_menu_empleados MenuEmpleados = new Frm_menu_empleados();
+
+            DialogResult res = MenuEmpleados.ShowDialog();
+
+            if(res == DialogResult.OK)
+            {
+               
+            }
+            this.DialogResult = DialogResult.OK;
+            this.Dispose();
         }
         internal EmpleadoBO RecuperarInformacion()
         {

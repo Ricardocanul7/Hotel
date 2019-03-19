@@ -35,9 +35,10 @@
             this.btn_buscarempleados = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txt_buscarempleados = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_empleados = new System.Windows.Forms.DataGridView();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.txt_Actualizar_Empleados = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleados)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,8 @@
             this.btn_buscarempleados,
             this.toolStripSeparator2,
             this.txt_buscarempleados,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.txt_Actualizar_Empleados});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -101,6 +103,15 @@
             this.txt_buscarempleados.Name = "txt_buscarempleados";
             this.txt_buscarempleados.Size = new System.Drawing.Size(250, 25);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::Hotel.Properties.Resources.close;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(126, 22);
+            this.toolStripButton1.Text = "Eliminar Empleado";
+            this.toolStripButton1.Click += new System.EventHandler(this.Eliminar_Empleado);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -120,14 +131,14 @@
             this.dgv_empleados.TabIndex = 5;
             this.dgv_empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_empleado);
             // 
-            // toolStripButton1
+            // txt_Actualizar_Empleados
             // 
-            this.toolStripButton1.Image = global::Hotel.Properties.Resources.close;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(126, 22);
-            this.toolStripButton1.Text = "Eliminar Empleado";
-            this.toolStripButton1.Click += new System.EventHandler(this.Eliminar_Empleado);
+            this.txt_Actualizar_Empleados.Image = global::Hotel.Properties.Resources._036_edit;
+            this.txt_Actualizar_Empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txt_Actualizar_Empleados.Name = "txt_Actualizar_Empleados";
+            this.txt_Actualizar_Empleados.Size = new System.Drawing.Size(136, 22);
+            this.txt_Actualizar_Empleados.Text = "Actualiza Empleados";
+            this.txt_Actualizar_Empleados.Click += new System.EventHandler(this.Modicicar_Empleados);
             // 
             // Frm_menu_empleados
             // 
@@ -159,5 +170,6 @@
         private System.Windows.Forms.DataGridView dgv_empleados;
         private System.Windows.Forms.ToolStripTextBox txt_buscarempleados;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton txt_Actualizar_Empleados;
     }
 }
