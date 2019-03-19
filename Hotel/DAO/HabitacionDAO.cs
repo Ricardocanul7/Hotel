@@ -40,7 +40,7 @@ namespace Hotel.DAO
 
         public int Eliminar(HabitacionBO habitacionBO)
         {
-            string ComandoSQL = string.Format("DELETE FROM empleado WHERE num_habitacion={0}", habitacionBO.Num_habitacion);
+            string ComandoSQL = string.Format("DELETE FROM habitacion WHERE num_habitacion={0}", habitacionBO.Num_habitacion);
             return conexion.EjecutarComando(ComandoSQL);
         }
 

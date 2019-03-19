@@ -18,7 +18,7 @@ namespace Hotel.DAO
             string col2 = "fecha_entrada";
             string col3 = "fecha_salida";
             string col4 = "detalles";
-            string col5 = "cliente";
+            string col5 = "cliente_id";
 
             string commandCol = String.Format("INSERT INTO reservacion({0}, {1}, {2}, {3}, {4})", col1, col2, col3, col4, col5);
             string commandValues = String.Format(" VALUES('{0}', '{1}', '{2}', '{3}', '{4}');", reserva.Habitacion.Num_habitacion, reserva.Fecha_entrada.ToString("yyyy-MM-dd H:mm:ss"), reserva.Fecha_salida.ToString("yyyy-MM-dd H:mm:ss"), reserva.Detalles, reserva.Cliente.Cliente_id);

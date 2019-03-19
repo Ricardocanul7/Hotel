@@ -58,7 +58,7 @@ namespace Hotel
 
             if(txt_buscar_hab.Text!= string.Empty)
             {
-                habitacion.RowFilter = string.Format("num_habitacion LIKE '%{0}%'", txt_buscar_hab.Text);
+                habitacion.RowFilter = string.Format("nombre LIKE '%{0}%'", txt_buscar_hab.Text);
             }
             dgv_habitaciones.DataSource = habitacion;
         }
@@ -67,6 +67,7 @@ namespace Hotel
         {
             frm_habitaciones frm_agregar_habit = new frm_habitaciones();
             frm_agregar_habit.Show();
+            dgv_habitaciones.DataSource = habitacionDAO.Buscar();
         }
 
         private void seleccionarFila(object sender, DataGridViewCellMouseEventArgs e)
@@ -82,14 +83,14 @@ namespace Hotel
                 habitacionBO.PrecioN = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_baja"].Value.ToString());
                 habitacionBO.PrecioPATA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_alta"].Value.ToString());
                 habitacionBO.PrecioPA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_baja"].Value.ToString());
-                habitacionBO.Tipo_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo"].Value.ToString();
+                habitacionBO.Tipo_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo_hab"].Value.ToString();
                 habitacionBO.DescripHab = dgv_habitaciones.Rows[filaSeleccionar].Cells["descripcion"].Value.ToString();
 
                 this.DialogResult = DialogResult.OK;
             }
         }
 
-        private void btn_eliminar_hab_Click(object sender, EventArgs e)
+        private void btn_eliminar_hab_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
             "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
@@ -102,7 +103,6 @@ namespace Hotel
                 {
                     MessageBox.Show("Algo salio mal");
                 }
-
                 dgv_habitaciones.DataSource = habitacionDAO.Buscar();
             }
         }
