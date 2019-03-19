@@ -23,6 +23,9 @@ namespace Hotel.GUI
             reservaDAO = new ReservaDAO();
             reservaBO = new ReservasBO();
 
+            dgv_reservaciones.AllowUserToAddRows = false;
+            dgv_reservaciones.ReadOnly = true;
+
             dgv_reservaciones.DataSource = reservaDAO.Buscar();
         }
 
