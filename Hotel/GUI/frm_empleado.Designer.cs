@@ -30,6 +30,9 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_sueldoempleado = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbo_tipoempleado = new System.Windows.Forms.ComboBox();
             this.txt_apellidoparteno = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_mod_empleado = new System.Windows.Forms.Button();
-            this.cbo_tipoempleado = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_sueldoempleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,30 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Empleado";
+            // 
+            // txt_sueldoempleado
+            // 
+            this.txt_sueldoempleado.Location = new System.Drawing.Point(366, 148);
+            this.txt_sueldoempleado.Name = "txt_sueldoempleado";
+            this.txt_sueldoempleado.Size = new System.Drawing.Size(162, 20);
+            this.txt_sueldoempleado.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(315, 154);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Sueldo:";
+            // 
+            // cbo_tipoempleado
+            // 
+            this.cbo_tipoempleado.FormattingEnabled = true;
+            this.cbo_tipoempleado.Location = new System.Drawing.Point(99, 147);
+            this.cbo_tipoempleado.Name = "cbo_tipoempleado";
+            this.cbo_tipoempleado.Size = new System.Drawing.Size(190, 21);
+            this.cbo_tipoempleado.TabIndex = 16;
             // 
             // txt_apellidoparteno
             // 
@@ -220,6 +244,7 @@
             // 
             // btn_guardar_empleado
             // 
+            this.btn_guardar_empleado.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_guardar_empleado.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar_empleado.Location = new System.Drawing.Point(440, 296);
@@ -252,30 +277,6 @@
             this.btn_mod_empleado.Text = "Modificar";
             this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_empleado.UseVisualStyleBackColor = true;
-            // 
-            // cbo_tipoempleado
-            // 
-            this.cbo_tipoempleado.FormattingEnabled = true;
-            this.cbo_tipoempleado.Location = new System.Drawing.Point(99, 147);
-            this.cbo_tipoempleado.Name = "cbo_tipoempleado";
-            this.cbo_tipoempleado.Size = new System.Drawing.Size(190, 21);
-            this.cbo_tipoempleado.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(315, 154);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Sueldo:";
-            // 
-            // txt_sueldoempleado
-            // 
-            this.txt_sueldoempleado.Location = new System.Drawing.Point(366, 148);
-            this.txt_sueldoempleado.Name = "txt_sueldoempleado";
-            this.txt_sueldoempleado.Size = new System.Drawing.Size(162, 20);
-            this.txt_sueldoempleado.TabIndex = 18;
             // 
             // frm_empleado
             // 

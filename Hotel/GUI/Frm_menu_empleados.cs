@@ -28,13 +28,18 @@ namespace Hotel.GUI
 
             dgv_empleados.DataSource = datos;
             dgv_empleados.AllowUserToAddRows = false;
+            dgv_empleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_empleados.ReadOnly = true;
         }
 
         private void btn_nvoempleado_Click(object sender, EventArgs e)
         {
             frm_empleado form_agregarEmpleado = new frm_empleado();
-            form_agregarEmpleado.Show();
+            if(form_agregarEmpleado.ShowDialog() == DialogResult.OK)
+            {
+                dgv_empleados.DataSource = empleadoDAO.Buscar();
+                dgv_empleados.Update();
+            }
  
         }
 
@@ -42,29 +47,41 @@ namespace Hotel.GUI
         {
             DataView empleados = datos.DefaultView;
             empleados.RowFilter = string.Empty;
-
-            if (txt_buscarempleados.Text != string.Empty)
+            try
             {
-                empleados.RowFilter = string.Format("nombre LIKE '%{0}%', apellido_paterm LIKE '%{0}%'", txt_buscarempleados.Text);
+                if (txt_buscarempleados.Text != string.Empty)
+                {
+                    empleados.RowFilter = string.Format("nombre LIKE '%{0}%' OR apellido_patern LIKE '%{0}%' OR apellido_matern LIKE '%{0}%' OR Convert(empleado_id,'System.String') LIKE '%{0}%'", txt_buscarempleados.Text);
+
+                }
+
+                dgv_empleados.DataSource = empleados;
+            }catch(Exception error)
+            {
+                MessageBox.Show(error.Message);
             }
-            dgv_empleados.DataSource = empleados;
+            
 
         }
 
         private void Seleccionar_empleado(object sender, DataGridViewCellMouseEventArgs e)
         {
             int Filaseleccionada = e.RowIndex;
-            empleadoBO.Nombre = dgv_empleados.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
-            empleadoBO.Id_empleado = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["id_empleado"].Value.ToString());
-            empleadoBO.Apellido_Petem = dgv_empleados.Rows[Filaseleccionada].Cells["apellido_patern"].Value.ToString();
-            empleadoBO.Apellido_Matem = dgv_empleados.Rows[Filaseleccionada].Cells["apellido_matern"].Value.ToString();
-            empleadoBO.Direccion = dgv_empleados.Rows[Filaseleccionada].Cells["direccion"].Value.ToString();
-            empleadoBO.Telefono = dgv_empleados.Rows[Filaseleccionada].Cells["telefono"].Value.ToString();
-            empleadoBO.Horario = dgv_empleados.Rows[Filaseleccionada].Cells["horario"].Value.ToString();
-            empleadoBO.Puesto = dgv_empleados.Rows[Filaseleccionada].Cells["tipo"].Value.ToString();
 
-            this.DialogResult = DialogResult.OK;
-         
+            if(Filaseleccionada > 0)
+            {
+                empleadoBO.Nombre = dgv_empleados.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
+                empleadoBO.Id_empleado = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["empleado_id"].Value.ToString());
+                empleadoBO.Apellido_Petem = dgv_empleados.Rows[Filaseleccionada].Cells["apellido_patern"].Value.ToString();
+                empleadoBO.Apellido_Matem = dgv_empleados.Rows[Filaseleccionada].Cells["apellido_matern"].Value.ToString();
+                empleadoBO.Direccion = dgv_empleados.Rows[Filaseleccionada].Cells["direccion"].Value.ToString();
+                empleadoBO.Telefono = dgv_empleados.Rows[Filaseleccionada].Cells["telefono"].Value.ToString();
+                empleadoBO.Horario = dgv_empleados.Rows[Filaseleccionada].Cells["horario"].Value.ToString();
+                empleadoBO.Sueldo = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["sueldo"].Value.ToString());
+                empleadoBO.Puesto = dgv_empleados.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
+
+                this.DialogResult = DialogResult.OK;
+            }
 
         }
         private void Eliminar_Empleado(object sender, EventArgs e)
