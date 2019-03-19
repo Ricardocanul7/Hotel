@@ -61,7 +61,7 @@ namespace Hotel.GUI
             empleadoBO.Direccion = dgv_empleados.Rows[Filaseleccionada].Cells["direccion"].Value.ToString();
             empleadoBO.Telefono = dgv_empleados.Rows[Filaseleccionada].Cells["telefono"].Value.ToString();
             empleadoBO.Horario = dgv_empleados.Rows[Filaseleccionada].Cells["horario"].Value.ToString();
-            empleadoBO.Tipo = dgv_empleados.Rows[Filaseleccionada].Cells["tipo"].Value.ToString();
+            empleadoBO.Puesto = dgv_empleados.Rows[Filaseleccionada].Cells["tipo"].Value.ToString();
 
             this.DialogResult = DialogResult.OK;
          

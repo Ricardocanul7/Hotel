@@ -26,13 +26,18 @@ namespace Hotel.GUI
             cbo_Horario.Items.Add("12 am - 8 am");
             cbo_Horario.SelectedIndex = 0;
 
-            cbo_tipoempleado.Items.Add("Administrador");
-            cbo_tipoempleado.Items.Add("Recepcionista");
-            cbo_tipoempleado.Items.Add("Mantenimiento");
-            cbo_tipoempleado.Items.Add("Limpieza");
-            cbo_tipoempleado.Items.Add("Guardias");
-            cbo_tipoempleado.SelectedIndex = 0;
+            Set_cbo_puesto();
+        }
 
+        public void Set_cbo_puesto()
+        {
+            DataRow[] rows = empleadoDAO.PuestoEmpleado().Select();
+            for(int i = 0; i < rows.Length; i++)
+            {
+                cbo_tipoempleado.Items.Add(rows[i][0]);
+            }
+
+            cbo_tipoempleado.SelectedIndex = 0;
         }
 
         private void Guardar_Empleados(object sender, EventArgs e)
@@ -46,17 +51,6 @@ namespace Hotel.GUI
                 MessageBox.Show("Ha sucedido un error");
             }
             Limpiar();
-
-            Frm_menu_empleados MenuEmpleados = new Frm_menu_empleados();
-
-            DialogResult res = MenuEmpleados.ShowDialog();
-
-            if(res == DialogResult.OK)
-            {
-               
-            }
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
         }
         internal EmpleadoBO RecuperarInformacion()
         {
@@ -69,18 +63,22 @@ namespace Hotel.GUI
             empleadoBO.Direccion = txt_direcc_empleado.Text;
             empleadoBO.Telefono = txt_tele_empleado.Text;
             empleadoBO.Horario = cbo_Horario.Text;
-            empleadoBO.Tipo = cbo_tipoempleado.Text;
+            empleadoBO.Puesto = cbo_tipoempleado.Text;
+            empleadoBO.Sueldo = Convert.ToDecimal(txt_sueldoempleado.Text);
+            
 
 
             return empleadoBO;
         }
         public void Limpiar()
         {
+            txt_apellidoparteno.Clear();
             txt_apellidomaterno.Clear();
             txt_direcc_empleado.Clear();
             txt_idempleado.Clear();
             txt_nom_empleado.Clear();
             txt_tele_empleado.Clear();
+            txt_sueldoempleado.Clear();
             cbo_Horario.Items.Clear();
             cbo_tipoempleado.Items.Clear();
         

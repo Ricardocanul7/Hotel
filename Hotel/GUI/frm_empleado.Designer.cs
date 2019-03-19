@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_apellidoparteno = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbo_tipoempleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbo_Horario = new System.Windows.Forms.ComboBox();
             this.txt_tele_empleado = new System.Windows.Forms.TextBox();
@@ -49,6 +48,9 @@
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_mod_empleado = new System.Windows.Forms.Button();
+            this.cbo_tipoempleado = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_sueldoempleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,9 +67,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_sueldoempleado);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.cbo_tipoempleado);
             this.groupBox1.Controls.Add(this.txt_apellidoparteno);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.cbo_tipoempleado);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cbo_Horario);
             this.groupBox1.Controls.Add(this.txt_tele_empleado);
@@ -83,7 +87,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 101);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(528, 189);
+            this.groupBox1.Size = new System.Drawing.Size(545, 189);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Empleado";
@@ -104,28 +108,14 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Apellido Paterno:";
             // 
-            // cbo_tipoempleado
-            // 
-            this.cbo_tipoempleado.FormattingEnabled = true;
-            this.cbo_tipoempleado.Items.AddRange(new object[] {
-            "Mantenimiento",
-            "Limpieza",
-            "Administrador",
-            "Recepcionista",
-            "Guardias "});
-            this.cbo_tipoempleado.Location = new System.Drawing.Point(99, 151);
-            this.cbo_tipoempleado.Name = "cbo_tipoempleado";
-            this.cbo_tipoempleado.Size = new System.Drawing.Size(190, 21);
-            this.cbo_tipoempleado.TabIndex = 13;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(62, 154);
+            this.label8.Location = new System.Drawing.Point(50, 154);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Tipo:";
+            this.label8.Text = "Puesto:";
             // 
             // cbo_Horario
             // 
@@ -134,7 +124,7 @@
             "8 am - 4 pm",
             "4pm - 12 am",
             "12 am - 8 am"});
-            this.cbo_Horario.Location = new System.Drawing.Point(373, 120);
+            this.cbo_Horario.Location = new System.Drawing.Point(366, 120);
             this.cbo_Horario.Name = "cbo_Horario";
             this.cbo_Horario.Size = new System.Drawing.Size(121, 21);
             this.cbo_Horario.TabIndex = 11;
@@ -263,11 +253,35 @@
             this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_empleado.UseVisualStyleBackColor = true;
             // 
+            // cbo_tipoempleado
+            // 
+            this.cbo_tipoempleado.FormattingEnabled = true;
+            this.cbo_tipoempleado.Location = new System.Drawing.Point(99, 147);
+            this.cbo_tipoempleado.Name = "cbo_tipoempleado";
+            this.cbo_tipoempleado.Size = new System.Drawing.Size(190, 21);
+            this.cbo_tipoempleado.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(315, 154);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Sueldo:";
+            // 
+            // txt_sueldoempleado
+            // 
+            this.txt_sueldoempleado.Location = new System.Drawing.Point(366, 148);
+            this.txt_sueldoempleado.Name = "txt_sueldoempleado";
+            this.txt_sueldoempleado.Size = new System.Drawing.Size(162, 20);
+            this.txt_sueldoempleado.TabIndex = 18;
+            // 
             // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 360);
+            this.ClientSize = new System.Drawing.Size(570, 360);
             this.Controls.Add(this.btn_mod_empleado);
             this.Controls.Add(this.btn_guardar_empleado);
             this.Controls.Add(this.groupBox1);
@@ -298,11 +312,13 @@
         private System.Windows.Forms.TextBox txt_idempleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_guardar_empleado;
-        private System.Windows.Forms.ComboBox cbo_tipoempleado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbo_Horario;
         private System.Windows.Forms.TextBox txt_apellidoparteno;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_mod_empleado;
+        private System.Windows.Forms.ComboBox cbo_tipoempleado;
+        private System.Windows.Forms.TextBox txt_sueldoempleado;
+        private System.Windows.Forms.Label label10;
     }
 }

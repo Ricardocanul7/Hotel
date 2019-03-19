@@ -15,7 +15,8 @@ namespace Hotel.BO
         private string direccion;
         private string telefono;
         private string horario;
-        private string tipo;
+        private string puesto;
+        private decimal sueldo;
 
         public int Id_empleado
         {
@@ -59,10 +60,16 @@ namespace Hotel.BO
             set { horario = value; }
         }
 
-        public string Tipo
+        public string Puesto
         {
-            get { return tipo; }
-            set { tipo = value; }
+            get { return puesto; }
+            set { puesto = value; }
+        }
+
+        public decimal Sueldo
+        {
+            get { return sueldo; }
+            set => sueldo = value;
         }
     }
 }
