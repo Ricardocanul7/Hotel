@@ -71,10 +71,7 @@ namespace Hotel.GUI
             HabitacionBO habitacionBO = new HabitacionBO();
             ClienteBO clienteBO = new ClienteBO();
 
-            habitacionBO.Nombre_hab = cbo_habitaciones.Text;
-            habitacionBO.Tipo_hab = txt_tipo_hab.Text;
-            habitacionBO.Max_adultos = Convert.ToInt32(cbo_max_adult.Text);
-            habitacionBO.Max_ninios = Convert.ToInt32(cbo_max_ninios.Text);
+            habitacionBO.Num_habitacion = Convert.ToInt32(cbo_habitaciones.Text);
             clienteBO.Cliente_id = Convert.ToInt32(Txt_id_cliente.Text);
             clienteBO.Cliente_nombre = Txt_nom_cliente.Text;
             clienteBO.Cliente_apaterno = Txt_apell_patern_cliente.Text;
@@ -106,6 +103,51 @@ namespace Hotel.GUI
                     break;
                 }
             } 
+        }
+
+        private void Txt_id_cliente_TextChanged(object sender, EventArgs e)
+        {
+            if(Txt_id_cliente.Text != "")
+            {
+                ClienteDAO clienteDAO = new ClienteDAO();
+                DataRow[] rows = clienteDAO.Buscar().Select(String.Format("cliente_id = '{0}'", Txt_id_cliente.Text));
+
+                if(rows.Length >= Convert.ToInt32(Txt_id_cliente.Text))
+                {
+                    ClienteBO clienteBO = new ClienteBO();
+                    clienteBO.Cliente_nombre = rows[0]["nombre"] as string;
+                    clienteBO.Cliente_apaterno = rows[0]["apaterno"] as string;
+                    clienteBO.Cliente_amaterno = rows[0]["amaterno"] as string;
+                    clienteBO.Cliente_direccion = rows[0]["direccion"] as string;
+                    clienteBO.Cliente_email = rows[0]["email"] as string;
+                    clienteBO.Cliente_telefono = rows[0]["telefono"] as string;
+
+                    Txt_nom_cliente.Text = clienteBO.Cliente_nombre;
+                    Txt_apell_patern_cliente.Text = clienteBO.Cliente_apaterno;
+                    txt_apelli_matern_cli.Text = clienteBO.Cliente_amaterno;
+                    Txt_dir_cliente.Text = clienteBO.Cliente_direccion;
+                    txt_email.Text = clienteBO.Cliente_email;
+                    Txt_telefono_cliente.Text = clienteBO.Cliente_telefono;
+                }
+                else
+                {
+                    LimpiarCamposCliente();
+                }
+            }
+            else
+            {
+                LimpiarCamposCliente();
+            }
+        }
+
+        private void LimpiarCamposCliente()
+        {
+            Txt_nom_cliente.Clear();
+            Txt_apell_patern_cliente.Clear();
+            txt_apelli_matern_cli.Clear();
+            Txt_dir_cliente.Clear();
+            txt_email.Clear();
+            Txt_telefono_cliente.Clear();
         }
     }
 }

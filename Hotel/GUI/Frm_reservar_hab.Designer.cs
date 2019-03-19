@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbo_max_ninios = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbo_max_adult = new System.Windows.Forms.ComboBox();
+            this.txt_tipo_hab = new System.Windows.Forms.TextBox();
             this.cbo_habitaciones = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -76,7 +73,6 @@
             this.btn_borrar_res = new System.Windows.Forms.Button();
             this.btn_guardar_res = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_tipo_hab = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,44 +84,23 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txt_tipo_hab);
-            this.groupBox3.Controls.Add(this.cbo_max_ninios);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.cbo_max_adult);
             this.groupBox3.Controls.Add(this.cbo_habitaciones);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(12, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(392, 182);
+            this.groupBox3.Size = new System.Drawing.Size(392, 113);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
             // 
-            // cbo_max_ninios
+            // txt_tipo_hab
             // 
-            this.cbo_max_ninios.FormattingEnabled = true;
-            this.cbo_max_ninios.Location = new System.Drawing.Point(119, 139);
-            this.cbo_max_ninios.Name = "cbo_max_ninios";
-            this.cbo_max_ninios.Size = new System.Drawing.Size(83, 21);
-            this.cbo_max_ninios.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Num. Niños";
-            // 
-            // cbo_max_adult
-            // 
-            this.cbo_max_adult.FormattingEnabled = true;
-            this.cbo_max_adult.Location = new System.Drawing.Point(119, 100);
-            this.cbo_max_adult.Name = "cbo_max_adult";
-            this.cbo_max_adult.Size = new System.Drawing.Size(83, 21);
-            this.cbo_max_adult.TabIndex = 17;
+            this.txt_tipo_hab.Enabled = false;
+            this.txt_tipo_hab.Location = new System.Drawing.Point(119, 63);
+            this.txt_tipo_hab.Name = "txt_tipo_hab";
+            this.txt_tipo_hab.Size = new System.Drawing.Size(241, 20);
+            this.txt_tipo_hab.TabIndex = 20;
             // 
             // cbo_habitaciones
             // 
@@ -144,15 +119,6 @@
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Tipo de habitación:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Num. Adultos";
             // 
             // label1
             // 
@@ -189,7 +155,7 @@
             this.groupBox1.Controls.Add(this.Txt_dir_cliente);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(12, 277);
+            this.groupBox1.Location = new System.Drawing.Point(12, 218);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(392, 236);
             this.groupBox1.TabIndex = 31;
@@ -218,6 +184,7 @@
             this.Txt_id_cliente.Name = "Txt_id_cliente";
             this.Txt_id_cliente.Size = new System.Drawing.Size(80, 20);
             this.Txt_id_cliente.TabIndex = 22;
+            this.Txt_id_cliente.TextChanged += new System.EventHandler(this.Txt_id_cliente_TextChanged);
             // 
             // label23
             // 
@@ -387,7 +354,7 @@
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Location = new System.Drawing.Point(410, 316);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(392, 175);
+            this.groupBox4.Size = new System.Drawing.Size(392, 138);
             this.groupBox4.TabIndex = 46;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Precio";
@@ -564,14 +531,6 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
-            // txt_tipo_hab
-            // 
-            this.txt_tipo_hab.Enabled = false;
-            this.txt_tipo_hab.Location = new System.Drawing.Point(119, 63);
-            this.txt_tipo_hab.Name = "txt_tipo_hab";
-            this.txt_tipo_hab.Size = new System.Drawing.Size(241, 20);
-            this.txt_tipo_hab.TabIndex = 20;
-            // 
             // Frm_reservar_hab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -608,7 +567,6 @@
 
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
@@ -619,7 +577,6 @@
         private System.Windows.Forms.TextBox Txt_dir_cliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbo_max_adult;
         private System.Windows.Forms.TextBox Txt_telefono_cliente;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox Txt_apell_patern_cliente;
@@ -650,8 +607,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox Txt_id_cliente;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox cbo_max_ninios;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_apelli_matern_cli;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_tipo_hab;
