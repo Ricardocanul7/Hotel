@@ -15,12 +15,14 @@ namespace Hotel.GUI
     public partial class Frm_reservar_hab : Form
     {
         ReservaDAO reservaDAO;
+        HabitacionDAO habitacionDAO;
 
         public Frm_reservar_hab()
         {
             InitializeComponent();
             
             reservaDAO = new ReservaDAO();
+            habitacionDAO = new HabitacionDAO();
 
             cbo_tipohab.Items.Add("SELECCIONAR");
             cbo_tipohab.Items.Add("CABAÑA");
@@ -31,6 +33,22 @@ namespace Hotel.GUI
             cbo_tipohab.Items.Add("DUPLEX LAG");
 
             cbo_tipohab.SelectedIndex = 0;
+
+            Set_cbo_habitaciones();
+        }
+
+        public void Set_cbo_habitaciones()
+        {
+            DataRow[] rows = habitacionDAO.Buscar().Select();
+
+            for (int i = 0; i < rows.Length; i++)
+            {
+                if((string)rows[i][10] == "Disponible" )
+                {
+                    cbo_habitaciones.Items.Add(rows[i][0] + " - " + rows[i][1]);
+                }
+                
+            }
         }
 
         private void btn_guardar_res_Click(object sender, EventArgs e)
