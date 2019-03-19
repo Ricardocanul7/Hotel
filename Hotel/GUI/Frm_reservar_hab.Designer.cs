@@ -510,6 +510,7 @@
             // 
             // btn_guardar_res
             // 
+            this.btn_guardar_res.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_guardar_res.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar_res.Location = new System.Drawing.Point(606, 519);
