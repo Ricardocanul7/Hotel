@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbo_max_adult = new System.Windows.Forms.ComboBox();
             this.cbo_habitaciones = new System.Windows.Forms.ComboBox();
-            this.cbo_tipohab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.btn_borrar_res = new System.Windows.Forms.Button();
             this.btn_guardar_res = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_tipo_hab = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,11 +87,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_tipo_hab);
             this.groupBox3.Controls.Add(this.cbo_max_ninios);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.cbo_max_adult);
             this.groupBox3.Controls.Add(this.cbo_habitaciones);
-            this.groupBox3.Controls.Add(this.cbo_tipohab);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
@@ -134,15 +134,7 @@
             this.cbo_habitaciones.Name = "cbo_habitaciones";
             this.cbo_habitaciones.Size = new System.Drawing.Size(241, 21);
             this.cbo_habitaciones.TabIndex = 16;
-            // 
-            // cbo_tipohab
-            // 
-            this.cbo_tipohab.Enabled = false;
-            this.cbo_tipohab.FormattingEnabled = true;
-            this.cbo_tipohab.Location = new System.Drawing.Point(119, 63);
-            this.cbo_tipohab.Name = "cbo_tipohab";
-            this.cbo_tipohab.Size = new System.Drawing.Size(241, 21);
-            this.cbo_tipohab.TabIndex = 15;
+            this.cbo_habitaciones.SelectedValueChanged += new System.EventHandler(this.cbo_habitaciones_SelectedValueChanged);
             // 
             // label4
             // 
@@ -572,6 +564,14 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // txt_tipo_hab
+            // 
+            this.txt_tipo_hab.Enabled = false;
+            this.txt_tipo_hab.Location = new System.Drawing.Point(119, 63);
+            this.txt_tipo_hab.Name = "txt_tipo_hab";
+            this.txt_tipo_hab.Size = new System.Drawing.Size(241, 20);
+            this.txt_tipo_hab.TabIndex = 20;
+            // 
             // Frm_reservar_hab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,7 +607,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cbo_tipohab;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -655,5 +654,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_apelli_matern_cli;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_tipo_hab;
     }
 }

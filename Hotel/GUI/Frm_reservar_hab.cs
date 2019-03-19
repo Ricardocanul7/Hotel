@@ -24,6 +24,7 @@ namespace Hotel.GUI
             reservaDAO = new ReservaDAO();
             habitacionDAO = new HabitacionDAO();
 
+            /*
             cbo_tipohab.Items.Add("SELECCIONAR");
             cbo_tipohab.Items.Add("CABAÑA");
             cbo_tipohab.Items.Add("CABAÑA ST");
@@ -31,8 +32,9 @@ namespace Hotel.GUI
             cbo_tipohab.Items.Add("SUITE LAG");
             cbo_tipohab.Items.Add("DUPLEX");
             cbo_tipohab.Items.Add("DUPLEX LAG");
-
+            
             cbo_tipohab.SelectedIndex = 0;
+            **/
 
             Set_cbo_habitaciones();
         }
@@ -45,7 +47,7 @@ namespace Hotel.GUI
             {
                 if((string)rows[i][10] == "Disponible" )
                 {
-                    cbo_habitaciones.Items.Add(rows[i][0] + " - " + rows[i][1]);
+                    cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
                 }
                 
             }
@@ -70,7 +72,7 @@ namespace Hotel.GUI
             ClienteBO clienteBO = new ClienteBO();
 
             habitacionBO.Nombre_hab = cbo_habitaciones.Text;
-            habitacionBO.Tipo_hab = cbo_tipohab.Text;
+            habitacionBO.Tipo_hab = txt_tipo_hab.Text;
             habitacionBO.Max_adultos = Convert.ToInt32(cbo_max_adult.Text);
             habitacionBO.Max_ninios = Convert.ToInt32(cbo_max_ninios.Text);
             clienteBO.Cliente_id = Convert.ToInt32(Txt_id_cliente.Text);
@@ -89,6 +91,21 @@ namespace Hotel.GUI
             reservasBO.Detalles = Txt_detalles_reserva.Text;
 
             return reservasBO;
+        }
+
+        private void cbo_habitaciones_SelectedValueChanged(object sender, EventArgs e)
+        {
+            int index = cbo_habitaciones.SelectedIndex;
+
+            DataRow[] rows = habitacionDAO.Buscar().Select();
+            for(int i = 0; i < rows.Length; i++)
+            {
+                if (rows[i][0].ToString() == cbo_habitaciones.Items[index].ToString().Split('-')[0].ToString())
+                {
+                    txt_tipo_hab.Text = (string)rows[i][8];
+                    break;
+                }
+            } 
         }
     }
 }

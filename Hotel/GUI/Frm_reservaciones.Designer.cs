@@ -37,9 +37,9 @@
             this.btn_checkin = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_chekout = new System.Windows.Forms.ToolStripButton();
-            this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
+            this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_habitaciones
@@ -111,21 +111,21 @@
             this.btn_chekout.Size = new System.Drawing.Size(81, 22);
             this.btn_chekout.Text = "Check out";
             // 
-            // Grd_Reservaciones
+            // dgv_reservaciones
             // 
-            this.Grd_Reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grd_Reservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grd_Reservaciones.Location = new System.Drawing.Point(0, 25);
-            this.Grd_Reservaciones.Name = "Grd_Reservaciones";
-            this.Grd_Reservaciones.Size = new System.Drawing.Size(938, 425);
-            this.Grd_Reservaciones.TabIndex = 2;
+            this.dgv_reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_reservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_reservaciones.Location = new System.Drawing.Point(0, 25);
+            this.dgv_reservaciones.Name = "dgv_reservaciones";
+            this.dgv_reservaciones.Size = new System.Drawing.Size(938, 425);
+            this.dgv_reservaciones.TabIndex = 2;
             // 
             // Frm_reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 450);
-            this.Controls.Add(this.Grd_Reservaciones);
+            this.Controls.Add(this.dgv_reservaciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_reservaciones";
@@ -133,7 +133,7 @@
             this.Text = "Reservaciones";
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +149,6 @@
         private System.Windows.Forms.ToolStripButton btn_checkin;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btn_chekout;
-        private System.Windows.Forms.DataGridView Grd_Reservaciones;
+        private System.Windows.Forms.DataGridView dgv_reservaciones;
     }
 }

@@ -23,7 +23,7 @@ namespace Hotel.GUI
             reservaDAO = new ReservaDAO();
             reservaBO = new ReservasBO();
 
-            Grd_Reservaciones.DataSource = reservaDAO.Buscar();
+            dgv_reservaciones.DataSource = reservaDAO.Buscar();
         }
 
         private void btn_reservarhab_Click(object sender, EventArgs e)
@@ -31,7 +31,8 @@ namespace Hotel.GUI
             Frm_reservar_hab reservar_Hab = new Frm_reservar_hab();
             if(reservar_Hab.ShowDialog() == DialogResult.OK)
             {
-
+                dgv_reservaciones.DataSource = reservaDAO.Buscar();
+                dgv_reservaciones.Update();
             }
         }
     }
