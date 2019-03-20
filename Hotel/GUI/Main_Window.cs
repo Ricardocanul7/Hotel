@@ -114,5 +114,72 @@ namespace Hotel.GUI
             lbl_titulo.Text = "CLIENTES";
 
         }
+
+        private void btn_reservaciones_Click_1(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_reservaciones();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "RESERVACIONES";
+        }
+
+        private void btn_habitaciones_Click_1(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            AbrirPantallaInicial();
+            lbl_titulo.Text = "HABITACIONES";
+        }
+
+        private void btn_mantenimiento_Click_1(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_mantenimiento();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "MANTENIMIENTO";
+        }
+
+        private void btn_empleados_Click_1(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_menu_empleados();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "EMPLEADOS";
+        }
+
+        private void btn_clientes_Click_1(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new frm_clientes();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "CLIENTES";
+        }
+
+        private void btn_caja_Click1(object sender, EventArgs e)
+        {
+            this.panel_principal.Controls.Clear();
+            var ventana = new Frm_menu_caja();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "CAJA";
+        }
     }
 }
