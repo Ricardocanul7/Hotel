@@ -39,7 +39,22 @@ namespace Hotel.DAO
 
         public DataTable Buscar()
         {
-            string commandSQL = String.Format("SELECT * FROM reservacion");
+            string col0 = "folio_reserva";
+            string col1 = "num_habitacion";
+            string col2 = "fecha_entrada";
+            string col3 = "fecha_salida";
+            string col4 = "detalles";
+            string col5 = "nombre";
+            string col6 = "apaterno";
+            string col7 = "amaterno";
+            string col8 = "direccion";
+            string col9 = "email";
+            string col10 = "telefono";
+    
+
+            string selectSQL = String.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10} ", col0, col1, col2, col3, col4, col5, col6, col7, col8, col9, col10);
+            string fromSQL = "FROM reservacion as a, cliente as b where a.cliente_id=b.cliente_id";
+            string commandSQL = selectSQL + fromSQL;
             return conn.EjecutarSentencia(commandSQL);
         }
     }
