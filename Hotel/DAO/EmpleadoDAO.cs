@@ -38,7 +38,7 @@ namespace Hotel.DAO
 
         public int Eliminar(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("DELETE FROM empleado WHERE id_empleado={0}", empleado.Id_empleado);
+            string ComandoSQL = string.Format("DELETE FROM empleado WHERE empleado_id ={0}", empleado.Id_empleado);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
         public DataTable Buscar()
