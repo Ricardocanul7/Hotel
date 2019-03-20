@@ -60,18 +60,6 @@ namespace Hotel.DAO
 
         public ReservasBO Buscar(int folio_reserva)
         {
-            string col0 = "folio_reserva";
-            string col1 = "num_habitacion";
-            string col2 = "fecha_entrada";
-            string col3 = "fecha_salida";
-            string col4 = "detalles";
-            string col5 = "nombre";
-            string col6 = "apaterno";
-            string col7 = "amaterno";
-            string col8 = "direccion";
-            string col9 = "email";
-            string col10 = "telefono";
-
             string commandSQL = String.Format("SELECT * FROM reserva WHERE folio_reserva={0}", folio_reserva);
             DataTable table = conn.EjecutarSentencia(commandSQL);
 
