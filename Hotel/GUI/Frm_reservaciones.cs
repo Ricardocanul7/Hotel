@@ -39,5 +39,16 @@ namespace Hotel.GUI
                 dgv_reservaciones.Update();
             }
         }
+
+        private void dgv_reservaciones_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int index = e.RowIndex;
+            if(index >= 0)
+            {
+                reservaBO.Folio_reserva = Convert.ToInt32(dgv_reservaciones.Rows[index].Cells[0].Value);
+
+                MessageBox.Show("Folio seleccionado: " + reservaBO.Folio_reserva);
+            }
+        }
     }
 }
