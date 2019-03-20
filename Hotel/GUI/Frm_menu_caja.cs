@@ -16,5 +16,10 @@ namespace Hotel.GUI
         {
             InitializeComponent();
         }
+
+        private void seleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,14 +30,13 @@
         {
             this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.brn_abrir_caja = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_cerrar_caja = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +49,7 @@
             this.Grd_Reservaciones.Name = "Grd_Reservaciones";
             this.Grd_Reservaciones.Size = new System.Drawing.Size(800, 425);
             this.Grd_Reservaciones.TabIndex = 4;
+            this.Grd_Reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
             // 
             // btn_habitaciones
             // 
@@ -71,21 +71,6 @@
             this.btn_habitaciones.TabIndex = 3;
             this.btn_habitaciones.Text = "Menu";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
             // btn_nvatransaccion
             // 
             this.btn_nvatransaccion.Image = global::Hotel.Properties.Resources.cash;
@@ -95,6 +80,11 @@
             this.btn_nvatransaccion.Size = new System.Drawing.Size(135, 22);
             this.btn_nvatransaccion.Text = "Agregar Transacción";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // brn_abrir_caja
             // 
             this.brn_abrir_caja.Image = global::Hotel.Properties.Resources._023_ladder;
@@ -102,6 +92,11 @@
             this.brn_abrir_caja.Name = "brn_abrir_caja";
             this.brn_abrir_caja.Size = new System.Drawing.Size(79, 22);
             this.brn_abrir_caja.Text = "Abrir Caja";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // btn_cerrar_caja
             // 
@@ -112,6 +107,11 @@
             this.btn_cerrar_caja.Text = "Cerrar Caja";
             this.btn_cerrar_caja.ToolTipText = "Cerrar Caja";
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
             // btn_reporte_caja
             // 
             this.btn_reporte_caja.Image = global::Hotel.Properties.Resources._049_notes1;
@@ -120,21 +120,11 @@
             this.btn_reporte_caja.Size = new System.Drawing.Size(159, 22);
             this.btn_reporte_caja.Text = "Reporte de transacciones";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(505, 46);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(283, 19);
-            this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "<< Aquí se mostrarán las últimas transacciones";
-            // 
             // Frm_menu_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Grd_Reservaciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_menu_caja";
@@ -158,6 +148,5 @@
         private System.Windows.Forms.ToolStripButton btn_cerrar_caja;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btn_reporte_caja;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
