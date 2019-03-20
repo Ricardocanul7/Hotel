@@ -48,6 +48,7 @@ namespace Hotel
         private void btn_agregar_habitaciones_Click(object sender, EventArgs e)
         {
             frm_habitaciones frm_agregar_habit = new frm_habitaciones();
+            frm_agregar_habit.data = dgv_habitaciones;
             frm_agregar_habit.Show();
         }
 
@@ -58,7 +59,7 @@ namespace Hotel
 
             if(txt_buscar_hab.Text!= string.Empty)
             {
-                habitacion.RowFilter = string.Format("nombre LIKE '%{0}%'", txt_buscar_hab.Text);
+                habitacion.RowFilter = string.Format( "convert(num_habitacion,'System.String')LIKE '%{0}%'" , txt_buscar_hab.Text);
             }
             dgv_habitaciones.DataSource = habitacion;
         }
@@ -66,8 +67,9 @@ namespace Hotel
         private void btn_modificar_hab_Click(object sender, EventArgs e)
         {
             frm_habitaciones frm_agregar_habit = new frm_habitaciones();
+            frm_agregar_habit.data = dgv_habitaciones;
+            frm_agregar_habit.SetObjectHabitacionBO = habitacionBO;
             frm_agregar_habit.Show();
-            dgv_habitaciones.DataSource = habitacionDAO.Buscar();
         }
 
         private void seleccionarFila(object sender, DataGridViewCellMouseEventArgs e)
