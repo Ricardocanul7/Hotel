@@ -297,5 +297,29 @@
   <ItemGroup>
     <None Include="Recursos\Iconos\32px\024-safety-box.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\020-bell-ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\021-phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\022-reception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\031-broom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\039-bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\042-single-bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\038-hotel-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
