@@ -69,6 +69,7 @@ namespace Hotel
             frm_habitaciones frm_agregar_habit = new frm_habitaciones();
             frm_agregar_habit.data = dgv_habitaciones;
             frm_agregar_habit.SetObjectHabitacionBO = habitacionBO;
+            
             frm_agregar_habit.Show();
         }
 

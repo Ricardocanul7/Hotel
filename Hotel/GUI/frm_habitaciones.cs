@@ -112,7 +112,21 @@ namespace Hotel.GUI
             }
             data.DataSource = habitacionDAO.Buscar();
             data.Update();
-                
+        }
+
+        public void InsertInfoFila()
+        {
+            txt_num_habitacion.Text = habitacionBO.Num_habitacion.ToString();
+            txt_nombrehab.Text = habitacionBO.Nombre_hab;
+            cbo_tipohab.Text = habitacionBO.Tipo_hab;
+            cbo_estadohab.Text = habitacionBO.Estado_habitacion;
+            txt_max_ninios.Text = habitacionBO.Max_ninios.ToString();
+            txt_max_adultos.Text = habitacionBO.Max_adultos.ToString();
+            txt_precioN.Text = habitacionBO.PrecioN.ToString();
+            txt_precioPA.Text = habitacionBO.PrecioPA.ToString();
+            txt_precioTA.Text = habitacionBO.PrecioTA.ToString();
+            txt_precioPATA.Text = habitacionBO.PrecioPATA.ToString();
+            txt_descripHab.Text = habitacionBO.DescripHab;
         }
     }
 }
