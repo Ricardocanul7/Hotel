@@ -84,12 +84,12 @@ namespace Hotel.GUI
 
             clientebo.Cliente_id = int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
 
-            clientebo.Cliente_nombre = Grd_clientes.Rows[rowSelected].Cells["cliente_nombre"].Value.ToString();
-            clientebo.Cliente_apaterno = Grd_clientes.Rows[rowSelected].Cells["cliente_apaterno"].Value.ToString();
-            clientebo.Cliente_amaterno = Grd_clientes.Rows[rowSelected].Cells["cliente_amaterno"].Value.ToString();
-            clientebo.Cliente_direccion = Grd_clientes.Rows[rowSelected].Cells["cliente_direccion"].Value.ToString();
-            clientebo.Cliente_email = Grd_clientes.Rows[rowSelected].Cells["cliente_email"].Value.ToString();
-            clientebo.Cliente_telefono = Grd_clientes.Rows[rowSelected].Cells["cliente_telefono"].Value.ToString();
+            clientebo.Cliente_nombre = Grd_clientes.Rows[rowSelected].Cells["nombre"].Value.ToString();
+            clientebo.Cliente_apaterno = Grd_clientes.Rows[rowSelected].Cells["apaterno"].Value.ToString();
+            clientebo.Cliente_amaterno = Grd_clientes.Rows[rowSelected].Cells["amaterno"].Value.ToString();
+            clientebo.Cliente_direccion = Grd_clientes.Rows[rowSelected].Cells["direccion"].Value.ToString();
+            clientebo.Cliente_email = Grd_clientes.Rows[rowSelected].Cells["email"].Value.ToString();
+            clientebo.Cliente_telefono = Grd_clientes.Rows[rowSelected].Cells["telefono"].Value.ToString();
 
 
             txt_idcliente.Text = clientebo.Cliente_id.ToString();
