@@ -32,11 +32,8 @@
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.btn_reservarhab = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_consultar_res = new System.Windows.Forms.ToolStripButton();
+            this.btn_modificar_reser = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_checkin = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_chekout = new System.Windows.Forms.ToolStripButton();
             this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).BeginInit();
@@ -49,11 +46,8 @@
             this.btn_habitaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_reservarhab,
             this.toolStripSeparator1,
-            this.btn_consultar_res,
-            this.toolStripSeparator2,
-            this.btn_checkin,
-            this.toolStripSeparator3,
-            this.btn_chekout});
+            this.btn_modificar_reser,
+            this.toolStripSeparator2});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -77,39 +71,18 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // btn_consultar_res
+            // btn_modificar_reser
             // 
-            this.btn_consultar_res.Image = global::Hotel.Properties.Resources._027_information;
-            this.btn_consultar_res.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_consultar_res.Name = "btn_consultar_res";
-            this.btn_consultar_res.Size = new System.Drawing.Size(101, 22);
-            this.btn_consultar_res.Text = "Reservaciones";
+            this.btn_modificar_reser.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_modificar_reser.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_modificar_reser.Name = "btn_modificar_reser";
+            this.btn_modificar_reser.Size = new System.Drawing.Size(118, 22);
+            this.btn_modificar_reser.Text = "Modificar reserva";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btn_checkin
-            // 
-            this.btn_checkin.Image = global::Hotel.Properties.Resources._005_check_in;
-            this.btn_checkin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_checkin.Name = "btn_checkin";
-            this.btn_checkin.Size = new System.Drawing.Size(73, 22);
-            this.btn_checkin.Text = "Check in";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btn_chekout
-            // 
-            this.btn_chekout.Image = global::Hotel.Properties.Resources._004_hotel_stroller;
-            this.btn_chekout.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_chekout.Name = "btn_chekout";
-            this.btn_chekout.Size = new System.Drawing.Size(81, 22);
-            this.btn_chekout.Text = "Check out";
             // 
             // dgv_reservaciones
             // 
@@ -119,6 +92,7 @@
             this.dgv_reservaciones.Name = "dgv_reservaciones";
             this.dgv_reservaciones.Size = new System.Drawing.Size(938, 425);
             this.dgv_reservaciones.TabIndex = 2;
+            this.dgv_reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_reservaciones_CellMouseClick);
             // 
             // Frm_reservaciones
             // 
@@ -144,11 +118,8 @@
         private System.Windows.Forms.ToolStrip btn_habitaciones;
         private System.Windows.Forms.ToolStripButton btn_reservarhab;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_consultar_res;
+        private System.Windows.Forms.ToolStripButton btn_modificar_reser;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btn_checkin;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton btn_chekout;
         private System.Windows.Forms.DataGridView dgv_reservaciones;
     }
 }

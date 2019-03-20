@@ -57,5 +57,42 @@ namespace Hotel.DAO
             string commandSQL = selectSQL + fromSQL;
             return conn.EjecutarSentencia(commandSQL);
         }
+
+        public ReservasBO Buscar(int folio_reserva)
+        {
+            string col0 = "folio_reserva";
+            string col1 = "num_habitacion";
+            string col2 = "fecha_entrada";
+            string col3 = "fecha_salida";
+            string col4 = "detalles";
+            string col5 = "nombre";
+            string col6 = "apaterno";
+            string col7 = "amaterno";
+            string col8 = "direccion";
+            string col9 = "email";
+            string col10 = "telefono";
+
+            string commandSQL = String.Format("SELECT * FROM reserva WHERE folio_reserva={0}", folio_reserva);
+            DataTable table = conn.EjecutarSentencia(commandSQL);
+
+            if(table.Rows.Count > 0)
+            {
+                DataRowCollection row = table.Rows;
+                ReservasBO reserva = new ReservasBO();
+
+                reserva.Folio_reserva = Convert.ToInt32(row[0]["folio_reserva"]);
+                reserva.Fecha_salida = DateTime.Parse(row[0]["fecha_salida"].ToString());
+                reserva.Fecha_entrada = DateTime.Parse(row[0]["fecha_entrada"].ToString());
+                reserva.Habitacion.Num_habitacion = Convert.ToInt32(row[0]["num_habitacion"]);
+                reserva.Detalles = row[0]["detalles"].ToString();
+                reserva.Cliente.Cliente_id = Convert.ToInt32(row[0]["cliente_id"]);
+
+                return reserva;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
