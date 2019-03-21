@@ -7,19 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel.BO;
+using Hotel.DAO;
 
 namespace Hotel.GUI
 {
     public partial class Frm_menu_caja : Form
     {
+        CajaDAO cajaDAO;
+        CajaBO cajaBO;
+
         public Frm_menu_caja()
         {
             InitializeComponent();
+            cajaDAO = new CajaDAO();
+            cajaBO = new CajaBO();
         }
 
         private void seleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
         {
 
+        }
+
+        private void btn_cerrar_caja_Click(object sender, EventArgs e)
+        {
+            Frm_corte_caja corte_Caja = new Frm_corte_caja();
+            if (corte_Caja.ShowDialog() == DialogResult.OK)
+            {
+                dgv_transacciones.DataSource = cajaDAO.Buscar();
+                dgv_transacciones.Update();
+            }
         }
     }
 }

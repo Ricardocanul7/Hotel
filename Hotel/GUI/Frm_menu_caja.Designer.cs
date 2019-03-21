@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
+            this.dgv_transacciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
-            this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.brn_abrir_caja = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_cerrar_caja = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
+            this.brn_abrir_caja = new System.Windows.Forms.ToolStripButton();
+            this.btn_cerrar_caja = new System.Windows.Forms.ToolStripButton();
             this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).BeginInit();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Grd_Reservaciones
+            // dgv_transacciones
             // 
-            this.Grd_Reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grd_Reservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grd_Reservaciones.Location = new System.Drawing.Point(0, 25);
-            this.Grd_Reservaciones.Name = "Grd_Reservaciones";
-            this.Grd_Reservaciones.Size = new System.Drawing.Size(800, 425);
-            this.Grd_Reservaciones.TabIndex = 4;
-            this.Grd_Reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
+            this.dgv_transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_transacciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_transacciones.Location = new System.Drawing.Point(0, 25);
+            this.dgv_transacciones.Name = "dgv_transacciones";
+            this.dgv_transacciones.Size = new System.Drawing.Size(800, 425);
+            this.dgv_transacciones.TabIndex = 4;
+            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
             // 
             // btn_habitaciones
             // 
@@ -71,6 +71,21 @@
             this.btn_habitaciones.TabIndex = 3;
             this.btn_habitaciones.Text = "Menu";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
             // btn_nvatransaccion
             // 
             this.btn_nvatransaccion.Image = global::Hotel.Properties.Resources.cash;
@@ -80,11 +95,6 @@
             this.btn_nvatransaccion.Size = new System.Drawing.Size(135, 22);
             this.btn_nvatransaccion.Text = "Agregar Transacción";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
             // brn_abrir_caja
             // 
             this.brn_abrir_caja.Image = global::Hotel.Properties.Resources._023_ladder;
@@ -92,11 +102,6 @@
             this.brn_abrir_caja.Name = "brn_abrir_caja";
             this.brn_abrir_caja.Size = new System.Drawing.Size(79, 22);
             this.brn_abrir_caja.Text = "Abrir Caja";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // btn_cerrar_caja
             // 
@@ -106,11 +111,7 @@
             this.btn_cerrar_caja.Size = new System.Drawing.Size(85, 22);
             this.btn_cerrar_caja.Text = "Cerrar Caja";
             this.btn_cerrar_caja.ToolTipText = "Cerrar Caja";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.btn_cerrar_caja.Click += new System.EventHandler(this.btn_cerrar_caja_Click);
             // 
             // btn_reporte_caja
             // 
@@ -125,11 +126,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Grd_Reservaciones);
+            this.Controls.Add(this.dgv_transacciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_menu_caja";
             this.Text = "Caja";
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).EndInit();
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
             this.ResumeLayout(false);
@@ -139,7 +140,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView Grd_Reservaciones;
+        private System.Windows.Forms.DataGridView dgv_transacciones;
         private System.Windows.Forms.ToolStrip btn_habitaciones;
         private System.Windows.Forms.ToolStripButton btn_nvatransaccion;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

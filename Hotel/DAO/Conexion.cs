@@ -34,7 +34,7 @@ namespace Hotel.DAO
 
         public void CerrarConexion()
         {
-            this.conn.Clone();
+            this.conn.Close();
         }
 
         public int EjecutarComando(string comandoSQL) // INSERT, UPDATE, DELETE
