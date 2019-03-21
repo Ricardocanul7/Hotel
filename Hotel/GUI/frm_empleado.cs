@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel.BO;
 using Hotel.DAO;
-using System.Data;
 
 namespace Hotel.GUI
 {
@@ -87,5 +86,10 @@ namespace Hotel.GUI
         
         }
 
+        private void Nuevo_Puesto(object sender, EventArgs e)
+        {
+            frm_agregar_puesto agregar_puesto = new frm_agregar_puesto();
+            agregar_puesto.Show();
+        }
     }
 }

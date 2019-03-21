@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Grd_Reservaciones = new System.Windows.Forms.DataGridView();
+            this.dgv_transacciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -37,19 +37,19 @@
             this.brn_abrir_caja = new System.Windows.Forms.ToolStripButton();
             this.btn_cerrar_caja = new System.Windows.Forms.ToolStripButton();
             this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).BeginInit();
             this.btn_habitaciones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Grd_Reservaciones
+            // dgv_transacciones
             // 
-            this.Grd_Reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grd_Reservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grd_Reservaciones.Location = new System.Drawing.Point(0, 25);
-            this.Grd_Reservaciones.Name = "Grd_Reservaciones";
-            this.Grd_Reservaciones.Size = new System.Drawing.Size(800, 425);
-            this.Grd_Reservaciones.TabIndex = 4;
+            this.dgv_transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_transacciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_transacciones.Location = new System.Drawing.Point(0, 25);
+            this.dgv_transacciones.Name = "dgv_transacciones";
+            this.dgv_transacciones.Size = new System.Drawing.Size(800, 425);
+            this.dgv_transacciones.TabIndex = 4;
+            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
             // 
             // btn_habitaciones
             // 
@@ -111,6 +111,7 @@
             this.btn_cerrar_caja.Size = new System.Drawing.Size(85, 22);
             this.btn_cerrar_caja.Text = "Cerrar Caja";
             this.btn_cerrar_caja.ToolTipText = "Cerrar Caja";
+            this.btn_cerrar_caja.Click += new System.EventHandler(this.btn_cerrar_caja_Click);
             // 
             // btn_reporte_caja
             // 
@@ -120,26 +121,16 @@
             this.btn_reporte_caja.Size = new System.Drawing.Size(159, 22);
             this.btn_reporte_caja.Text = "Reporte de transacciones";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(505, 46);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(283, 19);
-            this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "<< Aquí se mostrarán las últimas transacciones";
-            // 
             // Frm_menu_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.Grd_Reservaciones);
+            this.Controls.Add(this.dgv_transacciones);
             this.Controls.Add(this.btn_habitaciones);
             this.Name = "Frm_menu_caja";
             this.Text = "Caja";
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_Reservaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).EndInit();
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
             this.ResumeLayout(false);
@@ -149,7 +140,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView Grd_Reservaciones;
+        private System.Windows.Forms.DataGridView dgv_transacciones;
         private System.Windows.Forms.ToolStrip btn_habitaciones;
         private System.Windows.Forms.ToolStripButton btn_nvatransaccion;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -158,6 +149,5 @@
         private System.Windows.Forms.ToolStripButton btn_cerrar_caja;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btn_reporte_caja;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

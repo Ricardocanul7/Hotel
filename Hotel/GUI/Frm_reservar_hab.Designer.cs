@@ -68,10 +68,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btn_imprimir_res = new System.Windows.Forms.Button();
-            this.btn_mod_res = new System.Windows.Forms.Button();
-            this.btn_borrar_res = new System.Windows.Forms.Button();
-            this.btn_guardar_res = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -472,55 +470,31 @@
             this.label13.TabIndex = 42;
             this.label13.Text = "Precio: $";
             // 
-            // btn_imprimir_res
+            // btn_cancelar
             // 
-            this.btn_imprimir_res.Image = global::Hotel.Properties.Resources._049_notes1;
-            this.btn_imprimir_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_imprimir_res.Location = new System.Drawing.Point(711, 519);
-            this.btn_imprimir_res.Name = "btn_imprimir_res";
-            this.btn_imprimir_res.Size = new System.Drawing.Size(95, 47);
-            this.btn_imprimir_res.TabIndex = 45;
-            this.btn_imprimir_res.Text = "Imprimir";
-            this.btn_imprimir_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_imprimir_res.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Image = global::Hotel.Properties.Resources.close;
+            this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancelar.Location = new System.Drawing.Point(711, 519);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(95, 47);
+            this.btn_cancelar.TabIndex = 45;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // btn_mod_res
+            // btn_guardar
             // 
-            this.btn_mod_res.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_mod_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_res.Location = new System.Drawing.Point(490, 519);
-            this.btn_mod_res.Name = "btn_mod_res";
-            this.btn_mod_res.Size = new System.Drawing.Size(102, 47);
-            this.btn_mod_res.TabIndex = 44;
-            this.btn_mod_res.Text = "Modificar";
-            this.btn_mod_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_mod_res.UseVisualStyleBackColor = true;
-            // 
-            // btn_borrar_res
-            // 
-            this.btn_borrar_res.Image = global::Hotel.Properties.Resources.close;
-            this.btn_borrar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_res.Location = new System.Drawing.Point(382, 519);
-            this.btn_borrar_res.Name = "btn_borrar_res";
-            this.btn_borrar_res.Size = new System.Drawing.Size(93, 47);
-            this.btn_borrar_res.TabIndex = 43;
-            this.btn_borrar_res.Text = "Eliminar";
-            this.btn_borrar_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_borrar_res.UseVisualStyleBackColor = true;
-            // 
-            // btn_guardar_res
-            // 
-            this.btn_guardar_res.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_guardar_res.Image = global::Hotel.Properties.Resources._035_save;
-            this.btn_guardar_res.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_res.Location = new System.Drawing.Point(606, 519);
-            this.btn_guardar_res.Name = "btn_guardar_res";
-            this.btn_guardar_res.Size = new System.Drawing.Size(95, 47);
-            this.btn_guardar_res.TabIndex = 42;
-            this.btn_guardar_res.Text = "       Guardar";
-            this.btn_guardar_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_guardar_res.UseVisualStyleBackColor = true;
-            this.btn_guardar_res.Click += new System.EventHandler(this.btn_guardar_res_Click);
+            this.btn_guardar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_guardar.Image = global::Hotel.Properties.Resources._035_save;
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(606, 519);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(95, 47);
+            this.btn_guardar.TabIndex = 42;
+            this.btn_guardar.Text = "       Guardar";
+            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_res_Click);
             // 
             // pictureBox1
             // 
@@ -538,10 +512,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 588);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.btn_imprimir_res);
-            this.Controls.Add(this.btn_mod_res);
-            this.Controls.Add(this.btn_borrar_res);
-            this.Controls.Add(this.btn_guardar_res);
+            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
@@ -590,10 +562,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btn_mod_res;
-        private System.Windows.Forms.Button btn_borrar_res;
-        private System.Windows.Forms.Button btn_guardar_res;
-        private System.Windows.Forms.Button btn_imprimir_res;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label Lbl_precio_desc;
         private System.Windows.Forms.Label Lbl_anticipo;

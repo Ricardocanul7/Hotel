@@ -12,7 +12,7 @@ using Hotel.DAO;
 
 namespace Hotel.GUI
 {
-    public partial class Frm_reservar_hab : Form
+    public partial class Frm_reservar_hab : MetroFramework.Forms.MetroForm
     {
         ReservaDAO reservaDAO;
         HabitacionDAO habitacionDAO;

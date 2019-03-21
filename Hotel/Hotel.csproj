@@ -68,9 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\CajaBO.cs" />
     <Compile Include="BO\ClienteBO.cs" />
     <Compile Include="BO\EmpresaBO.cs" />
     <Compile Include="BO\ReservasBO.cs" />
+    <Compile Include="DAO\CajaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DatosLogin.cs" />
@@ -82,11 +84,23 @@
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
+    <Compile Include="GUI\frm_agregar_puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_agregar_puesto.Designer.cs">
+      <DependentUpon>frm_agregar_puesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frm_clientes.Designer.cs">
       <DependentUpon>frm_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Frm_corte_caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_corte_caja.Designer.cs">
+      <DependentUpon>Frm_corte_caja.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frm_Empresa.cs">
       <SubType>Form</SubType>
@@ -156,8 +170,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frm_agregar_puesto.resx">
+      <DependentUpon>frm_agregar_puesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_clientes.resx">
       <DependentUpon>frm_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_corte_caja.resx">
+      <DependentUpon>Frm_corte_caja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_Empresa.resx">
       <DependentUpon>frm_Empresa.cs</DependentUpon>
@@ -296,6 +316,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Iconos\32px\024-safety-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\020-bell-ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\021-phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\022-reception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\031-broom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\039-bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\042-single-bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\32px\038-hotel-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
