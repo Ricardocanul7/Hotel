@@ -31,15 +31,15 @@
             this.btn_guardar_empresa = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_monto = new System.Windows.Forms.TextBox();
-            this.txt_id_corte = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
+            this.dtp_hora = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbo_usuario = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,15 +55,16 @@
             this.btn_guardar_empresa.Text = "       Guardar";
             this.btn_guardar_empresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_empresa.UseVisualStyleBackColor = true;
+            this.btn_guardar_empresa.Click += new System.EventHandler(this.btn_guardar_empresa_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.cbo_usuario);
+            this.groupBox3.Controls.Add(this.dtp_hora);
+            this.groupBox3.Controls.Add(this.dtp_fecha);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.txt_monto);
-            this.groupBox3.Controls.Add(this.txt_id_corte);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(28, 119);
@@ -79,22 +80,6 @@
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(232, 20);
             this.txt_monto.TabIndex = 16;
-            // 
-            // txt_id_corte
-            // 
-            this.txt_id_corte.Location = new System.Drawing.Point(75, 28);
-            this.txt_id_corte.Name = "txt_id_corte";
-            this.txt_id_corte.Size = new System.Drawing.Size(232, 20);
-            this.txt_id_corte.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "ID:";
             // 
             // label1
             // 
@@ -143,25 +128,45 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Hora:";
             // 
-            // dateTimePicker1
+            // dtp_fecha
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 88);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(232, 20);
-            this.dateTimePicker1.TabIndex = 19;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 3, 21, 0, 0, 0, 0);
+            this.dtp_fecha.CustomFormat = "yyyy-MM-dd";
+            this.dtp_fecha.Enabled = false;
+            this.dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_fecha.Location = new System.Drawing.Point(75, 88);
+            this.dtp_fecha.Name = "dtp_fecha";
+            this.dtp_fecha.Size = new System.Drawing.Size(232, 20);
+            this.dtp_fecha.TabIndex = 19;
+            this.dtp_fecha.Value = new System.DateTime(2019, 3, 21, 0, 0, 0, 0);
             // 
-            // dateTimePicker2
+            // dtp_hora
             // 
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(75, 116);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(232, 20);
-            this.dateTimePicker2.TabIndex = 20;
-            this.dateTimePicker2.Value = new System.DateTime(2019, 3, 21, 0, 0, 0, 0);
+            this.dtp_hora.CustomFormat = "HH:mm:ss";
+            this.dtp_hora.Enabled = false;
+            this.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_hora.Location = new System.Drawing.Point(75, 116);
+            this.dtp_hora.Name = "dtp_hora";
+            this.dtp_hora.Size = new System.Drawing.Size(232, 20);
+            this.dtp_hora.TabIndex = 20;
+            this.dtp_hora.Value = new System.DateTime(2019, 3, 21, 5, 36, 31, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Usuario:";
+            // 
+            // cbo_usuario
+            // 
+            this.cbo_usuario.FormattingEnabled = true;
+            this.cbo_usuario.Location = new System.Drawing.Point(75, 26);
+            this.cbo_usuario.Name = "cbo_usuario";
+            this.cbo_usuario.Size = new System.Drawing.Size(232, 21);
+            this.cbo_usuario.TabIndex = 21;
+            this.cbo_usuario.SelectedValueChanged += new System.EventHandler(this.cbo_usuario_SelectedValueChanged);
             // 
             // Frm_corte_caja
             // 
@@ -186,14 +191,14 @@
         private System.Windows.Forms.Button btn_guardar_empresa;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_monto;
-        private System.Windows.Forms.TextBox txt_id_corte;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_fecha;
+        private System.Windows.Forms.DateTimePicker dtp_hora;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbo_usuario;
     }
 }
