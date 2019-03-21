@@ -40,6 +40,7 @@
             this.dtp_hora = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.cbo_usuario = new System.Windows.Forms.ComboBox();
+            this.txt_idcorte = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -168,11 +169,20 @@
             this.cbo_usuario.TabIndex = 21;
             this.cbo_usuario.SelectedValueChanged += new System.EventHandler(this.cbo_usuario_SelectedValueChanged);
             // 
+            // txt_idcorte
+            // 
+            this.txt_idcorte.Location = new System.Drawing.Point(303, 93);
+            this.txt_idcorte.Name = "txt_idcorte";
+            this.txt_idcorte.Size = new System.Drawing.Size(64, 20);
+            this.txt_idcorte.TabIndex = 23;
+            this.txt_idcorte.Visible = false;
+            // 
             // Frm_corte_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 354);
+            this.Controls.Add(this.txt_idcorte);
             this.Controls.Add(this.btn_guardar_empresa);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox1);
@@ -200,5 +210,6 @@
         private System.Windows.Forms.DateTimePicker dtp_hora;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbo_usuario;
+        private System.Windows.Forms.TextBox txt_idcorte;
     }
 }
