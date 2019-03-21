@@ -36,9 +36,10 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txt_buscarempleados = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.txt_Actualizar_Empleados = new System.Windows.Forms.ToolStripButton();
+            this.btn_agregar_puesto = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_empleados = new System.Windows.Forms.DataGridView();
-            this.txt_Actualizar_Empleados = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleados)).BeginInit();
             this.SuspendLayout();
@@ -55,12 +56,13 @@
             this.toolStripSeparator2,
             this.txt_buscarempleados,
             this.toolStripButton1,
-            this.txt_Actualizar_Empleados});
+            this.txt_Actualizar_Empleados,
+            this.btn_agregar_puesto});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.btn_habitaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_habitaciones.Size = new System.Drawing.Size(800, 25);
+            this.btn_habitaciones.Size = new System.Drawing.Size(1051, 25);
             this.btn_habitaciones.TabIndex = 2;
             this.btn_habitaciones.Text = "Menu";
             // 
@@ -112,6 +114,24 @@
             this.toolStripButton1.Text = "Eliminar Empleado";
             this.toolStripButton1.Click += new System.EventHandler(this.Eliminar_Empleado);
             // 
+            // txt_Actualizar_Empleados
+            // 
+            this.txt_Actualizar_Empleados.Image = global::Hotel.Properties.Resources._036_edit;
+            this.txt_Actualizar_Empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.txt_Actualizar_Empleados.Name = "txt_Actualizar_Empleados";
+            this.txt_Actualizar_Empleados.Size = new System.Drawing.Size(136, 22);
+            this.txt_Actualizar_Empleados.Text = "Actualiza Empleados";
+            this.txt_Actualizar_Empleados.Click += new System.EventHandler(this.Modicicar_Empleados);
+            // 
+            // btn_agregar_puesto
+            // 
+            this.btn_agregar_puesto.Image = global::Hotel.Properties.Resources.add1;
+            this.btn_agregar_puesto.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_agregar_puesto.Name = "btn_agregar_puesto";
+            this.btn_agregar_puesto.Size = new System.Drawing.Size(63, 22);
+            this.btn_agregar_puesto.Text = "Puesto";
+            this.btn_agregar_puesto.Click += new System.EventHandler(this.Forms_Puesto);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -127,24 +147,15 @@
             this.dgv_empleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_empleados.Location = new System.Drawing.Point(0, 25);
             this.dgv_empleados.Name = "dgv_empleados";
-            this.dgv_empleados.Size = new System.Drawing.Size(800, 425);
+            this.dgv_empleados.Size = new System.Drawing.Size(1051, 506);
             this.dgv_empleados.TabIndex = 5;
             this.dgv_empleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_empleado);
-            // 
-            // txt_Actualizar_Empleados
-            // 
-            this.txt_Actualizar_Empleados.Image = global::Hotel.Properties.Resources._036_edit;
-            this.txt_Actualizar_Empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txt_Actualizar_Empleados.Name = "txt_Actualizar_Empleados";
-            this.txt_Actualizar_Empleados.Size = new System.Drawing.Size(136, 22);
-            this.txt_Actualizar_Empleados.Text = "Actualiza Empleados";
-            this.txt_Actualizar_Empleados.Click += new System.EventHandler(this.Modicicar_Empleados);
             // 
             // Frm_menu_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1051, 531);
             this.Controls.Add(this.dgv_empleados);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_habitaciones);
@@ -171,5 +182,6 @@
         private System.Windows.Forms.ToolStripTextBox txt_buscarempleados;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton txt_Actualizar_Empleados;
+        private System.Windows.Forms.ToolStripButton btn_agregar_puesto;
     }
 }

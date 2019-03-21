@@ -55,7 +55,7 @@ namespace Hotel.GUI
 
             empleadoBO.Puesto = txt_Nuevo_Puesto.Text;
 
-            return empleadoBO;
+                return empleadoBO;
         }
 
          private void Buscar_puestos(object sender, EventArgs e)
@@ -83,9 +83,11 @@ namespace Hotel.GUI
         {
             int Filaseleccionada = e.RowIndex;
 
-            if (Filaseleccionada > 0)
+            if (Filaseleccionada >= 0)
             {
                 empleadoBO.Puesto = dgv_puestos.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
+
+                txt_Nuevo_Puesto.Text = empleadoBO.Puesto;
 
                 this.DialogResult = DialogResult.OK;
             }
@@ -94,7 +96,7 @@ namespace Hotel.GUI
         private void Eliminar_puestos(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
-       "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+              "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
             {
                 if (empleadoDAO.Eliminar_Puesto(empleadoBO) == 1)
                 {

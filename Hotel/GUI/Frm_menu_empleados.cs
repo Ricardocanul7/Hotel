@@ -80,6 +80,7 @@ namespace Hotel.GUI
                 empleadoBO.Sueldo = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["sueldo"].Value.ToString());
                 empleadoBO.Puesto = dgv_empleados.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
 
+
                 this.DialogResult = DialogResult.OK;
             }
 
@@ -112,6 +113,12 @@ namespace Hotel.GUI
                 empleadoDAO.Modificar(empleadoBO);
             }
             dgv_empleados.DataSource = empleadoDAO.Buscar();
+        }
+
+        private void Forms_Puesto(object sender, EventArgs e)
+        {
+            frm_agregar_puesto Agregar_puesto = new frm_agregar_puesto();
+            Agregar_puesto.Show();
         }
     }
 }
