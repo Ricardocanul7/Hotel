@@ -84,6 +84,12 @@
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
+    <Compile Include="GUI\frm_agregar_puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_agregar_puesto.Designer.cs">
+      <DependentUpon>frm_agregar_puesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_clientes.cs">
       <SubType>Form</SubType>
     </Compile>

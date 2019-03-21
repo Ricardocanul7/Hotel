@@ -53,5 +53,28 @@ namespace Hotel.DAO
             string ComandoSQL = "SELECT * FROM puesto_empleado";
             return Miconexion.EjecutarSentencia(ComandoSQL);
         }
+
+        public int Agregar_Puesto(EmpleadoBO empleado)
+        {
+            string ComandoSQL = string.Format("INSERT IN puesto_empleado (puesto) VALUES('{0}')", empleado.Puesto);
+            return Miconexion.EjecutarComando(ComandoSQL);
+        }
+
+        public int Modificar_Puesto(EmpleadoBO empleado)
+        {
+            string ComandoSQL = string.Format("UPDATE puesto_empleado SET puesto = '{0}'", empleado.Puesto);
+            return Miconexion.EjecutarComando(ComandoSQL);
+        }
+
+        public int Eliminar_Puesto(EmpleadoBO empleado)
+        {
+            string ComandoSQL = string.Format("DELETE FROM puesto_empleado WHERE puesto ='{0}'", empleado.Puesto);
+            return Miconexion.EjecutarComando(ComandoSQL);
+        }
+        public int Buscar_Puesto(EmpleadoBO empleado)
+        {
+            string ComandoSQL = string.Format("SELECT * FROM puesto_empleado");
+            return Miconexion.EjecutarComando(ComandoSQL);
+        }
     }
 }
