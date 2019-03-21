@@ -268,15 +268,16 @@
             // 
             // btn_mod_empleado
             // 
-            this.btn_mod_empleado.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_mod_empleado.Image = global::Hotel.Properties.Resources.add1;
             this.btn_mod_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_empleado.Location = new System.Drawing.Point(332, 296);
+            this.btn_mod_empleado.Location = new System.Drawing.Point(330, 296);
             this.btn_mod_empleado.Name = "btn_mod_empleado";
-            this.btn_mod_empleado.Size = new System.Drawing.Size(102, 47);
+            this.btn_mod_empleado.Size = new System.Drawing.Size(91, 47);
             this.btn_mod_empleado.TabIndex = 19;
-            this.btn_mod_empleado.Text = "Modificar";
+            this.btn_mod_empleado.Text = "Puesto";
             this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_mod_empleado.UseVisualStyleBackColor = true;
+            this.btn_mod_empleado.Click += new System.EventHandler(this.Nuevo_Puesto);
             // 
             // frm_empleado
             // 

@@ -87,5 +87,10 @@ namespace Hotel.GUI
         
         }
 
+        private void Nuevo_Puesto(object sender, EventArgs e)
+        {
+            frm_agregar_puesto agregar_puesto = new frm_agregar_puesto();
+            agregar_puesto.Show();
+        }
     }
 }
