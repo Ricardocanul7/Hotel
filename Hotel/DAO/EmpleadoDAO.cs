@@ -56,7 +56,7 @@ namespace Hotel.DAO
 
         public int Agregar_Puesto(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("INSERT IN puesto_empleado (puesto) VALUES('{0}')", empleado.Puesto);
+            string ComandoSQL = string.Format("INSERT INTO puesto_empleado (puesto) VALUES ('{0}')", empleado.Puesto);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
 
@@ -68,13 +68,13 @@ namespace Hotel.DAO
 
         public int Eliminar_Puesto(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("DELETE FROM puesto_empleado WHERE puesto ='{0}'", empleado.Puesto);
+            string ComandoSQL = string.Format("DELETE FROM puesto_empleado WHERE puesto = '{0}'", empleado.Puesto);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
-        public int Buscar_Puesto(EmpleadoBO empleado)
+        public DataTable Buscar_Puesto()
         {
             string ComandoSQL = string.Format("SELECT * FROM puesto_empleado");
-            return Miconexion.EjecutarComando(ComandoSQL);
+            return Miconexion.EjecutarSentencia(ComandoSQL);
         }
     }
 }
