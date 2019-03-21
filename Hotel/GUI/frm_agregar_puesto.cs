@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel.BO;
 using Hotel.DAO;
-using System.Data;
 
 namespace Hotel.GUI
 {
