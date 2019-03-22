@@ -22,8 +22,9 @@ CREATE TABLE usuario(
 );
 
 CREATE TABLE puesto_empleado(
+  puesto_id INT NOT NULL AUTO_INCREMENT,
   puesto VARCHAR(45) NOT NULL,
-  PRIMARY KEY(puesto)
+  PRIMARY KEY(puesto_id)
 );
 
 CREATE TABLE empleado(
@@ -35,20 +36,22 @@ CREATE TABLE empleado(
   telefono VARCHAR(20) NOT NULL,
   horario VARCHAR(45) NOT NULL,
   sueldo DECIMAL NOT NULL,
-  puesto VARCHAR(45) NOT NULL,
+  puesto_id INT NOT NULL,
   PRIMARY KEY(empleado_id),
-  FOREIGN KEY(puesto)
-    REFERENCES puesto_empleado(puesto)
+  FOREIGN KEY(puesto_id)
+    REFERENCES puesto_empleado(puesto_id)
 );
 
 CREATE TABLE tipo_habitacion(
+  tipo_id INT NOT NULL AUTO_INCREMENT,
   nombre_tipo VARCHAR(45) NOT NULL,
-  PRIMARY KEY(nombre_tipo)
+  PRIMARY KEY(tipo_id)
 );
 
 CREATE TABLE estado_habitacion(
+  estado_id INT NOT NULL AUTO_INCREMENT,
   estado VARCHAR(45) NOT NULL,
-  PRIMARY KEY(estado)
+  PRIMARY KEY(estado_id)
 );
 
 CREATE TABLE habitacion (
@@ -60,14 +63,14 @@ CREATE TABLE habitacion (
     precio_baja decimal NOT NULL,
     precio_adic_alta REAL NOT NULL,
     precio_adic_baja REAL NOT NULL,
-    tipo_hab VARCHAR(45) NOT NULL,
+    tipo_hab INT NOT NULL,
     descripcion text NOT NULL,
-    estado_hab VARCHAR(45) NOT NULL,
+    estado_hab INT NOT NULL,
     PRIMARY KEY(num_habitacion),
     FOREIGN KEY(tipo_hab)
-      REFERENCES tipo_habitacion(nombre_tipo),
+      REFERENCES tipo_habitacion(tipo_id),
     FOREIGN KEY(estado_hab)
-      REFERENCES estado_habitacion(estado)
+      REFERENCES estado_habitacion(estado_id)
 );
 
 CREATE TABLE cliente(
@@ -107,8 +110,9 @@ CREATE TABLE corte_caja(
 );
 
 CREATE TABLE tipo_transaccion(
+  tipo_id INT NOT NULL AUTO_INCREMENT,
   nombre_transaccion VARCHAR(45) NOT NULL,
-  PRIMARY KEY(nombre_transaccion)
+  PRIMARY KEY(tipo_id)
 );
 
 CREATE TABLE transaccion(
@@ -116,12 +120,12 @@ CREATE TABLE transaccion(
   monto REAL NOT NULL,
   descripcion TEXT NOT NULL,
   fecha DATE NOT NULL,
-  tipo VARCHAR(45) NOT NULL,
+  tipo INT NOT NULL,
   folio_reserva INT NOT NULL,
   usuario_id INT NOT NULL,
   PRIMARY KEY(codigo_transaccion),
   FOREIGN KEY(tipo)
-    REFERENCES tipo_transaccion(nombre_transaccion),
+    REFERENCES tipo_transaccion(tipo_id),
   FOREIGN KEY(folio_reserva)
     REFERENCES reservacion(folio_reserva),
   FOREIGN KEY(usuario_id)
@@ -169,7 +173,7 @@ CREATE TABLE pago_mantenimiento(
     REFERENCES mantenimiento(mantenimiento_id)
 );
 
-CREATE TABLE pago_limpieza(
+CREATE TABLE pago_empleado(
   folio_recibo INT NOT NULL AUTO_INCREMENT,
   fecha DATE NOT NULL,
   empleado_id INT NOT NULL,
