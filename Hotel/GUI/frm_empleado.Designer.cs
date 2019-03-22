@@ -50,7 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_guardar_empleado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_mod_empleado = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -266,25 +265,11 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_mod_empleado
-            // 
-            this.btn_mod_empleado.Image = global::Hotel.Properties.Resources.add1;
-            this.btn_mod_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_empleado.Location = new System.Drawing.Point(330, 296);
-            this.btn_mod_empleado.Name = "btn_mod_empleado";
-            this.btn_mod_empleado.Size = new System.Drawing.Size(91, 47);
-            this.btn_mod_empleado.TabIndex = 19;
-            this.btn_mod_empleado.Text = "Puesto";
-            this.btn_mod_empleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_mod_empleado.UseVisualStyleBackColor = true;
-            this.btn_mod_empleado.Click += new System.EventHandler(this.Nuevo_Puesto);
-            // 
             // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 360);
-            this.Controls.Add(this.btn_mod_empleado);
             this.Controls.Add(this.btn_guardar_empleado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
@@ -318,7 +303,6 @@
         private System.Windows.Forms.ComboBox cbo_Horario;
         private System.Windows.Forms.TextBox txt_apellidoparteno;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btn_mod_empleado;
         private System.Windows.Forms.ComboBox cbo_tipoempleado;
         private System.Windows.Forms.TextBox txt_sueldoempleado;
         private System.Windows.Forms.Label label10;
