@@ -81,24 +81,27 @@ namespace Hotel.GUI
         private void seleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
         {
             int rowSelected = e.RowIndex;
+            if(rowSelected >= 0)
+            {
+                clientebo.Cliente_id = int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
 
-            clientebo.Cliente_id = int.Parse(Grd_clientes.Rows[rowSelected].Cells["cliente_id"].Value.ToString());
-
-            clientebo.Cliente_nombre = Grd_clientes.Rows[rowSelected].Cells["nombre"].Value.ToString();
-            clientebo.Cliente_apaterno = Grd_clientes.Rows[rowSelected].Cells["apaterno"].Value.ToString();
-            clientebo.Cliente_amaterno = Grd_clientes.Rows[rowSelected].Cells["amaterno"].Value.ToString();
-            clientebo.Cliente_direccion = Grd_clientes.Rows[rowSelected].Cells["direccion"].Value.ToString();
-            clientebo.Cliente_email = Grd_clientes.Rows[rowSelected].Cells["email"].Value.ToString();
-            clientebo.Cliente_telefono = Grd_clientes.Rows[rowSelected].Cells["telefono"].Value.ToString();
+                clientebo.Cliente_nombre = Grd_clientes.Rows[rowSelected].Cells["nombre"].Value.ToString();
+                clientebo.Cliente_apaterno = Grd_clientes.Rows[rowSelected].Cells["apaterno"].Value.ToString();
+                clientebo.Cliente_amaterno = Grd_clientes.Rows[rowSelected].Cells["amaterno"].Value.ToString();
+                clientebo.Cliente_direccion = Grd_clientes.Rows[rowSelected].Cells["direccion"].Value.ToString();
+                clientebo.Cliente_email = Grd_clientes.Rows[rowSelected].Cells["email"].Value.ToString();
+                clientebo.Cliente_telefono = Grd_clientes.Rows[rowSelected].Cells["telefono"].Value.ToString();
 
 
-            txt_idcliente.Text = clientebo.Cliente_id.ToString();
-            txt_nom_cliente.Text = clientebo.Cliente_nombre;
-            txt_apaterno_cliente.Text = clientebo.Cliente_apaterno;
-            txt_amaterno_cliente.Text = clientebo.Cliente_amaterno;
-            txt_direcc_cliente.Text = clientebo.Cliente_direccion;
-            txt_email_cliente.Text = clientebo.Cliente_email;
-            txt_tele_cliente.Text = clientebo.Cliente_telefono;
+                txt_idcliente.Text = clientebo.Cliente_id.ToString();
+                txt_nom_cliente.Text = clientebo.Cliente_nombre;
+                txt_apaterno_cliente.Text = clientebo.Cliente_apaterno;
+                txt_amaterno_cliente.Text = clientebo.Cliente_amaterno;
+                txt_direcc_cliente.Text = clientebo.Cliente_direccion;
+                txt_email_cliente.Text = clientebo.Cliente_email;
+                txt_tele_cliente.Text = clientebo.Cliente_telefono;
+            }
+            
 
         }
 
