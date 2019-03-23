@@ -13,6 +13,7 @@ namespace Hotel.BO
         private DateTime fecha_entrada;
         private DateTime fecha_salida;
         private string detalles;
+        private bool estado;
         private ClienteBO cliente;
 
         public int Folio_reserva {
@@ -42,6 +43,12 @@ namespace Hotel.BO
         {
             get { return detalles; }
             set { detalles = value; }
+        }
+
+        public bool Estado
+        {
+            get { return estado; }
+            set { estado = value; }
         }
 
         public ClienteBO Cliente
