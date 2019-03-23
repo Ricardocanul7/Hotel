@@ -65,7 +65,7 @@ namespace Hotel.GUI
             empleadoBO.Direccion = txt_direcc_empleado.Text;
             empleadoBO.Telefono = txt_tele_empleado.Text;
             empleadoBO.Horario = cbo_Horario.Text;
-            empleadoBO.Puesto = cbo_tipoempleado.Text;
+            empleadoBO.Puesto_id = Convert.ToInt32(cbo_tipoempleado.Text);
             empleadoBO.Sueldo = Convert.ToDecimal(txt_sueldoempleado.Text);
             
 

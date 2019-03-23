@@ -10,7 +10,7 @@ namespace Hotel.BO
     {
         private string nombre;
         private string rfc;
-        private int precio_hora;
+        private decimal precio_hora;
 
         public string Nombre
         {
@@ -24,7 +24,7 @@ namespace Hotel.BO
             set { rfc = value; }
         }
 
-        public int Precio_hora
+        public decimal Precio_hora
         {
             get { return precio_hora; }
             set { precio_hora = value; }

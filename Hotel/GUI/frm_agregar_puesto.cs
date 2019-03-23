@@ -86,8 +86,10 @@ namespace Hotel.GUI
             if (Filaseleccionada >= 0)
             {
                 empleadoBO.Puesto = dgv_puestos.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
+                empleadoBO.Id_empleado = Convert.ToInt32(dgv_puestos.Rows[Filaseleccionada].Cells["puesto_id"].Value.ToString());
 
                 txt_Nuevo_Puesto.Text = empleadoBO.Puesto;
+
 
                 this.DialogResult = DialogResult.OK;
             }

@@ -78,7 +78,7 @@ namespace Hotel.GUI
                 empleadoBO.Telefono = dgv_empleados.Rows[Filaseleccionada].Cells["telefono"].Value.ToString();
                 empleadoBO.Horario = dgv_empleados.Rows[Filaseleccionada].Cells["horario"].Value.ToString();
                 empleadoBO.Sueldo = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["sueldo"].Value.ToString());
-                empleadoBO.Puesto = dgv_empleados.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
+                empleadoBO.Puesto_id = Convert.ToInt32(dgv_empleados.Rows[Filaseleccionada].Cells["puesto_id"].Value.ToString());
 
 
                 this.DialogResult = DialogResult.OK;

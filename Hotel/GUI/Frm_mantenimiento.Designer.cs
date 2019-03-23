@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_mantenimiento));
             this.Dgr_mantenimiento = new System.Windows.Forms.DataGridView();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.btn_nvoproveedor = new System.Windows.Forms.ToolStripButton();
-            this.btn_consultar_proveedor = new System.Windows.Forms.ToolStripButton();
-            this.btn_prog_mantenimiento = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.txt_Buscar_Empresa = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel_mantenimiento = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgv_empresas = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_precio_hora = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txt_nombre_empresa = new System.Windows.Forms.TextBox();
             this.txt_rfc_empresa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_empresas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Dgr_mantenimiento)).BeginInit();
             this.btn_habitaciones.SuspendLayout();
             this.panel_mantenimiento.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empresas)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Dgr_mantenimiento
@@ -68,11 +74,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // btn_habitaciones
             // 
             this.btn_habitaciones.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -80,9 +81,12 @@
             this.btn_habitaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_nvoproveedor,
             this.toolStripSeparator1,
-            this.btn_consultar_proveedor,
-            this.toolStripSeparator2,
-            this.btn_prog_mantenimiento});
+            this.toolStripButton1,
+            this.toolStripSeparator3,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.txt_Buscar_Empresa,
+            this.toolStripButton4});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -97,25 +101,54 @@
             this.btn_nvoproveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_nvoproveedor.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_nvoproveedor.Name = "btn_nvoproveedor";
-            this.btn_nvoproveedor.Size = new System.Drawing.Size(109, 22);
-            this.btn_nvoproveedor.Text = "Nueva Empresa";
-
+            this.btn_nvoproveedor.Size = new System.Drawing.Size(117, 22);
+            this.btn_nvoproveedor.Text = "Agregar Empresa";
+            this.btn_nvoproveedor.Click += new System.EventHandler(this.Guardar_Empresa);
             // 
-            // btn_consultar_proveedor
+            // toolStripButton1
             // 
-            this.btn_consultar_proveedor.Image = global::Hotel.Properties.Resources._021_phone;
-            this.btn_consultar_proveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_consultar_proveedor.Name = "btn_consultar_proveedor";
-            this.btn_consultar_proveedor.Size = new System.Drawing.Size(115, 22);
-            this.btn_consultar_proveedor.Text = "Buscar Empresas";
+            this.toolStripButton1.Image = global::Hotel.Properties.Resources.close;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(118, 22);
+            this.toolStripButton1.Text = "Eliminar Empresa";
+            this.toolStripButton1.Click += new System.EventHandler(this.Eliminar_Empresa);
             // 
-            // btn_prog_mantenimiento
+            // toolStripSeparator3
             // 
-            this.btn_prog_mantenimiento.Image = global::Hotel.Properties.Resources._031_broom;
-            this.btn_prog_mantenimiento.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_prog_mantenimiento.Name = "btn_prog_mantenimiento";
-            this.btn_prog_mantenimiento.Size = new System.Drawing.Size(168, 22);
-            this.btn_prog_mantenimiento.Text = "Programar Mantenimiento";
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::Hotel.Properties.Resources._036_edit;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(132, 22);
+            this.toolStripButton2.Text = "Actualizar Empresas";
+            this.toolStripButton2.Click += new System.EventHandler(this.Actualizar_Empresa);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(110, 22);
+            this.toolStripButton3.Text = "Buscar Empresa";
+            this.toolStripButton3.Click += new System.EventHandler(this.Buscar_Empresa);
+            // 
+            // txt_Buscar_Empresa
+            // 
+            this.txt_Buscar_Empresa.Name = "txt_Buscar_Empresa";
+            this.txt_Buscar_Empresa.Size = new System.Drawing.Size(200, 25);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::Hotel.Properties.Resources._031_broom1;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(168, 22);
+            this.toolStripButton4.Text = "Programar Mantenimiento";
             // 
             // panel_mantenimiento
             // 
@@ -123,13 +156,35 @@
             this.panel_mantenimiento.Controls.Add(this.groupBox3);
             this.panel_mantenimiento.Controls.Add(this.pictureBox1);
             this.panel_mantenimiento.Controls.Add(this.label6);
+            this.panel_mantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_mantenimiento.Location = new System.Drawing.Point(0, 25);
             this.panel_mantenimiento.Name = "panel_mantenimiento";
             this.panel_mantenimiento.Size = new System.Drawing.Size(966, 425);
             this.panel_mantenimiento.TabIndex = 5;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgv_empresas);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 229);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(966, 196);
+            this.panel1.TabIndex = 40;
+            // 
+            // dgv_empresas
+            // 
+            this.dgv_empresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_empresas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_empresas.Location = new System.Drawing.Point(0, 3);
+            this.dgv_empresas.Name = "dgv_empresas";
+            this.dgv_empresas.Size = new System.Drawing.Size(966, 193);
+            this.dgv_empresas.TabIndex = 0;
+            this.dgv_empresas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila);
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_precio_hora);
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.txt_nombre_empresa);
             this.groupBox3.Controls.Add(this.txt_rfc_empresa);
             this.groupBox3.Controls.Add(this.label4);
@@ -140,6 +195,22 @@
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la Empresa:";
+            // 
+            // txt_precio_hora
+            // 
+            this.txt_precio_hora.Location = new System.Drawing.Point(120, 93);
+            this.txt_precio_hora.Name = "txt_precio_hora";
+            this.txt_precio_hora.Size = new System.Drawing.Size(232, 20);
+            this.txt_precio_hora.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Precio por Hora :";
             // 
             // txt_nombre_empresa
             // 
@@ -193,24 +264,6 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "EMPRESA";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgv_empresas);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 229);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(966, 196);
-            this.panel1.TabIndex = 40;
-            // 
-            // dgv_empresas
-            // 
-            this.dgv_empresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_empresas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_empresas.Location = new System.Drawing.Point(0, 3);
-            this.dgv_empresas.Name = "dgv_empresas";
-            this.dgv_empresas.Size = new System.Drawing.Size(966, 193);
-            this.dgv_empresas.TabIndex = 0;
-            // 
             // Frm_mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,11 +279,11 @@
             this.btn_habitaciones.PerformLayout();
             this.panel_mantenimiento.ResumeLayout(false);
             this.panel_mantenimiento.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_empresas)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_empresas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,9 +293,6 @@
         private System.Windows.Forms.DataGridView Dgr_mantenimiento;
         private System.Windows.Forms.ToolStripButton btn_nvoproveedor;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_consultar_proveedor;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btn_prog_mantenimiento;
         private System.Windows.Forms.ToolStrip btn_habitaciones;
         private System.Windows.Forms.Panel panel_mantenimiento;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -254,5 +304,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_empresas;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_precio_hora;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripTextBox txt_Buscar_Empresa;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }
