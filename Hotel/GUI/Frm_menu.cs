@@ -86,7 +86,7 @@ namespace Hotel
                 habitacionBO.PrecioN = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_baja"].Value.ToString());
                 habitacionBO.PrecioPATA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_alta"].Value.ToString());
                 habitacionBO.PrecioPA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_baja"].Value.ToString());
-                habitacionBO.Tipo_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo_hab"].Value.ToString();
+                habitacionBO.Tipo_hab = Convert.ToInt32( dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo_hab"].Value.ToString());
                 habitacionBO.DescripHab = dgv_habitaciones.Rows[filaSeleccionar].Cells["descripcion"].Value.ToString();
 
                 this.DialogResult = DialogResult.OK;
