@@ -66,7 +66,7 @@ namespace Hotel.GUI
         {
             int Filaseleccionada = e.RowIndex;
 
-            if (Filaseleccionada > 0)
+            if (Filaseleccionada >= 0)
             {
                 empresaBO.RFC = dgv_empresas.Rows[Filaseleccionada].Cells["rfc_proveedor"].Value.ToString();
                 empresaBO.Nombre = dgv_empresas.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
