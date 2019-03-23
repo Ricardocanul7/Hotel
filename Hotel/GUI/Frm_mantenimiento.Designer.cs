@@ -99,7 +99,7 @@
             this.btn_nvoproveedor.Name = "btn_nvoproveedor";
             this.btn_nvoproveedor.Size = new System.Drawing.Size(109, 22);
             this.btn_nvoproveedor.Text = "Nueva Empresa";
-            this.btn_nvoproveedor.Click += new System.EventHandler(this.Nueva_Empresa_Click);
+
             // 
             // btn_consultar_proveedor
             // 

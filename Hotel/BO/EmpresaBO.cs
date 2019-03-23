@@ -10,6 +10,7 @@ namespace Hotel.BO
     {
         private string nombre;
         private string rfc;
+        private int precio_hora;
 
         public string Nombre
         {
@@ -21,6 +22,12 @@ namespace Hotel.BO
         {
             get { return rfc; }
             set { rfc = value; }
+        }
+
+        public int Precio_hora
+        {
+            get { return precio_hora; }
+            set { precio_hora = value; }
         }
     }
 }

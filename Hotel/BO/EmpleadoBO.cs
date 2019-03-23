@@ -17,11 +17,18 @@ namespace Hotel.BO
         private string horario;
         private string puesto;
         private decimal sueldo;
+        private int puesto_id;
 
         public int Id_empleado
         {
             get { return id_empleado; }
             set { id_empleado = value; }
+        }
+
+        public int Puesto_id
+        {
+            get { return puesto_id; }
+            set { puesto_id = value; }
         }
 
         public string Nombre

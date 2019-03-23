@@ -62,13 +62,13 @@ namespace Hotel.DAO
 
         public int Modificar_Puesto(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("UPDATE puesto_empleado SET puesto = '{0}'", empleado.Puesto);
+            string ComandoSQL = string.Format("UPDATE puesto_empleado SET puesto = '{1}' WHERE puesto_id = '{0}'", empleado.Puesto_id, empleado.Puesto);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
 
         public int Eliminar_Puesto(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("DELETE FROM puesto_empleado WHERE puesto = '{0}'", empleado.Puesto);
+            string ComandoSQL = string.Format("DELETE FROM puesto_empleado WHERE puesto_id = '{0}'", empleado.Puesto_id);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
         public DataTable Buscar_Puesto()

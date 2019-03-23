@@ -17,13 +17,6 @@ namespace Hotel.GUI
             InitializeComponent();
         }
 
-        private void Nueva_Empresa_Click(object sender, EventArgs e)
-        {
-            this.panel_mantenimiento.Controls.Clear();
-            var ventana = new frm_Empresa();
-            ventana.Show();
-
-        }
 
     }
 }
