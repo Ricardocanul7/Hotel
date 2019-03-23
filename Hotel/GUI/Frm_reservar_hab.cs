@@ -45,7 +45,7 @@ namespace Hotel.GUI
 
             for (int i = 0; i < rows.Length; i++)
             {
-                if((string)rows[i][10] == "Disponible" )
+                if((int)rows[i][10] == 4)
                 {
                     cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
                 }
@@ -90,11 +90,14 @@ namespace Hotel.GUI
             int index = cbo_habitaciones.SelectedIndex;
 
             DataRow[] rows = habitacionDAO.Buscar().Select();
+            DataRow[] rowsTipo = habitacionDAO.BuscarTipoHabitacion().Select();
+
             for(int i = 0; i < rows.Length; i++)
             {
-                if (rows[i][0].ToString() == cbo_habitaciones.Items[index].ToString().Split('-')[0].ToString())
+                if ((int)rows[i][0] == Convert.ToInt32(cbo_habitaciones.Items[index].ToString().Split('-')[0]))
                 {
-                    txt_tipo_hab.Text = (string)rows[i][8];
+                    int tipo_id = (int)rows[i][8] - 1;
+                    txt_tipo_hab.Text = rowsTipo[tipo_id]["nombre_tipo"].ToString();
                     break;
                 }
             } 
