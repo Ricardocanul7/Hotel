@@ -35,7 +35,7 @@ namespace Hotel.GUI
             DataRow[] rows = habitacionDAO.BuscarTipoHabitacion().Select();
             for (int i = 0; i < rows.Length; i++)
             {
-                cbo_tipohab.Items.Add(rows[i][0]);
+                cbo_tipohab.Items.Add(rows[i]["nombre_tipo"]);
             }
 
             cbo_tipohab.SelectedIndex = 0;
@@ -46,7 +46,7 @@ namespace Hotel.GUI
             DataRow[] rows = habitacionDAO.BuscarEstadoHabitacion().Select();
             for (int i = 0; i < rows.Length; i++)
             {
-                cbo_estadohab.Items.Add(rows[i][0]);
+                cbo_estadohab.Items.Add(rows[i]["estado"]);
             }
 
             cbo_estadohab.SelectedIndex = 0;
