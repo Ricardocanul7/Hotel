@@ -23,6 +23,7 @@ INSERT INTO tipo_usuario (nombre) VALUES ('Propietario');
 INSERT INTO tipo_habitacion (nombre_tipo) VALUES ('Sencilla');
 INSERT INTO tipo_habitacion (nombre_tipo) VALUES ('Doble');
 
-/* Estado de reservas */
+/* Estado de reservas
 INSERT INTO estado_reserva (estado_nombre) VALUE ('No pagado');
 INSERT INTO estado_reserva (estado_nombre) VALUE ('Pagado');
+*/

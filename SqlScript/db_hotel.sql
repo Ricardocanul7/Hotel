@@ -84,27 +84,19 @@ CREATE TABLE cliente(
   PRIMARY KEY(cliente_id)
 );
 
-CREATE TABLE estado_reserva(
-  estado_id INT NOT NULL AUTO_INCREMENT,
-  estado_nombre VARCHAR(45) NOT NULL,
-  PRIMARY KEY(estado_id)
-);
-
 CREATE TABLE reservacion(
   folio_reserva INT NOT NULL AUTO_INCREMENT,
   num_habitacion INT NOT NULL,
   fecha_entrada DATE NOT NULL,
   fecha_salida DATE NOT NULL,
   detalles TEXT,
-  estado_reserva INT NOT NULL,
+  estado_pagado BOOLEAN NOT NULL,
   cliente_id INT NOT NULL,
   PRIMARY KEY(folio_reserva),
   FOREIGN KEY(num_habitacion)
     REFERENCES habitacion(num_habitacion),
   FOREIGN KEY(cliente_id)
-    REFERENCES cliente(cliente_id),
-  FOREIGN KEY(estado_reserva)
-    REFERENCES estado_reserva(estado_id)
+    REFERENCES cliente(cliente_id)
 );
 
 CREATE TABLE corte_caja(
