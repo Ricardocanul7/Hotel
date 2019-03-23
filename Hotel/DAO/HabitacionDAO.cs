@@ -46,7 +46,7 @@ namespace Hotel.DAO
 
         public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT* FROM habitacion");
+            string ComandoSQL = string.Format("SELECT * FROM habitacion");
             return conexion.EjecutarSentencia(ComandoSQL);
         }
 

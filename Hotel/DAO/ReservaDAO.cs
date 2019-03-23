@@ -26,9 +26,13 @@ namespace Hotel.DAO
             return conn.EjecutarComando(commandSQL);
         }
 
-        public int Modificar()
+        public int Modificar(ReservasBO reserva)
         {
-            return 0;
+            string commandSQL = string.Format("UPDATE reservacion SET num_habitacion='{0}', fecha_entrada = {1}, " +
+                "fecha_salida='{2}', detalles='{3}', estado_reserva='{4}', cliente_id='{5}' " + 
+                "WHERE folio_reserva='{6}'", reserva.Habitacion, reserva.Fecha_entrada.ToString(), reserva.Fecha_salida.ToString(), reserva.Detalles,
+                reserva.Estado, reserva.Cliente, reserva.Folio_reserva);
+            return conn.EjecutarComando(commandSQL);
         }
 
         public int Eliminar(ReservasBO reservaBO)

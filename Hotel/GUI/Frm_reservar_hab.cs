@@ -45,7 +45,7 @@ namespace Hotel.GUI
 
             for (int i = 0; i < rows.Length; i++)
             {
-                if((string)rows[i][10] == "Disponible" )
+                if((int)rows[i][10] == 4)
                 {
                     cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
                 }
@@ -90,11 +90,14 @@ namespace Hotel.GUI
             int index = cbo_habitaciones.SelectedIndex;
 
             DataRow[] rows = habitacionDAO.Buscar().Select();
+            DataRow[] rowsTipo = habitacionDAO.BuscarTipoHabitacion().Select();
+
             for(int i = 0; i < rows.Length; i++)
             {
-                if (rows[i][0].ToString() == cbo_habitaciones.Items[index].ToString().Split('-')[0].ToString())
+                if ((int)rows[i][0] == Convert.ToInt32(cbo_habitaciones.Items[index].ToString().Split('-')[0]))
                 {
-                    txt_tipo_hab.Text = (string)rows[i][8];
+                    int tipo_id = (int)rows[i][8] - 1;
+                    txt_tipo_hab.Text = rowsTipo[tipo_id]["nombre_tipo"].ToString();
                     break;
                 }
             } 
@@ -107,22 +110,19 @@ namespace Hotel.GUI
                 ClienteDAO clienteDAO = new ClienteDAO();
                 DataRow[] rows = clienteDAO.Buscar().Select(String.Format("cliente_id = '{0}'", Txt_id_cliente.Text));
 
-                if(rows.Length >= Convert.ToInt32(Txt_id_cliente.Text))
+                if(rows.Length > 0)
                 {
-                    ClienteBO clienteBO = new ClienteBO();
-                    clienteBO.Cliente_nombre = rows[0]["nombre"] as string;
-                    clienteBO.Cliente_apaterno = rows[0]["apaterno"] as string;
-                    clienteBO.Cliente_amaterno = rows[0]["amaterno"] as string;
-                    clienteBO.Cliente_direccion = rows[0]["direccion"] as string;
-                    clienteBO.Cliente_email = rows[0]["email"] as string;
-                    clienteBO.Cliente_telefono = rows[0]["telefono"] as string;
-
-                    Txt_nom_cliente.Text = clienteBO.Cliente_nombre;
-                    Txt_apell_patern_cliente.Text = clienteBO.Cliente_apaterno;
-                    txt_apelli_matern_cli.Text = clienteBO.Cliente_amaterno;
-                    Txt_dir_cliente.Text = clienteBO.Cliente_direccion;
-                    txt_email.Text = clienteBO.Cliente_email;
-                    Txt_telefono_cliente.Text = clienteBO.Cliente_telefono;
+                    if(Txt_nom_cliente.Text != rows[0]["nombre"].ToString())
+                    {
+                        Txt_id_cliente.Text = rows[0]["cliente_id"].ToString();
+                        Txt_nom_cliente.Text = rows[0]["nombre"] as string; ;
+                        Txt_apell_patern_cliente.Text = rows[0]["apaterno"] as string;
+                        txt_apelli_matern_cli.Text = rows[0]["amaterno"] as string;
+                        Txt_dir_cliente.Text = rows[0]["direccion"] as string;
+                        txt_email.Text = rows[0]["email"] as string;
+                        Txt_telefono_cliente.Text = rows[0]["telefono"] as string;
+                    }
+                    
                 }
                 else
                 {
@@ -143,6 +143,42 @@ namespace Hotel.GUI
             Txt_dir_cliente.Clear();
             txt_email.Clear();
             Txt_telefono_cliente.Clear();
+        }
+
+        private void Txt_nom_cliente_TextChanged(object sender, EventArgs e)
+        {
+            ClienteDAO clienteDAO = new ClienteDAO();
+            DataRow[] rows = clienteDAO.Buscar().Select(String.Format("nombre LIKE '{0}%'", Txt_nom_cliente.Text));
+            foreach (var item in rows)
+                Txt_nom_cliente.AutoCompleteCustomSource.Add(item["nombre"].ToString());
+
+            if (Txt_nom_cliente.Text != "")
+            {
+                if (rows.Length > 0)
+                {
+                    //Txt_id_cliente.Text = (int)rows[0]["cliente_id"];
+                    if(Txt_nom_cliente.Text == rows[0]["nombre"] as string)
+                    {
+                        Txt_id_cliente.Text = rows[0]["cliente_id"].ToString();
+                    }
+                    else
+                    {
+                        Txt_id_cliente.Clear();
+                    }
+
+                    Txt_nom_cliente.DeselectAll();
+                    Txt_nom_cliente.SelectionStart = Txt_nom_cliente.Text.Length;
+                    Txt_apell_patern_cliente.Text = rows[0]["apaterno"] as string;
+                    txt_apelli_matern_cli.Text = rows[0]["amaterno"] as string;
+                    Txt_dir_cliente.Text = rows[0]["direccion"] as string;
+                    txt_email.Text = rows[0]["email"] as string;
+                    Txt_telefono_cliente.Text = rows[0]["telefono"] as string;
+                }
+            }
+            else
+            {
+                LimpiarCamposCliente();
+            }
         }
     }
 }

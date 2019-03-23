@@ -90,6 +90,7 @@ CREATE TABLE reservacion(
   fecha_entrada DATE NOT NULL,
   fecha_salida DATE NOT NULL,
   detalles TEXT,
+  estado_pagado BOOLEAN NOT NULL,
   cliente_id INT NOT NULL,
   PRIMARY KEY(folio_reserva),
   FOREIGN KEY(num_habitacion)
