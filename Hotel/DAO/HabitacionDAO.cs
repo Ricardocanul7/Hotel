@@ -52,13 +52,13 @@ namespace Hotel.DAO
 
         public DataTable BuscarTipoHabitacion()
         {
-            string commandSQL = "SELECT nombre_tipo from tipo_habitacion";
+            string commandSQL = "SELECT * from tipo_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
         }
 
         public DataTable BuscarEstadoHabitacion()
         {
-            string commandSQL = "SELECT estado from estado_habitacion";
+            string commandSQL = "SELECT * from estado_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
         }
     }
