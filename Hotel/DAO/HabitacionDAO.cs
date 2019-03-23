@@ -46,19 +46,19 @@ namespace Hotel.DAO
 
         public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT* FROM habitacion");
+            string ComandoSQL = string.Format("SELECT * FROM habitacion");
             return conexion.EjecutarSentencia(ComandoSQL);
         }
 
         public DataTable BuscarTipoHabitacion()
         {
-            string commandSQL = "SELECT * from tipo_habitacion";
+            string commandSQL = "SELECT nombre_tipo from tipo_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
         }
 
         public DataTable BuscarEstadoHabitacion()
         {
-            string commandSQL = "SELECT * from estado_habitacion";
+            string commandSQL = "SELECT estado from estado_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
         }
     }
