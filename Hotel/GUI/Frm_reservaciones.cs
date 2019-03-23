@@ -28,6 +28,22 @@ namespace Hotel.GUI
             dgv_reservaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgv_reservaciones.DataSource = reservaDAO.Buscar();
+            SetColumNames();
+        }
+
+        private void SetColumNames()
+        {
+            dgv_reservaciones.Columns[0].HeaderText = "No. Folio";
+            dgv_reservaciones.Columns[1].HeaderText = "No. Habitación";
+            dgv_reservaciones.Columns[2].HeaderText = "Entrada";
+            dgv_reservaciones.Columns[3].HeaderText = "Salida";
+            dgv_reservaciones.Columns[4].HeaderText = "Detalles";
+            dgv_reservaciones.Columns[5].HeaderText = "Nombre";
+            dgv_reservaciones.Columns[6].HeaderText = "Apellido Paterno";
+            dgv_reservaciones.Columns[7].HeaderText = "Apellido Materno";
+            dgv_reservaciones.Columns[8].HeaderText = "Dirección";
+            dgv_reservaciones.Columns[9].HeaderText = "Email";
+            dgv_reservaciones.Columns[10].HeaderText = "Telefono";
         }
 
         private void btn_reservarhab_Click(object sender, EventArgs e)
