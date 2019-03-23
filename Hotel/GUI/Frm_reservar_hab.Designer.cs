@@ -58,13 +58,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Lbl_precio_desc = new System.Windows.Forms.Label();
-            this.Lbl_anticipo = new System.Windows.Forms.Label();
             this.Lbl_total_pago = new System.Windows.Forms.Label();
             this.Lbl_precio_adpax = new System.Windows.Forms.Label();
             this.Lbl_precio_res = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -234,10 +230,13 @@
             // 
             // Txt_nom_cliente
             // 
+            this.Txt_nom_cliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.Txt_nom_cliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.Txt_nom_cliente.Location = new System.Drawing.Point(119, 49);
             this.Txt_nom_cliente.Name = "Txt_nom_cliente";
             this.Txt_nom_cliente.Size = new System.Drawing.Size(241, 20);
             this.Txt_nom_cliente.TabIndex = 15;
+            this.Txt_nom_cliente.TextChanged += new System.EventHandler(this.Txt_nom_cliente_TextChanged);
             // 
             // Txt_email_cliente
             // 
@@ -340,13 +339,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox2);
-            this.groupBox4.Controls.Add(this.Lbl_precio_desc);
-            this.groupBox4.Controls.Add(this.Lbl_anticipo);
             this.groupBox4.Controls.Add(this.Lbl_total_pago);
             this.groupBox4.Controls.Add(this.Lbl_precio_adpax);
             this.groupBox4.Controls.Add(this.Lbl_precio_res);
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
@@ -367,28 +362,6 @@
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
             // 
-            // Lbl_precio_desc
-            // 
-            this.Lbl_precio_desc.AutoSize = true;
-            this.Lbl_precio_desc.ForeColor = System.Drawing.Color.Brown;
-            this.Lbl_precio_desc.Location = new System.Drawing.Point(300, 60);
-            this.Lbl_precio_desc.Name = "Lbl_precio_desc";
-            this.Lbl_precio_desc.Size = new System.Drawing.Size(28, 13);
-            this.Lbl_precio_desc.TabIndex = 51;
-            this.Lbl_precio_desc.Text = "0.00";
-            this.Lbl_precio_desc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Lbl_anticipo
-            // 
-            this.Lbl_anticipo.AutoSize = true;
-            this.Lbl_anticipo.ForeColor = System.Drawing.Color.OrangeRed;
-            this.Lbl_anticipo.Location = new System.Drawing.Point(279, 82);
-            this.Lbl_anticipo.Name = "Lbl_anticipo";
-            this.Lbl_anticipo.Size = new System.Drawing.Size(49, 13);
-            this.Lbl_anticipo.TabIndex = 50;
-            this.Lbl_anticipo.Text = "2,700.00";
-            this.Lbl_anticipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Lbl_total_pago
             // 
             this.Lbl_total_pago.AutoSize = true;
@@ -404,7 +377,7 @@
             // Lbl_precio_adpax
             // 
             this.Lbl_precio_adpax.AutoSize = true;
-            this.Lbl_precio_adpax.Location = new System.Drawing.Point(288, 36);
+            this.Lbl_precio_adpax.Location = new System.Drawing.Point(288, 69);
             this.Lbl_precio_adpax.Name = "Lbl_precio_adpax";
             this.Lbl_precio_adpax.Size = new System.Drawing.Size(40, 13);
             this.Lbl_precio_adpax.TabIndex = 48;
@@ -414,32 +387,12 @@
             // Lbl_precio_res
             // 
             this.Lbl_precio_res.AutoSize = true;
-            this.Lbl_precio_res.Location = new System.Drawing.Point(279, 14);
+            this.Lbl_precio_res.Location = new System.Drawing.Point(279, 47);
             this.Lbl_precio_res.Name = "Lbl_precio_res";
             this.Lbl_precio_res.Size = new System.Drawing.Size(49, 13);
             this.Lbl_precio_res.TabIndex = 47;
             this.Lbl_precio_res.Text = "5,000.00";
             this.Lbl_precio_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Brown;
-            this.label17.Location = new System.Drawing.Point(171, 60);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(71, 13);
-            this.label17.TabIndex = 46;
-            this.label17.Text = "Descuento: $";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label16.Location = new System.Drawing.Point(185, 82);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 13);
-            this.label16.TabIndex = 45;
-            this.label16.Text = "Anticipo: $";
             // 
             // label15
             // 
@@ -455,7 +408,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(95, 36);
+            this.label14.Location = new System.Drawing.Point(95, 69);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(147, 13);
             this.label14.TabIndex = 43;
@@ -464,7 +417,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(193, 14);
+            this.label13.Location = new System.Drawing.Point(193, 47);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 13);
             this.label13.TabIndex = 42;
@@ -565,13 +518,9 @@
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label Lbl_precio_desc;
-        private System.Windows.Forms.Label Lbl_anticipo;
         private System.Windows.Forms.Label Lbl_total_pago;
         private System.Windows.Forms.Label Lbl_precio_adpax;
         private System.Windows.Forms.Label Lbl_precio_res;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
