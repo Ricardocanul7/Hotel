@@ -24,5 +24,6 @@ namespace Hotel.GUI
             ventana.Show();
 
         }
+
     }
 }
