@@ -25,6 +25,8 @@ namespace Hotel.GUI
         {
             InitializeComponent();
             habitacionBO = new HabitacionBO();
+            habitacionBO.Tipo = new TipohabBO();
+            habitacionBO.Estado = new EstadohabBO();
             habitacionDAO = new HabitacionDAO();
 
             Set_cbo_tipo_habitacion();
