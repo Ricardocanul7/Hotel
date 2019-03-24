@@ -31,6 +31,22 @@ namespace Hotel
             dgv_habitaciones.DataSource = datos;
             dgv_habitaciones.AllowUserToAddRows = false;
             dgv_habitaciones.ReadOnly = true;
+            SetColumNames();
+        }
+
+        private void SetColumNames()
+        {
+            dgv_habitaciones.Columns[0].HeaderText = "No. Habitación";
+            dgv_habitaciones.Columns[1].HeaderText = "Nombre";
+            dgv_habitaciones.Columns[2].HeaderText = "Max. niños";
+            dgv_habitaciones.Columns[3].HeaderText = "Max adultos";
+            dgv_habitaciones.Columns[4].HeaderText = "precio temp. \nalta";
+            dgv_habitaciones.Columns[5].HeaderText = "precio temp. \nbaja";
+            dgv_habitaciones.Columns[6].HeaderText = "precio persona \nadic. temp. alta";
+            dgv_habitaciones.Columns[7].HeaderText = "precio persona \nadic. temp. baja";
+            dgv_habitaciones.Columns[8].HeaderText = "tipo de \nhabitación";
+            dgv_habitaciones.Columns[9].HeaderText = "Descripción";
+            dgv_habitaciones.Columns[10].HeaderText = "Estado de \nhabitación";
         }
 
         private void btn_reservaciones_Click(object sender, EventArgs e)
