@@ -16,6 +16,7 @@ namespace Hotel.GUI
     {
         ReservaDAO reservaDAO;
         ReservasBO reservaBO;
+        int index;
 
         public Frm_reservaciones()
         {
@@ -44,6 +45,7 @@ namespace Hotel.GUI
             dgv_reservaciones.Columns[8].HeaderText = "Dirección";
             dgv_reservaciones.Columns[9].HeaderText = "Email";
             dgv_reservaciones.Columns[10].HeaderText = "Telefono";
+            dgv_reservaciones.Columns[11].HeaderText = "Pagado";
         }
 
         private void btn_reservarhab_Click(object sender, EventArgs e)
@@ -58,12 +60,33 @@ namespace Hotel.GUI
 
         private void dgv_reservaciones_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int index = e.RowIndex;
+            index = e.RowIndex;
             if(index >= 0)
             {
                 reservaBO.Folio_reserva = Convert.ToInt32(dgv_reservaciones.Rows[index].Cells[0].Value);
+            }
+        }
 
-                MessageBox.Show("Folio seleccionado: " + reservaBO.Folio_reserva);
+        private void btn_modificar_reser_Click(object sender, EventArgs e)
+        {
+            if(index >= 0)
+            {
+                Frm_reservar_hab modificar = new Frm_reservar_hab();
+                modificar.Add_reserva_mod(reservaBO.Folio_reserva);
+                if (modificar.ShowDialog() == DialogResult.OK)
+                {
+                    dgv_reservaciones.DataSource = reservaDAO.Buscar();
+                    dgv_reservaciones.Update();
+                }
+            }  
+        }
+
+        private void btn_eliminar_reserv_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show(this, "¿Seguro que quieres eliminar esta reserva?", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                reservaDAO.Eliminar(reservaBO);
+                dgv_reservaciones.DataSource = reservaDAO.Buscar();
             }
         }
     }

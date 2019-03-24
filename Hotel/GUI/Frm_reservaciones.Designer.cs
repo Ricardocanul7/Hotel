@@ -35,6 +35,7 @@
             this.btn_modificar_reser = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
+            this.btn_eliminar_reserv = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,8 @@
             this.btn_reservarhab,
             this.toolStripSeparator1,
             this.btn_modificar_reser,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.btn_eliminar_reserv});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -78,6 +80,7 @@
             this.btn_modificar_reser.Name = "btn_modificar_reser";
             this.btn_modificar_reser.Size = new System.Drawing.Size(118, 22);
             this.btn_modificar_reser.Text = "Modificar reserva";
+            this.btn_modificar_reser.Click += new System.EventHandler(this.btn_modificar_reser_Click);
             // 
             // toolStripSeparator2
             // 
@@ -93,6 +96,15 @@
             this.dgv_reservaciones.Size = new System.Drawing.Size(938, 425);
             this.dgv_reservaciones.TabIndex = 2;
             this.dgv_reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_reservaciones_CellMouseClick);
+            // 
+            // btn_eliminar_reserv
+            // 
+            this.btn_eliminar_reserv.Image = global::Hotel.Properties.Resources.close;
+            this.btn_eliminar_reserv.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_eliminar_reserv.Name = "btn_eliminar_reserv";
+            this.btn_eliminar_reserv.Size = new System.Drawing.Size(110, 22);
+            this.btn_eliminar_reserv.Text = "Eliminar reserva";
+            this.btn_eliminar_reserv.Click += new System.EventHandler(this.btn_eliminar_reserv_Click);
             // 
             // Frm_reservaciones
             // 
@@ -121,5 +133,6 @@
         private System.Windows.Forms.ToolStripButton btn_modificar_reser;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.DataGridView dgv_reservaciones;
+        private System.Windows.Forms.ToolStripButton btn_eliminar_reserv;
     }
 }

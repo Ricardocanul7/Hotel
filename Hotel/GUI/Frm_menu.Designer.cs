@@ -123,6 +123,7 @@
             // 
             // dgv_habitaciones
             // 
+            this.dgv_habitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_habitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_habitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_habitaciones.Location = new System.Drawing.Point(0, 25);
