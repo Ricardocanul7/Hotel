@@ -12,8 +12,8 @@ namespace Hotel.BO
         private string nombre_hab;
         private int max_adultos;
         private int max_ninios;
-        private int tipo_hab;
-        private int estado_habitacion;
+        private TipohabBO tipo;
+        private EstadohabBO estado;
         private double precioN;
         private double precioPA; //PA=persona adicional
         private double precioTA; //TA=temporada alta
@@ -44,16 +44,16 @@ namespace Hotel.BO
             set { max_ninios = value; }
         }
 
-        public int Tipo_hab
+        public TipohabBO Tipo
         {
-            get { return tipo_hab; }
-            set { tipo_hab = value; }
+            get { return tipo; }
+            set { tipo = value; }
         }
 
-        public int Estado_habitacion
+        public EstadohabBO Estado
         {
-            get { return estado_habitacion; }
-            set { estado_habitacion = value; }
+            get { return estado; }
+            set { estado = value; }
         }
 
         public double PrecioN
