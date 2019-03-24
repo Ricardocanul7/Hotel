@@ -54,10 +54,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombrehab = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_hab_agregar = new System.Windows.Forms.Button();
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -301,16 +300,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre:";
             // 
-            // btn_hab_agregar
-            // 
-            this.btn_hab_agregar.Location = new System.Drawing.Point(37, 466);
-            this.btn_hab_agregar.Name = "btn_hab_agregar";
-            this.btn_hab_agregar.Size = new System.Drawing.Size(75, 23);
-            this.btn_hab_agregar.TabIndex = 24;
-            this.btn_hab_agregar.Text = "Agregar";
-            this.btn_hab_agregar.UseVisualStyleBackColor = true;
-            this.btn_hab_agregar.Click += new System.EventHandler(this.btn_hab_guardar_Click);
-            // 
             // btn_hab_limpiar
             // 
             this.btn_hab_limpiar.Location = new System.Drawing.Point(368, 466);
@@ -331,24 +320,23 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_modificar
+            // btn_guardar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(118, 466);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
-            this.btn_modificar.TabIndex = 26;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click_1);
+            this.btn_guardar.Location = new System.Drawing.Point(287, 466);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.TabIndex = 27;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // frm_habitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 501);
-            this.Controls.Add(this.btn_modificar);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_hab_limpiar);
-            this.Controls.Add(this.btn_hab_agregar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -391,14 +379,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nombrehab;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_hab_agregar;
         private System.Windows.Forms.Button btn_hab_limpiar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_max_ninios;
         private System.Windows.Forms.TextBox txt_num_habitacion;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.ComboBox cbo_estadohab;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }

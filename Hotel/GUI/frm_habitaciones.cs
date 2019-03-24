@@ -15,6 +15,7 @@ namespace Hotel.GUI
     public partial class frm_habitaciones : MetroFramework.Forms.MetroForm
     {
         HabitacionBO habitacionBO;
+        HabitacionBO habitacionBO_mod = null;
         HabitacionDAO habitacionDAO;
         public DataGridView data;
 
@@ -28,6 +29,35 @@ namespace Hotel.GUI
 
             Set_cbo_tipo_habitacion();
             Set_cbo_estado_habitacion();
+        }
+
+        public void Add_habitacion_mod(int numeroHab)
+        {
+            habitacionBO_mod = habitacionDAO.Buscar(numeroHab);
+            btn_guardar.Text = "Modificar";
+            habitacionBO.Num_habitacion = numeroHab;
+
+            for (int i = 0; i < cbo_estadohab.Items.Count; i++)
+            {
+                if (cbo_estadohab.Items[i].ToString().Split('-')[0] == habitacionBO_mod.Tipo.Tipo_id.ToString())
+                    cbo_estadohab.SelectedIndex = i;
+            }
+            for (int i = 0; i < cbo_tipohab.Items.Count; i++)
+            {
+                if (cbo_tipohab.Items[i].ToString().Split('-')[0] == habitacionBO_mod.Estado.Estado_id.ToString())
+                    cbo_tipohab.SelectedIndex = i;
+            }
+
+            txt_num_habitacion.Text = habitacionBO_mod.Num_habitacion.ToString();
+            txt_nombrehab.Text = habitacionBO_mod.Nombre_hab;
+            txt_max_ninios.Text = habitacionBO_mod.Max_ninios.ToString();
+            txt_max_adultos.Text = habitacionBO_mod.Max_adultos.ToString();
+            txt_precioN.Text = habitacionBO_mod.PrecioN.ToString();
+            txt_precioPA.Text = habitacionBO_mod.PrecioPA.ToString();
+            txt_precioTA.Text = habitacionBO_mod.PrecioTA.ToString();
+            txt_precioPATA.Text = habitacionBO_mod.PrecioPATA.ToString();
+            txt_descripHab.Text = habitacionBO_mod.DescripHab;
+            
         }
 
         private void Set_cbo_tipo_habitacion()
@@ -52,20 +82,6 @@ namespace Hotel.GUI
             cbo_estadohab.SelectedIndex = 0;
         }
 
-        private void btn_hab_guardar_Click(object sender, EventArgs e)
-        {
-            if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
-            {
-                MessageBox.Show("Registro Agregado");
-            }
-            else
-            {
-                MessageBox.Show("Algo salio mal");
-            }
-            data.DataSource = habitacionDAO.Buscar();
-            data.Update();
-        }
-
         private HabitacionBO RecuperarInformacion()
         {
             int id = 0;
@@ -75,8 +91,8 @@ namespace Hotel.GUI
             habitacionBO.Nombre_hab = txt_nombrehab.Text;
             habitacionBO.Max_adultos = Convert.ToInt32(txt_max_adultos.Text);
             habitacionBO.Max_ninios = Convert.ToInt32(txt_max_ninios.Text);
-            habitacionBO.Tipo_hab = cbo_tipohab.SelectedIndex+1;
-            habitacionBO.Estado_habitacion = cbo_estadohab.SelectedIndex+1;
+            habitacionBO.Tipo.Tipo_id = cbo_tipohab.SelectedIndex+1;
+            habitacionBO.Estado.Estado_id = cbo_estadohab.SelectedIndex+1;
             habitacionBO.PrecioN = Convert.ToDouble(txt_precioN.Text);
             habitacionBO.PrecioPA = Convert.ToDouble(txt_precioPA.Text);
             habitacionBO.PrecioTA = Convert.ToDouble(txt_precioTA.Text);
@@ -100,18 +116,31 @@ namespace Hotel.GUI
             txt_descripHab.Clear();
         }
 
-        private void btn_modificar_Click_1(object sender, EventArgs e)
+        private void btn_guardar_Click(object sender, EventArgs e)
         {
-            if (habitacionDAO.Modificar(RecuperarInformacion()) == 1)
+            if (habitacionBO_mod != null)
             {
-                MessageBox.Show("Registro Modificado");
+                if (habitacionDAO.Modificar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha modificado la habitación");
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un error al modificar la habitación!");
+                }
+
             }
             else
             {
-                MessageBox.Show("Algo salio mal");
+                if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha registrado la habitación");
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un error al registrar la habitación!");
+                }
             }
-            data.DataSource = habitacionDAO.Buscar();
-            data.Update();
         }
     }
 }
