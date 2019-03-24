@@ -72,16 +72,14 @@ namespace Hotel
 
         private void btn_buscar_hab_Click(object sender, EventArgs e)
         {
-            if (index >= 0)
+            DataView habitacion = datos.DefaultView;
+            habitacion.RowFilter = string.Empty;
+
+            if (txt_buscar_hab.Text != string.Empty)
             {
-                Frm_reservar_hab modificar = new Frm_reservar_hab();
-                modificar.Add_reserva_mod(habitacionBO.Num_habitacion);
-                if (modificar.ShowDialog() == DialogResult.OK)
-                {
-                    dgv_habitaciones.DataSource = habitacionDAO.Buscar();
-                    dgv_habitaciones.Update();
-                }
+                habitacion.RowFilter = string.Format("convert(num_habitacion,'System.String')LIKE '%{0}%'", txt_buscar_hab.Text);
             }
+            dgv_habitaciones.DataSource = habitacion;
         }
 
         private void seleccionarFila(object sender, DataGridViewCellMouseEventArgs e)
