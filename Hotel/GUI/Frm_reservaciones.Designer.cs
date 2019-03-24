@@ -34,8 +34,12 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_modificar_reser = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
             this.btn_eliminar_reserv = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txt_buscar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).BeginInit();
             this.SuspendLayout();
@@ -49,12 +53,16 @@
             this.toolStripSeparator1,
             this.btn_modificar_reser,
             this.toolStripSeparator2,
-            this.btn_eliminar_reserv});
+            this.btn_eliminar_reserv,
+            this.toolStripSeparator3,
+            this.toolStripLabel1,
+            this.txt_buscar,
+            this.toolStripButton1});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.btn_habitaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_habitaciones.Size = new System.Drawing.Size(938, 25);
+            this.btn_habitaciones.Size = new System.Drawing.Size(938, 39);
             this.btn_habitaciones.TabIndex = 1;
             this.btn_habitaciones.Text = "Menu";
             // 
@@ -64,47 +72,76 @@
             this.btn_reservarhab.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_reservarhab.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_reservarhab.Name = "btn_reservarhab";
-            this.btn_reservarhab.Size = new System.Drawing.Size(130, 22);
+            this.btn_reservarhab.Size = new System.Drawing.Size(130, 36);
             this.btn_reservarhab.Text = "Reservar habitación";
             this.btn_reservarhab.Click += new System.EventHandler(this.btn_reservarhab_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // btn_modificar_reser
             // 
             this.btn_modificar_reser.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_modificar_reser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_modificar_reser.Name = "btn_modificar_reser";
-            this.btn_modificar_reser.Size = new System.Drawing.Size(118, 22);
+            this.btn_modificar_reser.Size = new System.Drawing.Size(118, 36);
             this.btn_modificar_reser.Text = "Modificar reserva";
             this.btn_modificar_reser.Click += new System.EventHandler(this.btn_modificar_reser_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // dgv_reservaciones
-            // 
-            this.dgv_reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_reservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_reservaciones.Location = new System.Drawing.Point(0, 25);
-            this.dgv_reservaciones.Name = "dgv_reservaciones";
-            this.dgv_reservaciones.Size = new System.Drawing.Size(938, 425);
-            this.dgv_reservaciones.TabIndex = 2;
-            this.dgv_reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_reservaciones_CellMouseClick);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // btn_eliminar_reserv
             // 
             this.btn_eliminar_reserv.Image = global::Hotel.Properties.Resources.close;
             this.btn_eliminar_reserv.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_eliminar_reserv.Name = "btn_eliminar_reserv";
-            this.btn_eliminar_reserv.Size = new System.Drawing.Size(110, 22);
+            this.btn_eliminar_reserv.Size = new System.Drawing.Size(110, 36);
             this.btn_eliminar_reserv.Text = "Eliminar reserva";
             this.btn_eliminar_reserv.Click += new System.EventHandler(this.btn_eliminar_reserv_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(42, 36);
+            this.toolStripLabel1.Text = "Buscar";
+            // 
+            // txt_buscar
+            // 
+            this.txt_buscar.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(150, 39);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::Hotel.Properties.Resources.icon_search;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton1.Text = "Buscar";
+            // 
+            // dgv_reservaciones
+            // 
+            this.dgv_reservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_reservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_reservaciones.Location = new System.Drawing.Point(0, 39);
+            this.dgv_reservaciones.Name = "dgv_reservaciones";
+            this.dgv_reservaciones.Size = new System.Drawing.Size(938, 411);
+            this.dgv_reservaciones.TabIndex = 2;
+            this.dgv_reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_reservaciones_CellMouseClick);
             // 
             // Frm_reservaciones
             // 
@@ -134,5 +171,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.DataGridView dgv_reservaciones;
         private System.Windows.Forms.ToolStripButton btn_eliminar_reserv;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripTextBox txt_buscar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

@@ -403,6 +403,16 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_search {
+            get {
+                object obj = ResourceManager.GetObject("icon_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_InterfaceExpendet_09_592608 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_InterfaceExpendet-09_592608", resourceCulture);
