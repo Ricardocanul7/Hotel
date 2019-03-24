@@ -24,8 +24,8 @@ namespace Hotel.DAO
                 "precio_adic_alta, precio_adic_baja, tipo_hab, descripcion, estado_hab)VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', " +
                 "'{7}', '{8}', '{9}');"
                 , habitacionBO.Nombre_hab, habitacionBO.Max_ninios, habitacionBO.Max_adultos, 
-                habitacionBO.PrecioTA, habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo_hab,
-                habitacionBO.DescripHab, habitacionBO.Estado_habitacion);
+                habitacionBO.PrecioTA, habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo.Tipo_id,
+                habitacionBO.DescripHab, habitacionBO.Estado.Estado_id);
             return conexion.EjecutarComando(ComandoSQL);
         }
 
@@ -34,7 +34,7 @@ namespace Hotel.DAO
             string ComandoSQL = string.Format("UPDATE habitacion SET nombre='{1}', max_ninios='{2}', max_adultos='{3}', precio_alta='{4}', " +
                 "precio_baja='{5}', precio_adic_alta='{6}', precio_adic_baja='{7}', tipo_hab='{8}', descripcion='{9}', estado_hab='{10}'  WHERE num_habitacion={0}",
                 habitacionBO.Num_habitacion, habitacionBO.Nombre_hab, habitacionBO.Max_ninios, habitacionBO.Max_adultos, habitacionBO.PrecioTA,
-                habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo_hab, habitacionBO.DescripHab, habitacionBO.Estado_habitacion);
+                habitacionBO.PrecioN, habitacionBO.PrecioPATA, habitacionBO.PrecioPA, habitacionBO.Tipo.Tipo_id, habitacionBO.DescripHab, habitacionBO.Estado.Estado_id);
             return conexion.EjecutarComando(ComandoSQL);
         }
 
@@ -60,6 +60,39 @@ namespace Hotel.DAO
         {
             string commandSQL = "SELECT * from estado_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
+        }
+
+        public HabitacionBO Buscar(int numeroHab)
+        {
+            string commandSQL = String.Format("SELECT * FROM habitacion WHERE num_habitacion={0}", numeroHab);
+            DataTable table = conexion.EjecutarSentencia(commandSQL);
+
+            if (table.Rows.Count > 0)
+            {
+                DataRowCollection row = table.Rows;
+
+                HabitacionBO habitacionBO = new HabitacionBO();
+                habitacionBO.Tipo = new TipohabBO();
+                habitacionBO.Estado = new EstadohabBO();
+
+                habitacionBO.Num_habitacion = Convert.ToInt32(row[0]["num_habitacion"]);
+                habitacionBO.Nombre_hab = row[0]["nombre"].ToString();
+                habitacionBO.Max_ninios = Convert.ToInt32(row[0]["max_ninios"]);
+                habitacionBO.Max_adultos = Convert.ToInt32(row[0]["max_adultos"]);
+                habitacionBO.PrecioTA = Convert.ToDouble(row[0]["precio_alta"]);
+                habitacionBO.PrecioN = Convert.ToDouble(row[0]["precio_baja"]);
+                habitacionBO.PrecioPATA = Convert.ToDouble(row[0]["precio_adic_alta"]);
+                habitacionBO.PrecioPA = Convert.ToDouble(row[0]["precio_adic_baja"]);
+                habitacionBO.Tipo.Nombre = row[0]["tipo_hab"].ToString();
+                habitacionBO.DescripHab = row[0]["descripcion"].ToString();
+                habitacionBO.Estado.Nombre = row[0]["estado_hab"].ToString();
+
+                return habitacionBO;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
