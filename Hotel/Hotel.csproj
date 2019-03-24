@@ -71,7 +71,9 @@
     <Compile Include="BO\CajaBO.cs" />
     <Compile Include="BO\ClienteBO.cs" />
     <Compile Include="BO\EmpresaBO.cs" />
+    <Compile Include="BO\EstadohabBO.cs" />
     <Compile Include="BO\ReservasBO.cs" />
+    <Compile Include="BO\TipohabBO.cs" />
     <Compile Include="DAO\CajaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
