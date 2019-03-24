@@ -19,7 +19,7 @@ namespace Hotel
         HabitacionBO habitacionBO;
 
         private DataTable datos;
-
+        int index;
 
         public Frm_menu()
         {
@@ -31,6 +31,8 @@ namespace Hotel
             dgv_habitaciones.DataSource = datos;
             dgv_habitaciones.AllowUserToAddRows = false;
             dgv_habitaciones.ReadOnly = true;
+            dgv_habitaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             SetColumNames();
         }
 
@@ -70,45 +72,41 @@ namespace Hotel
 
         private void btn_buscar_hab_Click(object sender, EventArgs e)
         {
-            DataView habitacion = datos.DefaultView;
-            habitacion.RowFilter = string.Empty;
-
-            if(txt_buscar_hab.Text!= string.Empty)
+            if (index >= 0)
             {
-                habitacion.RowFilter = string.Format( "convert(num_habitacion,'System.String')LIKE '%{0}%'" , txt_buscar_hab.Text);
+                Frm_reservar_hab modificar = new Frm_reservar_hab();
+                modificar.Add_reserva_mod(habitacionBO.Num_habitacion);
+                if (modificar.ShowDialog() == DialogResult.OK)
+                {
+                    dgv_habitaciones.DataSource = habitacionDAO.Buscar();
+                    dgv_habitaciones.Update();
+                }
             }
-            dgv_habitaciones.DataSource = habitacion;
-        }
-
-        private void btn_modificar_hab_Click(object sender, EventArgs e)
-        {
-            frm_habitaciones frm_agregar_habit = new frm_habitaciones();
-            frm_agregar_habit.data = dgv_habitaciones;
-            frm_agregar_habit.SetObjectHabitacionBO = habitacionBO;
-            
-            frm_agregar_habit.Show();
         }
 
         private void seleccionarFila(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int filaSeleccionar = e.RowIndex;
-            if(filaSeleccionar > 0)
+            index = e.RowIndex;
+            if (index >= 0)
             {
-                habitacionBO.Num_habitacion = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["num_habitacion"].Value.ToString());
-                habitacionBO.Nombre_hab = dgv_habitaciones.Rows[filaSeleccionar].Cells["nombre"].Value.ToString();
-                habitacionBO.Max_ninios = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["max_ninios"].Value.ToString());
-                habitacionBO.Max_adultos = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["max_adultos"].Value.ToString());
-                habitacionBO.PrecioTA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_alta"].Value.ToString());
-                habitacionBO.PrecioN = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_baja"].Value.ToString());
-                habitacionBO.PrecioPATA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_alta"].Value.ToString());
-                habitacionBO.PrecioPA = int.Parse(dgv_habitaciones.Rows[filaSeleccionar].Cells["precio_adic_baja"].Value.ToString());
-                habitacionBO.Tipo_hab = Convert.ToInt32( dgv_habitaciones.Rows[filaSeleccionar].Cells["tipo_hab"].Value.ToString());
-                habitacionBO.DescripHab = dgv_habitaciones.Rows[filaSeleccionar].Cells["descripcion"].Value.ToString();
-
-                this.DialogResult = DialogResult.OK;
+                habitacionBO.Num_habitacion = Convert.ToInt32(dgv_habitaciones.Rows[index].Cells[0].Value);
             }
         }
 
+        private void btn_modificar_hab_Click(object sender, EventArgs e)
+        {
+            if (index >= 0)
+            {
+                frm_habitaciones modificar = new frm_habitaciones();
+                modificar.Add_habitacion_mod(habitacionBO.Num_habitacion);
+                if (modificar.ShowDialog() == DialogResult.OK)
+                {
+                    dgv_habitaciones.DataSource = habitacionDAO.Buscar();
+                    dgv_habitaciones.Update();
+                }
+            }
+        }
+        
         private void btn_eliminar_hab_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
