@@ -80,5 +80,14 @@ namespace Hotel.GUI
                 }
             }  
         }
+
+        private void btn_eliminar_reserv_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show(this, "¿Seguro que quieres eliminar esta reserva?", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                reservaDAO.Eliminar(reservaBO);
+                dgv_reservaciones.DataSource = reservaDAO.Buscar();
+            }
+        }
     }
 }
