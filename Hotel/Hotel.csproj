@@ -80,8 +80,10 @@
     <Compile Include="DAO\DatosLogin.cs" />
     <Compile Include="DAO\EmpleadoDAO.cs" />
     <Compile Include="DAO\EmpresaDAO.cs" />
+    <Compile Include="DAO\EstadohabDAO.cs" />
     <Compile Include="DAO\HabitacionDAO.cs" />
     <Compile Include="DAO\ReservaDAO.cs" />
+    <Compile Include="DAO\TipohabDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
