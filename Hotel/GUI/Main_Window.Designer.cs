@@ -103,7 +103,7 @@
             this.btn_clientes.TabIndex = 17;
             this.btn_clientes.Text = "CLIENTES          ";
             this.btn_clientes.UseVisualStyleBackColor = false;
-            this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click_2);
+            this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
             // btn_empleados
             // 
@@ -125,7 +125,7 @@
             this.btn_empleados.TabIndex = 16;
             this.btn_empleados.Text = "EMPLEADOS     ";
             this.btn_empleados.UseVisualStyleBackColor = false;
-            this.btn_empleados.Click += new System.EventHandler(this.btn_empleados_Click_2);
+            this.btn_empleados.Click += new System.EventHandler(this.btn_empleados_Click);
             // 
             // btn_mantenimiento
             // 
@@ -147,7 +147,7 @@
             this.btn_mantenimiento.TabIndex = 15;
             this.btn_mantenimiento.Text = "     MANTENIMIENTO";
             this.btn_mantenimiento.UseVisualStyleBackColor = false;
-            this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click_2);
+            this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click);
             // 
             // btn_habitaciones
             // 
@@ -169,7 +169,7 @@
             this.btn_habitaciones.TabIndex = 14;
             this.btn_habitaciones.Text = "HABITACIONES";
             this.btn_habitaciones.UseVisualStyleBackColor = false;
-            this.btn_habitaciones.Click += new System.EventHandler(this.btn_habitaciones_Click_2);
+            this.btn_habitaciones.Click += new System.EventHandler(this.btn_habitaciones_Click);
             // 
             // button2
             // 
@@ -212,7 +212,7 @@
             this.btn_caja.TabIndex = 12;
             this.btn_caja.Text = "CAJA                  ";
             this.btn_caja.UseVisualStyleBackColor = false;
-            this.btn_caja.Click += new System.EventHandler(this.btn_caja_Click_1);
+            this.btn_caja.Click += new System.EventHandler(this.btn_caja_Click);
             // 
             // btn_reservaciones
             // 
@@ -234,7 +234,7 @@
             this.btn_reservaciones.TabIndex = 11;
             this.btn_reservaciones.Text = "RESERVACIONES";
             this.btn_reservaciones.UseVisualStyleBackColor = false;
-            this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click_2);
+            this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
             // 
             // button1
             // 
