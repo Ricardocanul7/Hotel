@@ -59,14 +59,16 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Lbl_total_pago = new System.Windows.Forms.Label();
-            this.Lbl_precio_adpax = new System.Windows.Forms.Label();
-            this.Lbl_precio_res = new System.Windows.Forms.Label();
+            this.lbl_precio_adpax = new System.Windows.Forms.Label();
+            this.lbl_precio_res = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rdb_pagado = new System.Windows.Forms.RadioButton();
+            this.rdb_pago_pendiente = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,7 +85,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(12, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(392, 113);
+            this.groupBox3.Size = new System.Drawing.Size(392, 167);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
@@ -149,7 +151,7 @@
             this.groupBox1.Controls.Add(this.Txt_dir_cliente);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(12, 218);
+            this.groupBox1.Location = new System.Drawing.Point(12, 259);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(392, 236);
             this.groupBox1.TabIndex = 31;
@@ -338,16 +340,18 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.rdb_pago_pendiente);
+            this.groupBox4.Controls.Add(this.rdb_pagado);
             this.groupBox4.Controls.Add(this.pictureBox2);
             this.groupBox4.Controls.Add(this.Lbl_total_pago);
-            this.groupBox4.Controls.Add(this.Lbl_precio_adpax);
-            this.groupBox4.Controls.Add(this.Lbl_precio_res);
+            this.groupBox4.Controls.Add(this.lbl_precio_adpax);
+            this.groupBox4.Controls.Add(this.lbl_precio_res);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Location = new System.Drawing.Point(410, 316);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(392, 138);
+            this.groupBox4.Size = new System.Drawing.Size(392, 179);
             this.groupBox4.TabIndex = 46;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Precio";
@@ -355,7 +359,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hotel.Properties.Resources.cash;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(18, 74);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -367,39 +371,39 @@
             this.Lbl_total_pago.AutoSize = true;
             this.Lbl_total_pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_total_pago.ForeColor = System.Drawing.Color.ForestGreen;
-            this.Lbl_total_pago.Location = new System.Drawing.Point(248, 99);
+            this.Lbl_total_pago.Location = new System.Drawing.Point(248, 130);
             this.Lbl_total_pago.Name = "Lbl_total_pago";
             this.Lbl_total_pago.Size = new System.Drawing.Size(80, 24);
             this.Lbl_total_pago.TabIndex = 49;
             this.Lbl_total_pago.Text = "2,700.00";
             this.Lbl_total_pago.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Lbl_precio_adpax
+            // lbl_precio_adpax
             // 
-            this.Lbl_precio_adpax.AutoSize = true;
-            this.Lbl_precio_adpax.Location = new System.Drawing.Point(288, 69);
-            this.Lbl_precio_adpax.Name = "Lbl_precio_adpax";
-            this.Lbl_precio_adpax.Size = new System.Drawing.Size(40, 13);
-            this.Lbl_precio_adpax.TabIndex = 48;
-            this.Lbl_precio_adpax.Text = "400.00";
-            this.Lbl_precio_adpax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_precio_adpax.AutoSize = true;
+            this.lbl_precio_adpax.Location = new System.Drawing.Point(288, 100);
+            this.lbl_precio_adpax.Name = "lbl_precio_adpax";
+            this.lbl_precio_adpax.Size = new System.Drawing.Size(40, 13);
+            this.lbl_precio_adpax.TabIndex = 48;
+            this.lbl_precio_adpax.Text = "400.00";
+            this.lbl_precio_adpax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Lbl_precio_res
+            // lbl_precio_res
             // 
-            this.Lbl_precio_res.AutoSize = true;
-            this.Lbl_precio_res.Location = new System.Drawing.Point(279, 47);
-            this.Lbl_precio_res.Name = "Lbl_precio_res";
-            this.Lbl_precio_res.Size = new System.Drawing.Size(49, 13);
-            this.Lbl_precio_res.TabIndex = 47;
-            this.Lbl_precio_res.Text = "5,000.00";
-            this.Lbl_precio_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_precio_res.AutoSize = true;
+            this.lbl_precio_res.Location = new System.Drawing.Point(279, 78);
+            this.lbl_precio_res.Name = "lbl_precio_res";
+            this.lbl_precio_res.Size = new System.Drawing.Size(49, 13);
+            this.lbl_precio_res.TabIndex = 47;
+            this.lbl_precio_res.Text = "5,000.00";
+            this.lbl_precio_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label15.Location = new System.Drawing.Point(103, 99);
+            this.label15.Location = new System.Drawing.Point(103, 130);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(139, 24);
             this.label15.TabIndex = 44;
@@ -408,7 +412,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(95, 69);
+            this.label14.Location = new System.Drawing.Point(95, 100);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(147, 13);
             this.label14.TabIndex = 43;
@@ -417,7 +421,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(193, 47);
+            this.label13.Location = new System.Drawing.Point(193, 78);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 13);
             this.label13.TabIndex = 42;
@@ -458,6 +462,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
+            // 
+            // rdb_pagado
+            // 
+            this.rdb_pagado.AutoSize = true;
+            this.rdb_pagado.Location = new System.Drawing.Point(55, 28);
+            this.rdb_pagado.Name = "rdb_pagado";
+            this.rdb_pagado.Size = new System.Drawing.Size(62, 17);
+            this.rdb_pagado.TabIndex = 53;
+            this.rdb_pagado.TabStop = true;
+            this.rdb_pagado.Text = "Pagado";
+            this.rdb_pagado.UseVisualStyleBackColor = true;
+            // 
+            // rdb_pago_pendiente
+            // 
+            this.rdb_pago_pendiente.AutoSize = true;
+            this.rdb_pago_pendiente.Location = new System.Drawing.Point(252, 28);
+            this.rdb_pago_pendiente.Name = "rdb_pago_pendiente";
+            this.rdb_pago_pendiente.Size = new System.Drawing.Size(73, 17);
+            this.rdb_pago_pendiente.TabIndex = 54;
+            this.rdb_pago_pendiente.TabStop = true;
+            this.rdb_pago_pendiente.Text = "Pendiente";
+            this.rdb_pago_pendiente.UseVisualStyleBackColor = true;
             // 
             // Frm_reservar_hab
             // 
@@ -519,8 +545,8 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label Lbl_total_pago;
-        private System.Windows.Forms.Label Lbl_precio_adpax;
-        private System.Windows.Forms.Label Lbl_precio_res;
+        private System.Windows.Forms.Label lbl_precio_adpax;
+        private System.Windows.Forms.Label lbl_precio_res;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -530,5 +556,7 @@
         private System.Windows.Forms.TextBox txt_apelli_matern_cli;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_tipo_hab;
+        private System.Windows.Forms.RadioButton rdb_pago_pendiente;
+        private System.Windows.Forms.RadioButton rdb_pagado;
     }
 }

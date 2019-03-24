@@ -16,6 +16,8 @@ namespace Hotel.GUI
     {
         ReservaDAO reservaDAO;
         HabitacionDAO habitacionDAO;
+        ReservasBO reservaBO_mod = null;
+        ReservasBO reservasBO = new ReservasBO();
 
         public Frm_reservar_hab()
         {
@@ -55,19 +57,34 @@ namespace Hotel.GUI
 
         private void btn_guardar_res_Click(object sender, EventArgs e)
         {
-            if(reservaDAO.Agregar(Recuperar_Informacion()) == 1)
+            if(reservaBO_mod != null)
             {
-                MessageBox.Show("Se ha registrado la reserva");
+                if(reservaDAO.Modificar(Recuperar_Informacion()) == 1)
+                {
+                    MessageBox.Show("Se ha modificado la reserva");
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un error al modificar la reserva!");
+                }
+
             }
             else
             {
-                MessageBox.Show("Ha habido un error al hacer la reserva!");
-            }
+                if (reservaDAO.Agregar(Recuperar_Informacion()) == 1)
+                {
+                    MessageBox.Show("Se ha registrado la reserva");
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un error al hacer la reserva!");
+                }
+            } 
         }
 
         internal ReservasBO Recuperar_Informacion()
         {
-            ReservasBO reservasBO = new ReservasBO();
+            
             HabitacionBO habitacionBO = new HabitacionBO();
             ClienteBO clienteBO = new ClienteBO();
 
@@ -81,8 +98,34 @@ namespace Hotel.GUI
             reservasBO.Fecha_salida = Dtm_checkout.Value.Date;
             reservasBO.Detalles = Txt_detalles_reserva.Text;
             reservasBO.Cliente = clienteBO;
+            if (rdb_pagado.Checked == true)
+                reservasBO.Estado = true;
+            else
+                reservasBO.Estado = false;
 
             return reservasBO;
+        }
+
+        public void Add_reserva_mod(int folio)
+        {
+            reservaBO_mod = reservaDAO.Buscar(folio);
+            btn_guardar.Text = "Modificar";
+            reservasBO.Folio_reserva = folio;
+
+            for(int i = 0; i < cbo_habitaciones.Items.Count; i++)
+            {
+                if (cbo_habitaciones.Items[i].ToString().Split('-')[0] == reservaBO_mod.Habitacion.Num_habitacion.ToString())
+                    cbo_habitaciones.SelectedIndex = i;
+            }
+
+            Txt_id_cliente.Text = reservaBO_mod.Cliente.Cliente_id.ToString();
+            Dtm_checkin.Value = reservaBO_mod.Fecha_entrada;
+            Dtm_checkout.Value = reservaBO_mod.Fecha_salida;
+            Txt_detalles_reserva.Text = reservaBO_mod.Detalles;
+            if (reservaBO_mod.Estado == true)
+                rdb_pagado.Checked = true;
+            else
+                rdb_pago_pendiente.Checked = true;
         }
 
         private void cbo_habitaciones_SelectedValueChanged(object sender, EventArgs e)

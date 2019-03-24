@@ -78,6 +78,7 @@
             this.btn_modificar_reser.Name = "btn_modificar_reser";
             this.btn_modificar_reser.Size = new System.Drawing.Size(118, 22);
             this.btn_modificar_reser.Text = "Modificar reserva";
+            this.btn_modificar_reser.Click += new System.EventHandler(this.btn_modificar_reser_Click);
             // 
             // toolStripSeparator2
             // 
