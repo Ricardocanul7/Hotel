@@ -27,3 +27,5 @@ INSERT INTO tipo_habitacion (nombre_tipo) VALUES ('Doble');
 INSERT INTO estado_reserva (estado_nombre) VALUE ('No pagado');
 INSERT INTO estado_reserva (estado_nombre) VALUE ('Pagado');
 */
+
+INSERT INTO usuario (usuario_tipo, nombre, apellido_patern, apellido_matern, email, password) VALUES ('1', 'demo', 'demo', 'demo', 'demo', 'demo');
