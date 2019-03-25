@@ -38,7 +38,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txt_buscar = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_buscar = new System.Windows.Forms.ToolStripButton();
             this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).BeginInit();
@@ -57,7 +57,7 @@
             this.toolStripSeparator3,
             this.toolStripLabel1,
             this.txt_buscar,
-            this.toolStripButton1});
+            this.btn_buscar});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -123,15 +123,16 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(150, 39);
             // 
-            // toolStripButton1
+            // btn_buscar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::Hotel.Properties.Resources.icon_search;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton1.Text = "Buscar";
+            this.btn_buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btn_buscar.Image = global::Hotel.Properties.Resources.icon_search;
+            this.btn_buscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(36, 36);
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // dgv_reservaciones
             // 
@@ -173,7 +174,7 @@
         private System.Windows.Forms.ToolStripButton btn_eliminar_reserv;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripTextBox txt_buscar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_buscar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

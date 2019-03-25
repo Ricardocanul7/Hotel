@@ -89,5 +89,17 @@ namespace Hotel.GUI
                 dgv_reservaciones.DataSource = reservaDAO.Buscar();
             }
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            ReservaDAO reservaDAO = new ReservaDAO();
+            DataView habitacion = reservaDAO.Buscar().DefaultView;
+            habitacion.RowFilter = string.Empty;
+            if (txt_buscar.Text != string.Empty)
+            {
+                habitacion.RowFilter = string.Format("convert(folio_reserva,'System.String')LIKE '{0}%'", txt_buscar.Text);
+            }
+            dgv_reservaciones.DataSource = habitacion;
+        }
     }
 }
