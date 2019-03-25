@@ -66,8 +66,12 @@ namespace Hotel
         private void btn_agregar_habitaciones_Click(object sender, EventArgs e)
         {
             frm_habitaciones frm_agregar_habit = new frm_habitaciones();
-            frm_agregar_habit.data = dgv_habitaciones;
-            frm_agregar_habit.Show();
+          
+            if (frm_agregar_habit.ShowDialog() == DialogResult.OK)
+            {
+                dgv_habitaciones.DataSource = habitacionDAO.Buscar();
+                dgv_habitaciones.Update();
+            }
         }
 
         private void btn_buscar_hab_Click(object sender, EventArgs e)

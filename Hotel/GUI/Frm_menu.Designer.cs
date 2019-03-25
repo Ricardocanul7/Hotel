@@ -36,10 +36,12 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_eliminar_hab = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_buscar_hab = new System.Windows.Forms.ToolStripButton();
-            this.txt_buscar_hab = new System.Windows.Forms.ToolStripTextBox();
-            this.dgv_habitaciones = new System.Windows.Forms.DataGridView();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txt_buscar_hab = new System.Windows.Forms.ToolStripTextBox();
+            this.btn_buscar_hab = new System.Windows.Forms.ToolStripButton();
+            this.dgv_habitaciones = new System.Windows.Forms.DataGridView();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_configuracion = new System.Windows.Forms.ToolStripButton();
             this.MenuStrip_principal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_habitaciones)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,9 @@
             this.toolStripSeparator3,
             this.toolStripLabel1,
             this.txt_buscar_hab,
-            this.btn_buscar_hab});
+            this.btn_buscar_hab,
+            this.toolStripSeparator4,
+            this.btn_configuracion});
             this.MenuStrip_principal.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip_principal.Name = "MenuStrip_principal";
             this.MenuStrip_principal.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -109,6 +113,19 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(42, 36);
+            this.toolStripLabel1.Text = "Buscar";
+            // 
+            // txt_buscar_hab
+            // 
+            this.txt_buscar_hab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_buscar_hab.Name = "txt_buscar_hab";
+            this.txt_buscar_hab.Size = new System.Drawing.Size(150, 39);
+            // 
             // btn_buscar_hab
             // 
             this.btn_buscar_hab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -119,12 +136,6 @@
             this.btn_buscar_hab.Size = new System.Drawing.Size(36, 36);
             this.btn_buscar_hab.Text = "Buscar";
             this.btn_buscar_hab.Click += new System.EventHandler(this.btn_buscar_hab_Click);
-            // 
-            // txt_buscar_hab
-            // 
-            this.txt_buscar_hab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_buscar_hab.Name = "txt_buscar_hab";
-            this.txt_buscar_hab.Size = new System.Drawing.Size(150, 39);
             // 
             // dgv_habitaciones
             // 
@@ -137,12 +148,19 @@
             this.dgv_habitaciones.TabIndex = 44;
             this.dgv_habitaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarFila);
             // 
-            // toolStripLabel1
+            // toolStripSeparator4
             // 
-            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(42, 36);
-            this.toolStripLabel1.Text = "Buscar";
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
+            // 
+            // btn_configuracion
+            // 
+            this.btn_configuracion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btn_configuracion.Image = ((System.Drawing.Image)(resources.GetObject("btn_configuracion.Image")));
+            this.btn_configuracion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_configuracion.Name = "btn_configuracion";
+            this.btn_configuracion.Size = new System.Drawing.Size(114, 36);
+            this.btn_configuracion.Text = "Configuraciones";
             // 
             // Frm_menu
             // 
@@ -175,6 +193,8 @@
         private System.Windows.Forms.ToolStripTextBox txt_buscar_hab;
         private System.Windows.Forms.DataGridView dgv_habitaciones;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton btn_configuracion;
     }
 }
 
