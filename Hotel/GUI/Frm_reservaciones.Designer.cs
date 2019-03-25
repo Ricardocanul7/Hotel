@@ -72,8 +72,8 @@
             this.btn_reservarhab.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_reservarhab.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_reservarhab.Name = "btn_reservarhab";
-            this.btn_reservarhab.Size = new System.Drawing.Size(130, 36);
-            this.btn_reservarhab.Text = "Reservar habitación";
+            this.btn_reservarhab.Size = new System.Drawing.Size(114, 36);
+            this.btn_reservarhab.Text = "Reservar registro";
             this.btn_reservarhab.Click += new System.EventHandler(this.btn_reservarhab_Click);
             // 
             // toolStripSeparator1
@@ -86,8 +86,8 @@
             this.btn_modificar_reser.Image = global::Hotel.Properties.Resources._036_edit;
             this.btn_modificar_reser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_modificar_reser.Name = "btn_modificar_reser";
-            this.btn_modificar_reser.Size = new System.Drawing.Size(118, 36);
-            this.btn_modificar_reser.Text = "Modificar reserva";
+            this.btn_modificar_reser.Size = new System.Drawing.Size(121, 36);
+            this.btn_modificar_reser.Text = "Modificar registro";
             this.btn_modificar_reser.Click += new System.EventHandler(this.btn_modificar_reser_Click);
             // 
             // toolStripSeparator2
@@ -100,8 +100,8 @@
             this.btn_eliminar_reserv.Image = global::Hotel.Properties.Resources.close;
             this.btn_eliminar_reserv.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_eliminar_reserv.Name = "btn_eliminar_reserv";
-            this.btn_eliminar_reserv.Size = new System.Drawing.Size(110, 36);
-            this.btn_eliminar_reserv.Text = "Eliminar reserva";
+            this.btn_eliminar_reserv.Size = new System.Drawing.Size(113, 36);
+            this.btn_eliminar_reserv.Text = "Eliminar registro";
             this.btn_eliminar_reserv.Click += new System.EventHandler(this.btn_eliminar_reserv_Click);
             // 
             // toolStripSeparator3

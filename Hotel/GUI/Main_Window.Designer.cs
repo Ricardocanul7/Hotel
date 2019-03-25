@@ -101,7 +101,7 @@
             this.btn_clientes.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btn_clientes.Size = new System.Drawing.Size(250, 48);
             this.btn_clientes.TabIndex = 17;
-            this.btn_clientes.Text = "CLIENTES          ";
+            this.btn_clientes.Text = "CLIENTES            ";
             this.btn_clientes.UseVisualStyleBackColor = false;
             this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
@@ -230,9 +230,10 @@
             this.btn_reservaciones.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.btn_reservaciones.Name = "btn_reservaciones";
             this.btn_reservaciones.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btn_reservaciones.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_reservaciones.Size = new System.Drawing.Size(250, 48);
             this.btn_reservaciones.TabIndex = 11;
-            this.btn_reservaciones.Text = "RESERVACIONES";
+            this.btn_reservaciones.Text = "REGISTROS      ";
             this.btn_reservaciones.UseVisualStyleBackColor = false;
             this.btn_reservaciones.Click += new System.EventHandler(this.btn_reservaciones_Click);
             // 
