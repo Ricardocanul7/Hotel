@@ -30,6 +30,20 @@ namespace Hotel.GUI
             dgv_empleados.AllowUserToAddRows = false;
             dgv_empleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_empleados.ReadOnly = true;
+            SetColumNames();
+        }
+        private void SetColumNames()
+        {
+            dgv_empleados.Columns[0].HeaderText = "ID";
+            dgv_empleados.Columns[1].HeaderText = "Nombre";
+            dgv_empleados.Columns[2].HeaderText = "Apellido Paterno";
+            dgv_empleados.Columns[3].HeaderText = "Apellido Materno";
+            dgv_empleados.Columns[4].HeaderText = "Direccion";
+            dgv_empleados.Columns[5].HeaderText = "Telefono";
+            dgv_empleados.Columns[6].HeaderText = "Horario";
+            dgv_empleados.Columns[7].HeaderText = "Sueldo";
+            dgv_empleados.Columns[8].HeaderText = "Puesto";
+          
         }
 
         private void btn_nvoempleado_Click(object sender, EventArgs e)

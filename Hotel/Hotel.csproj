@@ -112,6 +112,12 @@
     <Compile Include="GUI\Frm_corte_caja.Designer.cs">
       <DependentUpon>Frm_corte_caja.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_empresa.Designer.cs">
+      <DependentUpon>frm_empresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_corte_caja.resx">
       <DependentUpon>Frm_corte_caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_empresa.resx">
+      <DependentUpon>frm_empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu.resx">
       <DependentUpon>Frm_menu.cs</DependentUpon>

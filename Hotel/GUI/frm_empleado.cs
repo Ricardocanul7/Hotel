@@ -34,7 +34,7 @@ namespace Hotel.GUI
             DataRow[] rows = empleadoDAO.PuestoEmpleado().Select();
             for(int i = 0; i < rows.Length; i++)
             {
-                cbo_tipoempleado.Items.Add(rows[i][0]);
+                cbo_tipoempleado.Items.Add(rows[i][1]);
             }
 
             cbo_tipoempleado.SelectedIndex = 0;
