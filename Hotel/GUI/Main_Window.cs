@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace Hotel.GUI
         {
             InitializeComponent();
             AbrirPantallaInicial();
-
+            lbl_nombre_usuario.Text = DatosLogin.Nombre + " " + DatosLogin.Apaterno;
         }
 
         protected override void OnClosed(EventArgs e)
