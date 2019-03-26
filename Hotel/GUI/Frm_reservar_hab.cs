@@ -143,7 +143,14 @@ namespace Hotel.GUI
                     txt_tipo_hab.Text = rowsTipo[tipo_id]["nombre_tipo"].ToString();
                     break;
                 }
-            } 
+            }
+
+            // Establecer precio de habitacion
+            int num_habitacion = Convert.ToInt32(cbo_habitaciones.Items[index].ToString().Split('-')[0]);
+            DataRow[] rowHab = habitacionDAO.Buscar().Select(string.Format("num_habitacion = '{0}'", num_habitacion));
+            decimal precio = Convert.ToDecimal(rowHab[0]["precio_baja"]);
+            lbl_precio_res.Text = (precio * 1.00m).ToString();
+            lbl_iva.Text = (precio * 0.16m).ToString();
         }
 
         private void Txt_id_cliente_TextChanged(object sender, EventArgs e)

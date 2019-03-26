@@ -61,7 +61,7 @@
             this.rdb_pagado = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Lbl_total_pago = new System.Windows.Forms.Label();
-            this.lbl_precio_adpax = new System.Windows.Forms.Label();
+            this.lbl_iva = new System.Windows.Forms.Label();
             this.lbl_precio_res = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -345,7 +345,7 @@
             this.groupBox4.Controls.Add(this.rdb_pagado);
             this.groupBox4.Controls.Add(this.pictureBox2);
             this.groupBox4.Controls.Add(this.Lbl_total_pago);
-            this.groupBox4.Controls.Add(this.lbl_precio_adpax);
+            this.groupBox4.Controls.Add(this.lbl_iva);
             this.groupBox4.Controls.Add(this.lbl_precio_res);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label14);
@@ -401,15 +401,15 @@
             this.Lbl_total_pago.Text = "2,700.00";
             this.Lbl_total_pago.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbl_precio_adpax
+            // lbl_iva
             // 
-            this.lbl_precio_adpax.AutoSize = true;
-            this.lbl_precio_adpax.Location = new System.Drawing.Point(288, 100);
-            this.lbl_precio_adpax.Name = "lbl_precio_adpax";
-            this.lbl_precio_adpax.Size = new System.Drawing.Size(40, 13);
-            this.lbl_precio_adpax.TabIndex = 48;
-            this.lbl_precio_adpax.Text = "400.00";
-            this.lbl_precio_adpax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_iva.AutoSize = true;
+            this.lbl_iva.Location = new System.Drawing.Point(279, 100);
+            this.lbl_iva.Name = "lbl_iva";
+            this.lbl_iva.Size = new System.Drawing.Size(40, 13);
+            this.lbl_iva.TabIndex = 48;
+            this.lbl_iva.Text = "400.00";
+            this.lbl_iva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_precio_res
             // 
@@ -435,11 +435,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(95, 100);
+            this.label14.Location = new System.Drawing.Point(206, 100);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 13);
+            this.label14.Size = new System.Drawing.Size(36, 13);
             this.label14.TabIndex = 43;
-            this.label14.Text = "Adicional por persona extra: $";
+            this.label14.Text = "IVA: $";
             // 
             // label13
             // 
@@ -546,7 +546,7 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label Lbl_total_pago;
-        private System.Windows.Forms.Label lbl_precio_adpax;
+        private System.Windows.Forms.Label lbl_iva;
         private System.Windows.Forms.Label lbl_precio_res;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
