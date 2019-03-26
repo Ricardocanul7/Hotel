@@ -47,7 +47,7 @@ namespace Hotel.GUI
 
             for (int i = 0; i < rows.Length; i++)
             {
-                if((int)rows[i][10] == 4)
+                if((string)rows[i][10] == "Disponible")
                 {
                     cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
                 }
