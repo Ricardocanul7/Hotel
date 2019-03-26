@@ -69,15 +69,6 @@ namespace Hotel.GUI
             return tipohabBO;
         }
 
-        private void seleccionarFila(object sender, DataGridViewCellEventArgs e)
-        {
-            index = e.RowIndex;
-            if (index >= 0)
-            {
-                tipohabBO.Tipo_id = Convert.ToInt32(dgv_tipo_hab.Rows[index].Cells[0].Value);
-            }
-        }
-
         private void btn_eliminar_tipo_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
@@ -92,6 +83,15 @@ namespace Hotel.GUI
                     MessageBox.Show("Algo salio mal");
                 }
                 dgv_tipo_hab.DataSource = tipohabDAO.Buscar();
+            }
+        }
+
+        private void dgv_tipo_hab_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            index = e.RowIndex;
+            if (index >= 0)
+            {
+                tipohabBO.Tipo_id = Convert.ToInt32(dgv_tipo_hab.Rows[index].Cells[0].Value);
             }
         }
     }

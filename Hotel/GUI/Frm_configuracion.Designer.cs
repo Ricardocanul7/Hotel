@@ -106,7 +106,7 @@
             this.dgv_tipo_hab.Name = "dgv_tipo_hab";
             this.dgv_tipo_hab.Size = new System.Drawing.Size(287, 199);
             this.dgv_tipo_hab.TabIndex = 35;
-            this.dgv_tipo_hab.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
+            this.dgv_tipo_hab.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_tipo_hab_CellMouseClick);
             // 
             // btn_buscar_tipo
             // 
