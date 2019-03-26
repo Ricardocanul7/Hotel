@@ -131,9 +131,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(93, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(346, 39);
+            this.label6.Size = new System.Drawing.Size(152, 39);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Registrar Habitación";
+            this.label6.Text = "Registro";
             // 
             // groupBox1
             // 
