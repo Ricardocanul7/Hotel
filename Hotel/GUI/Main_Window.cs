@@ -110,5 +110,11 @@ namespace Hotel.GUI
             lbl_titulo.Text = "CLIENTES";
 
         }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+            this.loginWindow.Show();
+            this.Dispose();
+        }
     }
 }

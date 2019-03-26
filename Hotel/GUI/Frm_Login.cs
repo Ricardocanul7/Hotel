@@ -43,6 +43,8 @@ namespace Hotel.GUI
                     Main_Window menu = new Main_Window();
                     menu.VentanaHija(this);
                     this.Hide();
+                    this.txt_correo.Clear();
+                    this.txt_password.Clear();
                     menu.Show();
                 }
                 else

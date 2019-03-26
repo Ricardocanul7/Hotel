@@ -307,6 +307,7 @@
             this.btn_cerrar_sesion.TabIndex = 1;
             this.btn_cerrar_sesion.Text = "CERRAR SESIÓN";
             this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
+            this.btn_cerrar_sesion.Click += new System.EventHandler(this.btn_cerrar_sesion_Click);
             // 
             // panel_logo
             // 
