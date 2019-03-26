@@ -119,6 +119,7 @@
             this.btn_buscar_tipo.Text = "Buscar";
             this.btn_buscar_tipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_buscar_tipo.UseVisualStyleBackColor = true;
+            this.btn_buscar_tipo.Click += new System.EventHandler(this.btn_buscar_tipo_Click);
             // 
             // txt_buscar_tipo
             // 

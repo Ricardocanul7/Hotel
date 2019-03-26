@@ -94,5 +94,17 @@ namespace Hotel.GUI
                 tipohabBO.Tipo_id = Convert.ToInt32(dgv_tipo_hab.Rows[index].Cells[0].Value);
             }
         }
+
+        private void btn_buscar_tipo_Click(object sender, EventArgs e)
+        {
+            DataView tipohab = datos.DefaultView;
+            tipohab.RowFilter = string.Empty;
+
+            if (txt_buscar_tipo.Text != string.Empty)
+            {
+                tipohab.RowFilter = string.Format("convert(tipo_id,'System.String')LIKE '%{0}%'", txt_buscar_tipo.Text);
+            }
+            dgv_tipo_hab.DataSource = tipohab;
+        }
     }
 }
