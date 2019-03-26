@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using Hotel.BO;
 
 namespace Hotel.DAO
@@ -17,7 +18,8 @@ namespace Hotel.DAO
 
         public int Agregar(EstadohabBO estadohabBO)
         {
-            return 0;
+            string ComandoSQL = string.Format("INSERT INTO  estado_habitacion(estado)VALUES('{0}');", estadohabBO.Nombre);
+            return conexion.EjecutarComando(ComandoSQL);
         }
 
         public int Modificar(EstadohabBO estadohabBO)
@@ -30,9 +32,10 @@ namespace Hotel.DAO
             return 0;
         }
 
-        public int Buscar()
+        public DataTable Buscar()
         {
-            return 0;
+            string commandSQL = "SELECT * from estado_habitacion";
+            return conexion.EjecutarSentencia(commandSQL);
         }
     }
 }
