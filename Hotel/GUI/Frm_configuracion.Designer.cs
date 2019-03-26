@@ -238,6 +238,7 @@
             this.btn_modificar_estado.Text = "Modificar";
             this.btn_modificar_estado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar_estado.UseVisualStyleBackColor = true;
+            this.btn_modificar_estado.Click += new System.EventHandler(this.btn_modificar_estado_Click);
             // 
             // btn_agregar_estado
             // 
@@ -250,6 +251,7 @@
             this.btn_agregar_estado.Text = "       Guardar";
             this.btn_agregar_estado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_agregar_estado.UseVisualStyleBackColor = true;
+            this.btn_agregar_estado.Click += new System.EventHandler(this.btn_agregar_estado_Click);
             // 
             // txt_buscar_estado
             // 

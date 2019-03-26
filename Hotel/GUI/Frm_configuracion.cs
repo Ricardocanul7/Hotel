@@ -16,8 +16,10 @@ namespace Hotel.GUI
     {
         TipohabBO tipohabBO;
         TipohabDAO tipohabDAO;
-
+        EstadohabBO estadohabBO;
+        EstadohabDAO estadohabDAO;
         private DataTable datos;
+        private DataTable datos2;
         int index;
 
         public Frm_configuracion()
@@ -25,13 +27,21 @@ namespace Hotel.GUI
             InitializeComponent();
             tipohabBO = new TipohabBO();
             tipohabDAO = new TipohabDAO();
+            estadohabBO = new EstadohabBO();
+            estadohabDAO = new EstadohabDAO();
 
             datos = tipohabDAO.Buscar();
+            datos2 = estadohabDAO.Buscar();
 
             dgv_tipo_hab.DataSource = datos;
             dgv_tipo_hab.AllowUserToAddRows = false;
             dgv_tipo_hab.ReadOnly = true;
             dgv_tipo_hab.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgv_estado_hab.DataSource = datos2;
+            dgv_estado_hab.AllowUserToAddRows = false;
+            dgv_estado_hab.ReadOnly = true;
+            dgv_estado_hab.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             setColumNames();
         }
@@ -40,13 +50,13 @@ namespace Hotel.GUI
         {
             dgv_tipo_hab.Columns[0].HeaderText = "ID";
             dgv_tipo_hab.Columns[1].HeaderText = "Nombre";
-            //dgv_estado_hab.Columns[0].HeaderText = "ID";
-            //dgv_estado_hab.Columns[1].HeaderText = "Nombre";
+            dgv_estado_hab.Columns[0].HeaderText = "ID";
+            dgv_estado_hab.Columns[1].HeaderText = "Nombre";
         }
 
         private void btn_guardar_tipo_Click(object sender, EventArgs e)
         {
-            if (tipohabDAO.Agregar(RecuperarInformacion()) == 1)
+            if (tipohabDAO.Agregar(RecuperarInformacionTipo()) == 1)
             {
                 MessageBox.Show("Se ha registrado la habitación");
             }
@@ -58,7 +68,7 @@ namespace Hotel.GUI
             dgv_tipo_hab.Update();
         }
 
-        private TipohabBO RecuperarInformacion()
+        private TipohabBO RecuperarInformacionTipo()
         {
             int id = 0;
             int.TryParse(txt_tipo_id.Text, out id);
@@ -105,6 +115,36 @@ namespace Hotel.GUI
                 tipohab.RowFilter = string.Format("convert(tipo_id,'System.String')LIKE '%{0}%'", txt_buscar_tipo.Text);
             }
             dgv_tipo_hab.DataSource = tipohab;
+        }
+
+        private void btn_modificar_estado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private EstadohabBO RecuperarInformacionEstado()
+        {
+            int id = 0;
+            int.TryParse(txt_tipo_id.Text, out id);
+
+            estadohabBO.Estado_id = id;
+            estadohabBO.Nombre = txt_nombre_estado.Text;
+
+            return estadohabBO;
+        }
+
+        private void btn_agregar_estado_Click(object sender, EventArgs e)
+        {
+            if (estadohabDAO.Agregar(RecuperarInformacionEstado()) == 1)
+            {
+                MessageBox.Show("Se ha registrado la habitación");
+            }
+            else
+            {
+                MessageBox.Show("Ha habido un error al registrar la habitación!");
+            }
+            dgv_estado_hab.DataSource = estadohabDAO.Buscar();
+            dgv_estado_hab.Update();
         }
     }
 }
