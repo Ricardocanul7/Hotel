@@ -125,5 +125,11 @@ namespace Hotel
                 dgv_habitaciones.DataSource = habitacionDAO.Buscar();
             }
         }
+
+        private void btn_configuracion_Click(object sender, EventArgs e)
+        {
+            Frm_configuracion frm_Configuracion = new Frm_configuracion();
+            frm_Configuracion.Show();
+        }
     }
 }

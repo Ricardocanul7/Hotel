@@ -39,9 +39,9 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txt_buscar_hab = new System.Windows.Forms.ToolStripTextBox();
             this.btn_buscar_hab = new System.Windows.Forms.ToolStripButton();
-            this.dgv_habitaciones = new System.Windows.Forms.DataGridView();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_configuracion = new System.Windows.Forms.ToolStripButton();
+            this.dgv_habitaciones = new System.Windows.Forms.DataGridView();
             this.MenuStrip_principal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_habitaciones)).BeginInit();
             this.SuspendLayout();
@@ -137,17 +137,6 @@
             this.btn_buscar_hab.Text = "Buscar";
             this.btn_buscar_hab.Click += new System.EventHandler(this.btn_buscar_hab_Click);
             // 
-            // dgv_habitaciones
-            // 
-            this.dgv_habitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_habitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_habitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_habitaciones.Location = new System.Drawing.Point(0, 39);
-            this.dgv_habitaciones.Name = "dgv_habitaciones";
-            this.dgv_habitaciones.Size = new System.Drawing.Size(849, 411);
-            this.dgv_habitaciones.TabIndex = 44;
-            this.dgv_habitaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarFila);
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
@@ -161,6 +150,18 @@
             this.btn_configuracion.Name = "btn_configuracion";
             this.btn_configuracion.Size = new System.Drawing.Size(114, 36);
             this.btn_configuracion.Text = "Configuraciones";
+            this.btn_configuracion.Click += new System.EventHandler(this.btn_configuracion_Click);
+            // 
+            // dgv_habitaciones
+            // 
+            this.dgv_habitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_habitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_habitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_habitaciones.Location = new System.Drawing.Point(0, 39);
+            this.dgv_habitaciones.Name = "dgv_habitaciones";
+            this.dgv_habitaciones.Size = new System.Drawing.Size(849, 411);
+            this.dgv_habitaciones.TabIndex = 44;
+            this.dgv_habitaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarFila);
             // 
             // Frm_menu
             // 
