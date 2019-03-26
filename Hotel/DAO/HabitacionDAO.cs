@@ -46,8 +46,24 @@ namespace Hotel.DAO
 
         public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT * FROM habitacion");
-            return conexion.EjecutarSentencia(ComandoSQL);
+            //string ComandoSQL = string.Format("SELECT * FROM habitacion");
+            //return conexion.EjecutarSentencia(ComandoSQL);
+            string col0 = "num_habitacion";
+            string col1 = "nombre";
+            string col2 = "max_ninios";
+            string col3 = "max_adultos";
+            string col4 = "precio_alta";
+            string col5 = "precio_baja";
+            string col6 = "precio_adic_alta";
+            string col7 = "precio_adic_baja";
+            string col8 = "nombre_tipo";
+            string col9 = "descripcion";
+            string col10 = "estado";
+
+            string selectSQL = String.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10} ", col0, col1, col2, col3, col4, col5, col6, col7, col8, col9, col10);
+            string fromSQL = "FROM habitacion as a, tipo_habitacion as b, estado_habitacion as c where a.tipo_hab=b.tipo_id and a.estado_hab=c.estado_id";
+            string commandSQL = selectSQL + fromSQL;
+            return conexion.EjecutarSentencia(commandSQL);
         }
 
         public DataTable BuscarTipoHabitacion()
