@@ -55,7 +55,7 @@
             // htmlLabel1
             // 
             this.htmlLabel1.AutoScroll = true;
-            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(44, 23);
+            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(110, 48);
             this.htmlLabel1.AutoSize = false;
             this.htmlLabel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel1.Location = new System.Drawing.Point(117, 120);
@@ -67,7 +67,7 @@
             // htmlLabel2
             // 
             this.htmlLabel2.AutoScroll = true;
-            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(59, 23);
+            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(155, 48);
             this.htmlLabel2.AutoSize = false;
             this.htmlLabel2.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel2.Location = new System.Drawing.Point(103, 163);
@@ -124,7 +124,7 @@
             this.txt_password.Location = new System.Drawing.Point(227, 163);
             this.txt_password.MaxLength = 32767;
             this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '\0';
+            this.txt_password.PasswordChar = '●';
             this.txt_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_password.SelectedText = "";
             this.txt_password.SelectionLength = 0;
@@ -133,6 +133,7 @@
             this.txt_password.Size = new System.Drawing.Size(209, 23);
             this.txt_password.TabIndex = 4;
             this.txt_password.UseSelectable = true;
+            this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
