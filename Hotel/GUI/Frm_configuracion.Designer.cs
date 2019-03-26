@@ -271,6 +271,7 @@
             this.btn_buscar_estado.Text = "Buscar";
             this.btn_buscar_estado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_buscar_estado.UseVisualStyleBackColor = true;
+            this.btn_buscar_estado.Click += new System.EventHandler(this.btn_buscar_estado_Click);
             // 
             // btn_eliminar_estado
             // 

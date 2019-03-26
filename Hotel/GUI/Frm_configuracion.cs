@@ -146,5 +146,17 @@ namespace Hotel.GUI
             dgv_estado_hab.DataSource = estadohabDAO.Buscar();
             dgv_estado_hab.Update();
         }
+
+        private void btn_buscar_estado_Click(object sender, EventArgs e)
+        {
+            DataView estadohab = datos2.DefaultView;
+            estadohab.RowFilter = string.Empty;
+
+            if (txt_buscar_estado.Text != string.Empty)
+            {
+                estadohab.RowFilter = string.Format("convert(estado_id,'System.String')LIKE '%{0}%'", txt_buscar_estado.Text);
+            }
+            dgv_estado_hab.DataSource = estadohab;
+        }
     }
 }
