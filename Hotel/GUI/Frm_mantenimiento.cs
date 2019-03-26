@@ -29,55 +29,15 @@ namespace Hotel.GUI
             dgv_empresas.AllowUserToAddRows = false;
             dgv_empresas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_empresas.ReadOnly = true;
+            SetColumNames();
+
         }
-
-        private void Guardar_Empresa(object sender, EventArgs e)
+        private void SetColumNames()
         {
-            if (empresaDAO.Agregar(RecuperarInformacion()) == 1)
-            {
-                MessageBox.Show("Se ha Agregado el Empleado");
-            }
-            else
-            {
-                MessageBox.Show("Ha sucedido un error");
-            }
-            dgv_empresas.DataSource = empresaDAO.Buscar();
-            Limpiar();
-        }
-        internal EmpresaBO RecuperarInformacion()
-        {
-            EmpresaBO empresaBO = new EmpresaBO();
-            EmpresaDAO empresaDAO = new EmpresaDAO();
+            dgv_empresas.Columns[0].HeaderText = "RFC";
+            dgv_empresas.Columns[1].HeaderText = "Nombre Empresa";
+            dgv_empresas.Columns[2].HeaderText = "Precio Hora";
 
-            empresaBO.RFC = txt_rfc_empresa.Text;
-            empresaBO.Nombre = txt_nombre_empresa.Text;
-            empresaBO.Precio_hora = Convert.ToDecimal(txt_precio_hora.Text);
-
-            return empresaBO;
-        }
-        public void Limpiar()
-        {
-            txt_nombre_empresa.Clear();
-            txt_precio_hora.Clear();
-            txt_rfc_empresa.Clear();
-        }
-
-        private void Seleccionar_fila(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int Filaseleccionada = e.RowIndex;
-
-            if (Filaseleccionada >= 0)
-            {
-                empresaBO.RFC = dgv_empresas.Rows[Filaseleccionada].Cells["rfc_proveedor"].Value.ToString();
-                empresaBO.Nombre = dgv_empresas.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
-                empresaBO.Precio_hora = Convert.ToInt32(dgv_empresas.Rows[Filaseleccionada].Cells["precio_porhora"].Value.ToString());
-
-                txt_nombre_empresa.Text = empresaBO.Nombre;
-                txt_rfc_empresa.Text = empresaBO.RFC;
-                txt_precio_hora.Text = Convert.ToString(empresaBO.Precio_hora);
-                
-                this.DialogResult = DialogResult.OK;
-            }
         }
 
         private void Buscar_Empresa(object sender, EventArgs e)
@@ -112,20 +72,29 @@ namespace Hotel.GUI
             }
         }
 
-        private void Actualizar_Empresa(object sender, EventArgs e)
+        private void Agregar_Empresa(object sender, EventArgs e)
         {
-            if (empresaDAO.Modificar(RecuperarInformacion()) == 1)
+            frm_empresa form_agregarEmpleado = new frm_empresa();
+            if (form_agregarEmpleado.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Registro Modificado :)");
-
+                dgv_empresas.DataSource = empresaDAO.Buscar();
+                dgv_empresas.Update();
             }
-            else
-            {
-                MessageBox.Show("Algo a salido mal :(");
-            }
-
-            dgv_empresas.DataSource = empresaDAO.Buscar();
-            Limpiar();
         }
-    }
+
+        private void Seleccionar_Fila(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int Filaseleccionada = e.RowIndex;
+
+            if (Filaseleccionada >= 0)
+            {
+                empresaBO.RFC = dgv_empresas.Rows[Filaseleccionada].Cells["rfc_proveedor"].Value.ToString();
+                empresaBO.Nombre = dgv_empresas.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
+                empresaBO.Precio_hora = Convert.ToInt32(dgv_empresas.Rows[Filaseleccionada].Cells["precio_porhora"].Value.ToString());
+
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+     }
 }          
