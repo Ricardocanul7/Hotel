@@ -106,6 +106,7 @@
             this.dgv_tipo_hab.Name = "dgv_tipo_hab";
             this.dgv_tipo_hab.Size = new System.Drawing.Size(287, 199);
             this.dgv_tipo_hab.TabIndex = 35;
+            this.dgv_tipo_hab.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccionarFila);
             // 
             // btn_buscar_tipo
             // 
@@ -137,6 +138,7 @@
             this.btn_eliminar_tipo.Text = "Eliminar";
             this.btn_eliminar_tipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar_tipo.UseVisualStyleBackColor = true;
+            this.btn_eliminar_tipo.Click += new System.EventHandler(this.btn_eliminar_tipo_Click);
             // 
             // btn_modificar_tipo
             // 
