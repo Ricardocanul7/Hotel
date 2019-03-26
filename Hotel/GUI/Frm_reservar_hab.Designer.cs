@@ -57,6 +57,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rdb_pago_pendiente = new System.Windows.Forms.RadioButton();
+            this.rdb_pagado = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Lbl_total_pago = new System.Windows.Forms.Label();
             this.lbl_precio_adpax = new System.Windows.Forms.Label();
@@ -67,8 +69,6 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rdb_pagado = new System.Windows.Forms.RadioButton();
-            this.rdb_pago_pendiente = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -131,9 +131,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(93, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(345, 39);
+            this.label6.Size = new System.Drawing.Size(346, 39);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Reservar Habitación";
+            this.label6.Text = "Registrar Habitación";
             // 
             // groupBox1
             // 
@@ -306,6 +306,7 @@
             // 
             // Dtm_checkin
             // 
+            this.Dtm_checkin.Enabled = false;
             this.Dtm_checkin.Location = new System.Drawing.Point(141, 28);
             this.Dtm_checkin.Name = "Dtm_checkin";
             this.Dtm_checkin.Size = new System.Drawing.Size(200, 20);
@@ -355,6 +356,28 @@
             this.groupBox4.TabIndex = 46;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Precio";
+            // 
+            // rdb_pago_pendiente
+            // 
+            this.rdb_pago_pendiente.AutoSize = true;
+            this.rdb_pago_pendiente.Location = new System.Drawing.Point(252, 28);
+            this.rdb_pago_pendiente.Name = "rdb_pago_pendiente";
+            this.rdb_pago_pendiente.Size = new System.Drawing.Size(73, 17);
+            this.rdb_pago_pendiente.TabIndex = 54;
+            this.rdb_pago_pendiente.TabStop = true;
+            this.rdb_pago_pendiente.Text = "Pendiente";
+            this.rdb_pago_pendiente.UseVisualStyleBackColor = true;
+            // 
+            // rdb_pagado
+            // 
+            this.rdb_pagado.AutoSize = true;
+            this.rdb_pagado.Location = new System.Drawing.Point(55, 28);
+            this.rdb_pagado.Name = "rdb_pagado";
+            this.rdb_pagado.Size = new System.Drawing.Size(62, 17);
+            this.rdb_pagado.TabIndex = 53;
+            this.rdb_pagado.TabStop = true;
+            this.rdb_pagado.Text = "Pagado";
+            this.rdb_pagado.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -462,28 +485,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            // 
-            // rdb_pagado
-            // 
-            this.rdb_pagado.AutoSize = true;
-            this.rdb_pagado.Location = new System.Drawing.Point(55, 28);
-            this.rdb_pagado.Name = "rdb_pagado";
-            this.rdb_pagado.Size = new System.Drawing.Size(62, 17);
-            this.rdb_pagado.TabIndex = 53;
-            this.rdb_pagado.TabStop = true;
-            this.rdb_pagado.Text = "Pagado";
-            this.rdb_pagado.UseVisualStyleBackColor = true;
-            // 
-            // rdb_pago_pendiente
-            // 
-            this.rdb_pago_pendiente.AutoSize = true;
-            this.rdb_pago_pendiente.Location = new System.Drawing.Point(252, 28);
-            this.rdb_pago_pendiente.Name = "rdb_pago_pendiente";
-            this.rdb_pago_pendiente.Size = new System.Drawing.Size(73, 17);
-            this.rdb_pago_pendiente.TabIndex = 54;
-            this.rdb_pago_pendiente.TabStop = true;
-            this.rdb_pago_pendiente.Text = "Pendiente";
-            this.rdb_pago_pendiente.UseVisualStyleBackColor = true;
             // 
             // Frm_reservar_hab
             // 
