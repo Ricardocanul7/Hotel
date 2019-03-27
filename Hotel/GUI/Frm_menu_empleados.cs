@@ -130,14 +130,20 @@ namespace Hotel.GUI
 
         private void Modicicar_Empleados(object sender, EventArgs e)
         {
-            if(empleadoDAO.Modificar(empleadoBO) == 1)
+            if(Filaseleccionada >= 0)
             {
-                frm_empleado form_agregarEmpleado = new frm_empleado();
-                form_agregarEmpleado.Show();
-
-                empleadoDAO.Modificar(empleadoBO);
+                frm_empleado modificar = new frm_empleado();
+                modificar.Add_empleado_mod(empleadoBO.Id_empleado);
+                if (modificar.ShowDialog() == DialogResult.OK)
+                {
+                    dgv_empleados.DataSource = empleadoDAO.Buscar();
+                    dgv_empleados.Update();
+                }
             }
-            dgv_empleados.DataSource = empleadoDAO.Buscar();
+            else
+            {
+                MessageBox.Show("Selecciona un registro antes de modificar empleado!");
+            }
         }
 
         private void Forms_Puesto(object sender, EventArgs e)
