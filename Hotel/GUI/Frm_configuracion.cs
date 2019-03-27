@@ -133,7 +133,7 @@ namespace Hotel.GUI
 
             if (txt_buscar_tipo.Text != string.Empty)
             {
-                tipohab.RowFilter = string.Format("convert(tipo_id,'System.String')LIKE '%{0}%'", txt_buscar_tipo.Text);
+                tipohab.RowFilter = string.Format("nombre_tipo LIKE '%{0}%' OR convert(tipo_id,'System.String')LIKE '%{0}%'", txt_buscar_tipo.Text);
             }
             dgv_tipo_hab.DataSource = tipohab;
         }
@@ -206,7 +206,7 @@ namespace Hotel.GUI
 
             if (txt_buscar_estado.Text != string.Empty)
             {
-                estadohab.RowFilter = string.Format("convert(estado_id,'System.String')LIKE '%{0}%'", txt_buscar_estado.Text);
+                estadohab.RowFilter = string.Format("estado LIKE '%{0}%' OR convert(estado_id,'System.String')LIKE '%{0}%'", txt_buscar_estado.Text);
             }
             dgv_estado_hab.DataSource = estadohab;
         }
