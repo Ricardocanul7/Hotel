@@ -39,17 +39,6 @@ namespace Hotel.GUI
             btn_guardar.Text = "Modificar";
             habitacionBO.Num_habitacion = numeroHab;
 
-            for (int i = 0; i < cbo_estadohab.Items.Count; i++)
-            {
-                if (cbo_estadohab.Items[i].ToString().Split('-')[0] == habitacionBO_mod.Tipo.Tipo_id.ToString())
-                    cbo_estadohab.SelectedIndex = i;
-            }
-            for (int i = 0; i < cbo_tipohab.Items.Count; i++)
-            {
-                if (cbo_tipohab.Items[i].ToString().Split('-')[0] == habitacionBO_mod.Estado.Estado_id.ToString())
-                    cbo_tipohab.SelectedIndex = i;
-            }
-
             txt_num_habitacion.Text = habitacionBO_mod.Num_habitacion.ToString();
             txt_nombrehab.Text = habitacionBO_mod.Nombre_hab;
             txt_max_ninios.Text = habitacionBO_mod.Max_ninios.ToString();
