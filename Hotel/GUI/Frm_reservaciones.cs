@@ -16,7 +16,7 @@ namespace Hotel.GUI
     {
         ReservaDAO reservaDAO;
         ReservasBO reservaBO;
-        int index;
+        int index = -1;
 
         public Frm_reservaciones()
         {
@@ -87,11 +87,19 @@ namespace Hotel.GUI
 
         private void btn_eliminar_reserv_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show(this, "¿Seguro que quieres eliminar esta reserva?", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(index >= 0)
             {
-                reservaDAO.Eliminar(reservaBO);
-                dgv_reservaciones.DataSource = reservaDAO.Buscar();
+                if (MessageBox.Show(this, "¿Seguro que quieres eliminar esta reserva?", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    reservaDAO.Eliminar(reservaBO);
+                    dgv_reservaciones.DataSource = reservaDAO.Buscar();
+                }
             }
+            else
+            {
+                MessageBox.Show("Selecciona un registro de reservas para eliminar");
+            }
+            
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
