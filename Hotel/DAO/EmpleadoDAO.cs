@@ -43,9 +43,9 @@ namespace Hotel.DAO
         }
         public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT * FROM empleado");
+            string ComandoSQL = string.Format("SELECT empleado_id, nombre, apellido_patern, apellido_matern, direccion, " +
+                "telefono, horario, sueldo, puesto FROM empleado, puesto_empleado WHERE empleado.puesto_id = puesto_empleado.puesto_id");
             return Miconexion.EjecutarSentencia(ComandoSQL);
-
         }
 
         public DataTable PuestoEmpleado()
