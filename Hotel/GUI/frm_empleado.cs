@@ -32,12 +32,16 @@ namespace Hotel.GUI
         public void Set_cbo_puesto()
         {
             DataRow[] rows = empleadoDAO.PuestoEmpleado().Select();
-            for(int i = 0; i < rows.Length; i++)
+            if(rows.Length > 0)
             {
-                cbo_tipoempleado.Items.Add(rows[i][1]);
-            }
+                for (int i = 0; i < rows.Length; i++)
+                {
+                    cbo_tipoempleado.Items.Add(rows[i][1]);
+                }
 
-            cbo_tipoempleado.SelectedIndex = 0;
+                cbo_tipoempleado.SelectedIndex = 0;
+            }
+            
         }
 
         private void Guardar_Empleados(object sender, EventArgs e)
@@ -65,7 +69,10 @@ namespace Hotel.GUI
             empleadoBO.Direccion = txt_direcc_empleado.Text;
             empleadoBO.Telefono = txt_tele_empleado.Text;
             empleadoBO.Horario = cbo_Horario.Text;
-            empleadoBO.Puesto_id = Convert.ToInt32(cbo_tipoempleado.Text);
+
+            DataRow[] tipoRow = empleadoDAO.PuestoEmpleado().Select(String.Format("puesto = '{0}'", cbo_tipoempleado.Text));
+
+            empleadoBO.Puesto_id = Convert.ToInt32(tipoRow[0]["puesto_id"]);
             empleadoBO.Sueldo = Convert.ToDecimal(txt_sueldoempleado.Text);
             
 

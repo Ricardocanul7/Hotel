@@ -16,6 +16,7 @@ namespace Hotel.GUI
     {
         EmpleadoDAO empleadoDAO = new EmpleadoDAO();
         EmpleadoBO empleadoBO = new EmpleadoBO();
+        int Filaseleccionada = -1;
 
         private DataTable datos;
         public string nombre = "";
@@ -80,9 +81,9 @@ namespace Hotel.GUI
 
         private void Seleccionar_empleado(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int Filaseleccionada = e.RowIndex;
+            Filaseleccionada = e.RowIndex;
 
-            if(Filaseleccionada > 0)
+            if(Filaseleccionada >= 0)
             {
                 empleadoBO.Nombre = dgv_empleados.Rows[Filaseleccionada].Cells["nombre"].Value.ToString();
                 empleadoBO.Id_empleado = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["empleado_id"].Value.ToString());
@@ -92,8 +93,10 @@ namespace Hotel.GUI
                 empleadoBO.Telefono = dgv_empleados.Rows[Filaseleccionada].Cells["telefono"].Value.ToString();
                 empleadoBO.Horario = dgv_empleados.Rows[Filaseleccionada].Cells["horario"].Value.ToString();
                 empleadoBO.Sueldo = int.Parse(dgv_empleados.Rows[Filaseleccionada].Cells["sueldo"].Value.ToString());
-                empleadoBO.Puesto_id = Convert.ToInt32(dgv_empleados.Rows[Filaseleccionada].Cells["puesto_id"].Value.ToString());
 
+                string puesto = dgv_empleados.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
+                int puesto_id = Convert.ToInt32(empleadoDAO.PuestoEmpleado().Select(String.Format("puesto = '{0}'", puesto))[0]["puesto_id"]);
+                empleadoBO.Puesto_id = puesto_id;
 
                 this.DialogResult = DialogResult.OK;
             }
@@ -101,20 +104,28 @@ namespace Hotel.GUI
         }
         private void Eliminar_Empleado(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
-        "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+            if(Filaseleccionada >= 0)
             {
-                if (empleadoDAO.Eliminar(empleadoBO) == 1)
+                if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
+        "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("El registro se a borrado");
-                }
-                else
-                {
-                    MessageBox.Show("Algo salio mal");
-                }
+                    if (empleadoDAO.Eliminar(empleadoBO) == 1)
+                    {
+                        MessageBox.Show("El registro se a borrado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Algo salio mal");
+                    }
 
-                dgv_empleados.DataSource = empleadoDAO.Buscar();
+                    dgv_empleados.DataSource = empleadoDAO.Buscar();
+                }
             }
+            else
+            {
+                MessageBox.Show("Selecciona un registro antes para eliminar");
+            }
+            
         }
 
         private void Modicicar_Empleados(object sender, EventArgs e)
