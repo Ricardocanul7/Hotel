@@ -49,14 +49,14 @@ namespace Hotel.DAO
             //return conexion.EjecutarSentencia(ComandoSQL);
             string col0 = "num_habitacion";
             string col1 = "nombre";
-            string col2 = "max_ninios";
-            string col3 = "max_adultos";
-            string col4 = "precio_baja";
-            string col5 = "nombre_tipo";
-            string col6 = "descripcion";
-            string col7 = "estado";
+            //string col2 = "max_ninios";
+            //string col3 = "max_adultos";
+            string col2 = "precio_baja";
+            string col3 = "nombre_tipo";
+            string col4 = "descripcion";
+            string col5 = "estado";
 
-            string selectSQL = String.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7} ", col0, col1, col2, col3, col4,  col5, col6, col7);
+            string selectSQL = String.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5} ", col0, col1, col2, col3, col4,  col5);
             string fromSQL = "FROM habitacion as a, tipo_habitacion as b, estado_habitacion as c WHERE a.tipo_hab=b.tipo_id and a.estado_hab=c.estado_id";
             string commandSQL = selectSQL + fromSQL;
             return conexion.EjecutarSentencia(commandSQL);
