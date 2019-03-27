@@ -171,6 +171,7 @@ namespace Hotel.GUI
 
         private void Txt_id_cliente_TextChanged(object sender, EventArgs e)
         {
+            /**
             if(Txt_id_cliente.Text != "")
             {
                 ClienteDAO clienteDAO = new ClienteDAO();
@@ -199,10 +200,12 @@ namespace Hotel.GUI
             {
                 LimpiarCamposCliente();
             }
+    */
         }
 
         private void LimpiarCamposCliente()
         {
+            Txt_id_cliente.Clear();
             Txt_nom_cliente.Clear();
             Txt_apell_patern_cliente.Clear();
             txt_apelli_matern_cli.Clear();
@@ -213,6 +216,7 @@ namespace Hotel.GUI
 
         private void Txt_nom_cliente_TextChanged(object sender, EventArgs e)
         {
+            /**
             ClienteDAO clienteDAO = new ClienteDAO();
             DataRow[] rows = clienteDAO.Buscar().Select(String.Format("nombre LIKE '{0}%'", Txt_nom_cliente.Text));
             foreach (var item in rows)
@@ -245,6 +249,7 @@ namespace Hotel.GUI
             {
                 LimpiarCamposCliente();
             }
+    */
         }
 
         private void Dtm_checkout_ValueChanged(object sender, EventArgs e)
@@ -253,6 +258,64 @@ namespace Hotel.GUI
             double num_noches = Math.Ceiling( span.TotalDays); // Pendiente de calcular
             lbl_num_noches.Text = num_noches.ToString();
             Lbl_total_pago.Text = (precioMasIVA * (decimal)num_noches).ToString();
+        }
+
+        private void btn_buscar_id_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteDAO clienteDAO = new ClienteDAO();
+                DataRow[] rows = clienteDAO.Buscar().Select(String.Format("cliente_id = '{0}'", Txt_id_cliente.Text));
+
+                if (rows.Length > 0)
+                {
+                    Txt_id_cliente.Text = rows[0]["cliente_id"].ToString();
+                    Txt_nom_cliente.Text = rows[0]["nombre"] as string; ;
+                    Txt_apell_patern_cliente.Text = rows[0]["apaterno"] as string;
+                    txt_apelli_matern_cli.Text = rows[0]["amaterno"] as string;
+                    Txt_dir_cliente.Text = rows[0]["direccion"] as string;
+                    txt_email.Text = rows[0]["email"] as string;
+                    Txt_telefono_cliente.Text = rows[0]["telefono"] as string;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado!");
+                    LimpiarCamposCliente();
+                }
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Error, ingresa solo valores numericos");
+            }
+            
+        }
+
+        private void btn_buscar_nombre_Click(object sender, EventArgs e)
+        {
+            ClienteDAO clienteDAO = new ClienteDAO();
+            DataRow[] rows = clienteDAO.Buscar().Select(String.Format("nombre LIKE '{0}%'", Txt_nom_cliente.Text));
+
+            try
+            {
+                if (rows.Length > 0)
+                {
+                    Txt_id_cliente.Text = rows[0]["cliente_id"] as string;
+                    Txt_nom_cliente.Text = rows[0]["nombre"] as string;
+                    Txt_apell_patern_cliente.Text = rows[0]["apaterno"] as string;
+                    txt_apelli_matern_cli.Text = rows[0]["amaterno"] as string;
+                    Txt_dir_cliente.Text = rows[0]["direccion"] as string;
+                    txt_email.Text = rows[0]["email"] as string;
+                    Txt_telefono_cliente.Text = rows[0]["telefono"] as string;
+                }
+                else
+                {
+                    LimpiarCamposCliente();
+                }
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
         }
     }
 }

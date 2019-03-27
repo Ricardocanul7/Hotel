@@ -71,6 +71,8 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
+            this.btn_buscar_id = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -140,6 +142,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_buscar_id);
+            this.groupBox1.Controls.Add(this.btn_buscar_nombre);
             this.groupBox1.Controls.Add(this.txt_apelli_matern_cli);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.Txt_id_cliente);
@@ -181,7 +185,7 @@
             // 
             this.Txt_id_cliente.Location = new System.Drawing.Point(119, 23);
             this.Txt_id_cliente.Name = "Txt_id_cliente";
-            this.Txt_id_cliente.Size = new System.Drawing.Size(80, 20);
+            this.Txt_id_cliente.Size = new System.Drawing.Size(209, 20);
             this.Txt_id_cliente.TabIndex = 22;
             this.Txt_id_cliente.TextChanged += new System.EventHandler(this.Txt_id_cliente_TextChanged);
             // 
@@ -239,7 +243,7 @@
             this.Txt_nom_cliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.Txt_nom_cliente.Location = new System.Drawing.Point(119, 49);
             this.Txt_nom_cliente.Name = "Txt_nom_cliente";
-            this.Txt_nom_cliente.Size = new System.Drawing.Size(241, 20);
+            this.Txt_nom_cliente.Size = new System.Drawing.Size(209, 20);
             this.Txt_nom_cliente.TabIndex = 15;
             this.Txt_nom_cliente.TextChanged += new System.EventHandler(this.Txt_nom_cliente_TextChanged);
             // 
@@ -511,6 +515,30 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_nombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_nombre.Image = global::Hotel.Properties.Resources.icon_search;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(334, 47);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(26, 23);
+            this.btn_buscar_nombre.TabIndex = 25;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
+            // 
+            // btn_buscar_id
+            // 
+            this.btn_buscar_id.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_id.Image = global::Hotel.Properties.Resources.icon_search;
+            this.btn_buscar_id.Location = new System.Drawing.Point(334, 21);
+            this.btn_buscar_id.Name = "btn_buscar_id";
+            this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
+            this.btn_buscar_id.TabIndex = 26;
+            this.btn_buscar_id.UseVisualStyleBackColor = true;
+            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
+            // 
             // Frm_reservar_hab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,5 +614,7 @@
         private System.Windows.Forms.RadioButton rdb_pagado;
         private System.Windows.Forms.Label lbl_num_noches;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_buscar_id;
+        private System.Windows.Forms.Button btn_buscar_nombre;
     }
 }
