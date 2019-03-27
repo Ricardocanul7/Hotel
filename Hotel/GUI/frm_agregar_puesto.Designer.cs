@@ -70,7 +70,7 @@
             // 
             this.btn_guardar_puesto.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_puesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_puesto.Location = new System.Drawing.Point(232, 110);
+            this.btn_guardar_puesto.Location = new System.Drawing.Point(230, 98);
             this.btn_guardar_puesto.Name = "btn_guardar_puesto";
             this.btn_guardar_puesto.Size = new System.Drawing.Size(95, 38);
             this.btn_guardar_puesto.TabIndex = 22;
@@ -81,18 +81,18 @@
             // 
             // txt_Buscar_Puesto
             // 
-            this.txt_Buscar_Puesto.Location = new System.Drawing.Point(50, 183);
+            this.txt_Buscar_Puesto.Location = new System.Drawing.Point(50, 185);
             this.txt_Buscar_Puesto.Name = "txt_Buscar_Puesto";
             this.txt_Buscar_Puesto.Size = new System.Drawing.Size(156, 20);
             this.txt_Buscar_Puesto.TabIndex = 25;
             // 
             // btn_buscar_puesto
             // 
-            this.btn_buscar_puesto.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_buscar_puesto.Image = global::Hotel.Properties.Resources.icon_search;
             this.btn_buscar_puesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscar_puesto.Location = new System.Drawing.Point(232, 169);
+            this.btn_buscar_puesto.Location = new System.Drawing.Point(212, 183);
             this.btn_buscar_puesto.Name = "btn_buscar_puesto";
-            this.btn_buscar_puesto.Size = new System.Drawing.Size(93, 38);
+            this.btn_buscar_puesto.Size = new System.Drawing.Size(82, 23);
             this.btn_buscar_puesto.TabIndex = 26;
             this.btn_buscar_puesto.Text = "Buscar";
             this.btn_buscar_puesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
