@@ -18,7 +18,7 @@ namespace Hotel.DAO
 
         public int Agregar(TipohabBO tipohabBO)
         {
-            string ComandoSQL = string.Format("INSERT INTO  tipo_habitacion(nombre_tipo)VALUES('{0}');",tipohabBO.Nombre);
+            string ComandoSQL = string.Format("INSERT INTO  tipo_habitacion(nombre_tipo)VALUES('{0}');", tipohabBO.Nombre);
             return conexion.EjecutarComando(ComandoSQL);
         }
 
@@ -38,6 +38,28 @@ namespace Hotel.DAO
         {
             string commandSQL = "SELECT * from tipo_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
+        }
+
+        public TipohabBO Buscar(int tipo_id)
+        {
+            string commandSQL = String.Format("SELECT * FROM tipo_habitacion WHERE tipo_id={0}", tipo_id);
+            DataTable table = conexion.EjecutarSentencia(commandSQL);
+
+            if (table.Rows.Count > 0)
+            {
+                DataRowCollection row = table.Rows;
+
+                TipohabBO tipohabBO = new TipohabBO();
+
+                tipohabBO.Tipo_id = Convert.ToInt32(row[0]["tipo_id"]);
+                tipohabBO.Nombre = row[0]["nombre_tipo"].ToString();
+
+                return tipohabBO;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
