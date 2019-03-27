@@ -78,7 +78,11 @@ namespace Hotel.GUI
                     dgv_reservaciones.DataSource = reservaDAO.Buscar();
                     dgv_reservaciones.Update();
                 }
-            }  
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un registro de reservas para modificar");
+            }
         }
 
         private void btn_eliminar_reserv_Click(object sender, EventArgs e)
