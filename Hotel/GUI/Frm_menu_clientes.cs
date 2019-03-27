@@ -28,6 +28,14 @@ namespace Hotel.GUI
             dgv_clientes.AllowUserToAddRows = false;
             dgv_clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_clientes.ReadOnly = true;
+
+            // Admin = 1
+            if(DatosLogin.Tipo_usuario != 1)
+            {
+                btn_eliminar.Enabled = false;
+                btn_Actualizar_Empleados.Enabled = false;
+            }
+
             SetColumNames();
         }
         private void SetColumNames()
