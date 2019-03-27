@@ -88,6 +88,18 @@
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
+    <Compile Include="GUI\frm_agregar_limpieza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_agregar_limpieza.Designer.cs">
+      <DependentUpon>frm_agregar_limpieza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_agregar_mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_agregar_mantenimiento.Designer.cs">
+      <DependentUpon>frm_agregar_mantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_agregar_puesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     <Compile Include="GUI\Frm_menu_empleados.Designer.cs">
       <DependentUpon>Frm_menu_empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_programar_mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_programar_mantenimiento.Designer.cs">
+      <DependentUpon>frm_programar_mantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_reservaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +204,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frm_agregar_limpieza.resx">
+      <DependentUpon>frm_agregar_limpieza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_agregar_mantenimiento.resx">
+      <DependentUpon>frm_agregar_mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_agregar_puesto.resx">
       <DependentUpon>frm_agregar_puesto.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu_empleados.resx">
       <DependentUpon>Frm_menu_empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_programar_mantenimiento.resx">
+      <DependentUpon>frm_programar_mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_reservaciones.resx">
       <DependentUpon>Frm_reservaciones.cs</DependentUpon>

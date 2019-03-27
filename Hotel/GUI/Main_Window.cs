@@ -116,5 +116,18 @@ namespace Hotel.GUI
             this.loginWindow.Show();
             this.Dispose();
         }
+        private void Abrir_Servicios(object sender, EventArgs e)
+        {
+
+            this.panel_principal.Controls.Clear();
+            var ventana = new frm_programar_mantenimiento();
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.FormBorderStyle = FormBorderStyle.None;
+            this.panel_principal.Controls.Add(ventana);
+            ventana.Show();
+            lbl_titulo.Text = "SERVICIOS";
+
+        }
     }
 }
