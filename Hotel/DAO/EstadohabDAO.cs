@@ -29,13 +29,36 @@ namespace Hotel.DAO
 
         public int Eliminar(EstadohabBO estadohabBO)
         {
-            return 0;
+            string ComandoSQL = string.Format("DELETE FROM estado_habitacion WHERE estado_id={0}", estadohabBO.Estado_id);
+            return conexion.EjecutarComando(ComandoSQL);
         }
 
         public DataTable Buscar()
         {
             string commandSQL = "SELECT * from estado_habitacion";
             return conexion.EjecutarSentencia(commandSQL);
+        }
+
+        public EstadohabBO Buscar(int estado_id)
+        {
+            string commandSQL = String.Format("SELECT * FROM estado_habitacion WHERE estado_id={0}", estado_id);
+            DataTable table = conexion.EjecutarSentencia(commandSQL);
+
+            if (table.Rows.Count > 0)
+            {
+                DataRowCollection row = table.Rows;
+
+                EstadohabBO estadohabBO = new EstadohabBO();
+
+                estadohabBO.Estado_id = Convert.ToInt32(row[0]["estado_id"]);
+                estadohabBO.Nombre = row[0]["estado"].ToString();
+
+                return estadohabBO;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
