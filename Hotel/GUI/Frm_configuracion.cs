@@ -82,6 +82,7 @@ namespace Hotel.GUI
                 {
                     MessageBox.Show("Ha habido un error al modificar el tipo de habitación!");
                 }
+                tipohabBO_mod = null;
             }
             else
             {
@@ -180,6 +181,7 @@ namespace Hotel.GUI
                 {
                     MessageBox.Show("Ha habido un error al modificar el estado de habitación!");
                 }
+                estadohabBO_mod = null;
             }
             else
             {
@@ -249,7 +251,6 @@ namespace Hotel.GUI
         {
             estadohabBO_mod = estadohabDAO.Buscar(estado_id);
             btn_agregar_estado.Text = "Guardar";
-            estadohabBO_mod.Estado_id = estado_id;
 
             txt_estado_id.Text = estadohabBO_mod.Estado_id.ToString();
             txt_nombre_estado.Text = estadohabBO_mod.Nombre;
