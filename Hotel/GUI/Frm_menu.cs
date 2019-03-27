@@ -39,17 +39,17 @@ namespace Hotel
                 this.btn_configuracion.Visible = false;
             }
 
-            SetColumNames();
+            //SetColumNames();
         }
 
         private void SetColumNames()
         {
             dgv_habitaciones.Columns[0].HeaderText = "No. Habitación";
             dgv_habitaciones.Columns[1].HeaderText = "Nombre";
-            dgv_habitaciones.Columns[5].HeaderText = "precio temp. \nbaja";
-            dgv_habitaciones.Columns[8].HeaderText = "tipo de \nhabitación";
-            dgv_habitaciones.Columns[9].HeaderText = "Descripción";
-            dgv_habitaciones.Columns[10].HeaderText = "Estado de \nhabitación";
+            dgv_habitaciones.Columns[2].HeaderText = "Precio";
+            dgv_habitaciones.Columns[3].HeaderText = "tipo de habitación";
+            dgv_habitaciones.Columns[4].HeaderText = "Descripción";
+            dgv_habitaciones.Columns[5].HeaderText = "Estado";
         }
 
         private void btn_reservaciones_Click(object sender, EventArgs e)
