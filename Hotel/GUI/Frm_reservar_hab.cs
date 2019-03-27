@@ -283,7 +283,7 @@ namespace Hotel.GUI
                     LimpiarCamposCliente();
                 }
             }
-            catch(Exception error)
+            catch(Exception)
             {
                 MessageBox.Show("Error, ingresa solo valores numericos");
             }
