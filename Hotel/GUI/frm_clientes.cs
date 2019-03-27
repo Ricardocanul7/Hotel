@@ -16,7 +16,7 @@ namespace Hotel.GUI
     {
         ClienteBO clienteBO = new ClienteBO();
         ClienteDAO clienteDAO = new ClienteDAO();
-        Conexion Miconexion = new Conexion();
+        bool Cliente_mod = false;
         public frm_clientes()
         {
             InitializeComponent();
@@ -27,21 +27,42 @@ namespace Hotel.GUI
 
         private void Guardar_clientes(object sender, EventArgs e)
         {
-            if (clienteDAO.Agregar(RecuperarInformacion()) == 1)
+            if (Cliente_mod == false)
             {
-                MessageBox.Show("Se ha Agregado el Empleado");
+                if (clienteDAO.Agregar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha Agregado el Cliente");
+                }
+                else
+                {
+                    MessageBox.Show("Ha sucedido un error");
+                }
             }
             else
             {
-                MessageBox.Show("Ha sucedido un error");
+                if (clienteDAO.Modificar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha modificado el Cliente");
+                }
+                else
+                {
+                    MessageBox.Show("Ha sucedido un error");
+                }
             }
 
+
             Limpiar();
+         
         }
         internal ClienteBO RecuperarInformacion()
         {
             ClienteBO clienteBO = new ClienteBO();
             ClienteDAO clienteDAO = new ClienteDAO();
+
+            if (Cliente_mod == true)
+            {
+                clienteBO.Cliente_id = Convert.ToInt32(txt_idcliente.Text);
+            }
 
             clienteBO.Cliente_nombre = txt_nom_cliente.Text;
             clienteBO.Cliente_apaterno = txt_apaterno_cliente.Text;
@@ -61,6 +82,23 @@ namespace Hotel.GUI
             txt_email_cliente.Clear();
             txt_tele_cliente.Clear();
         }
+        public void Add_cliente_mod(int id_cliente)
+        {
+            Cliente_mod = true;
+            btn_guardar_cliente.Text = "Modificar";
+            DataRow[] clienteT = clienteDAO.Buscar().Select(String.Format("cliente_id = {0}", id_cliente));
 
+            if (clienteT.Length > 0)
+            {
+                txt_idcliente.Text = clienteT[0]["cliente_id"].ToString();
+                txt_nom_cliente.Text = clienteT[0]["nombre"].ToString();
+                txt_apaterno_cliente.Text = clienteT[0]["apaterno"].ToString();
+                txt_amaterno_cliente.Text = clienteT[0]["amaterno"].ToString();
+                txt_direcc_cliente.Text = clienteT[0]["direccion"].ToString();
+                txt_email_cliente.Text = clienteT[0]["email"].ToString();
+                txt_tele_cliente.Text = clienteT[0]["telefono"].ToString();
+
+            }
+        }
     }
 }

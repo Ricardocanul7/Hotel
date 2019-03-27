@@ -31,7 +31,7 @@ namespace Hotel.DAO
 
         public int Modificar(EmpresaBO empresa)
         {
-            string ComandoSQL = string.Format("UPDATE proveedor SET nombre='{1}', precio_porhora= {2}  WHERE id_empleado = '{0}' ", empresa.RFC, empresa.Nombre, empresa.Precio_hora);
+            string ComandoSQL = string.Format("UPDATE proveedor SET nombre='{1}', precio_porhora= {2}  WHERE rfc_proveedor = '{0}' ", empresa.RFC, empresa.Nombre, empresa.Precio_hora);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
 

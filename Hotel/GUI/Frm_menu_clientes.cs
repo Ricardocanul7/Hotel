@@ -17,6 +17,7 @@ namespace Hotel.GUI
         ClienteBO clienteBO = new ClienteBO();
         ClienteDAO clienteDAO = new ClienteDAO();
         private DataTable datos;
+        int Filaseleccionada = -1;
         public Frm_menu_clientes()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Hotel.GUI
 
         private void Seleccionar_Fila(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int Filaseleccionada = e.RowIndex;
+            Filaseleccionada = e.RowIndex;
 
             if (Filaseleccionada >= 0)
             {
@@ -103,6 +104,24 @@ namespace Hotel.GUI
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
+            }
+        }
+
+        private void Actualizar_Cliente(object sender, EventArgs e)
+        {
+            if (Filaseleccionada >= 0)
+            {
+                frm_clientes modificar = new frm_clientes();
+                modificar.Add_cliente_mod(clienteBO.Cliente_id);
+                if (modificar.ShowDialog() == DialogResult.OK)
+                {
+                    dgv_clientes.DataSource = clienteDAO.Buscar();
+                    dgv_clientes.Update();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un registro antes de modificar empleado!");
             }
         }
     }

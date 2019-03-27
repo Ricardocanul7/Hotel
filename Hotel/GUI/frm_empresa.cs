@@ -16,6 +16,7 @@ namespace Hotel.GUI
     {
         EmpresaBO empresaBO = new EmpresaBO();
         EmpresaDAO empresaDAO = new EmpresaDAO();
+        bool Empresa_mod = false;
 
         public frm_empresa()
         {
@@ -24,9 +25,16 @@ namespace Hotel.GUI
 
         internal EmpresaBO RecuperarInformacion()
         {
-            empresaBO.RFC = txt_rfc_empresa.Text;
+            EmpresaBO empresaBO = new EmpresaBO();
+            EmpresaDAO empresaDAO = new EmpresaDAO();
+
+            if (Empresa_mod == true)
+            {
+                empresaBO.RFC = txt_rfc_empresa.Text;
+            }
+
             empresaBO.Nombre = txt_nombre_empresa.Text;
-            empresaBO.Precio_hora = Convert.ToDecimal(txt_precio_hora.Text);
+            empresaBO.Precio_hora = Convert.ToInt32(txt_precio_hora.Text);
 
             return empresaBO;
         }
@@ -39,14 +47,45 @@ namespace Hotel.GUI
 
         private void Guardar_empresa(object sender, EventArgs e)
         {
-            if (empresaDAO.Agregar(RecuperarInformacion()) == 1)
+            if (Empresa_mod == false)
             {
-                MessageBox.Show("Se ha Agregado el Empleado");
+                if (empresaDAO.Agregar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha Agregado el Empleado");
+                }
+                else
+                {
+                    MessageBox.Show("Ha sucedido un error");
+                }
             }
             else
             {
-                MessageBox.Show("Ha sucedido un error");
+                if (empresaDAO.Modificar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha modificado el Empleado");
+                }
+                else
+                {
+                    MessageBox.Show("Ha sucedido un error");
+                }
+            }
+
+        }
+
+        public void Add_empresa_mod(int id_empresa)
+        {
+            Empresa_mod = true;
+            btn_guardar_puesto.Text = "Modificar";
+            DataRow[] empresas = empresaDAO.Buscar().Select(String.Format("rfc_proveedor = {0}", id_empresa));
+
+            if (empresas.Length > 0)
+            {
+                txt_rfc_empresa.Text = empresas[0]["rfc_proveedor"].ToString();
+                txt_nombre_empresa.Text = empresas[0]["nombre"].ToString();
+                txt_precio_hora.Text = empresas[0]["precio_porhora"].ToString();
+
             }
         }
     }
 }
+
