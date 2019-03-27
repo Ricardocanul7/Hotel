@@ -32,7 +32,7 @@ namespace Hotel
             dgv_habitaciones.AllowUserToAddRows = false;
             dgv_habitaciones.ReadOnly = true;
             dgv_habitaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            
             SetColumNames();
         }
 
@@ -40,12 +40,7 @@ namespace Hotel
         {
             dgv_habitaciones.Columns[0].HeaderText = "No. Habitación";
             dgv_habitaciones.Columns[1].HeaderText = "Nombre";
-            dgv_habitaciones.Columns[2].HeaderText = "Max. niños";
-            dgv_habitaciones.Columns[3].HeaderText = "Max adultos";
-            dgv_habitaciones.Columns[4].HeaderText = "precio temp. \nalta";
             dgv_habitaciones.Columns[5].HeaderText = "precio temp. \nbaja";
-            dgv_habitaciones.Columns[6].HeaderText = "precio persona \nadic. temp. alta";
-            dgv_habitaciones.Columns[7].HeaderText = "precio persona \nadic. temp. baja";
             dgv_habitaciones.Columns[8].HeaderText = "tipo de \nhabitación";
             dgv_habitaciones.Columns[9].HeaderText = "Descripción";
             dgv_habitaciones.Columns[10].HeaderText = "Estado de \nhabitación";
@@ -81,7 +76,7 @@ namespace Hotel
 
             if (txt_buscar_hab.Text != string.Empty)
             {
-                habitacion.RowFilter = string.Format("convert(num_habitacion,'System.String')LIKE '%{0}%'", txt_buscar_hab.Text);
+                habitacion.RowFilter = string.Format("nombre LIKE '%{0}%' OR convert(num_habitacion,'System.String')LIKE '%{0}%'", txt_buscar_hab.Text);
             }
             dgv_habitaciones.DataSource = habitacion;
         }
