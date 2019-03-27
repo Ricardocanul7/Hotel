@@ -152,6 +152,7 @@
             this.btn_modificar_tipo.Text = "Modificar";
             this.btn_modificar_tipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar_tipo.UseVisualStyleBackColor = true;
+            this.btn_modificar_tipo.Click += new System.EventHandler(this.btn_modificar_tipo_Click);
             // 
             // btn_guardar_tipo
             // 
@@ -226,6 +227,7 @@
             this.dgv_estado_hab.Name = "dgv_estado_hab";
             this.dgv_estado_hab.Size = new System.Drawing.Size(305, 199);
             this.dgv_estado_hab.TabIndex = 44;
+            this.dgv_estado_hab.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_estado_hab_CellMouseClick);
             // 
             // btn_modificar_estado
             // 
@@ -284,6 +286,7 @@
             this.btn_eliminar_estado.Text = "Eliminar";
             this.btn_eliminar_estado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar_estado.UseVisualStyleBackColor = true;
+            this.btn_eliminar_estado.Click += new System.EventHandler(this.btn_eliminar_estado_Click);
             // 
             // txt_estado_id
             // 
