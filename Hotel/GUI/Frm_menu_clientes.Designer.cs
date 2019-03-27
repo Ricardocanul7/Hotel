@@ -108,6 +108,7 @@
             this.txt_Actualizar_Empleados.Name = "txt_Actualizar_Empleados";
             this.txt_Actualizar_Empleados.Size = new System.Drawing.Size(120, 36);
             this.txt_Actualizar_Empleados.Text = "Actualiza Clientes";
+            this.txt_Actualizar_Empleados.Click += new System.EventHandler(this.Actualizar_Cliente);
             // 
             // toolStripSeparator5
             // 

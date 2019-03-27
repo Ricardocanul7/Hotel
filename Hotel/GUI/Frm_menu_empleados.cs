@@ -107,7 +107,7 @@ namespace Hotel.GUI
             if(Filaseleccionada >= 0)
             {
                 if (MessageBox.Show("¿Estas seguro? el cambio sera permanente",
-        "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                  "Se requiere confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     if (empleadoDAO.Eliminar(empleadoBO) == 1)
                     {

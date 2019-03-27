@@ -17,7 +17,7 @@ namespace Hotel.GUI
     {
         EmpresaBO empresaBO = new EmpresaBO();
         EmpresaDAO empresaDAO = new EmpresaDAO();
-
+        int Filaseleccionada = -1;
         private DataTable datos;
         
         public Frm_mantenimiento()
@@ -84,7 +84,7 @@ namespace Hotel.GUI
 
         private void Seleccionar_Fila(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int Filaseleccionada = e.RowIndex;
+            Filaseleccionada = e.RowIndex;
 
             if (Filaseleccionada >= 0)
             {
@@ -96,5 +96,22 @@ namespace Hotel.GUI
             }
         }
 
-     }
+        private void Actualizar_Empresa(object sender, EventArgs e)
+        {
+            if (Filaseleccionada >= 0)
+            {
+                frm_empresa modificar = new frm_empresa();
+                modificar.Add_empresa_mod(Convert.ToInt32(empresaBO.RFC));
+                if (modificar.ShowDialog() == DialogResult.OK)
+                {
+                    dgv_empresas.DataSource = empresaDAO.Buscar();
+                    dgv_empresas.Update();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un registro antes de modificar Empresa!");
+            }
+        }
+    }
 }          

@@ -137,7 +137,7 @@
             this.btn_mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mantenimiento.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mantenimiento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_mantenimiento.Image = global::Hotel.Properties.Resources._031_broom1;
+            this.btn_mantenimiento.Image = global::Hotel.Properties.Resources.add1;
             this.btn_mantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_mantenimiento.Location = new System.Drawing.Point(0, 369);
             this.btn_mantenimiento.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
@@ -145,7 +145,8 @@
             this.btn_mantenimiento.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btn_mantenimiento.Size = new System.Drawing.Size(250, 48);
             this.btn_mantenimiento.TabIndex = 15;
-            this.btn_mantenimiento.Text = "     MANTENIMIENTO";
+            this.btn_mantenimiento.Text = "           EMPRESAS";
+            this.btn_mantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_mantenimiento.UseVisualStyleBackColor = false;
             this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click);
             // 
