@@ -33,6 +33,12 @@ namespace Hotel
             dgv_habitaciones.ReadOnly = true;
             dgv_habitaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            // Admin = 1
+            if(DatosLogin.Tipo_usuario != 1)
+            {
+                this.btn_configuracion.Visible = false;
+            }
+
             SetColumNames();
         }
 
