@@ -109,6 +109,7 @@
             // 
             // cbo_tipoempleado
             // 
+            this.cbo_tipoempleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_tipoempleado.FormattingEnabled = true;
             this.cbo_tipoempleado.Location = new System.Drawing.Point(99, 147);
             this.cbo_tipoempleado.Name = "cbo_tipoempleado";
@@ -142,6 +143,7 @@
             // 
             // cbo_Horario
             // 
+            this.cbo_Horario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Horario.FormattingEnabled = true;
             this.cbo_Horario.Items.AddRange(new object[] {
             "8 am - 4 pm",

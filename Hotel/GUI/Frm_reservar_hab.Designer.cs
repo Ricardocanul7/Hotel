@@ -57,6 +57,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbl_num_noches = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.rdb_pago_pendiente = new System.Windows.Forms.RadioButton();
             this.rdb_pagado = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -69,8 +71,6 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_num_noches = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -102,6 +102,7 @@
             // 
             // cbo_habitaciones
             // 
+            this.cbo_habitaciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_habitaciones.FormattingEnabled = true;
             this.cbo_habitaciones.Location = new System.Drawing.Point(119, 28);
             this.cbo_habitaciones.Name = "cbo_habitaciones";
@@ -362,6 +363,25 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Precio";
             // 
+            // lbl_num_noches
+            // 
+            this.lbl_num_noches.AutoSize = true;
+            this.lbl_num_noches.Location = new System.Drawing.Point(249, 108);
+            this.lbl_num_noches.Name = "lbl_num_noches";
+            this.lbl_num_noches.Size = new System.Drawing.Size(13, 13);
+            this.lbl_num_noches.TabIndex = 56;
+            this.lbl_num_noches.Text = "1";
+            this.lbl_num_noches.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(138, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Cantidad de noches:";
+            // 
             // rdb_pago_pendiente
             // 
             this.rdb_pago_pendiente.AutoSize = true;
@@ -490,25 +510,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Cantidad de noches:";
-            // 
-            // lbl_num_noches
-            // 
-            this.lbl_num_noches.AutoSize = true;
-            this.lbl_num_noches.Location = new System.Drawing.Point(249, 108);
-            this.lbl_num_noches.Name = "lbl_num_noches";
-            this.lbl_num_noches.Size = new System.Drawing.Size(13, 13);
-            this.lbl_num_noches.TabIndex = 56;
-            this.lbl_num_noches.Text = "1";
-            this.lbl_num_noches.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Frm_reservar_hab
             // 

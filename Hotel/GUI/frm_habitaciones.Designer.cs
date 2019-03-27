@@ -203,6 +203,7 @@
             // 
             // cbo_estadohab
             // 
+            this.cbo_estadohab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_estadohab.FormattingEnabled = true;
             this.cbo_estadohab.Location = new System.Drawing.Point(125, 100);
             this.cbo_estadohab.Name = "cbo_estadohab";
@@ -253,6 +254,7 @@
             // 
             // cbo_tipohab
             // 
+            this.cbo_tipohab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_tipohab.FormattingEnabled = true;
             this.cbo_tipohab.Location = new System.Drawing.Point(125, 63);
             this.cbo_tipohab.Name = "cbo_tipohab";
