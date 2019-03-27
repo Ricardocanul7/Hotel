@@ -19,6 +19,7 @@ namespace Hotel.GUI
         ReservasBO reservaBO_mod = null;
         ReservasBO reservasBO = new ReservasBO();
         decimal precioMasIVA = 0.00m;
+        double num_noches = 1;
 
         public Frm_reservar_hab()
         {
@@ -26,6 +27,8 @@ namespace Hotel.GUI
             
             reservaDAO = new ReservaDAO();
             habitacionDAO = new HabitacionDAO();
+
+            this.LimitDate();
 
             /*
             cbo_tipohab.Items.Add("SELECCIONAR");
@@ -40,6 +43,14 @@ namespace Hotel.GUI
             **/
 
             Set_cbo_habitaciones();
+        }
+
+        public void LimitDate()
+        {
+            Dtm_checkout.MinDate = DateTime.Now.AddDays(1);
+            num_noches = 1;
+            lbl_num_noches.Text = num_noches.ToString();
+            Lbl_total_pago.Text = (precioMasIVA * (decimal)num_noches).ToString();
         }
 
         public void Set_cbo_habitaciones()
@@ -141,7 +152,7 @@ namespace Hotel.GUI
                 if ((int)rows[i][0] == Convert.ToInt32(cbo_habitaciones.Items[index].ToString().Split('-')[0]))
                 {
                     //int tipo_id = (int)rows[i][8] - 1;
-                    txt_tipo_hab.Text = rowsTipo[i]["nombre_tipo"].ToString();
+                    txt_tipo_hab.Text = rows[i]["nombre_tipo"].ToString();
                     break;
                 }
             }
@@ -155,7 +166,7 @@ namespace Hotel.GUI
             lbl_iva.Text = iva.ToString();
 
             precioMasIVA = precio + iva;
-            Lbl_total_pago.Text = precioMasIVA.ToString();
+            Lbl_total_pago.Text = (precioMasIVA * (decimal)num_noches).ToString();
         }
 
         private void Txt_id_cliente_TextChanged(object sender, EventArgs e)
