@@ -69,6 +69,8 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_num_noches = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -303,6 +305,7 @@
             this.Dtm_checkout.Name = "Dtm_checkout";
             this.Dtm_checkout.Size = new System.Drawing.Size(200, 20);
             this.Dtm_checkout.TabIndex = 16;
+            this.Dtm_checkout.ValueChanged += new System.EventHandler(this.Dtm_checkout_ValueChanged);
             // 
             // Dtm_checkin
             // 
@@ -341,6 +344,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lbl_num_noches);
+            this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.rdb_pago_pendiente);
             this.groupBox4.Controls.Add(this.rdb_pagado);
             this.groupBox4.Controls.Add(this.pictureBox2);
@@ -382,7 +387,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hotel.Properties.Resources.cash;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 74);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 60);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -396,29 +401,29 @@
             this.Lbl_total_pago.ForeColor = System.Drawing.Color.ForestGreen;
             this.Lbl_total_pago.Location = new System.Drawing.Point(248, 130);
             this.Lbl_total_pago.Name = "Lbl_total_pago";
-            this.Lbl_total_pago.Size = new System.Drawing.Size(80, 24);
+            this.Lbl_total_pago.Size = new System.Drawing.Size(45, 24);
             this.Lbl_total_pago.TabIndex = 49;
-            this.Lbl_total_pago.Text = "2,700.00";
+            this.Lbl_total_pago.Text = "0.00";
             this.Lbl_total_pago.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_iva
             // 
             this.lbl_iva.AutoSize = true;
-            this.lbl_iva.Location = new System.Drawing.Point(279, 100);
+            this.lbl_iva.Location = new System.Drawing.Point(249, 84);
             this.lbl_iva.Name = "lbl_iva";
-            this.lbl_iva.Size = new System.Drawing.Size(40, 13);
+            this.lbl_iva.Size = new System.Drawing.Size(28, 13);
             this.lbl_iva.TabIndex = 48;
-            this.lbl_iva.Text = "400.00";
+            this.lbl_iva.Text = "0.00";
             this.lbl_iva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_precio_res
             // 
             this.lbl_precio_res.AutoSize = true;
-            this.lbl_precio_res.Location = new System.Drawing.Point(279, 78);
+            this.lbl_precio_res.Location = new System.Drawing.Point(249, 60);
             this.lbl_precio_res.Name = "lbl_precio_res";
-            this.lbl_precio_res.Size = new System.Drawing.Size(49, 13);
+            this.lbl_precio_res.Size = new System.Drawing.Size(28, 13);
             this.lbl_precio_res.TabIndex = 47;
-            this.lbl_precio_res.Text = "5,000.00";
+            this.lbl_precio_res.Text = "0.00";
             this.lbl_precio_res.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
@@ -435,7 +440,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(206, 100);
+            this.label14.Location = new System.Drawing.Point(206, 84);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 13);
             this.label14.TabIndex = 43;
@@ -444,11 +449,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(193, 78);
+            this.label13.Location = new System.Drawing.Point(142, 60);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.Size = new System.Drawing.Size(100, 13);
             this.label13.TabIndex = 42;
-            this.label13.Text = "Precio: $";
+            this.label13.Text = "Precio por noche: $";
             // 
             // btn_cancelar
             // 
@@ -485,6 +490,25 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(138, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Cantidad de noches:";
+            // 
+            // lbl_num_noches
+            // 
+            this.lbl_num_noches.AutoSize = true;
+            this.lbl_num_noches.Location = new System.Drawing.Point(249, 108);
+            this.lbl_num_noches.Name = "lbl_num_noches";
+            this.lbl_num_noches.Size = new System.Drawing.Size(13, 13);
+            this.lbl_num_noches.TabIndex = 56;
+            this.lbl_num_noches.Text = "1";
+            this.lbl_num_noches.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Frm_reservar_hab
             // 
@@ -559,5 +583,7 @@
         private System.Windows.Forms.TextBox txt_tipo_hab;
         private System.Windows.Forms.RadioButton rdb_pago_pendiente;
         private System.Windows.Forms.RadioButton rdb_pagado;
+        private System.Windows.Forms.Label lbl_num_noches;
+        private System.Windows.Forms.Label label2;
     }
 }

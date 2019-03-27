@@ -18,6 +18,7 @@ namespace Hotel.GUI
         HabitacionDAO habitacionDAO;
         ReservasBO reservaBO_mod = null;
         ReservasBO reservasBO = new ReservasBO();
+        decimal precioMasIVA = 0.00m;
 
         public Frm_reservar_hab()
         {
@@ -150,7 +151,11 @@ namespace Hotel.GUI
             DataRow[] rowHab = habitacionDAO.Buscar().Select(string.Format("num_habitacion = '{0}'", num_habitacion));
             decimal precio = Convert.ToDecimal(rowHab[0]["precio_baja"]);
             lbl_precio_res.Text = (precio * 1.00m).ToString();
-            lbl_iva.Text = (precio * 0.16m).ToString();
+            decimal iva = precio * 0.16m;
+            lbl_iva.Text = iva.ToString();
+
+            precioMasIVA = precio + iva;
+            Lbl_total_pago.Text = precioMasIVA.ToString();
         }
 
         private void Txt_id_cliente_TextChanged(object sender, EventArgs e)
@@ -229,6 +234,14 @@ namespace Hotel.GUI
             {
                 LimpiarCamposCliente();
             }
+        }
+
+        private void Dtm_checkout_ValueChanged(object sender, EventArgs e)
+        {
+            TimeSpan span = Dtm_checkout.Value.Subtract(Dtm_checkin.Value);
+            double num_noches = Math.Ceiling( span.TotalDays); // Pendiente de calcular
+            lbl_num_noches.Text = num_noches.ToString();
+            Lbl_total_pago.Text = (precioMasIVA * (decimal)num_noches).ToString();
         }
     }
 }
