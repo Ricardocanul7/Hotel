@@ -32,9 +32,9 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_nvoempleado = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btn_eliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.txt_Actualizar_Empleados = new System.Windows.Forms.ToolStripButton();
+            this.btn_Actualizar_Empleados = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txt_buscarclientes = new System.Windows.Forms.ToolStripTextBox();
@@ -52,9 +52,9 @@
             this.toolStripSeparator4,
             this.btn_nvoempleado,
             this.toolStripSeparator1,
-            this.toolStripButton1,
+            this.btn_eliminar,
             this.toolStripSeparator3,
-            this.txt_Actualizar_Empleados,
+            this.btn_Actualizar_Empleados,
             this.toolStripSeparator5,
             this.toolStripLabel1,
             this.txt_buscarclientes,
@@ -87,28 +87,28 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
-            // toolStripButton1
+            // btn_eliminar
             // 
-            this.toolStripButton1.Image = global::Hotel.Properties.Resources.close;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(110, 36);
-            this.toolStripButton1.Text = "Eliminar Cliente";
-            this.toolStripButton1.Click += new System.EventHandler(this.Eliminar_Clientes);
+            this.btn_eliminar.Image = global::Hotel.Properties.Resources.close;
+            this.btn_eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(110, 36);
+            this.btn_eliminar.Text = "Eliminar Cliente";
+            this.btn_eliminar.Click += new System.EventHandler(this.Eliminar_Clientes);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
             // 
-            // txt_Actualizar_Empleados
+            // btn_Actualizar_Empleados
             // 
-            this.txt_Actualizar_Empleados.Image = global::Hotel.Properties.Resources._036_edit;
-            this.txt_Actualizar_Empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.txt_Actualizar_Empleados.Name = "txt_Actualizar_Empleados";
-            this.txt_Actualizar_Empleados.Size = new System.Drawing.Size(120, 36);
-            this.txt_Actualizar_Empleados.Text = "Actualiza Clientes";
-            this.txt_Actualizar_Empleados.Click += new System.EventHandler(this.Actualizar_Cliente);
+            this.btn_Actualizar_Empleados.Image = global::Hotel.Properties.Resources._036_edit;
+            this.btn_Actualizar_Empleados.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Actualizar_Empleados.Name = "btn_Actualizar_Empleados";
+            this.btn_Actualizar_Empleados.Size = new System.Drawing.Size(120, 36);
+            this.btn_Actualizar_Empleados.Text = "Actualiza Clientes";
+            this.btn_Actualizar_Empleados.Click += new System.EventHandler(this.Actualizar_Cliente);
             // 
             // toolStripSeparator5
             // 
@@ -171,9 +171,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btn_nvoempleado;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_eliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton txt_Actualizar_Empleados;
+        private System.Windows.Forms.ToolStripButton btn_Actualizar_Empleados;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox txt_buscarclientes;

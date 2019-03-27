@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_buscar_id = new System.Windows.Forms.Button();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
             this.txt_apelli_matern_cli = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Txt_id_cliente = new System.Windows.Forms.TextBox();
@@ -59,8 +61,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lbl_num_noches = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.rdb_pago_pendiente = new System.Windows.Forms.RadioButton();
-            this.rdb_pagado = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Lbl_total_pago = new System.Windows.Forms.Label();
             this.lbl_iva = new System.Windows.Forms.Label();
@@ -71,8 +71,6 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar_id = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,6 +162,30 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
+            // 
+            // btn_buscar_id
+            // 
+            this.btn_buscar_id.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_id.Image = global::Hotel.Properties.Resources.icon_search;
+            this.btn_buscar_id.Location = new System.Drawing.Point(334, 21);
+            this.btn_buscar_id.Name = "btn_buscar_id";
+            this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
+            this.btn_buscar_id.TabIndex = 26;
+            this.btn_buscar_id.UseVisualStyleBackColor = true;
+            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_nombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_nombre.Image = global::Hotel.Properties.Resources.icon_search;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(334, 47);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(26, 23);
+            this.btn_buscar_nombre.TabIndex = 25;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // txt_apelli_matern_cli
             // 
@@ -351,8 +373,6 @@
             // 
             this.groupBox4.Controls.Add(this.lbl_num_noches);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.rdb_pago_pendiente);
-            this.groupBox4.Controls.Add(this.rdb_pagado);
             this.groupBox4.Controls.Add(this.pictureBox2);
             this.groupBox4.Controls.Add(this.Lbl_total_pago);
             this.groupBox4.Controls.Add(this.lbl_iva);
@@ -385,28 +405,6 @@
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 55;
             this.label2.Text = "Cantidad de noches:";
-            // 
-            // rdb_pago_pendiente
-            // 
-            this.rdb_pago_pendiente.AutoSize = true;
-            this.rdb_pago_pendiente.Location = new System.Drawing.Point(252, 28);
-            this.rdb_pago_pendiente.Name = "rdb_pago_pendiente";
-            this.rdb_pago_pendiente.Size = new System.Drawing.Size(73, 17);
-            this.rdb_pago_pendiente.TabIndex = 54;
-            this.rdb_pago_pendiente.TabStop = true;
-            this.rdb_pago_pendiente.Text = "Pendiente";
-            this.rdb_pago_pendiente.UseVisualStyleBackColor = true;
-            // 
-            // rdb_pagado
-            // 
-            this.rdb_pagado.AutoSize = true;
-            this.rdb_pagado.Location = new System.Drawing.Point(55, 28);
-            this.rdb_pagado.Name = "rdb_pagado";
-            this.rdb_pagado.Size = new System.Drawing.Size(62, 17);
-            this.rdb_pagado.TabIndex = 53;
-            this.rdb_pagado.TabStop = true;
-            this.rdb_pagado.Text = "Pagado";
-            this.rdb_pagado.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -515,30 +513,6 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_buscar_nombre
-            // 
-            this.btn_buscar_nombre.FlatAppearance.BorderSize = 0;
-            this.btn_buscar_nombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar_nombre.Image = global::Hotel.Properties.Resources.icon_search;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(334, 47);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(26, 23);
-            this.btn_buscar_nombre.TabIndex = 25;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
-            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
-            // 
-            // btn_buscar_id
-            // 
-            this.btn_buscar_id.FlatAppearance.BorderSize = 0;
-            this.btn_buscar_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar_id.Image = global::Hotel.Properties.Resources.icon_search;
-            this.btn_buscar_id.Location = new System.Drawing.Point(334, 21);
-            this.btn_buscar_id.Name = "btn_buscar_id";
-            this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
-            this.btn_buscar_id.TabIndex = 26;
-            this.btn_buscar_id.UseVisualStyleBackColor = true;
-            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
-            // 
             // Frm_reservar_hab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -610,8 +584,6 @@
         private System.Windows.Forms.TextBox txt_apelli_matern_cli;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_tipo_hab;
-        private System.Windows.Forms.RadioButton rdb_pago_pendiente;
-        private System.Windows.Forms.RadioButton rdb_pagado;
         private System.Windows.Forms.Label lbl_num_noches;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_buscar_id;
