@@ -24,7 +24,8 @@ namespace Hotel.DAO
 
         public int Modificar(EstadohabBO estadohabBO)
         {
-            return 0;
+            string ComandoSQL = string.Format("UPDATE estado_habitacion SET estado='{1}' WHERE estado_id={0}", estadohabBO.Estado_id, estadohabBO.Nombre);
+            return conexion.EjecutarComando(ComandoSQL);
         }
 
         public int Eliminar(EstadohabBO estadohabBO)
