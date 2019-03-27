@@ -16,6 +16,8 @@ namespace Hotel.GUI
     {
         EmpleadoBO empleadoBO = new EmpleadoBO();
         EmpleadoDAO empleadoDAO = new EmpleadoDAO();
+        bool Empleado_mod = false;
+
         public frm_empleado()
         {
             InitializeComponent();
@@ -46,14 +48,29 @@ namespace Hotel.GUI
 
         private void Guardar_Empleados(object sender, EventArgs e)
         {
-            if(empleadoDAO.Agregar(RecuperarInformacion()) == 1)
+            if(Empleado_mod == false)
             {
-                MessageBox.Show("Se ha Agregado el Empleado");
+                if (empleadoDAO.Agregar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha Agregado el Empleado");
+                }
+                else
+                {
+                    MessageBox.Show("Ha sucedido un error");
+                }
             }
             else
             {
-                MessageBox.Show("Ha sucedido un error");
+                if (empleadoDAO.Modificar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha modificado el Empleado");
+                }
+                else
+                {
+                    MessageBox.Show("Ha sucedido un error");
+                }
             }
+            
             
             Limpiar();
 
@@ -62,6 +79,11 @@ namespace Hotel.GUI
         {
             EmpleadoBO empleadoBO = new EmpleadoBO();
             EmpleadoDAO empleadoDAO = new EmpleadoDAO();
+
+            if(Empleado_mod == true)
+            {
+                empleadoBO.Id_empleado = Convert.ToInt32(txt_idempleado.Text);
+            }
 
             empleadoBO.Nombre = txt_nom_empleado.Text;
             empleadoBO.Apellido_Petem = txt_apellidoparteno.Text;
@@ -93,5 +115,24 @@ namespace Hotel.GUI
         
         }
 
+        public void Add_empleado_mod(int id_empleado)
+        {
+            Empleado_mod = true;
+            btn_guardar_empleado.Text = "Modificar";
+            DataRow[] empleadoT = empleadoDAO.Buscar().Select(String.Format("empleado_id = {0}", id_empleado));
+
+            if(empleadoT.Length > 0)
+            {
+                txt_idempleado.Text = empleadoT[0]["empleado_id"].ToString();
+                txt_nom_empleado.Text = empleadoT[0]["nombre"].ToString();
+                txt_apellidoparteno.Text = empleadoT[0]["apellido_patern"].ToString();
+                txt_apellidomaterno.Text = empleadoT[0]["apellido_matern"].ToString();
+                txt_direcc_empleado.Text = empleadoT[0]["direccion"].ToString();
+                txt_tele_empleado.Text = empleadoT[0]["telefono"].ToString();
+                cbo_Horario.Text = empleadoT[0]["horario"].ToString();
+                txt_sueldoempleado.Text = empleadoT[0]["sueldo"].ToString();
+                cbo_tipoempleado.Text = empleadoT[0]["puesto"].ToString();
+            }
+        }
     }
 }
