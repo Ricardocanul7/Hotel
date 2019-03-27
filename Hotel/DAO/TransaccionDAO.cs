@@ -15,11 +15,11 @@ namespace Hotel.DAO
             Miconexion = new Conexion();
         }
 
-        public int Agregar(TransaccionBO transaccionbo)
+      /*  public int Agregar(TransaccionBO transaccionbo)
         {
-            string ComandoSQL = string.Format("INSERT INTO corte_caja (corte_id, monto, fecha, hora, usuario_id)VALUES('{0}','{1}','{2}','{3}','1');", cajabo.Corte_id, cajabo.Monto, cajabo.Fecha.ToString("yyyy-MM-dd"), cajabo.Hora.ToString("HH:mm:ss"), cajabo.Usuario);
+            //string ComandoSQL = string.Format("INSERT INTO corte_caja (corte_id, monto, fecha, hora, usuario_id)VALUES('{0}','{1}','{2}','{3}','1');", cajabo.Corte_id, cajabo.Monto, cajabo.Fecha.ToString("yyyy-MM-dd"), cajabo.Hora.ToString("HH:mm:ss"), cajabo.Usuario);
 
-            return Miconexion.EjecutarComando(ComandoSQL);
+          return Miconexion.EjecutarComando(ComandoSQL);*/
 
         }
 
@@ -28,13 +28,13 @@ namespace Hotel.DAO
         /* public bool Eliminar()
          {
              return true;
-         }*/
+         }
         public DataTable Buscar()
         {
             string ComandoSQL = string.Format("SELECT * FROM corte_caja");
             return Miconexion.EjecutarSentencia(ComandoSQL);
 
-        }
+        }*/
         /*  -Agregar
            -Modificar
            -Eliminar
