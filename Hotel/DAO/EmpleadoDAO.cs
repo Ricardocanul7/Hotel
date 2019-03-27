@@ -32,7 +32,7 @@ namespace Hotel.DAO
 
         public int Modificar(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("UPDATE empleado SET nombre='{1}', apellido_patern='{2}', apellido_matern='{3}', direccion='{4}', telefono='{5}', horario='{6}', sueldo='{7}', puesto_id='{8}' WHERE id_empleado = {0} ", empleado.Id_empleado, empleado.Nombre, empleado.Apellido_Petem, empleado.Apellido_Matem, empleado.Direccion, empleado.Telefono, empleado.Horario, empleado.Sueldo, empleado.Puesto_id);
+            string ComandoSQL = string.Format("UPDATE empleado SET nombre='{1}', apellido_patern='{2}', apellido_matern='{3}', direccion='{4}', telefono='{5}', horario='{6}', sueldo='{7}', puesto_id='{8}' WHERE empleado_id = {0} ", empleado.Id_empleado, empleado.Nombre, empleado.Apellido_Petem, empleado.Apellido_Matem, empleado.Direccion, empleado.Telefono, empleado.Horario, empleado.Sueldo, empleado.Puesto_id);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
 
