@@ -17,8 +17,10 @@ namespace Hotel
     {
         HabitacionDAO habitacionDAO;
         HabitacionBO habitacionBO;
+        ReservaDAO reservas;
 
         private DataTable datos;
+        private DataTable datos_reservas;
         int index;
 
         public Frm_menu()
@@ -26,6 +28,11 @@ namespace Hotel
             InitializeComponent();
             habitacionBO = new HabitacionBO();
             habitacionDAO = new HabitacionDAO();
+            reservas = new ReservaDAO();
+
+            datos_reservas = reservas.Buscar();
+
+            this.VerificarEstado_Hab_reserva();
 
             datos = habitacionDAO.Buscar();
             dgv_habitaciones.DataSource = datos;
@@ -36,10 +43,18 @@ namespace Hotel
             // Admin = 1
             if(DatosLogin.Tipo_usuario != 1)
             {
-                this.btn_configuracion.Visible = false;
+                this.btn_configuracion.Enabled = false;
+                this.btn_eliminar_hab.Enabled = false;
+                this.btn_agregar_habitaciones.Enabled = false;
+                this.btn_modificar_hab.Enabled = false;
             }
 
-            //SetColumNames();
+            SetColumNames();
+        }
+
+        private void VerificarEstado_Hab_reserva()
+        {
+            // POR HACER
         }
 
         private void SetColumNames()
@@ -47,7 +62,7 @@ namespace Hotel
             dgv_habitaciones.Columns[0].HeaderText = "No. Habitación";
             dgv_habitaciones.Columns[1].HeaderText = "Nombre";
             dgv_habitaciones.Columns[2].HeaderText = "Precio";
-            dgv_habitaciones.Columns[3].HeaderText = "tipo de habitación";
+            dgv_habitaciones.Columns[3].HeaderText = "Tipo de habitación";
             dgv_habitaciones.Columns[4].HeaderText = "Descripción";
             dgv_habitaciones.Columns[5].HeaderText = "Estado";
         }
