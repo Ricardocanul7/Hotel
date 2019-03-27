@@ -109,7 +109,7 @@ namespace Hotel.GUI
             habitacion.RowFilter = string.Empty;
             if (txt_buscar.Text != string.Empty)
             {
-                habitacion.RowFilter = string.Format("convert(folio_reserva,'System.String')LIKE '{0}%'", txt_buscar.Text);
+                habitacion.RowFilter = string.Format("convert(folio_reserva,'System.String')LIKE '{0}%' or nombre LIKE '{0}%'", txt_buscar.Text);
             }
             dgv_reservaciones.DataSource = habitacion;
         }
