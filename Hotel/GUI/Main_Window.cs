@@ -19,6 +19,13 @@ namespace Hotel.GUI
             InitializeComponent();
             AbrirPantallaInicial();
             lbl_nombre_usuario.Text = DatosLogin.Nombre + " " + DatosLogin.Apaterno;
+
+            // Admin = 1;
+            if(DatosLogin.Tipo_usuario != 1)
+            {
+                btn_empleados.Visible = false;
+                btn_mantenimiento.Visible = false;
+            }
         }
 
         protected override void OnClosed(EventArgs e)
