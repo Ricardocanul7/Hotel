@@ -74,6 +74,8 @@
     <Compile Include="BO\EstadohabBO.cs" />
     <Compile Include="BO\ReservasBO.cs" />
     <Compile Include="BO\TipohabBO.cs" />
+    <Compile Include="BO\TipoTransaccionBO.cs" />
+    <Compile Include="BO\TransaccionBO.cs" />
     <Compile Include="DAO\CajaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
@@ -84,6 +86,8 @@
     <Compile Include="DAO\HabitacionDAO.cs" />
     <Compile Include="DAO\ReservaDAO.cs" />
     <Compile Include="DAO\TipohabDAO.cs" />
+    <Compile Include="DAO\TipoTransaccionDAO.cs" />
+    <Compile Include="DAO\TransaccionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="BO\EmpleadoBO.cs" />
     <Compile Include="BO\HabitacionBO.cs" />
@@ -196,6 +200,12 @@
     <Compile Include="GUI\Frm_reservar_hab.Designer.cs">
       <DependentUpon>Frm_reservar_hab.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Frm_Transacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_Transacciones.Designer.cs">
+      <DependentUpon>Frm_Transacciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Main_Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_reservar_hab.resx">
       <DependentUpon>Frm_reservar_hab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_Transacciones.resx">
+      <DependentUpon>Frm_Transacciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main_Window.resx">
       <DependentUpon>Main_Window.cs</DependentUpon>
