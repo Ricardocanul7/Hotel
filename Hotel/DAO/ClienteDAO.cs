@@ -31,9 +31,10 @@ namespace Hotel.DAO
 
         }
 
-        public bool Eliminar()
+        public int Eliminar(ClienteBO cliente)
         {
-            return true;
+            string ComandoSQL = string.Format("DELETE FROM cliente WHERE cliente_id ={0}", cliente.Cliente_id);
+            return Miconexion.EjecutarComando(ComandoSQL);
         }
         public DataTable Buscar()
         {
