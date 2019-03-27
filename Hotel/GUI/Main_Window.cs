@@ -101,7 +101,7 @@ namespace Hotel.GUI
         private void btn_clientes_Click(object sender, EventArgs e)
         {
             this.panel_principal.Controls.Clear();
-            var ventana = new frm_clientes();
+            var ventana = new Frm_menu_clientes();
             ventana.TopLevel = false;
             ventana.Dock = DockStyle.Fill;
             ventana.FormBorderStyle = FormBorderStyle.None;

@@ -154,6 +154,12 @@
     <Compile Include="GUI\Frm_menu_caja.Designer.cs">
       <DependentUpon>Frm_menu_caja.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Frm_menu_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Frm_menu_clientes.Designer.cs">
+      <DependentUpon>Frm_menu_clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Frm_menu_empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu_caja.resx">
       <DependentUpon>Frm_menu_caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Frm_menu_clientes.resx">
+      <DependentUpon>Frm_menu_clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Frm_menu_empleados.resx">
       <DependentUpon>Frm_menu_empleados.cs</DependentUpon>

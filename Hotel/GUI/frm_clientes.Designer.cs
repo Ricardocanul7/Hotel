@@ -43,12 +43,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_borrar_cliente = new System.Windows.Forms.Button();
-            this.btn_mod_cliente = new System.Windows.Forms.Button();
             this.btn_guardar_cliente = new System.Windows.Forms.Button();
-            this.Grd_clientes = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_clientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_email_cliente
@@ -138,7 +137,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(18, 27);
+            this.groupBox1.Location = new System.Drawing.Point(25, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(551, 189);
             this.groupBox1.TabIndex = 18;
@@ -186,77 +185,59 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombres:";
             // 
-            // btn_borrar_cliente
-            // 
-            this.btn_borrar_cliente.Image = global::Hotel.Properties.Resources.close;
-            this.btn_borrar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrar_cliente.Location = new System.Drawing.Point(476, 222);
-            this.btn_borrar_cliente.Name = "btn_borrar_cliente";
-            this.btn_borrar_cliente.Size = new System.Drawing.Size(93, 47);
-            this.btn_borrar_cliente.TabIndex = 20;
-            this.btn_borrar_cliente.Text = "Eliminar";
-            this.btn_borrar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_borrar_cliente.UseVisualStyleBackColor = true;
-            this.btn_borrar_cliente.Click += new System.EventHandler(this.btn_borrar_cliente_Click);
-            // 
-            // btn_mod_cliente
-            // 
-            this.btn_mod_cliente.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_mod_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mod_cliente.Location = new System.Drawing.Point(368, 222);
-            this.btn_mod_cliente.Name = "btn_mod_cliente";
-            this.btn_mod_cliente.Size = new System.Drawing.Size(102, 47);
-            this.btn_mod_cliente.TabIndex = 21;
-            this.btn_mod_cliente.Text = "Modificar";
-            this.btn_mod_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_mod_cliente.UseVisualStyleBackColor = true;
-            this.btn_mod_cliente.Click += new System.EventHandler(this.Modificar_clientes);
-            // 
             // btn_guardar_cliente
             // 
+            this.btn_guardar_cliente.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_guardar_cliente.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_cliente.Location = new System.Drawing.Point(267, 222);
+            this.btn_guardar_cliente.Location = new System.Drawing.Point(474, 346);
             this.btn_guardar_cliente.Name = "btn_guardar_cliente";
             this.btn_guardar_cliente.Size = new System.Drawing.Size(95, 47);
             this.btn_guardar_cliente.TabIndex = 19;
+            this.btn_guardar_cliente.TabStop = false;
             this.btn_guardar_cliente.Text = "       Guardar";
             this.btn_guardar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_cliente.UseVisualStyleBackColor = true;
             this.btn_guardar_cliente.Click += new System.EventHandler(this.Guardar_clientes);
             // 
-            // Grd_clientes
+            // label6
             // 
-            this.Grd_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grd_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Grd_clientes.Location = new System.Drawing.Point(0, 290);
-            this.Grd_clientes.Name = "Grd_clientes";
-            this.Grd_clientes.Size = new System.Drawing.Size(599, 208);
-            this.Grd_clientes.TabIndex = 22;
-            this.Grd_clientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarRegistro);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(168, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(162, 40);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "CLIENTES";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel.Properties.Resources.add;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 66);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 498);
-            this.Controls.Add(this.Grd_clientes);
-            this.Controls.Add(this.btn_borrar_cliente);
-            this.Controls.Add(this.btn_mod_cliente);
+            this.ClientSize = new System.Drawing.Size(599, 410);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_guardar_cliente);
             this.Name = "frm_clientes";
-            this.Text = "frm_clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grd_clientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_borrar_cliente;
         private System.Windows.Forms.TextBox txt_email_cliente;
         private System.Windows.Forms.TextBox txt_direcc_cliente;
         private System.Windows.Forms.TextBox txt_apaterno_cliente;
@@ -265,7 +246,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_mod_cliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
@@ -274,6 +254,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_tele_cliente;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView Grd_clientes;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
