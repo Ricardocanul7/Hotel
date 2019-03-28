@@ -161,6 +161,7 @@
             this.dgv_habitaciones.Name = "dgv_habitaciones";
             this.dgv_habitaciones.Size = new System.Drawing.Size(849, 411);
             this.dgv_habitaciones.TabIndex = 44;
+            this.dgv_habitaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Seleccionar_color);
             this.dgv_habitaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.seleccionarFila);
             // 
             // Frm_menu

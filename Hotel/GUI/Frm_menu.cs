@@ -163,5 +163,28 @@ namespace Hotel
             Frm_configuracion frm_Configuracion = new Frm_configuracion();
             frm_Configuracion.Show();
         }
+
+        private void Seleccionar_color(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(dgv_habitaciones.Columns[e.ColumnIndex].Name == "estado")
+            {
+                if(Convert.ToString(e.Value) == "Disponible")
+                {
+                    e.CellStyle.BackColor = Color.Green;
+                }
+                if (Convert.ToString(e.Value) == "No disponible")
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                }
+                if (Convert.ToString(e.Value) == "Mantenimiento")
+                {
+                    e.CellStyle.BackColor = Color.Yellow;
+                }
+                if (Convert.ToString(e.Value) == "Limpieza")
+                {
+                    e.CellStyle.BackColor = Color.Yellow;
+                }
+            }
+        }
     }
 }
