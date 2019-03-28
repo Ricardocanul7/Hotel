@@ -89,7 +89,7 @@ namespace Hotel.GUI
             FilaseleccionadaLimp = e.RowIndex;
             if (FilaseleccionadaLimp >= 0)
             {
-                limpiezaBO.Limpieza_id = Convert.ToInt32(dgv_Mantenimiento.Rows[FilaseleccionadaLimp].Cells["limpieza_id"].Value);
+                limpiezaBO.Limpieza_id = Convert.ToInt32(dgv_Limpieza.Rows[FilaseleccionadaLimp].Cells["limpieza_id"].Value);
             }
         }
     }
