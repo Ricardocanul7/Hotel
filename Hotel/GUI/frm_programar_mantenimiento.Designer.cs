@@ -84,6 +84,7 @@
             // 
             // dgv_Mantenimiento
             // 
+            this.dgv_Mantenimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Mantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Mantenimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Mantenimiento.Location = new System.Drawing.Point(0, 116);
@@ -134,6 +135,7 @@
             this.btn_mantenimiento.Name = "btn_mantenimiento";
             this.btn_mantenimiento.Size = new System.Drawing.Size(168, 36);
             this.btn_mantenimiento.Text = "Programar Mantenimiento";
+            this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click);
             // 
             // toolStripSeparator1
             // 

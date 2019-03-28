@@ -54,14 +54,19 @@ namespace Hotel.GUI
         {
             DataRow[] rows = habitacionDAO.Buscar().Select();
 
-            for (int i = 0; i < rows.Length; i++)
+            if(rows.Length > 0)
             {
-                if ((string)rows[i]["estado"] == "Disponible")
+                for (int i = 0; i < rows.Length; i++)
                 {
-                    cbo_num_habitacion.Items.Add(rows[i][0] + "-" + rows[i][1]);
-                }
+                    if ((string)rows[i]["estado"] == "Disponible")
+                    {
+                        cbo_num_habitacion.Items.Add(rows[i][0] + "-" + rows[i][1]);
+                    }
 
+                }
+                cbo_num_habitacion.SelectedIndex = 0;
             }
+            
         }
 
         private LimpiezaBO RecuperarInformacion()

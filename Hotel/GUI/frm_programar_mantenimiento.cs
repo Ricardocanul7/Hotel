@@ -16,6 +16,8 @@ namespace Hotel.GUI
     {
         LimpiezaBO limpiezaBO = new LimpiezaBO();
         LimpiezaDAO limpiezaDAO = new LimpiezaDAO();
+        MantenimientoDAO mantenimientoDAO = new MantenimientoDAO();
+        MantenimientoBO mantenimientoBO = new MantenimientoBO();
         int Filaseleccionada = -1;
         private DataTable datos;
         public frm_programar_mantenimiento()
@@ -23,6 +25,32 @@ namespace Hotel.GUI
              InitializeComponent();
 
             dgv_Limpieza.DataSource = limpiezaDAO.Buscar();
+            dgv_Mantenimiento.DataSource = mantenimientoDAO.Buscar();
+
+            dgv_Limpieza.AllowUserToAddRows = false;
+            dgv_Limpieza.ReadOnly = true;
+            dgv_Mantenimiento.AllowUserToAddRows = false;
+            dgv_Mantenimiento.ReadOnly = true;
+
+            this.Set_Headers_Limpieza();
+            this.Set_Headers_Mantenimiento();
+        }
+
+        private void Set_Headers_Mantenimiento()
+        {
+            dgv_Mantenimiento.Columns[0].HeaderText = "ID";
+            dgv_Mantenimiento.Columns[1].HeaderText = "Fecha";
+            dgv_Mantenimiento.Columns[2].HeaderText = "Nombre";
+            dgv_Mantenimiento.Columns[3].HeaderText = "RFC";
+            dgv_Mantenimiento.Columns[4].HeaderText = "Num. Habitación";
+        }
+
+        private void Set_Headers_Limpieza()
+        {
+            dgv_Limpieza.Columns[0].HeaderText = "ID";
+            dgv_Limpieza.Columns[1].HeaderText = "Fecha";
+            dgv_Limpieza.Columns[2].HeaderText = "Empleado";
+            dgv_Limpieza.Columns[3].HeaderText = "Num. Habitacion";
         }
 
 
@@ -33,6 +61,16 @@ namespace Hotel.GUI
             {
                 dgv_Limpieza.DataSource = limpiezaDAO.Buscar();
                 dgv_Limpieza.Update();
+            }
+        }
+
+        private void btn_mantenimiento_Click(object sender, EventArgs e)
+        {
+            frm_agregar_mantenimiento form_agregarMant = new frm_agregar_mantenimiento();
+            if (form_agregarMant.ShowDialog() == DialogResult.OK)
+            {
+                dgv_Mantenimiento.DataSource = mantenimientoDAO.Buscar();
+                dgv_Mantenimiento.Update();
             }
         }
     }
