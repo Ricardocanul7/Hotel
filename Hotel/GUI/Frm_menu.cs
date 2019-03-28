@@ -51,10 +51,7 @@ namespace Hotel
 
         private void VerificarEstado_Hab_reserva()
         {
-            // POR HACER
             DataRow[] row_reservas = reservas.Buscar().Select();
-
-            DateTime fecha_hoy = DateTime.Now;
 
             for(int i = 0; i < row_reservas.Length; i++)
             {
@@ -64,12 +61,25 @@ namespace Hotel
                 // Si la fecha de hoy esta en el rango de reserva de una habitacion... ponerla ocupada
                 if(DateTime.Now >= checkin && DateTime.Now <= checkout)
                 {
-                    int num_habitacion = Convert.ToInt32( row_reservas[i]["num_habitacion"]);
+                    int num_habitacion = Convert.ToInt32(row_reservas[i]["num_habitacion"]);
                     // No disponible = 1
                     // Disponible = 4
                     habitacionDAO.ModificarEstado(num_habitacion, 1);
                 }
+            }
 
+            LimpiezaDAO limpiezaDAO = new LimpiezaDAO();
+            DataRow[] rowLimp = limpiezaDAO.Buscar().Select();
+
+            
+            for (int i = 0; i < rowLimp.Length; i++)
+            {
+                if(DateTime.Now == DateTime.Parse(rowLimp[i]["fecha"].ToString()))
+                {
+                    int num_habitacion = Convert.ToInt32(rowLimp[i]["fecha"]);
+                    // Limpieza = 3
+                    habitacionDAO.ModificarEstado(num_habitacion, 3);
+                } 
             }
         }
 
