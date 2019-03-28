@@ -27,7 +27,7 @@ namespace Hotel.DAO
 
         public int Modificar(LimpiezaBO limpieza)
         {
-            string ComandoSQL = string.Format("UPDATE limpieza SET fecha={0}, empleado_id='{1}', num_habitacionnum='{2}' WHERE limpieza_id= {3}",
+            string ComandoSQL = string.Format("UPDATE limpieza SET fecha='{0}', empleado_id={1}, num_habitacion={2} WHERE limpieza_id = {3}",
                 limpieza.Fecha_limpieza.ToString("yyyy-MM-dd"),
                 limpieza.Empleado.Id_empleado,
                 limpieza.Habitacion.Num_habitacion,
