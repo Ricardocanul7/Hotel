@@ -72,6 +72,7 @@
     <Compile Include="BO\ClienteBO.cs" />
     <Compile Include="BO\EmpresaBO.cs" />
     <Compile Include="BO\EstadohabBO.cs" />
+    <Compile Include="BO\LimpiezaBO.cs" />
     <Compile Include="BO\ReservasBO.cs" />
     <Compile Include="BO\TipohabBO.cs" />
     <Compile Include="BO\TipoTransaccionBO.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="DAO\EmpresaDAO.cs" />
     <Compile Include="DAO\EstadohabDAO.cs" />
     <Compile Include="DAO\HabitacionDAO.cs" />
+    <Compile Include="DAO\LimpiezaDAO.cs" />
     <Compile Include="DAO\ReservaDAO.cs" />
     <Compile Include="DAO\TipohabDAO.cs" />
     <Compile Include="DAO\TipoTransaccionDAO.cs" />

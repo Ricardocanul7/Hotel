@@ -37,9 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.txt_id_mantenimiento = new System.Windows.Forms.TextBox();
+            this.txt_id_limpieza = new System.Windows.Forms.TextBox();
+            this.cbo_empleado = new System.Windows.Forms.ComboBox();
+            this.cbo_num_habitacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.btn_guardar_limpieza.Text = "       Guardar";
             this.btn_guardar_limpieza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_limpieza.UseVisualStyleBackColor = true;
+            this.btn_guardar_limpieza.Click += new System.EventHandler(this.Guardar_Limpieza);
             // 
             // pictureBox1
             // 
@@ -121,9 +122,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_id_mantenimiento);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txt_id_limpieza);
+            this.groupBox1.Controls.Add(this.cbo_empleado);
+            this.groupBox1.Controls.Add(this.cbo_num_habitacion);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtp_fecha_limpieza);
@@ -136,30 +137,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Limpieza";
             // 
-            // comboBox1
+            // txt_id_limpieza
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 143);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 21);
-            this.comboBox1.TabIndex = 31;
+            this.txt_id_limpieza.Location = new System.Drawing.Point(112, 34);
+            this.txt_id_limpieza.Name = "txt_id_limpieza";
+            this.txt_id_limpieza.Size = new System.Drawing.Size(40, 20);
+            this.txt_id_limpieza.TabIndex = 33;
             // 
-            // comboBox2
+            // cbo_empleado
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 115);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(137, 21);
-            this.comboBox2.TabIndex = 32;
+            this.cbo_empleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_empleado.FormattingEnabled = true;
+            this.cbo_empleado.Location = new System.Drawing.Point(112, 115);
+            this.cbo_empleado.Name = "cbo_empleado";
+            this.cbo_empleado.Size = new System.Drawing.Size(137, 21);
+            this.cbo_empleado.TabIndex = 32;
             // 
-            // txt_id_mantenimiento
+            // cbo_num_habitacion
             // 
-            this.txt_id_mantenimiento.Location = new System.Drawing.Point(112, 34);
-            this.txt_id_mantenimiento.Name = "txt_id_mantenimiento";
-            this.txt_id_mantenimiento.Size = new System.Drawing.Size(40, 20);
-            this.txt_id_mantenimiento.TabIndex = 33;
+            this.cbo_num_habitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_num_habitacion.FormattingEnabled = true;
+            this.cbo_num_habitacion.Location = new System.Drawing.Point(112, 143);
+            this.cbo_num_habitacion.Name = "cbo_num_habitacion";
+            this.cbo_num_habitacion.Size = new System.Drawing.Size(137, 21);
+            this.cbo_num_habitacion.TabIndex = 31;
             // 
             // frm_agregar_limpieza
             // 
@@ -190,8 +191,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txt_id_mantenimiento;
+        private System.Windows.Forms.ComboBox cbo_empleado;
+        private System.Windows.Forms.ComboBox cbo_num_habitacion;
+        private System.Windows.Forms.TextBox txt_id_limpieza;
     }
 }
