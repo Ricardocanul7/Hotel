@@ -180,7 +180,7 @@
             // 
             // dgv_Limpieza
             // 
-            this.dgv_Limpieza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Limpieza.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Limpieza.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Limpieza.Location = new System.Drawing.Point(0, 116);
             this.dgv_Limpieza.Name = "dgv_Limpieza";
