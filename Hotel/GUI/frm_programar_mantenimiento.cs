@@ -21,6 +21,8 @@ namespace Hotel.GUI
         public frm_programar_mantenimiento()
         {
              InitializeComponent();
+
+            dgv_Limpieza.DataSource = limpiezaDAO.Buscar();
         }
 
 
