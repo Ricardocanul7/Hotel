@@ -17,6 +17,7 @@ namespace Hotel
     {
         HabitacionDAO habitacionDAO;
         HabitacionBO habitacionBO;
+        ReservaDAO reservas;
 
         private DataTable datos;
         int index;
@@ -26,6 +27,9 @@ namespace Hotel
             InitializeComponent();
             habitacionBO = new HabitacionBO();
             habitacionDAO = new HabitacionDAO();
+            reservas = new ReservaDAO();
+
+            this.VerificarEstado_Hab_reserva();
 
             datos = habitacionDAO.Buscar();
             dgv_habitaciones.DataSource = datos;
@@ -36,20 +40,47 @@ namespace Hotel
             // Admin = 1
             if(DatosLogin.Tipo_usuario != 1)
             {
-                this.btn_configuracion.Visible = false;
+                this.btn_configuracion.Enabled = false;
+                this.btn_eliminar_hab.Enabled = false;
+                this.btn_agregar_habitaciones.Enabled = false;
+                this.btn_modificar_hab.Enabled = false;
             }
 
             SetColumNames();
+        }
+
+        private void VerificarEstado_Hab_reserva()
+        {
+            // POR HACER
+            DataRow[] row_reservas = reservas.Buscar().Select();
+
+            DateTime fecha_hoy = DateTime.Now;
+
+            for(int i = 0; i < row_reservas.Length; i++)
+            {
+                DateTime checkin = DateTime.Parse(row_reservas[i]["fecha_entrada"].ToString());
+                DateTime checkout = DateTime.Parse(row_reservas[i]["fecha_salida"].ToString());
+
+                // Si la fecha de hoy esta en el rango de reserva de una habitacion... ponerla ocupada
+                if(DateTime.Now >= checkin && DateTime.Now <= checkout)
+                {
+                    int num_habitacion = Convert.ToInt32( row_reservas[i]["num_habitacion"]);
+                    // No disponible = 1
+                    // Disponible = 4
+                    habitacionDAO.ModificarEstado(num_habitacion, 1);
+                }
+
+            }
         }
 
         private void SetColumNames()
         {
             dgv_habitaciones.Columns[0].HeaderText = "No. Habitación";
             dgv_habitaciones.Columns[1].HeaderText = "Nombre";
-            dgv_habitaciones.Columns[5].HeaderText = "precio temp. \nbaja";
-            dgv_habitaciones.Columns[8].HeaderText = "tipo de \nhabitación";
-            dgv_habitaciones.Columns[9].HeaderText = "Descripción";
-            dgv_habitaciones.Columns[10].HeaderText = "Estado de \nhabitación";
+            dgv_habitaciones.Columns[2].HeaderText = "Precio";
+            dgv_habitaciones.Columns[3].HeaderText = "Tipo de habitación";
+            dgv_habitaciones.Columns[4].HeaderText = "Descripción";
+            dgv_habitaciones.Columns[5].HeaderText = "Estado";
         }
 
         private void btn_reservaciones_Click(object sender, EventArgs e)

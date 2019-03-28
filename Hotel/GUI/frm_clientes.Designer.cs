@@ -55,14 +55,14 @@
             this.txt_email_cliente.Location = new System.Drawing.Point(97, 150);
             this.txt_email_cliente.Name = "txt_email_cliente";
             this.txt_email_cliente.Size = new System.Drawing.Size(162, 20);
-            this.txt_email_cliente.TabIndex = 10;
+            this.txt_email_cliente.TabIndex = 11;
             // 
             // txt_direcc_cliente
             // 
             this.txt_direcc_cliente.Location = new System.Drawing.Point(97, 120);
             this.txt_direcc_cliente.Name = "txt_direcc_cliente";
             this.txt_direcc_cliente.Size = new System.Drawing.Size(428, 20);
-            this.txt_direcc_cliente.TabIndex = 9;
+            this.txt_direcc_cliente.TabIndex = 10;
             // 
             // txt_apaterno_cliente
             // 
@@ -149,14 +149,14 @@
             this.txt_tele_cliente.Location = new System.Drawing.Point(363, 150);
             this.txt_tele_cliente.Name = "txt_tele_cliente";
             this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
-            this.txt_tele_cliente.TabIndex = 10;
+            this.txt_tele_cliente.TabIndex = 12;
             // 
             // txt_amaterno_cliente
             // 
             this.txt_amaterno_cliente.Location = new System.Drawing.Point(363, 86);
             this.txt_amaterno_cliente.Name = "txt_amaterno_cliente";
             this.txt_amaterno_cliente.Size = new System.Drawing.Size(162, 20);
-            this.txt_amaterno_cliente.TabIndex = 8;
+            this.txt_amaterno_cliente.TabIndex = 9;
             // 
             // label8
             // 
@@ -193,8 +193,7 @@
             this.btn_guardar_cliente.Location = new System.Drawing.Point(474, 346);
             this.btn_guardar_cliente.Name = "btn_guardar_cliente";
             this.btn_guardar_cliente.Size = new System.Drawing.Size(95, 47);
-            this.btn_guardar_cliente.TabIndex = 19;
-            this.btn_guardar_cliente.TabStop = false;
+            this.btn_guardar_cliente.TabIndex = 13;
             this.btn_guardar_cliente.Text = "       Guardar";
             this.btn_guardar_cliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar_cliente.UseVisualStyleBackColor = true;

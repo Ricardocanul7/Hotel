@@ -59,7 +59,7 @@ namespace Hotel.GUI
 
             for (int i = 0; i < rows.Length; i++)
             {
-                if((string)rows[i][10] == "Disponible")
+                if((string)rows[i]["estado"] == "Disponible")
                 {
                     cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
                 }
@@ -110,10 +110,7 @@ namespace Hotel.GUI
             reservasBO.Fecha_salida = Dtm_checkout.Value.Date;
             reservasBO.Detalles = Txt_detalles_reserva.Text;
             reservasBO.Cliente = clienteBO;
-            if (rdb_pagado.Checked == true)
-                reservasBO.Estado = true;
-            else
-                reservasBO.Estado = false;
+            reservasBO.Estado = false;  // Preterminado pago no hecho
 
             return reservasBO;
         }
@@ -134,10 +131,6 @@ namespace Hotel.GUI
             Dtm_checkin.Value = reservaBO_mod.Fecha_entrada;
             Dtm_checkout.Value = reservaBO_mod.Fecha_salida;
             Txt_detalles_reserva.Text = reservaBO_mod.Detalles;
-            if (reservaBO_mod.Estado == true)
-                rdb_pagado.Checked = true;
-            else
-                rdb_pago_pendiente.Checked = true;
         }
 
         private void cbo_habitaciones_SelectedValueChanged(object sender, EventArgs e)
@@ -216,7 +209,6 @@ namespace Hotel.GUI
 
         private void Txt_nom_cliente_TextChanged(object sender, EventArgs e)
         {
-            /**
             ClienteDAO clienteDAO = new ClienteDAO();
             DataRow[] rows = clienteDAO.Buscar().Select(String.Format("nombre LIKE '{0}%'", Txt_nom_cliente.Text));
             foreach (var item in rows)
@@ -249,7 +241,6 @@ namespace Hotel.GUI
             {
                 LimpiarCamposCliente();
             }
-    */
         }
 
         private void Dtm_checkout_ValueChanged(object sender, EventArgs e)
@@ -299,7 +290,7 @@ namespace Hotel.GUI
             {
                 if (rows.Length > 0)
                 {
-                    Txt_id_cliente.Text = rows[0]["cliente_id"] as string;
+                    Txt_id_cliente.Text = rows[0]["cliente_id"].ToString();
                     Txt_nom_cliente.Text = rows[0]["nombre"] as string;
                     Txt_apell_patern_cliente.Text = rows[0]["apaterno"] as string;
                     txt_apelli_matern_cli.Text = rows[0]["amaterno"] as string;
@@ -316,6 +307,11 @@ namespace Hotel.GUI
             {
                 MessageBox.Show("Error: " + error.Message);
             }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

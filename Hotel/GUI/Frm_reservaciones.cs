@@ -28,6 +28,12 @@ namespace Hotel.GUI
             dgv_reservaciones.ReadOnly = true;
             dgv_reservaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            if(DatosLogin.Tipo_usuario != 1)
+            {
+                btn_eliminar_reserv.Enabled = false;
+                btn_modificar_reser.Enabled = false;
+            }
+
             dgv_reservaciones.DataSource = reservaDAO.Buscar();
             SetColumNames();
         }

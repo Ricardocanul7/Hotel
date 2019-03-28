@@ -31,16 +31,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_descripHab = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_precioPA = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txt_precioN = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_precioPATA = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_precioTA = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbo_estadohab = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,8 +49,6 @@
             this.btn_hab_limpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +56,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 332);
+            this.label5.Location = new System.Drawing.Point(35, 302);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 8;
@@ -74,9 +64,9 @@
             // 
             // txt_descripHab
             // 
-            this.txt_descripHab.Location = new System.Drawing.Point(37, 349);
+            this.txt_descripHab.Location = new System.Drawing.Point(37, 318);
             this.txt_descripHab.Name = "txt_descripHab";
-            this.txt_descripHab.Size = new System.Drawing.Size(406, 101);
+            this.txt_descripHab.Size = new System.Drawing.Size(406, 132);
             this.txt_descripHab.TabIndex = 9;
             this.txt_descripHab.Text = "";
             // 
@@ -90,99 +80,27 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "HABITACIONES";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txt_precioPA);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txt_precioN);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(37, 233);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 87);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Precio Normal";
-            // 
-            // txt_precioPA
-            // 
-            this.txt_precioPA.Location = new System.Drawing.Point(101, 53);
-            this.txt_precioPA.Name = "txt_precioPA";
-            this.txt_precioPA.Size = new System.Drawing.Size(87, 20);
-            this.txt_precioPA.TabIndex = 21;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 56);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Per. adicional: $";
-            // 
             // txt_precioN
             // 
-            this.txt_precioN.Location = new System.Drawing.Point(101, 27);
+            this.txt_precioN.Location = new System.Drawing.Point(68, 140);
             this.txt_precioN.Name = "txt_precioN";
-            this.txt_precioN.Size = new System.Drawing.Size(87, 20);
+            this.txt_precioN.Size = new System.Drawing.Size(174, 20);
             this.txt_precioN.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(46, 30);
+            this.label7.Location = new System.Drawing.Point(15, 143);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "Precio: $";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txt_precioPATA);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txt_precioTA);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Location = new System.Drawing.Point(243, 233);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 87);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Precio Temp. Alta";
-            // 
-            // txt_precioPATA
-            // 
-            this.txt_precioPATA.Location = new System.Drawing.Point(101, 53);
-            this.txt_precioPATA.Name = "txt_precioPATA";
-            this.txt_precioPATA.Size = new System.Drawing.Size(87, 20);
-            this.txt_precioPATA.TabIndex = 21;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 56);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Per. adicional: $";
-            // 
-            // txt_precioTA
-            // 
-            this.txt_precioTA.Location = new System.Drawing.Point(101, 27);
-            this.txt_precioTA.Name = "txt_precioTA";
-            this.txt_precioTA.Size = new System.Drawing.Size(87, 20);
-            this.txt_precioTA.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Precio: $";
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_precioN);
             this.groupBox3.Controls.Add(this.cbo_estadohab);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txt_num_habitacion);
             this.groupBox3.Controls.Add(this.label11);
@@ -196,7 +114,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(37, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(406, 136);
+            this.groupBox3.Size = new System.Drawing.Size(406, 199);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos de la habitación";
@@ -341,17 +259,11 @@
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_hab_limpiar);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_descripHab);
             this.Controls.Add(this.label5);
             this.Name = "frm_habitaciones";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -365,16 +277,8 @@
         private System.Windows.Forms.RichTextBox txt_descripHab;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_precioPA;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_precioN;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_precioPATA;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_precioTA;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cbo_tipohab;
         private System.Windows.Forms.Label label4;

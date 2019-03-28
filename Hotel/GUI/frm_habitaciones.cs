@@ -44,9 +44,8 @@ namespace Hotel.GUI
             txt_max_ninios.Text = habitacionBO_mod.Max_ninios.ToString();
             txt_max_adultos.Text = habitacionBO_mod.Max_adultos.ToString();
             txt_precioN.Text = habitacionBO_mod.PrecioN.ToString();
-            txt_precioPA.Text = habitacionBO_mod.PrecioPA.ToString();
-            txt_precioTA.Text = habitacionBO_mod.PrecioTA.ToString();
-            txt_precioPATA.Text = habitacionBO_mod.PrecioPATA.ToString();
+            cbo_tipohab.Text = habitacionBO_mod.Tipo.Nombre;
+            cbo_estadohab.Text = habitacionBO_mod.Estado.Nombre;
             txt_descripHab.Text = habitacionBO_mod.DescripHab;
             
         }
@@ -85,9 +84,6 @@ namespace Hotel.GUI
             habitacionBO.Tipo.Tipo_id = cbo_tipohab.SelectedIndex+1;
             habitacionBO.Estado.Estado_id = cbo_estadohab.SelectedIndex+1;
             habitacionBO.PrecioN = Convert.ToDouble(txt_precioN.Text);
-            habitacionBO.PrecioPA = Convert.ToDouble(txt_precioPA.Text);
-            habitacionBO.PrecioTA = Convert.ToDouble(txt_precioTA.Text);
-            habitacionBO.PrecioPATA = Convert.ToDouble(txt_precioPATA.Text);
             habitacionBO.DescripHab = txt_descripHab.Text;
 
             return habitacionBO;
@@ -101,9 +97,6 @@ namespace Hotel.GUI
             cbo_tipohab.SelectedIndex = 0;
             cbo_estadohab.SelectedIndex = 0;
             txt_precioN.Clear();
-            txt_precioPA.Clear();
-            txt_precioTA.Clear();
-            txt_precioPATA.Clear();
             txt_descripHab.Clear();
         }
 

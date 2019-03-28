@@ -38,5 +38,16 @@ namespace Hotel.GUI
                 dgv_transacciones.Update();
             }
         }
+
+        private void btn_nvatransaccion_Click(object sender, EventArgs e)
+        {
+            Frm_Transacciones frm_Transacciones = new Frm_Transacciones();
+            
+            if(frm_Transacciones.DialogResult == DialogResult.OK)
+            {
+                // AQUI CODIGO PARA ACTUALIZAR EL GRID
+                // AL CERRAR LA VENTANA DESPUES DE GUARDAR
+            }
+        }
     }
 }
