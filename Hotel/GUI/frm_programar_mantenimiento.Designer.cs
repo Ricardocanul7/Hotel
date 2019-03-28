@@ -91,6 +91,7 @@
             this.dgv_Mantenimiento.Name = "dgv_Mantenimiento";
             this.dgv_Mantenimiento.Size = new System.Drawing.Size(408, 334);
             this.dgv_Mantenimiento.TabIndex = 1;
+            this.dgv_Mantenimiento.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_mantenimiento);
             // 
             // panel1
             // 
@@ -188,6 +189,7 @@
             this.dgv_Limpieza.Name = "dgv_Limpieza";
             this.dgv_Limpieza.Size = new System.Drawing.Size(397, 334);
             this.dgv_Limpieza.TabIndex = 2;
+            this.dgv_Limpieza.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_limpieza);
             // 
             // panel2
             // 

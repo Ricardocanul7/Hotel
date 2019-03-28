@@ -18,8 +18,9 @@ namespace Hotel.GUI
         LimpiezaDAO limpiezaDAO = new LimpiezaDAO();
         MantenimientoDAO mantenimientoDAO = new MantenimientoDAO();
         MantenimientoBO mantenimientoBO = new MantenimientoBO();
-        int Filaseleccionada = -1;
-        private DataTable datos;
+        int FilaseleccionadaMant = -1;
+        int FilaseleccionadaLimp = -1;
+
         public frm_programar_mantenimiento()
         {
              InitializeComponent();
@@ -71,6 +72,24 @@ namespace Hotel.GUI
             {
                 dgv_Mantenimiento.DataSource = mantenimientoDAO.Buscar();
                 dgv_Mantenimiento.Update();
+            }
+        }
+
+        private void Seleccionar_fila_mantenimiento(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            FilaseleccionadaMant = e.RowIndex;
+            if(FilaseleccionadaMant >= 0)
+            {
+                mantenimientoBO.Mantenimiento_id = Convert.ToInt32(dgv_Mantenimiento.Rows[FilaseleccionadaMant].Cells["mantenimiento_id"].Value);
+            }
+        }
+
+        private void Seleccionar_fila_limpieza(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            FilaseleccionadaLimp = e.RowIndex;
+            if (FilaseleccionadaLimp >= 0)
+            {
+                limpiezaBO.Limpieza_id = Convert.ToInt32(dgv_Mantenimiento.Rows[FilaseleccionadaLimp].Cells["limpieza_id"].Value);
             }
         }
     }
