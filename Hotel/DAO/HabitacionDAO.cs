@@ -37,6 +37,12 @@ namespace Hotel.DAO
             return conexion.EjecutarComando(ComandoSQL);
         }
 
+        public int ModificarEstado(int num_habitacion, int estado)
+        {
+            string comandSQL = string.Format("UPDATE habitacion SET estado_hab = '{0}' WHERE num_habitacion = {1}", estado, num_habitacion.ToString());
+            return conexion.EjecutarComando(comandSQL);
+        }
+
         public int Eliminar(HabitacionBO habitacionBO)
         {
             string ComandoSQL = string.Format("DELETE FROM habitacion WHERE num_habitacion={0}", habitacionBO.Num_habitacion);

@@ -20,7 +20,6 @@ namespace Hotel
         ReservaDAO reservas;
 
         private DataTable datos;
-        private DataTable datos_reservas;
         int index;
 
         public Frm_menu()
@@ -29,8 +28,6 @@ namespace Hotel
             habitacionBO = new HabitacionBO();
             habitacionDAO = new HabitacionDAO();
             reservas = new ReservaDAO();
-
-            datos_reservas = reservas.Buscar();
 
             this.VerificarEstado_Hab_reserva();
 
@@ -55,6 +52,25 @@ namespace Hotel
         private void VerificarEstado_Hab_reserva()
         {
             // POR HACER
+            DataRow[] row_reservas = reservas.Buscar().Select();
+
+            DateTime fecha_hoy = DateTime.Now;
+
+            for(int i = 0; i < row_reservas.Length; i++)
+            {
+                DateTime checkin = DateTime.Parse(row_reservas[i]["fecha_entrada"].ToString());
+                DateTime checkout = DateTime.Parse(row_reservas[i]["fecha_salida"].ToString());
+
+                // Si la fecha de hoy esta en el rango de reserva de una habitacion... ponerla ocupada
+                if(DateTime.Now >= checkin && DateTime.Now <= checkout)
+                {
+                    int num_habitacion = Convert.ToInt32( row_reservas[i]["num_habitacion"]);
+                    // No disponible = 1
+                    // Disponible = 4
+                    habitacionDAO.ModificarEstado(num_habitacion, 1);
+                }
+
+            }
         }
 
         private void SetColumNames()
