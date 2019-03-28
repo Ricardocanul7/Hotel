@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
+            this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_cerrar_caja = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgv_transacciones = new System.Windows.Forms.DataGridView();
             this.dgv_corte = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
-            this.btn_cerrar_caja = new System.Windows.Forms.ToolStripButton();
-            this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -71,15 +71,43 @@
             this.btn_habitaciones.TabIndex = 3;
             this.btn_habitaciones.Text = "Menu";
             // 
+            // btn_nvatransaccion
+            // 
+            this.btn_nvatransaccion.Image = global::Hotel.Properties.Resources.cash;
+            this.btn_nvatransaccion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_nvatransaccion.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btn_nvatransaccion.Name = "btn_nvatransaccion";
+            this.btn_nvatransaccion.Size = new System.Drawing.Size(136, 22);
+            this.btn_nvatransaccion.Text = "Agregar Transacción";
+            this.btn_nvatransaccion.Click += new System.EventHandler(this.btn_nvatransaccion_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // btn_cerrar_caja
+            // 
+            this.btn_cerrar_caja.Image = global::Hotel.Properties.Resources._024_safety_box1;
+            this.btn_cerrar_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_cerrar_caja.Name = "btn_cerrar_caja";
+            this.btn_cerrar_caja.Size = new System.Drawing.Size(85, 22);
+            this.btn_cerrar_caja.Text = "Cerrar Caja";
+            this.btn_cerrar_caja.ToolTipText = "Cerrar Caja";
+            this.btn_cerrar_caja.Click += new System.EventHandler(this.btn_cerrar_caja_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_reporte_caja
+            // 
+            this.btn_reporte_caja.Image = global::Hotel.Properties.Resources._049_notes1;
+            this.btn_reporte_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_reporte_caja.Name = "btn_reporte_caja";
+            this.btn_reporte_caja.Size = new System.Drawing.Size(159, 22);
+            this.btn_reporte_caja.Text = "Reporte de transacciones";
             // 
             // splitContainer1
             // 
@@ -99,45 +127,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 425);
             this.splitContainer1.SplitterDistance = 60;
             this.splitContainer1.TabIndex = 4;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.dgv_transacciones);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.dgv_corte);
-            this.splitContainer2.Size = new System.Drawing.Size(800, 361);
-            this.splitContainer2.SplitterDistance = 390;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // dgv_transacciones
-            // 
-            this.dgv_transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_transacciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_transacciones.Location = new System.Drawing.Point(0, 0);
-            this.dgv_transacciones.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
-            this.dgv_transacciones.Name = "dgv_transacciones";
-            this.dgv_transacciones.Size = new System.Drawing.Size(390, 361);
-            this.dgv_transacciones.TabIndex = 44;
-            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_Fila);
-            // 
-            // dgv_corte
-            // 
-            this.dgv_corte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_corte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_corte.Location = new System.Drawing.Point(0, 0);
-            this.dgv_corte.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
-            this.dgv_corte.Name = "dgv_corte";
-            this.dgv_corte.Size = new System.Drawing.Size(406, 361);
-            this.dgv_corte.TabIndex = 45;
-            this.dgv_corte.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Selecionar_Fila2);
             // 
             // label1
             // 
@@ -165,33 +154,44 @@
             this.label6.TabIndex = 46;
             this.label6.Text = "     TRANSACCIONES";
             // 
-            // btn_nvatransaccion
+            // splitContainer2
             // 
-            this.btn_nvatransaccion.Image = global::Hotel.Properties.Resources.cash;
-            this.btn_nvatransaccion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_nvatransaccion.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btn_nvatransaccion.Name = "btn_nvatransaccion";
-            this.btn_nvatransaccion.Size = new System.Drawing.Size(135, 22);
-            this.btn_nvatransaccion.Text = "Agregar Transacción";
-            this.btn_nvatransaccion.Click += new System.EventHandler(this.btn_nvatransaccion_Click);
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
             // 
-            // btn_cerrar_caja
+            // splitContainer2.Panel1
             // 
-            this.btn_cerrar_caja.Image = global::Hotel.Properties.Resources._024_safety_box1;
-            this.btn_cerrar_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_cerrar_caja.Name = "btn_cerrar_caja";
-            this.btn_cerrar_caja.Size = new System.Drawing.Size(85, 22);
-            this.btn_cerrar_caja.Text = "Cerrar Caja";
-            this.btn_cerrar_caja.ToolTipText = "Cerrar Caja";
-            this.btn_cerrar_caja.Click += new System.EventHandler(this.btn_cerrar_caja_Click);
+            this.splitContainer2.Panel1.Controls.Add(this.dgv_transacciones);
             // 
-            // btn_reporte_caja
+            // splitContainer2.Panel2
             // 
-            this.btn_reporte_caja.Image = global::Hotel.Properties.Resources._049_notes1;
-            this.btn_reporte_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_reporte_caja.Name = "btn_reporte_caja";
-            this.btn_reporte_caja.Size = new System.Drawing.Size(159, 22);
-            this.btn_reporte_caja.Text = "Reporte de transacciones";
+            this.splitContainer2.Panel2.Controls.Add(this.dgv_corte);
+            this.splitContainer2.Size = new System.Drawing.Size(800, 361);
+            this.splitContainer2.SplitterDistance = 390;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // dgv_transacciones
+            // 
+            this.dgv_transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_transacciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_transacciones.Location = new System.Drawing.Point(0, 0);
+            this.dgv_transacciones.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
+            this.dgv_transacciones.Name = "dgv_transacciones";
+            this.dgv_transacciones.Size = new System.Drawing.Size(390, 361);
+            this.dgv_transacciones.TabIndex = 44;
+            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_trans);
+            // 
+            // dgv_corte
+            // 
+            this.dgv_corte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_corte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_corte.Location = new System.Drawing.Point(0, 0);
+            this.dgv_corte.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
+            this.dgv_corte.Name = "dgv_corte";
+            this.dgv_corte.Size = new System.Drawing.Size(406, 361);
+            this.dgv_corte.TabIndex = 45;
+            this.dgv_corte.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Selecionar_fila_corte);
             // 
             // Frm_menu_caja
             // 

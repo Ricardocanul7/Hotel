@@ -22,7 +22,8 @@ namespace Hotel.GUI
         TipoTransaccionBO tipotransaccionBO;
         TipoTransaccionDAO tipotransaccionDAO;
         private DataTable datos;
-        int Filaseleccionada = -1;
+        int Filaseleccionada_trans = -1;
+        int Filaseleccionada_corte = -1;
         public Frm_menu_caja()
 
         {
@@ -73,37 +74,31 @@ namespace Hotel.GUI
             }
         }
 
-        private void Seleccionar_Fila(object sender, DataGridViewCellMouseEventArgs e)
-        { 
-            Filaseleccionada = e.RowIndex;
+        private void Seleccionar_fila_trans(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Filaseleccionada_trans = e.RowIndex;
 
-            if (Filaseleccionada >= 0)
+            if (Filaseleccionada_trans >= 0)
             {
-                transaccioBO.Codigo_transaccion = int.Parse(dgv_transacciones.Rows[Filaseleccionada].Cells["Codigo"].Value.ToString());
-                transaccioBO.Monto = double.Parse(dgv_transacciones.Rows[Filaseleccionada].Cells["monto"].Value.ToString());
-                transaccioBO.Fecha= DateTime.Parse(dgv_transacciones.Rows[Filaseleccionada].Cells["fecha"].Value.ToString());
-                transaccioBO.Descripccion = dgv_transacciones.Rows[Filaseleccionada].Cells["Descripccion"].Value.ToString();
-                tipotransaccionBO.Tipo_id= int.Parse(dgv_transacciones.Rows[Filaseleccionada].Cells["Tipo"].Value.ToString());
-
-                this.DialogResult = DialogResult.OK;
+                transaccioBO.Codigo_transaccion = int.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["Codigo"].Value.ToString());
+                transaccioBO.Monto = double.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["monto"].Value.ToString());
+                transaccioBO.Fecha = DateTime.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["fecha"].Value.ToString());
+                transaccioBO.Descripccion = dgv_transacciones.Rows[Filaseleccionada_trans].Cells["Descripccion"].Value.ToString();
+                tipotransaccionBO.Tipo_id = int.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["Tipo"].Value.ToString());
             }
-
-
         }
 
-        private void Selecionar_Fila2(object sender, DataGridViewCellMouseEventArgs e)
+        private void Selecionar_fila_corte(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Filaseleccionada = e.RowIndex;
+            Filaseleccionada_corte = e.RowIndex;
 
-            if (Filaseleccionada >= 0)
+            if (Filaseleccionada_corte >= 0)
             {
-                cajaBO.Corte_id = int.Parse(dgv_corte.Rows[Filaseleccionada].Cells["corte_id"].Value.ToString());
-                cajaBO.Monto = double.Parse(dgv_corte.Rows[Filaseleccionada].Cells["monto"].Value.ToString());
-                cajaBO.Fecha= DateTime.Parse(dgv_corte.Rows[Filaseleccionada].Cells["fecha"].Value.ToString());
-                cajaBO.Hora = DateTime.Parse(dgv_corte.Rows[Filaseleccionada].Cells["hora"].Value.ToString());
-                usuarioBO.Id_usuario= int.Parse(dgv_corte.Rows[Filaseleccionada].Cells["usuario_id"].Value.ToString());
-
-                this.DialogResult = DialogResult.OK;
+                cajaBO.Corte_id = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["corte_id"].Value.ToString());
+                cajaBO.Monto = double.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["monto"].Value.ToString());
+                cajaBO.Fecha = DateTime.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["fecha"].Value.ToString());
+                cajaBO.Hora = DateTime.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["hora"].Value.ToString());
+                usuarioBO.Id_usuario = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["usuario_id"].Value.ToString());
             }
         }
     }
