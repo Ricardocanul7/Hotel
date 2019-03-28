@@ -19,7 +19,7 @@ namespace Hotel.DAO
         }
         public int Agregar(LimpiezaBO limpieza)
         {
-            string ComandoSQL = string.Format("INSERT INTO limpieza (fecha, empleado_id, num_habitacion) VALUES('{0}', '{1}', '{2}')", limpieza.Fecha_limpieza.ToString("yyyy-MM-dd H:mm:ss"), limpieza.Empleado.Id_empleado, limpieza.Habitacion.Num_habitacion);
+            string ComandoSQL = string.Format("INSERT INTO limpieza (fecha, empleado_id, num_habitacion) VALUES('{0}', '{1}', '{2}')", limpieza.Fecha_limpieza.ToString("yyyy-MM-dd"), limpieza.Empleado.Id_empleado, limpieza.Habitacion.Num_habitacion);
 
             return Miconexion.EjecutarComando(ComandoSQL);
 
@@ -43,7 +43,7 @@ namespace Hotel.DAO
         }
         public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT limpieza_id, fecha, empleado_id, num_habitacion WHERE limpieza.limpieza_id = empleado.empleado_id, limpieza.limpieza.id = habitaciones.num_habitacion");
+            string ComandoSQL = string.Format("SELECT limpieza_id, fecha, empleado.nombre, habitacion.num_habitacion FROM limpieza, empleado, habitacion WHERE limpieza.empleado_id = empleado.empleado_id and limpieza.num_habitacion = habitacion.num_habitacion");
             return Miconexion.EjecutarSentencia(ComandoSQL);
         }
 
