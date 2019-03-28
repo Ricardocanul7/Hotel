@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_eliminar_puesto = new System.Windows.Forms.Button();
             this.btn_modificar_puesto = new System.Windows.Forms.Button();
+            this.txt_puesto_id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_puestos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             this.txt_Nuevo_Puesto.Location = new System.Drawing.Point(104, 72);
             this.txt_Nuevo_Puesto.Name = "txt_Nuevo_Puesto";
-            this.txt_Nuevo_Puesto.Size = new System.Drawing.Size(221, 20);
+            this.txt_Nuevo_Puesto.Size = new System.Drawing.Size(136, 20);
             this.txt_Nuevo_Puesto.TabIndex = 1;
             // 
             // label6
@@ -134,11 +135,19 @@
             this.btn_modificar_puesto.UseVisualStyleBackColor = true;
             this.btn_modificar_puesto.Click += new System.EventHandler(this.Modificar_puesto);
             // 
+            // txt_puesto_id
+            // 
+            this.txt_puesto_id.Location = new System.Drawing.Point(267, 72);
+            this.txt_puesto_id.Name = "txt_puesto_id";
+            this.txt_puesto_id.Size = new System.Drawing.Size(43, 20);
+            this.txt_puesto_id.TabIndex = 30;
+            // 
             // frm_agregar_puesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 410);
+            this.Controls.Add(this.txt_puesto_id);
             this.Controls.Add(this.btn_eliminar_puesto);
             this.Controls.Add(this.btn_modificar_puesto);
             this.Controls.Add(this.label1);
@@ -166,5 +175,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_eliminar_puesto;
         private System.Windows.Forms.Button btn_modificar_puesto;
+        private System.Windows.Forms.TextBox txt_puesto_id;
     }
 }

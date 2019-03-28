@@ -161,6 +161,7 @@
             this.txt_tele_empleado.Name = "txt_tele_empleado";
             this.txt_tele_empleado.Size = new System.Drawing.Size(190, 20);
             this.txt_tele_empleado.TabIndex = 10;
+            this.txt_tele_empleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_telefono);
             // 
             // txt_direcc_empleado
             // 
