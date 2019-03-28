@@ -96,7 +96,7 @@ namespace Hotel.GUI
             {
                 if (limpiezaDAO.Agregar(RecuperarInformacion()) == 1)
                 {
-                    MessageBox.Show("Se ha Agregado el Empleado");
+                    MessageBox.Show("Se ha programado limpieza");
                 }
                 else
                 {
@@ -107,7 +107,7 @@ namespace Hotel.GUI
             {
                 if (limpiezaDAO.Modificar(RecuperarInformacion()) == 1)
                 {
-                    MessageBox.Show("Se ha modificado el Empleado");
+                    MessageBox.Show("Se ha modificado el registro de limpieza");
                 }
                 else
                 {
