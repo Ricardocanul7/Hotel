@@ -30,6 +30,11 @@
         {
             this.btn_guardar_empresa = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmb_tipo = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_buscar_id = new System.Windows.Forms.Button();
+            this.Txt_folio_reserva = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmb_usuario = new System.Windows.Forms.ComboBox();
@@ -40,11 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_buscar_id = new System.Windows.Forms.Button();
-            this.Txt_folio_reserva = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.txt_num_transaccion = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
@@ -84,6 +84,50 @@
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agrega una transacción";
+            // 
+            // cmb_tipo
+            // 
+            this.cmb_tipo.FormattingEnabled = true;
+            this.cmb_tipo.Location = new System.Drawing.Point(115, 128);
+            this.cmb_tipo.Name = "cmb_tipo";
+            this.cmb_tipo.Size = new System.Drawing.Size(232, 21);
+            this.cmb_tipo.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(36, 133);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Tipo de pago:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Folio de Reserva:";
+            // 
+            // btn_buscar_id
+            // 
+            this.btn_buscar_id.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_id.Image = global::Hotel.Properties.Resources.icon_search;
+            this.btn_buscar_id.Location = new System.Drawing.Point(321, 63);
+            this.btn_buscar_id.Name = "btn_buscar_id";
+            this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
+            this.btn_buscar_id.TabIndex = 28;
+            this.btn_buscar_id.UseVisualStyleBackColor = true;
+            // 
+            // Txt_folio_reserva
+            // 
+            this.Txt_folio_reserva.Location = new System.Drawing.Point(115, 65);
+            this.Txt_folio_reserva.Name = "Txt_folio_reserva";
+            this.Txt_folio_reserva.Size = new System.Drawing.Size(200, 20);
+            this.Txt_folio_reserva.TabIndex = 27;
             // 
             // textBox1
             // 
@@ -136,6 +180,7 @@
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(232, 20);
             this.txt_monto.TabIndex = 16;
+            this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_monto);
             // 
             // label4
             // 
@@ -174,50 +219,6 @@
             this.label6.Size = new System.Drawing.Size(298, 40);
             this.label6.TabIndex = 40;
             this.label6.Text = "TRANSACCIONES";
-            // 
-            // btn_buscar_id
-            // 
-            this.btn_buscar_id.FlatAppearance.BorderSize = 0;
-            this.btn_buscar_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar_id.Image = global::Hotel.Properties.Resources.icon_search;
-            this.btn_buscar_id.Location = new System.Drawing.Point(321, 63);
-            this.btn_buscar_id.Name = "btn_buscar_id";
-            this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
-            this.btn_buscar_id.TabIndex = 28;
-            this.btn_buscar_id.UseVisualStyleBackColor = true;
-            // 
-            // Txt_folio_reserva
-            // 
-            this.Txt_folio_reserva.Location = new System.Drawing.Point(115, 65);
-            this.Txt_folio_reserva.Name = "Txt_folio_reserva";
-            this.Txt_folio_reserva.Size = new System.Drawing.Size(200, 20);
-            this.Txt_folio_reserva.TabIndex = 27;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Folio de Reserva:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "Tipo de pago:";
-            // 
-            // cmb_tipo
-            // 
-            this.cmb_tipo.FormattingEnabled = true;
-            this.cmb_tipo.Location = new System.Drawing.Point(115, 128);
-            this.cmb_tipo.Name = "cmb_tipo";
-            this.cmb_tipo.Size = new System.Drawing.Size(232, 21);
-            this.cmb_tipo.TabIndex = 31;
             // 
             // btn_cancelar
             // 

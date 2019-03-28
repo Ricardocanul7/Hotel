@@ -86,6 +86,11 @@ namespace Hotel.GUI
 
             }
         }
+
+        private void Validar_precio(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
+        }
     }
 }
 

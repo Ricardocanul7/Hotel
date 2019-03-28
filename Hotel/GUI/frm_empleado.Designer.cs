@@ -97,6 +97,7 @@
             this.txt_sueldoempleado.Name = "txt_sueldoempleado";
             this.txt_sueldoempleado.Size = new System.Drawing.Size(162, 20);
             this.txt_sueldoempleado.TabIndex = 18;
+            this.txt_sueldoempleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_sueldo);
             // 
             // label10
             // 

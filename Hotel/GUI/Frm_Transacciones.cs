@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel.BO;
 
 namespace Hotel.GUI
 {
@@ -15,6 +16,11 @@ namespace Hotel.GUI
         public Frm_Transacciones()
         {
             InitializeComponent();
+        }
+
+        private void Validar_monto(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
         }
     }
 }

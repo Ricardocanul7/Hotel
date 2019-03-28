@@ -134,5 +134,10 @@ namespace Hotel.GUI
                 cbo_tipoempleado.Text = empleadoT[0]["puesto"].ToString();
             }
         }
+
+        private void Validar_sueldo(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
+        }
     }
 }

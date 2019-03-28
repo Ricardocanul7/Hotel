@@ -99,5 +99,10 @@ namespace Hotel.GUI
         {
            
         }
+
+        private void Validar_monto(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
+        }
     }
 }

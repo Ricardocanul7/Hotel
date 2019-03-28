@@ -131,6 +131,7 @@
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(232, 20);
             this.txt_monto.TabIndex = 16;
+            this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_monto);
             // 
             // label4
             // 

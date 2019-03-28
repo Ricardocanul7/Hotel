@@ -78,6 +78,7 @@
     <Compile Include="BO\TipohabBO.cs" />
     <Compile Include="BO\TipoTransaccionBO.cs" />
     <Compile Include="BO\TransaccionBO.cs" />
+    <Compile Include="BO\ValidacionBO.cs" />
     <Compile Include="DAO\CajaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
