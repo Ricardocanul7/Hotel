@@ -97,7 +97,7 @@
             // 
             // dtp_fecha_limpieza
             // 
-            this.dtp_fecha_limpieza.Location = new System.Drawing.Point(112, 75);
+            this.dtp_fecha_limpieza.Location = new System.Drawing.Point(112, 69);
             this.dtp_fecha_limpieza.Name = "dtp_fecha_limpieza";
             this.dtp_fecha_limpieza.Size = new System.Drawing.Size(200, 20);
             this.dtp_fecha_limpieza.TabIndex = 5;
@@ -139,6 +139,7 @@
             // 
             // txt_id_limpieza
             // 
+            this.txt_id_limpieza.Enabled = false;
             this.txt_id_limpieza.Location = new System.Drawing.Point(112, 34);
             this.txt_id_limpieza.Name = "txt_id_limpieza";
             this.txt_id_limpieza.Size = new System.Drawing.Size(40, 20);
@@ -148,7 +149,7 @@
             // 
             this.cbo_empleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_empleado.FormattingEnabled = true;
-            this.cbo_empleado.Location = new System.Drawing.Point(112, 115);
+            this.cbo_empleado.Location = new System.Drawing.Point(112, 112);
             this.cbo_empleado.Name = "cbo_empleado";
             this.cbo_empleado.Size = new System.Drawing.Size(137, 21);
             this.cbo_empleado.TabIndex = 32;
@@ -157,7 +158,7 @@
             // 
             this.cbo_num_habitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_num_habitacion.FormattingEnabled = true;
-            this.cbo_num_habitacion.Location = new System.Drawing.Point(112, 143);
+            this.cbo_num_habitacion.Location = new System.Drawing.Point(112, 149);
             this.cbo_num_habitacion.Name = "cbo_num_habitacion";
             this.cbo_num_habitacion.Size = new System.Drawing.Size(137, 21);
             this.cbo_num_habitacion.TabIndex = 31;
