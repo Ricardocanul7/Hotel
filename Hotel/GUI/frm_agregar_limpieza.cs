@@ -54,14 +54,19 @@ namespace Hotel.GUI
         {
             DataRow[] rows = habitacionDAO.Buscar().Select();
 
-            for (int i = 0; i < rows.Length; i++)
+            if(rows.Length > 0)
             {
-                if ((string)rows[i]["estado"] == "Disponible")
+                for (int i = 0; i < rows.Length; i++)
                 {
-                    cbo_num_habitacion.Items.Add(rows[i][0] + "-" + rows[i][1]);
-                }
+                    if ((string)rows[i]["estado"] == "Disponible")
+                    {
+                        cbo_num_habitacion.Items.Add(rows[i][0] + "-" + rows[i][1]);
+                    }
 
+                }
+                cbo_num_habitacion.SelectedIndex = 0;
             }
+            
         }
 
         private LimpiezaBO RecuperarInformacion()
@@ -91,7 +96,7 @@ namespace Hotel.GUI
             {
                 if (limpiezaDAO.Agregar(RecuperarInformacion()) == 1)
                 {
-                    MessageBox.Show("Se ha Agregado el Empleado");
+                    MessageBox.Show("Se ha programado limpieza");
                 }
                 else
                 {
@@ -102,7 +107,7 @@ namespace Hotel.GUI
             {
                 if (limpiezaDAO.Modificar(RecuperarInformacion()) == 1)
                 {
-                    MessageBox.Show("Se ha modificado el Empleado");
+                    MessageBox.Show("Se ha modificado el registro de limpieza");
                 }
                 else
                 {

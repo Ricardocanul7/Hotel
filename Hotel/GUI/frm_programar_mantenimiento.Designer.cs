@@ -84,12 +84,14 @@
             // 
             // dgv_Mantenimiento
             // 
+            this.dgv_Mantenimiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Mantenimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Mantenimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Mantenimiento.Location = new System.Drawing.Point(0, 116);
             this.dgv_Mantenimiento.Name = "dgv_Mantenimiento";
             this.dgv_Mantenimiento.Size = new System.Drawing.Size(408, 334);
             this.dgv_Mantenimiento.TabIndex = 1;
+            this.dgv_Mantenimiento.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_mantenimiento);
             // 
             // panel1
             // 
@@ -134,6 +136,7 @@
             this.btn_mantenimiento.Name = "btn_mantenimiento";
             this.btn_mantenimiento.Size = new System.Drawing.Size(168, 36);
             this.btn_mantenimiento.Text = "Programar Mantenimiento";
+            this.btn_mantenimiento.Click += new System.EventHandler(this.btn_mantenimiento_Click);
             // 
             // toolStripSeparator1
             // 
@@ -186,6 +189,7 @@
             this.dgv_Limpieza.Name = "dgv_Limpieza";
             this.dgv_Limpieza.Size = new System.Drawing.Size(397, 334);
             this.dgv_Limpieza.TabIndex = 2;
+            this.dgv_Limpieza.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_limpieza);
             // 
             // panel2
             // 

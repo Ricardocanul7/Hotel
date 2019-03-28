@@ -41,7 +41,7 @@ namespace Hotel.DAO
         }
         public DataTable Buscar()
         {
-            string ComandoSQL = string.Format("SELECT limpieza_id, fecha, empleado_id, num_habitacion WHERE limpieza.limpieza_id = empleado.empleado_id, limpieza.limpieza.id = habitaciones.num_habitacion");
+            string ComandoSQL = string.Format("SELECT mantenimiento_id, fecha, nombre, proveedor_rfc, num_habitacion FROM mantenimiento, proveedor WHERE mantenimiento.proveedor_rfc = proveedor.rfc_proveedor");
             return Miconexion.EjecutarSentencia(ComandoSQL);
         }
     }

@@ -101,7 +101,7 @@ namespace Hotel.GUI
             if (Filaseleccionada >= 0)
             {
                 frm_empresa modificar = new frm_empresa();
-                modificar.Add_empresa_mod(Convert.ToInt32(empresaBO.RFC));
+                modificar.Add_empresa_mod(empresaBO.RFC);
                 if (modificar.ShowDialog() == DialogResult.OK)
                 {
                     dgv_empresas.DataSource = empresaDAO.Buscar();

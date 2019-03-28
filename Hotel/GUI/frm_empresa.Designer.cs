@@ -37,8 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_modificar_puesto = new System.Windows.Forms.Button();
-            this.btn_guardar_puesto = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -127,39 +126,26 @@
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_modificar_puesto
+            // btn_guardar
             // 
-            this.btn_modificar_puesto.Image = global::Hotel.Properties.Resources._036_edit;
-            this.btn_modificar_puesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar_puesto.Location = new System.Drawing.Point(248, 267);
-            this.btn_modificar_puesto.Name = "btn_modificar_puesto";
-            this.btn_modificar_puesto.Size = new System.Drawing.Size(102, 38);
-            this.btn_modificar_puesto.TabIndex = 44;
-            this.btn_modificar_puesto.Text = "Modificar";
-            this.btn_modificar_puesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_modificar_puesto.UseVisualStyleBackColor = true;
-            // 
-            // btn_guardar_puesto
-            // 
-            this.btn_guardar_puesto.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_guardar_puesto.Image = global::Hotel.Properties.Resources._035_save;
-            this.btn_guardar_puesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_puesto.Location = new System.Drawing.Point(365, 267);
-            this.btn_guardar_puesto.Name = "btn_guardar_puesto";
-            this.btn_guardar_puesto.Size = new System.Drawing.Size(95, 38);
-            this.btn_guardar_puesto.TabIndex = 43;
-            this.btn_guardar_puesto.Text = "       Guardar";
-            this.btn_guardar_puesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_guardar_puesto.UseVisualStyleBackColor = true;
-            this.btn_guardar_puesto.Click += new System.EventHandler(this.Guardar_empresa);
+            this.btn_guardar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_guardar.Image = global::Hotel.Properties.Resources._035_save;
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar.Location = new System.Drawing.Point(365, 267);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(95, 38);
+            this.btn_guardar.TabIndex = 43;
+            this.btn_guardar.Text = "       Guardar";
+            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.Guardar_empresa);
             // 
             // frm_empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 328);
-            this.Controls.Add(this.btn_modificar_puesto);
-            this.Controls.Add(this.btn_guardar_puesto);
+            this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox3);
@@ -183,7 +169,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btn_modificar_puesto;
-        private System.Windows.Forms.Button btn_guardar_puesto;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }
