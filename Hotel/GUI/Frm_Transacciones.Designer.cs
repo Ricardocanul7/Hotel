@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_guardar_empresa = new System.Windows.Forms.Button();
+            this.btn_guardar_transaccion = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmb_tipo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_buscar_id = new System.Windows.Forms.Button();
             this.Txt_folio_reserva = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmb_usuario = new System.Windows.Forms.ComboBox();
+            this.cbo_usuario = new System.Windows.Forms.ComboBox();
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_monto = new System.Windows.Forms.TextBox();
@@ -51,17 +51,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_guardar_empresa
+            // btn_guardar_transaccion
             // 
-            this.btn_guardar_empresa.Image = global::Hotel.Properties.Resources._035_save;
-            this.btn_guardar_empresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_empresa.Location = new System.Drawing.Point(210, 333);
-            this.btn_guardar_empresa.Name = "btn_guardar_empresa";
-            this.btn_guardar_empresa.Size = new System.Drawing.Size(93, 50);
-            this.btn_guardar_empresa.TabIndex = 43;
-            this.btn_guardar_empresa.Text = "       Guardar";
-            this.btn_guardar_empresa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_guardar_empresa.UseVisualStyleBackColor = true;
+            this.btn_guardar_transaccion.Image = global::Hotel.Properties.Resources._035_save;
+            this.btn_guardar_transaccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_guardar_transaccion.Location = new System.Drawing.Point(210, 333);
+            this.btn_guardar_transaccion.Name = "btn_guardar_transaccion";
+            this.btn_guardar_transaccion.Size = new System.Drawing.Size(93, 50);
+            this.btn_guardar_transaccion.TabIndex = 43;
+            this.btn_guardar_transaccion.Text = "       Guardar";
+            this.btn_guardar_transaccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_guardar_transaccion.UseVisualStyleBackColor = true;
+            this.btn_guardar_transaccion.Click += new System.EventHandler(this.btn_guardar_transaccion_Click);
             // 
             // groupBox3
             // 
@@ -70,9 +71,9 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.btn_buscar_id);
             this.groupBox3.Controls.Add(this.Txt_folio_reserva);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.Txt_Descripcion);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.cmb_usuario);
+            this.groupBox3.Controls.Add(this.cbo_usuario);
             this.groupBox3.Controls.Add(this.dtp_fecha);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.txt_monto);
@@ -129,12 +130,12 @@
             this.Txt_folio_reserva.Size = new System.Drawing.Size(200, 20);
             this.Txt_folio_reserva.TabIndex = 27;
             // 
-            // textBox1
+            // Txt_Descripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 188);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 20);
-            this.textBox1.TabIndex = 23;
+            this.Txt_Descripcion.Location = new System.Drawing.Point(117, 188);
+            this.Txt_Descripcion.Name = "Txt_Descripcion";
+            this.Txt_Descripcion.Size = new System.Drawing.Size(232, 20);
+            this.Txt_Descripcion.TabIndex = 23;
             // 
             // label3
             // 
@@ -145,14 +146,14 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Descripción:";
             // 
-            // cmb_usuario
+            // cbo_usuario
             // 
-            this.cmb_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_usuario.FormattingEnabled = true;
-            this.cmb_usuario.Location = new System.Drawing.Point(115, 29);
-            this.cmb_usuario.Name = "cmb_usuario";
-            this.cmb_usuario.Size = new System.Drawing.Size(232, 21);
-            this.cmb_usuario.TabIndex = 21;
+            this.cbo_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_usuario.FormattingEnabled = true;
+            this.cbo_usuario.Location = new System.Drawing.Point(115, 29);
+            this.cbo_usuario.Name = "cbo_usuario";
+            this.cbo_usuario.Size = new System.Drawing.Size(232, 21);
+            this.cbo_usuario.TabIndex = 21;
             // 
             // dtp_fecha
             // 
@@ -247,7 +248,7 @@
             this.ClientSize = new System.Drawing.Size(457, 450);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.txt_num_transaccion);
-            this.Controls.Add(this.btn_guardar_empresa);
+            this.Controls.Add(this.btn_guardar_transaccion);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -261,9 +262,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_guardar_empresa;
+        private System.Windows.Forms.Button btn_guardar_transaccion;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cmb_usuario;
+        private System.Windows.Forms.ComboBox cbo_usuario;
         private System.Windows.Forms.DateTimePicker dtp_fecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_monto;
@@ -271,7 +272,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Descripcion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmb_tipo;
         private System.Windows.Forms.Label label7;
