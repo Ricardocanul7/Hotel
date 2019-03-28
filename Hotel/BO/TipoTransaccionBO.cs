@@ -8,5 +8,19 @@ namespace Hotel.BO
 {
     class TipoTransaccionBO
     {
+        private int tipo_id;
+        private string nombre;
+
+        public int Tipo_id
+        {
+            get { return tipo_id; }
+            set { tipo_id = value; }
+        }
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
     }
 }
