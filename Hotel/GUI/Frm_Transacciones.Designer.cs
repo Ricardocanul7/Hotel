@@ -30,7 +30,7 @@
         {
             this.btn_guardar_transaccion = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cmb_tipo = new System.Windows.Forms.ComboBox();
+            this.cbo_tipo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_buscar_id = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cmb_tipo);
+            this.groupBox3.Controls.Add(this.cbo_tipo);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.btn_buscar_id);
@@ -86,13 +86,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agrega una transacción";
             // 
-            // cmb_tipo
+            // cbo_tipo
             // 
-            this.cmb_tipo.FormattingEnabled = true;
-            this.cmb_tipo.Location = new System.Drawing.Point(115, 128);
-            this.cmb_tipo.Name = "cmb_tipo";
-            this.cmb_tipo.Size = new System.Drawing.Size(232, 21);
-            this.cmb_tipo.TabIndex = 31;
+            this.cbo_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo.FormattingEnabled = true;
+            this.cbo_tipo.Location = new System.Drawing.Point(115, 128);
+            this.cbo_tipo.Name = "cbo_tipo";
+            this.cbo_tipo.Size = new System.Drawing.Size(232, 21);
+            this.cbo_tipo.TabIndex = 31;
             // 
             // label7
             // 
@@ -274,7 +275,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Txt_Descripcion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmb_tipo;
+        private System.Windows.Forms.ComboBox cbo_tipo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_buscar_id;

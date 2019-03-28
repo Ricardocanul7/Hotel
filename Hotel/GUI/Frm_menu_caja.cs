@@ -37,7 +37,7 @@ namespace Hotel.GUI
             datos = cajaDAO.Buscar();
 
 
-            dgv_transacciones.DataSource = datos;
+            dgv_transacciones.DataSource = transaccionDAO.Buscar();
             dgv_transacciones.AllowUserToAddRows = false;
             dgv_transacciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_transacciones.ReadOnly = true;

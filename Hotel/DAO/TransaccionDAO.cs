@@ -36,6 +36,13 @@ namespace Hotel.DAO
             return Miconexion.EjecutarSentencia(ComandoSQL);
 
         }
+
+        public DataTable Buscar_tipoTransaccion()
+        {
+            string ComandoSQL = string.Format("SELECT * FROM tipo_transaccion");
+            return Miconexion.EjecutarSentencia(ComandoSQL);
+
+        }
         /*  -Agregar
            -Modificar
            -Eliminar

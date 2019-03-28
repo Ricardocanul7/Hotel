@@ -27,6 +27,9 @@ namespace Hotel.GUI
         {
             InitializeComponent();
             Set_cbo_usuario();
+            Set_cbo_tipo();
+
+            dtp_fecha.Value = DateTime.Now;
         }
 
         public void Set_cbo_usuario()
@@ -34,10 +37,20 @@ namespace Hotel.GUI
             DataRow[] rows = usuariodao.Buscar().Select();
             for (int i = 0; i < rows.Length; i++)
             {
-                cbo_usuario.Items.Add(rows[i][0]);
+                cbo_usuario.Items.Add(rows[i][0] + "-" + rows[i]["nombre"]);
             }
 
             cbo_usuario.SelectedIndex = 0;
+        }
+
+        public void Set_cbo_tipo()
+        {
+            DataRow[] rows = transaccionDAO.Buscar_tipoTransaccion().Select();
+            for (int i = 0; i < rows.Length; i++)
+            {
+                cbo_tipo.Items.Add(rows[i]["nombre_transaccion"]);
+            }
+            cbo_tipo.SelectedIndex = 0;
         }
 
         private void Validar_monto(object sender, KeyPressEventArgs e)
@@ -50,7 +63,7 @@ namespace Hotel.GUI
             transaccionbo.Descripccion = Txt_Descripcion.Text;
             transaccionbo.Monto = Convert.ToDouble(txt_monto.Text);
             transaccionbo.Fecha = dtp_fecha.Value.Date;
-            tipotransaccionBO.Tipo_id = cmb_tipo.SelectedIndex;
+            tipotransaccionBO.Tipo_id = cbo_tipo.SelectedIndex;
             reservaBO.Folio_reserva = Convert.ToInt32(Txt_folio_reserva.Text);
             usuariobo.Id_usuario = cbo_usuario.SelectedIndex;
 
