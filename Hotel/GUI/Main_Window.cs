@@ -77,7 +77,7 @@ namespace Hotel.GUI
             ventana.FormBorderStyle = FormBorderStyle.None;
             this.panel_principal.Controls.Add(ventana);
             ventana.Show();
-            lbl_titulo.Text = "MANTENIMIENTO";
+            lbl_titulo.Text = "EMPRESAS";
         }
 
         private void btn_habitaciones_Click(object sender, EventArgs e)

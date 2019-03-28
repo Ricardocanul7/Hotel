@@ -139,5 +139,10 @@ namespace Hotel.GUI
         {
             ValidacionBO.SoloNumeros(e);
         }
+
+        private void Validar_telefono(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
+        }
     }
 }

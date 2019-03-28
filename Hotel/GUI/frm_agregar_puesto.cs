@@ -21,6 +21,8 @@ namespace Hotel.GUI
         {
             InitializeComponent();
 
+            txt_puesto_id.Enabled = false;
+
             datos = empleadoDAO.Buscar_Puesto();
 
             dgv_puestos.DataSource = datos;
@@ -49,10 +51,13 @@ namespace Hotel.GUI
 
             Limpiar();
         }
-        internal EmpleadoBO RecuperarInformacion()
+        private EmpleadoBO RecuperarInformacion()
         {
-            EmpleadoBO empleadoBO = new EmpleadoBO();
+            int id = 0;
+            int.TryParse(txt_puesto_id.Text, out id);
 
+
+            empleadoBO.Puesto_id = id;
             empleadoBO.Puesto = txt_Nuevo_Puesto.Text;
 
                 return empleadoBO;
@@ -83,15 +88,15 @@ namespace Hotel.GUI
         {
             int Filaseleccionada = e.RowIndex;
 
-            if (Filaseleccionada >= 0)
+            if (Filaseleccionada > 0)
             {
+                
+                empleadoBO.Puesto_id = int.Parse(dgv_puestos.Rows[Filaseleccionada].Cells["puesto_id"].Value.ToString());
                 empleadoBO.Puesto = dgv_puestos.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
-                empleadoBO.Id_empleado = Convert.ToInt32(dgv_puestos.Rows[Filaseleccionada].Cells["puesto_id"].Value.ToString());
 
-                txt_Nuevo_Puesto.Text = empleadoBO.Puesto;
+                txt_puesto_id.Text = Convert.ToString(empleadoBO.Puesto_id);
+                txt_Buscar_Puesto.Text = empleadoBO.Puesto;
 
-
-                this.DialogResult = DialogResult.OK;
             }
         }
 
@@ -117,12 +122,12 @@ namespace Hotel.GUI
         {
             if (empleadoDAO.Modificar_Puesto(RecuperarInformacion()) == 1)
             {
-                MessageBox.Show("Registro Modificado :)");
+                MessageBox.Show("Registro Modificado");
 
             }
             else
             {
-                MessageBox.Show("Algo a salido mal :(");
+                MessageBox.Show("Algo a salido mal");
             }
 
             dgv_puestos.DataSource = empleadoDAO.Buscar_Puesto();
