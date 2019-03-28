@@ -74,12 +74,25 @@ namespace Hotel
             
             for (int i = 0; i < rowLimp.Length; i++)
             {
-                if(DateTime.Now == DateTime.Parse(rowLimp[i]["fecha"].ToString()))
+                if (DateTime.Now.ToShortDateString() == DateTime.Parse(rowLimp[i]["fecha"].ToString()).ToShortDateString())
                 {
-                    int num_habitacion = Convert.ToInt32(rowLimp[i]["fecha"]);
+                    int num_habitacion = Convert.ToInt32(rowLimp[i]["num_habitacion"]);
                     // Limpieza = 3
                     habitacionDAO.ModificarEstado(num_habitacion, 3);
                 } 
+            }
+
+            MantenimientoDAO mantenimientoDAO = new MantenimientoDAO();
+            DataRow[] rowMant = mantenimientoDAO.Buscar().Select();
+
+            for (int i = 0; i < rowMant.Length; i++)
+            {
+                if (DateTime.Now.ToShortDateString() == DateTime.Parse(rowMant[i]["fecha"].ToString()).ToShortDateString())
+                {
+                    int num_habitacion = Convert.ToInt32(rowMant[i]["num_habitacion"]);
+                    // Mantenimiento = 2
+                    habitacionDAO.ModificarEstado(num_habitacion, 2);
+                }
             }
         }
 
