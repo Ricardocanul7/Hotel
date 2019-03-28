@@ -86,6 +86,7 @@
             this.txt_precioN.Name = "txt_precioN";
             this.txt_precioN.Size = new System.Drawing.Size(174, 20);
             this.txt_precioN.TabIndex = 19;
+            this.txt_precioN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_Precio);
             // 
             // label7
             // 
@@ -160,6 +161,7 @@
             this.txt_max_ninios.Name = "txt_max_ninios";
             this.txt_max_ninios.Size = new System.Drawing.Size(45, 20);
             this.txt_max_ninios.TabIndex = 17;
+            this.txt_max_ninios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_maxniños);
             // 
             // label2
             // 
@@ -194,6 +196,7 @@
             this.txt_max_adultos.Name = "txt_max_adultos";
             this.txt_max_adultos.Size = new System.Drawing.Size(45, 20);
             this.txt_max_adultos.TabIndex = 13;
+            this.txt_max_adultos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validar_maxadultos);
             // 
             // label3
             // 

@@ -150,6 +150,7 @@
             this.txt_tele_cliente.Name = "txt_tele_cliente";
             this.txt_tele_cliente.Size = new System.Drawing.Size(162, 20);
             this.txt_tele_cliente.TabIndex = 12;
+            this.txt_tele_cliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_telefono);
             // 
             // txt_amaterno_cliente
             // 

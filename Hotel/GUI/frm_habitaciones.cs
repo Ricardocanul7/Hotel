@@ -112,7 +112,7 @@ namespace Hotel.GUI
                 {
                     MessageBox.Show("Ha habido un error al modificar la habitación!");
                 }
-
+              
             }
             else
             {
@@ -125,6 +125,22 @@ namespace Hotel.GUI
                     MessageBox.Show("Ha habido un error al registrar la habitación!");
                 }
             }
+         
+        }
+
+        private void Validar_maxniños(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
+        }
+
+        private void validar_maxadultos(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
+        }
+
+        private void Validar_Precio(object sender, KeyPressEventArgs e)
+        {
+            ValidacionBO.SoloNumeros(e);
         }
     }
 }

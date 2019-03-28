@@ -226,6 +226,7 @@
             this.Txt_telefono_cliente.Name = "Txt_telefono_cliente";
             this.Txt_telefono_cliente.Size = new System.Drawing.Size(241, 20);
             this.Txt_telefono_cliente.TabIndex = 20;
+            this.Txt_telefono_cliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_telefono);
             // 
             // txt_email
             // 

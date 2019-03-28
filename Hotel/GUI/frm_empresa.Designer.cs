@@ -59,6 +59,7 @@
             this.txt_precio_hora.Name = "txt_precio_hora";
             this.txt_precio_hora.Size = new System.Drawing.Size(232, 20);
             this.txt_precio_hora.TabIndex = 18;
+            this.txt_precio_hora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_precio);
             // 
             // label2
             // 
