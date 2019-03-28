@@ -308,5 +308,10 @@ namespace Hotel.GUI
                 MessageBox.Show("Error: " + error.Message);
             }
         }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

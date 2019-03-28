@@ -65,6 +65,7 @@
             this.btn_nvatransaccion.Name = "btn_nvatransaccion";
             this.btn_nvatransaccion.Size = new System.Drawing.Size(135, 22);
             this.btn_nvatransaccion.Text = "Agregar Transacción";
+            this.btn_nvatransaccion.Click += new System.EventHandler(this.btn_nvatransaccion_Click);
             // 
             // toolStripSeparator1
             // 
