@@ -37,11 +37,9 @@
             this.Txt_folio_reserva = new System.Windows.Forms.TextBox();
             this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbo_usuario = new System.Windows.Forms.ComboBox();
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_monto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,15 +71,13 @@
             this.groupBox3.Controls.Add(this.Txt_folio_reserva);
             this.groupBox3.Controls.Add(this.Txt_Descripcion);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.cbo_usuario);
             this.groupBox3.Controls.Add(this.dtp_fecha);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.txt_monto);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(29, 112);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(375, 218);
+            this.groupBox3.Size = new System.Drawing.Size(375, 196);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agrega una transacción";
@@ -90,7 +86,7 @@
             // 
             this.cbo_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_tipo.FormattingEnabled = true;
-            this.cbo_tipo.Location = new System.Drawing.Point(115, 128);
+            this.cbo_tipo.Location = new System.Drawing.Point(115, 87);
             this.cbo_tipo.Name = "cbo_tipo";
             this.cbo_tipo.Size = new System.Drawing.Size(232, 21);
             this.cbo_tipo.TabIndex = 31;
@@ -98,7 +94,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 133);
+            this.label7.Location = new System.Drawing.Point(36, 92);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 30;
@@ -107,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 68);
+            this.label5.Location = new System.Drawing.Point(19, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 13);
             this.label5.TabIndex = 29;
@@ -118,7 +114,7 @@
             this.btn_buscar_id.FlatAppearance.BorderSize = 0;
             this.btn_buscar_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar_id.Image = global::Hotel.Properties.Resources.icon_search;
-            this.btn_buscar_id.Location = new System.Drawing.Point(321, 63);
+            this.btn_buscar_id.Location = new System.Drawing.Point(321, 22);
             this.btn_buscar_id.Name = "btn_buscar_id";
             this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
             this.btn_buscar_id.TabIndex = 28;
@@ -126,14 +122,14 @@
             // 
             // Txt_folio_reserva
             // 
-            this.Txt_folio_reserva.Location = new System.Drawing.Point(115, 65);
+            this.Txt_folio_reserva.Location = new System.Drawing.Point(115, 24);
             this.Txt_folio_reserva.Name = "Txt_folio_reserva";
             this.Txt_folio_reserva.Size = new System.Drawing.Size(200, 20);
             this.Txt_folio_reserva.TabIndex = 27;
             // 
             // Txt_Descripcion
             // 
-            this.Txt_Descripcion.Location = new System.Drawing.Point(117, 188);
+            this.Txt_Descripcion.Location = new System.Drawing.Point(117, 147);
             this.Txt_Descripcion.Name = "Txt_Descripcion";
             this.Txt_Descripcion.Size = new System.Drawing.Size(232, 20);
             this.Txt_Descripcion.TabIndex = 23;
@@ -141,27 +137,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 191);
+            this.label3.Location = new System.Drawing.Point(43, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 22;
             this.label3.Text = "Descripción:";
-            // 
-            // cbo_usuario
-            // 
-            this.cbo_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_usuario.FormattingEnabled = true;
-            this.cbo_usuario.Location = new System.Drawing.Point(115, 29);
-            this.cbo_usuario.Name = "cbo_usuario";
-            this.cbo_usuario.Size = new System.Drawing.Size(232, 21);
-            this.cbo_usuario.TabIndex = 21;
             // 
             // dtp_fecha
             // 
             this.dtp_fecha.CustomFormat = "yyyy-MM-dd";
             this.dtp_fecha.Enabled = false;
             this.dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_fecha.Location = new System.Drawing.Point(115, 159);
+            this.dtp_fecha.Location = new System.Drawing.Point(115, 118);
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(232, 20);
             this.dtp_fecha.TabIndex = 19;
@@ -170,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 159);
+            this.label2.Location = new System.Drawing.Point(69, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 17;
@@ -178,25 +165,16 @@
             // 
             // txt_monto
             // 
-            this.txt_monto.Location = new System.Drawing.Point(115, 99);
+            this.txt_monto.Location = new System.Drawing.Point(115, 58);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(232, 20);
             this.txt_monto.TabIndex = 16;
             this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_monto);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Usuario:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 102);
+            this.label1.Location = new System.Drawing.Point(69, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 8;
@@ -265,11 +243,9 @@
         #endregion
         private System.Windows.Forms.Button btn_guardar_transaccion;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cbo_usuario;
         private System.Windows.Forms.DateTimePicker dtp_fecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_monto;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;

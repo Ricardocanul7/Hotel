@@ -35,23 +35,16 @@ namespace Hotel.GUI
             usuarioBO = new UsuarioBO();
             tipotransaccionBO = new TipoTransaccionBO();
             tipotransaccionDAO = new TipoTransaccionDAO();
-            datos = cajaDAO.Buscar();
-
 
             dgv_transacciones.DataSource = transaccionDAO.Buscar();
             dgv_transacciones.AllowUserToAddRows = false;
             dgv_transacciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_transacciones.ReadOnly = true;
 
-            dgv_corte.DataSource = datos;
+            dgv_corte.DataSource = cajaDAO.Buscar();
             dgv_corte.AllowUserToAddRows = false;
             dgv_corte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_corte.ReadOnly = true;
-        }
-
-        private void seleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
         }
 
         private void btn_cerrar_caja_Click(object sender, EventArgs e)
@@ -69,7 +62,7 @@ namespace Hotel.GUI
             Frm_Transacciones transacciones = new Frm_Transacciones();
             if (transacciones.ShowDialog() == DialogResult.OK)
             {
-                dgv_transacciones.DataSource = cajaDAO.Buscar();
+                dgv_transacciones.DataSource = transaccionDAO.Buscar();
                 dgv_transacciones.Update();
             }
         }
