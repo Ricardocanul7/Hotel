@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.btn_habitaciones = new System.Windows.Forms.ToolStrip();
             this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
             this.dgv_transacciones = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dgv_corte = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_corte = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_corte)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -76,18 +76,27 @@
             this.splitContainer1.SplitterDistance = 564;
             this.splitContainer1.TabIndex = 0;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::Hotel.Properties.Resources._024_safety_box1;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(14, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 40);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "     CORTES DE CAJA";
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(564, 100);
+            this.panel1.TabIndex = 52;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Image = global::Hotel.Properties.Resources.cash1;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(12, 29);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 3, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(348, 40);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "     TRANSACCIONES";
             // 
             // btn_habitaciones
             // 
@@ -137,19 +146,40 @@
             this.dgv_transacciones.Name = "dgv_transacciones";
             this.dgv_transacciones.Size = new System.Drawing.Size(564, 540);
             this.dgv_transacciones.TabIndex = 48;
+            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_trans);
             // 
-            // label6
+            // dgv_corte
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = global::Hotel.Properties.Resources.cash1;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(12, 29);
-            this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 3, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(348, 40);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "     TRANSACCIONES";
+            this.dgv_corte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_corte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_corte.Location = new System.Drawing.Point(0, 125);
+            this.dgv_corte.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
+            this.dgv_corte.Name = "dgv_corte";
+            this.dgv_corte.Size = new System.Drawing.Size(636, 415);
+            this.dgv_corte.TabIndex = 54;
+            this.dgv_corte.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Selecionar_fila_corte);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(636, 100);
+            this.panel2.TabIndex = 53;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::Hotel.Properties.Resources._024_safety_box1;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(14, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(348, 40);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "     CORTES DE CAJA";
             // 
             // toolStrip1
             // 
@@ -190,34 +220,6 @@
             this.toolStripButton3.Size = new System.Drawing.Size(103, 22);
             this.toolStripButton3.Text = "imprimir corte";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 100);
-            this.panel1.TabIndex = 52;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(636, 100);
-            this.panel2.TabIndex = 53;
-            // 
-            // dgv_corte
-            // 
-            this.dgv_corte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_corte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_corte.Location = new System.Drawing.Point(0, 125);
-            this.dgv_corte.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
-            this.dgv_corte.Name = "dgv_corte";
-            this.dgv_corte.Size = new System.Drawing.Size(636, 415);
-            this.dgv_corte.TabIndex = 54;
-            // 
             // Frm_menu_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,16 +234,16 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.btn_habitaciones.ResumeLayout(false);
             this.btn_habitaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_corte)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_corte)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
