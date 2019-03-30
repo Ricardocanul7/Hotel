@@ -30,13 +30,11 @@
         {
             this.btn_guardar_empresa = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbo_usuario = new System.Windows.Forms.ComboBox();
             this.dtp_hora = new System.Windows.Forms.DateTimePicker();
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_monto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,37 +58,25 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbo_usuario);
             this.groupBox3.Controls.Add(this.dtp_hora);
             this.groupBox3.Controls.Add(this.dtp_fecha);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.txt_monto);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(28, 119);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(339, 157);
+            this.groupBox3.Size = new System.Drawing.Size(339, 133);
             this.groupBox3.TabIndex = 37;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles del Corte";
-            // 
-            // cbo_usuario
-            // 
-            this.cbo_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_usuario.FormattingEnabled = true;
-            this.cbo_usuario.Location = new System.Drawing.Point(75, 26);
-            this.cbo_usuario.Name = "cbo_usuario";
-            this.cbo_usuario.Size = new System.Drawing.Size(232, 21);
-            this.cbo_usuario.TabIndex = 21;
-            this.cbo_usuario.SelectedValueChanged += new System.EventHandler(this.cbo_usuario_SelectedValueChanged);
             // 
             // dtp_hora
             // 
             this.dtp_hora.CustomFormat = "HH:mm:ss";
             this.dtp_hora.Enabled = false;
             this.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_hora.Location = new System.Drawing.Point(75, 116);
+            this.dtp_hora.Location = new System.Drawing.Point(75, 89);
             this.dtp_hora.Name = "dtp_hora";
             this.dtp_hora.Size = new System.Drawing.Size(232, 20);
             this.dtp_hora.TabIndex = 20;
@@ -101,7 +87,7 @@
             this.dtp_fecha.CustomFormat = "yyyy-MM-dd";
             this.dtp_fecha.Enabled = false;
             this.dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_fecha.Location = new System.Drawing.Point(75, 88);
+            this.dtp_fecha.Location = new System.Drawing.Point(75, 61);
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(232, 20);
             this.dtp_fecha.TabIndex = 19;
@@ -110,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 120);
+            this.label3.Location = new System.Drawing.Point(31, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 18;
@@ -119,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 88);
+            this.label2.Location = new System.Drawing.Point(24, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 17;
@@ -127,25 +113,16 @@
             // 
             // txt_monto
             // 
-            this.txt_monto.Location = new System.Drawing.Point(75, 59);
+            this.txt_monto.Location = new System.Drawing.Point(75, 32);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(232, 20);
             this.txt_monto.TabIndex = 16;
             this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validar_monto);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Usuario:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 62);
+            this.label1.Location = new System.Drawing.Point(24, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 8;
@@ -210,8 +187,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_fecha;
         private System.Windows.Forms.DateTimePicker dtp_hora;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbo_usuario;
         private System.Windows.Forms.TextBox txt_idcorte;
     }
 }
