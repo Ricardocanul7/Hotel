@@ -188,7 +188,6 @@
             // 
             // btn_guardar_cliente
             // 
-            this.btn_guardar_cliente.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_guardar_cliente.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar_cliente.Location = new System.Drawing.Point(474, 346);

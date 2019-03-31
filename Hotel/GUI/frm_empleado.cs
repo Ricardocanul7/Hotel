@@ -45,35 +45,48 @@ namespace Hotel.GUI
             }
             
         }
-
-        private void Guardar_Empleados(object sender, EventArgs e)
+        public void ValidarTexbox()
         {
-            if(Empleado_mod == false)
+            if(txt_apellidomaterno.Text =="" | txt_apellidoparteno.Text =="" | txt_direcc_empleado.Text =="" | txt_nom_empleado.Text =="" | txt_sueldoempleado.Text == "" | txt_tele_empleado.Text == "")
             {
-                if (empleadoDAO.Agregar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se ha Agregado el Empleado");
-                }
-                else
-                {
-                    MessageBox.Show("Ha sucedido un error");
-                }
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (empleadoDAO.Modificar(RecuperarInformacion()) == 1)
+                if (Empleado_mod == false)
                 {
-                    MessageBox.Show("Se ha modificado el Empleado");
+                    if (empleadoDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha Agregado el Empleado");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ha sucedido un error");
+                    if (empleadoDAO.Modificar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado el Empleado");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
-            }
-            
-            
-            Limpiar();
 
+
+                Limpiar();
+
+            }
+        }
+
+        private void Guardar_Empleados(object sender, EventArgs e)
+        {
+            ValidarTexbox();
         }
         internal EmpleadoBO RecuperarInformacion()
         {

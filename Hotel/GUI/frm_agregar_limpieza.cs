@@ -89,31 +89,44 @@ namespace Hotel.GUI
 
             return limpiezaBO;
         }
-
-        private void Guardar_Limpieza(object sender, EventArgs e)
+        public void ValidarText()
         {
-            if (Limpieza_mod == false)
+            if(cbo_empleado.Text =="" | cbo_num_habitacion.Text == "")
             {
-                if (limpiezaDAO.Agregar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se ha programado limpieza");
-                }
-                else
-                {
-                    MessageBox.Show("Ha sucedido un error");
-                }
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (limpiezaDAO.Modificar(RecuperarInformacion()) == 1)
+                if (Limpieza_mod == false)
                 {
-                    MessageBox.Show("Se ha modificado el registro de limpieza");
+                    if (limpiezaDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha programado limpieza");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ha sucedido un error");
+                    if (limpiezaDAO.Modificar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado el registro de limpieza");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
             }
+        }
+
+        private void Guardar_Limpieza(object sender, EventArgs e)
+        {
+            ValidarText();
         }
     }
 }

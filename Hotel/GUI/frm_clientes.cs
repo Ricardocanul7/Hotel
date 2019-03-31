@@ -24,35 +24,49 @@ namespace Hotel.GUI
 
 
         }
-
-        private void Guardar_clientes(object sender, EventArgs e)
+        public void ValidarTexbox()
         {
-            if (Cliente_mod == false)
+            if(txt_amaterno_cliente.Text =="" | txt_apaterno_cliente.Text =="" | txt_direcc_cliente.Text =="" | txt_email_cliente.Text =="" | txt_nom_cliente.Text =="" | txt_tele_cliente.Text == "")
             {
-                if (clienteDAO.Agregar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se ha Agregado el Cliente");
-                }
-                else
-                {
-                    MessageBox.Show("Ha sucedido un error");
-                }
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (clienteDAO.Modificar(RecuperarInformacion()) == 1)
+                if (Cliente_mod == false)
                 {
-                    MessageBox.Show("Se ha modificado el Cliente");
+                    if (clienteDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha Agregado el Cliente");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ha sucedido un error");
+                    if (clienteDAO.Modificar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado el Cliente");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
+
+
+                Limpiar();
+
             }
+        }
 
-
-            Limpiar();
-         
+        private void Guardar_clientes(object sender, EventArgs e)
+        {
+            ValidarTexbox();
+          
         }
         internal ClienteBO RecuperarInformacion()
         {

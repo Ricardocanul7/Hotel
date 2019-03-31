@@ -49,21 +49,31 @@ namespace Hotel.GUI
         {
             ValidacionBO.SoloNumeros(e);
         }
-
-        private void btn_guardar_transaccion_Click(object sender, EventArgs e)
+        public void ValidarTextBox()
         {
-            if (transaccionDAO.Agregar(RecuperarInformacion()) == 1)
+            if(Txt_folio_reserva.Text =="" | txt_monto.Text == "")
             {
-                int folio = Convert.ToInt32(Txt_folio_reserva.Text);
-                reservaDAO.PagarReserva(folio); // La reserva cambia de estado a pagado
-
-                MessageBox.Show("Se ha registrado la transaccion");
-                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                MessageBox.Show("Ha habido un error al hacer la transacción");
+                if (transaccionDAO.Agregar(RecuperarInformacion()) == 1)
+                {
+                    int folio = Convert.ToInt32(Txt_folio_reserva.Text);
+                    reservaDAO.PagarReserva(folio); // La reserva cambia de estado a pagado
+
+                    MessageBox.Show("Se ha registrado la transaccion");
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un error al hacer la transacción");
+                }
             }
+        }
+        private void btn_guardar_transaccion_Click(object sender, EventArgs e)
+        {
+            ValidarTextBox();
         }
 
         private TransaccionBO RecuperarInformacion()

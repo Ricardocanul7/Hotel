@@ -55,7 +55,7 @@ namespace Hotel.GUI
                     if (empresaDAO.Agregar(RecuperarInformacion()) == 1)
                     {
 
-                        MessageBox.Show("Se ha Agregado el Empleado");
+                        MessageBox.Show("Se ha Agregado el Empresa");
                         this.DialogResult = DialogResult.OK;
                     }
                     else
@@ -67,7 +67,7 @@ namespace Hotel.GUI
                 {
                     if (empresaDAO.Modificar(RecuperarInformacion()) == 1)
                     {
-                        MessageBox.Show("Se ha modificado el Empleado");
+                        MessageBox.Show("Se ha modificado el Empresa");
                         this.DialogResult = DialogResult.OK;
                     }
                     else

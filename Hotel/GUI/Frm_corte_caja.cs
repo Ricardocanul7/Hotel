@@ -66,26 +66,35 @@ namespace Hotel.GUI
                 MessageBox.Show("No hay transacciones el dia de hoy");
             }
         }
-
-        private void btn_guardar_empresa_Click(object sender, EventArgs e)
+        public void ValidarText()
         {
-            if(txt_monto.Text != string.Empty)
+            if(txt_monto.Text == "")
             {
-                if (cajaDAO.Agregar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se ha registrado el Corte de Caja");
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    MessageBox.Show("Ha habido un error al hacer el Corte de Caja");
-                }
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                MessageBox.Show("Rellene todos los campos!");
+                if (txt_monto.Text != string.Empty)
+                {
+                    if (cajaDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha registrado el Corte de Caja");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al hacer el Corte de Caja");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Rellene todos los campos!");
+                }
             }
-            
+        }
+        private void btn_guardar_empresa_Click(object sender, EventArgs e)
+        {
+            ValidarText();            
         }
 
         private CajaBO RecuperarInformacion()

@@ -247,7 +247,6 @@
             // 
             // btn_guardar_empleado
             // 
-            this.btn_guardar_empleado.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_guardar_empleado.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar_empleado.Location = new System.Drawing.Point(440, 296);

@@ -46,7 +46,6 @@
             // 
             // btn_guardar_limpieza
             // 
-            this.btn_guardar_limpieza.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_guardar_limpieza.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_limpieza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar_limpieza.Location = new System.Drawing.Point(382, 324);

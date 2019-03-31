@@ -80,31 +80,43 @@ namespace Hotel.GUI
 
             return mantenimientoBO;
         }
-
-        private void btn_guardar_Click(object sender, EventArgs e)
+        public void ValidarText()
         {
-            if (Mantenimiento_mod == false)
+            if(cbo_empresa.Text =="" | cbo_num_habitacion.Text == "")
             {
-                if (mantenimientoDAO.Agregar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se programado un mantenimiento");
-                }
-                else
-                {
-                    MessageBox.Show("Ha sucedido un error");
-                }
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (mantenimientoDAO.Modificar(RecuperarInformacion()) == 1)
+                if (Mantenimiento_mod == false)
                 {
-                    MessageBox.Show("Se ha modificado el registro de mantenimiento");
+                    if (mantenimientoDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se programado un mantenimiento");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ha sucedido un error");
+                    if (mantenimientoDAO.Modificar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado el registro de mantenimiento");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
             }
+        }
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            ValidarText();
         }
     }
 }

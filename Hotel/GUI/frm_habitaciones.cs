@@ -99,33 +99,45 @@ namespace Hotel.GUI
             txt_precioN.Clear();
             txt_descripHab.Clear();
         }
-
-        private void btn_guardar_Click(object sender, EventArgs e)
+        public void ValidarTexbox()
         {
-            if (habitacionBO_mod != null)
+            if(txt_nombrehab.Text =="" | txt_num_habitacion.Text =="" | txt_precioN.Text == "" | txt_max_adultos.Text =="" | txt_max_ninios.Text =="")
             {
-                if (habitacionDAO.Modificar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se ha modificado la habitación");
-                }
-                else
-                {
-                    MessageBox.Show("Ha habido un error al modificar la habitación!");
-                }
-              
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
+                if (habitacionBO_mod != null)
                 {
-                    MessageBox.Show("Se ha registrado la habitación");
+                    if (habitacionDAO.Modificar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado la habitación");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al modificar la habitación!");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Ha habido un error al registrar la habitación!");
+                    if (habitacionDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha registrado la habitación");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al registrar la habitación!");
+                    }
                 }
+
             }
-         
+        }
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            ValidarTexbox();
         }
 
         private void Validar_maxniños(object sender, KeyPressEventArgs e)

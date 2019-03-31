@@ -69,35 +69,46 @@ namespace Hotel.GUI
 
             return tipohabBO;
         }
-
-        private void btn_guardar_tipo_Click(object sender, EventArgs e)
+        public void ValidarTexboxTipo()
         {
-            if (tipohabBO_mod != null)
+            if(txt_nombre_tipo.Text == "")
             {
-                if (tipohabDAO.Modificar(RecuperarInformacionTipo()) == 1)
-                {
-                    MessageBox.Show("Se ha modificado el tipo de habitación");
-                }
-                else
-                {
-                    MessageBox.Show("Ha habido un error al modificar el tipo de habitación!");
-                }
-                tipohabBO_mod = null;
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (tipohabDAO.Agregar(RecuperarInformacionTipo()) == 1)
+                if (tipohabBO_mod != null)
                 {
-                    MessageBox.Show("Se ha registrado el tipo de habitación");
+                    if (tipohabDAO.Modificar(RecuperarInformacionTipo()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado el tipo de habitación");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al modificar el tipo de habitación!");
+                    }
+                    tipohabBO_mod = null;
                 }
                 else
                 {
-                    MessageBox.Show("Ha habido un error al registrar el tipo de habitación!");
+                    if (tipohabDAO.Agregar(RecuperarInformacionTipo()) == 1)
+                    {
+                        MessageBox.Show("Se ha registrado el tipo de habitación");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al registrar el tipo de habitación!");
+                    }
                 }
+                Clean();
+                dgv_tipo_hab.DataSource = tipohabDAO.Buscar();
+                dgv_tipo_hab.Update();
             }
-            Clean();
-            dgv_tipo_hab.DataSource = tipohabDAO.Buscar();
-            dgv_tipo_hab.Update();
+        }
+
+        private void btn_guardar_tipo_Click(object sender, EventArgs e)
+        {
+            ValidarTexboxTipo();
         }
 
         private void btn_eliminar_tipo_Click(object sender, EventArgs e)
@@ -168,10 +179,15 @@ namespace Hotel.GUI
 
             return estadohabBO;
         }
-
-        private void btn_agregar_estado_Click(object sender, EventArgs e)
+        public void ValidarTexboxEstado()
         {
-            if (estadohabBO_mod != null)
+            if( txt_nombre_estado.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos");
+            }
+            else
+            {
+                 if (estadohabBO_mod != null)
             {
                 if (estadohabDAO.Modificar(RecuperarInformacionEstado()) == 1)
                 { 
@@ -197,6 +213,12 @@ namespace Hotel.GUI
             Clean();
             dgv_estado_hab.DataSource = estadohabDAO.Buscar();
             dgv_estado_hab.Update();
+            }
+        }
+
+        private void btn_agregar_estado_Click(object sender, EventArgs e)
+        {
+            ValidarTexboxEstado();
         }
 
         private void btn_buscar_estado_Click(object sender, EventArgs e)

@@ -67,32 +67,45 @@ namespace Hotel.GUI
                 
             }
         }
-
-        private void btn_guardar_res_Click(object sender, EventArgs e)
+        public void ValidarTexbox()
         {
-            if(reservaBO_mod != null)
+            if(txt_apelli_matern_cli.Text =="" | Txt_apell_patern_cliente.Text =="" | Txt_dir_cliente.Text =="" | txt_email.Text =="" | Txt_nom_cliente.Text =="" |Txt_id_cliente.Text =="" | Txt_telefono_cliente.Text == "")
             {
-                if(reservaDAO.Modificar(Recuperar_Informacion()) == 1)
-                {
-                    MessageBox.Show("Se ha modificado la reserva");
-                }
-                else
-                {
-                    MessageBox.Show("Ha habido un error al modificar la reserva!");
-                }
-
+                MessageBox.Show("Debe completar todos los campos");
             }
             else
             {
-                if (reservaDAO.Agregar(Recuperar_Informacion()) == 1)
+                if (reservaBO_mod != null)
                 {
-                    MessageBox.Show("Se ha registrado la reserva");
+                    if (reservaDAO.Modificar(Recuperar_Informacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado la reserva");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al modificar la reserva!");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Ha habido un error al hacer la reserva!");
+                    if (reservaDAO.Agregar(Recuperar_Informacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha registrado la reserva");
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha habido un error al hacer la reserva!");
+                    }
                 }
-            } 
+            }
+        }
+
+        private void btn_guardar_res_Click(object sender, EventArgs e)
+        {
+            ValidarTexbox();
         }
 
         internal ReservasBO Recuperar_Informacion()
