@@ -18,7 +18,7 @@ namespace Hotel.DAO
 
         public int Agregar(CajaBO cajabo)
         {
-            string ComandoSQL = string.Format("INSERT INTO corte_caja (corte_id, monto, fecha, hora, usuario_id)VALUES('{0}','{1}','{2}','{3}','1');", cajabo.Corte_id, cajabo.Monto, cajabo.Fecha.ToString("yyyy-MM-dd"), cajabo.Hora.ToString("HH:mm:ss"), cajabo.Usuario);
+            string ComandoSQL = string.Format("INSERT INTO corte_caja (monto, fecha, hora, usuario_id) VALUES({0}, '{1}', '{2}' , {3});", cajabo.Monto, cajabo.Fecha.ToString("yyyy-MM-dd"), cajabo.Hora.ToString("HH:mm:ss"), cajabo.Usuario.Id_usuario);
 
             return Miconexion.EjecutarComando(ComandoSQL);
 
