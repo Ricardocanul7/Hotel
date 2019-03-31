@@ -41,31 +41,46 @@ namespace Hotel.GUI
             txt_precio_hora.Clear();
             txt_rfc_empresa.Clear();
         }
-
-        private void Guardar_empresa(object sender, EventArgs e)
+        public void Validar_TexBox()
         {
-            if (Empresa_mod == false)
+            if(txt_nombre_empresa.Text == "" || txt_precio_hora.Text == "" || txt_rfc_empresa.Text == "")
             {
-                if (empresaDAO.Agregar(RecuperarInformacion()) == 1)
-                {
-                    MessageBox.Show("Se ha Agregado el Empleado");
-                }
-                else
-                {
-                    MessageBox.Show("Ha sucedido un error");
-                }
+                MessageBox.Show("Debe completar todos los campos");
+
             }
             else
             {
-                if (empresaDAO.Modificar(RecuperarInformacion()) == 1)
+                if (Empresa_mod == false)
                 {
-                    MessageBox.Show("Se ha modificado el Empleado");
+
+                    if (empresaDAO.Agregar(RecuperarInformacion()) == 1)
+                    {
+
+                        MessageBox.Show("Se ha Agregado el Empleado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ha sucedido un error");
+                    if (empresaDAO.Modificar(RecuperarInformacion()) == 1)
+                    {
+                        MessageBox.Show("Se ha modificado el Empleado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha sucedido un error");
+                    }
                 }
             }
+        }
+
+        private void Guardar_empresa(object sender, EventArgs e)
+        {
+            Validar_TexBox();
+
         }
 
         public void Add_empresa_mod(string RFC_empresa)
