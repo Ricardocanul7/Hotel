@@ -53,12 +53,12 @@ namespace Hotel.GUI
         {
             if (transaccionDAO.Agregar(RecuperarInformacion()) == 1)
             {
-                MessageBox.Show("Se ha registrado el Corte de Caja");
+                MessageBox.Show("Se ha registrado la transaccion");
                 this.DialogResult = DialogResult.OK;
             }
             else
             {
-                MessageBox.Show("Ha habido un error al hacer el Corte de Caja");
+                MessageBox.Show("Ha habido un error al hacer la transacción");
             }
         }
 
