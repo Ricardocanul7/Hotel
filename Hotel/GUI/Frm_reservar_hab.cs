@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -129,6 +130,8 @@ namespace Hotel.GUI
 
             Txt_id_cliente.Text = reservaBO_mod.Cliente.Cliente_id.ToString();
             Dtm_checkin.Value = reservaBO_mod.Fecha_entrada;
+
+            this.Dtm_checkout.MinDate = reservaBO_mod.Fecha_entrada.AddDays(1);
             Dtm_checkout.Value = reservaBO_mod.Fecha_salida;
             Txt_detalles_reserva.Text = reservaBO_mod.Detalles;
         }
