@@ -119,5 +119,11 @@ namespace Hotel.GUI
             }
             dgv_reservaciones.DataSource = habitacion;
         }
+
+        private void btn_reporte_Click(object sender, EventArgs e)
+        {
+            Frm_reporte_reserva reporte = new Frm_reporte_reserva();
+            reporte.Show();
+        }
     }
 }

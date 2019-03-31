@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_reservas" targetNamespace="http://tempuri.org/DataSet_reservas.xsd" xmlns:mstns="http://tempuri.org/DataSet_reservas.xsd" xmlns="http://tempuri.org/DataSet_reservas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_reservas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_reservas" msprop:Generator_UserDSName="DataSet_reservas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="reservacion" msprop:Generator_TableClassName="reservacionDataTable" msprop:Generator_TableVarName="tablereservacion" msprop:Generator_TablePropName="reservacion" msprop:Generator_RowDeletingName="reservacionRowDeleting" msprop:Generator_RowChangingName="reservacionRowChanging" msprop:Generator_RowEvHandlerName="reservacionRowChangeEventHandler" msprop:Generator_RowDeletedName="reservacionRowDeleted" msprop:Generator_UserTableName="reservacion" msprop:Generator_RowChangedName="reservacionRowChanged" msprop:Generator_RowEvArgName="reservacionRowChangeEvent" msprop:Generator_RowClassName="reservacionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="folio_reserva" msprop:Generator_ColumnVarNameInTable="columnfolio_reserva" msprop:Generator_ColumnPropNameInRow="folio_reserva" msprop:Generator_ColumnPropNameInTable="folio_reservaColumn" msprop:Generator_UserColumnName="folio_reserva" type="xs:long" minOccurs="0" />
+              <xs:element name="num_habitacion" msprop:Generator_ColumnVarNameInTable="columnnum_habitacion" msprop:Generator_ColumnPropNameInRow="num_habitacion" msprop:Generator_ColumnPropNameInTable="num_habitacionColumn" msprop:Generator_UserColumnName="num_habitacion" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_entrada" msprop:Generator_ColumnVarNameInTable="columnfecha_entrada" msprop:Generator_ColumnPropNameInRow="fecha_entrada" msprop:Generator_ColumnPropNameInTable="fecha_entradaColumn" msprop:Generator_UserColumnName="fecha_entrada" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_salida" msprop:Generator_ColumnVarNameInTable="columnfecha_salida" msprop:Generator_ColumnPropNameInRow="fecha_salida" msprop:Generator_ColumnPropNameInTable="fecha_salidaColumn" msprop:Generator_UserColumnName="fecha_salida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="detalles" msprop:Generator_ColumnVarNameInTable="columndetalles" msprop:Generator_ColumnPropNameInRow="detalles" msprop:Generator_ColumnPropNameInTable="detallesColumn" msprop:Generator_UserColumnName="detalles" type="xs:string" minOccurs="0" />
+              <xs:element name="estado_pagado" msprop:Generator_ColumnVarNameInTable="columnestado_pagado" msprop:Generator_ColumnPropNameInRow="estado_pagado" msprop:Generator_ColumnPropNameInTable="estado_pagadoColumn" msprop:Generator_UserColumnName="estado_pagado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="apaterno" msprop:Generator_ColumnVarNameInTable="columnapaterno" msprop:Generator_ColumnPropNameInRow="apaterno" msprop:Generator_ColumnPropNameInTable="apaternoColumn" msprop:Generator_UserColumnName="apaterno" type="xs:string" minOccurs="0" />
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="folio_reserva">
+      <xs:selector xpath=".//mstns:reservacion" />
+      <xs:field xpath="mstns:folio_reserva" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

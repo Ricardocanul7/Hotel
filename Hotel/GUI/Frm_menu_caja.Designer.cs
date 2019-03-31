@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgv_transacciones = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.toolStrip0 = new System.Windows.Forms.ToolStrip();
             this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
-            this.dgv_transacciones = new System.Windows.Forms.DataGridView();
             this.dgv_corte = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,13 +43,15 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btn_eliminar_transac = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.toolStrip0.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_corte)).BeginInit();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -75,6 +77,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(1204, 540);
             this.splitContainer1.SplitterDistance = 564;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // dgv_transacciones
+            // 
+            this.dgv_transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_transacciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_transacciones.Location = new System.Drawing.Point(0, 125);
+            this.dgv_transacciones.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
+            this.dgv_transacciones.Name = "dgv_transacciones";
+            this.dgv_transacciones.Size = new System.Drawing.Size(564, 415);
+            this.dgv_transacciones.TabIndex = 48;
+            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_trans);
             // 
             // panel1
             // 
@@ -105,6 +118,8 @@
             this.toolStrip0.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_nvatransaccion,
             this.toolStripSeparator1,
+            this.btn_eliminar_transac,
+            this.toolStripSeparator2,
             this.btn_reporte_caja});
             this.toolStrip0.Location = new System.Drawing.Point(0, 0);
             this.toolStrip0.Name = "toolStrip0";
@@ -120,7 +135,7 @@
             this.btn_nvatransaccion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_nvatransaccion.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btn_nvatransaccion.Name = "btn_nvatransaccion";
-            this.btn_nvatransaccion.Size = new System.Drawing.Size(135, 22);
+            this.btn_nvatransaccion.Size = new System.Drawing.Size(136, 22);
             this.btn_nvatransaccion.Text = "Agregar Transacción";
             this.btn_nvatransaccion.Click += new System.EventHandler(this.btn_nvatransaccion_Click);
             // 
@@ -136,17 +151,6 @@
             this.btn_reporte_caja.Name = "btn_reporte_caja";
             this.btn_reporte_caja.Size = new System.Drawing.Size(137, 22);
             this.btn_reporte_caja.Text = "imprimir transacción";
-            // 
-            // dgv_transacciones
-            // 
-            this.dgv_transacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_transacciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_transacciones.Location = new System.Drawing.Point(0, 125);
-            this.dgv_transacciones.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
-            this.dgv_transacciones.Name = "dgv_transacciones";
-            this.dgv_transacciones.Size = new System.Drawing.Size(564, 415);
-            this.dgv_transacciones.TabIndex = 48;
-            this.dgv_transacciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar_fila_trans);
             // 
             // dgv_corte
             // 
@@ -220,6 +224,20 @@
             this.toolStripButton3.Size = new System.Drawing.Size(103, 22);
             this.toolStripButton3.Text = "imprimir corte";
             // 
+            // btn_eliminar_transac
+            // 
+            this.btn_eliminar_transac.Image = global::Hotel.Properties.Resources.close;
+            this.btn_eliminar_transac.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_eliminar_transac.Name = "btn_eliminar_transac";
+            this.btn_eliminar_transac.Size = new System.Drawing.Size(134, 22);
+            this.btn_eliminar_transac.Text = "Eliminar transaccion";
+            this.btn_eliminar_transac.Click += new System.EventHandler(this.btn_eliminar_transac_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // Frm_menu_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,11 +252,11 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip0.ResumeLayout(false);
             this.toolStrip0.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_transacciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_corte)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -265,5 +283,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btn_eliminar_transac;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

@@ -21,7 +21,6 @@ namespace Hotel.GUI
         UsuarioBO usuarioBO;
         TipoTransaccionBO tipotransaccionBO;
         TipoTransaccionDAO tipotransaccionDAO;
-        private DataTable datos;
         int Filaseleccionada_trans = -1;
         int Filaseleccionada_corte = -1;
         public Frm_menu_caja()
@@ -45,6 +44,11 @@ namespace Hotel.GUI
             dgv_corte.AllowUserToAddRows = false;
             dgv_corte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_corte.ReadOnly = true;
+
+            if(DatosLogin.Tipo_usuario != 1)
+            {
+                this.btn_eliminar_transac.Enabled = false;
+            }
 
             this.Set_ColumnHeader_Transac();
             this.Set_ColumnHeader_Caja();
@@ -108,10 +112,30 @@ namespace Hotel.GUI
             if (Filaseleccionada_corte >= 0)
             {
                 cajaBO.Corte_id = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["corte_id"].Value.ToString());
-                cajaBO.Monto = double.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["monto"].Value.ToString());
-                cajaBO.Fecha = DateTime.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["fecha"].Value.ToString());
-                cajaBO.Hora = DateTime.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["hora"].Value.ToString());
-                usuarioBO.Id_usuario = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["usuario_id"].Value.ToString());
+            }
+        }
+
+        private void btn_eliminar_transac_Click(object sender, EventArgs e)
+        {
+            if(Filaseleccionada_trans >= 0)
+            {
+                if(MessageBox.Show("Estas seguro que quieres eliminar la transacción " + transaccioBO.Codigo_transaccion + "?", "Alerta!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (transaccionDAO.Eliminar(transaccioBO.Codigo_transaccion) == 1)
+                    {
+                        MessageBox.Show("Se ha eliminado la transaccion con codigo " + transaccioBO.Codigo_transaccion);
+                        dgv_transacciones.DataSource = transaccionDAO.Buscar_FormatDataGridView();
+                        Filaseleccionada_trans = -1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error!");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("¡Debes seleccionar una registro antes de eliminar!");
             }
         }
     }

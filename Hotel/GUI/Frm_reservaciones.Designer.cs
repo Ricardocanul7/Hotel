@@ -40,6 +40,7 @@
             this.txt_buscar = new System.Windows.Forms.ToolStripTextBox();
             this.btn_buscar = new System.Windows.Forms.ToolStripButton();
             this.dgv_reservaciones = new System.Windows.Forms.DataGridView();
+            this.btn_reporte = new System.Windows.Forms.ToolStripButton();
             this.btn_habitaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reservaciones)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,8 @@
             this.toolStripSeparator3,
             this.toolStripLabel1,
             this.txt_buscar,
-            this.btn_buscar});
+            this.btn_buscar,
+            this.btn_reporte});
             this.btn_habitaciones.Location = new System.Drawing.Point(0, 0);
             this.btn_habitaciones.Name = "btn_habitaciones";
             this.btn_habitaciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -144,6 +146,16 @@
             this.dgv_reservaciones.TabIndex = 2;
             this.dgv_reservaciones.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_reservaciones_CellMouseClick);
             // 
+            // btn_reporte
+            // 
+            this.btn_reporte.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btn_reporte.Image = global::Hotel.Properties.Resources._049_notes;
+            this.btn_reporte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_reporte.Name = "btn_reporte";
+            this.btn_reporte.Size = new System.Drawing.Size(109, 36);
+            this.btn_reporte.Text = "Generar reporte";
+            this.btn_reporte.Click += new System.EventHandler(this.btn_reporte_Click);
+            // 
             // Frm_reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.ToolStripTextBox txt_buscar;
         private System.Windows.Forms.ToolStripButton btn_buscar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton btn_reporte;
     }
 }
