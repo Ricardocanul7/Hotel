@@ -32,6 +32,7 @@ namespace Hotel.GUI
             Set_cbo_tipo();
 
             dtp_fecha.Value = DateTime.Now;
+            dtp_hora.Value = DateTime.Now;
         }
 
         public void Set_cbo_tipo()
@@ -82,6 +83,7 @@ namespace Hotel.GUI
 
             transaccionTemp.Monto = Convert.ToDouble(txt_monto.Text);
             transaccionTemp.Fecha = dtp_fecha.Value;
+            transaccionTemp.Hora = DateTime.Now;
             transaccionTemp.Descripccion= Txt_Descripcion.Text;
             transaccionTemp.Folio.Folio_reserva = Convert.ToInt32(Txt_folio_reserva.Text);
 

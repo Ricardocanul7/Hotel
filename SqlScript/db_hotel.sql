@@ -118,6 +118,7 @@ CREATE TABLE transaccion(
   monto REAL NOT NULL,
   descripcion TEXT NOT NULL,
   fecha DATE NOT NULL,
+  hora TIME NOT NULL,
   tipo INT NOT NULL,
   folio_reserva INT NOT NULL,
   usuario_id INT NOT NULL,

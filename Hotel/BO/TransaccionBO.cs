@@ -12,6 +12,7 @@ namespace Hotel.BO
         private double monto;
         private string descripccion;
         private DateTime fecha;
+        private DateTime hora;
         private TipoTransaccionBO tipo;
         private ReservasBO folio;
         private UsuarioBO usuario;
@@ -38,6 +39,12 @@ namespace Hotel.BO
         {
             get { return fecha; }
             set { fecha = value; }
+        }
+
+        public DateTime Hora
+        {
+            get { return hora; }
+            set { hora = value; }
         }
 
         public TipoTransaccionBO Tipo

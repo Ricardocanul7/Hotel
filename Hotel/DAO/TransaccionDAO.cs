@@ -18,8 +18,8 @@ namespace Hotel.DAO
 
        public int Agregar(TransaccionBO transaccionbo)
         {
-            string ComandoSQL = string.Format("INSERT INTO transaccion (monto, descripcion, fecha, tipo, folio_reserva, usuario_id) VALUES({0},'{1}','{2}','{3}','{4}','{5}' );", 
-                transaccionbo.Monto, transaccionbo.Descripccion, transaccionbo.Fecha.ToString("yyyy-MM-dd"), transaccionbo.Tipo.Tipo_id, transaccionbo.Folio.Folio_reserva, transaccionbo.Usuario.Id_usuario);
+            string ComandoSQL = string.Format("INSERT INTO transaccion (monto, descripcion, fecha, hora, tipo, folio_reserva, usuario_id) VALUES({0},'{1}','{2}','{3}','{4}','{5}', '{6}');", 
+                transaccionbo.Monto, transaccionbo.Descripccion, transaccionbo.Fecha.ToString("yyyy-MM-dd"), transaccionbo.Hora.ToString("HH:mm:ss"), transaccionbo.Tipo.Tipo_id, transaccionbo.Folio.Folio_reserva, transaccionbo.Usuario.Id_usuario);
 
           return Miconexion.EjecutarComando(ComandoSQL);
 

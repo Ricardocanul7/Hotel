@@ -45,6 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.txt_num_transaccion = new System.Windows.Forms.TextBox();
+            this.dtp_hora = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             // 
             this.btn_guardar_transaccion.Image = global::Hotel.Properties.Resources._035_save;
             this.btn_guardar_transaccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_transaccion.Location = new System.Drawing.Point(210, 333);
+            this.btn_guardar_transaccion.Location = new System.Drawing.Point(211, 363);
             this.btn_guardar_transaccion.Name = "btn_guardar_transaccion";
             this.btn_guardar_transaccion.Size = new System.Drawing.Size(93, 50);
             this.btn_guardar_transaccion.TabIndex = 43;
@@ -64,6 +66,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dtp_hora);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.cbo_tipo);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label5);
@@ -77,7 +81,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(29, 112);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(375, 196);
+            this.groupBox3.Size = new System.Drawing.Size(375, 225);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agrega una transacción";
@@ -130,7 +134,7 @@
             // 
             // Txt_Descripcion
             // 
-            this.Txt_Descripcion.Location = new System.Drawing.Point(117, 147);
+            this.Txt_Descripcion.Location = new System.Drawing.Point(115, 179);
             this.Txt_Descripcion.Name = "Txt_Descripcion";
             this.Txt_Descripcion.Size = new System.Drawing.Size(232, 20);
             this.Txt_Descripcion.TabIndex = 23;
@@ -138,7 +142,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 150);
+            this.label3.Location = new System.Drawing.Point(43, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 22;
@@ -206,7 +210,7 @@
             // 
             this.btn_cancelar.Image = global::Hotel.Properties.Resources.close;
             this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancelar.Location = new System.Drawing.Point(309, 336);
+            this.btn_cancelar.Location = new System.Drawing.Point(310, 366);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(95, 47);
             this.btn_cancelar.TabIndex = 46;
@@ -221,6 +225,26 @@
             this.txt_num_transaccion.Size = new System.Drawing.Size(64, 20);
             this.txt_num_transaccion.TabIndex = 39;
             this.txt_num_transaccion.Visible = false;
+            // 
+            // dtp_hora
+            // 
+            this.dtp_hora.CustomFormat = "HH:mm:ss";
+            this.dtp_hora.Enabled = false;
+            this.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_hora.Location = new System.Drawing.Point(115, 150);
+            this.dtp_hora.Name = "dtp_hora";
+            this.dtp_hora.Size = new System.Drawing.Size(232, 20);
+            this.dtp_hora.TabIndex = 33;
+            this.dtp_hora.Value = new System.DateTime(2019, 3, 21, 5, 36, 31, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(76, 150);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Hora:";
             // 
             // Frm_Transacciones
             // 
@@ -260,5 +284,7 @@
         private System.Windows.Forms.TextBox Txt_folio_reserva;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.TextBox txt_num_transaccion;
+        private System.Windows.Forms.DateTimePicker dtp_hora;
+        private System.Windows.Forms.Label label4;
     }
 }
