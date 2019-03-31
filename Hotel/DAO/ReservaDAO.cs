@@ -98,7 +98,7 @@ namespace Hotel.DAO
 
         public int PagarReserva(int folio)
         {
-            string commandSQL = String.Format("UPDATE reservacion SET estado_pagado = '{1}' WHERE folio_reserva = {0}", folio, true);
+            string commandSQL = String.Format("UPDATE reservacion SET estado_pagado = {1} WHERE folio_reserva = {0}", folio, 1);
             return conn.EjecutarComando(commandSQL);
         }
     }
