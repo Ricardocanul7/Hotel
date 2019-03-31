@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Window));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_izquierdo = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btn_clientes = new System.Windows.Forms.Button();
             this.btn_empleados = new System.Windows.Forms.Button();
             this.btn_mantenimiento = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@
             this.panel_titulo = new System.Windows.Forms.Panel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel_principal = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_izquierdo.SuspendLayout();
             this.panel_user_info.SuspendLayout();
@@ -84,6 +85,28 @@
             this.panel_izquierdo.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.panel_izquierdo.Size = new System.Drawing.Size(250, 654);
             this.panel_izquierdo.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Image = global::Hotel.Properties.Resources._031_broom1;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 513);
+            this.button3.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.button3.Size = new System.Drawing.Size(250, 48);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "  SERVICIOS            ";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Abrir_Servicios);
             // 
             // btn_clientes
             // 
@@ -353,28 +376,6 @@
             this.panel_principal.Size = new System.Drawing.Size(825, 654);
             this.panel_principal.TabIndex = 3;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::Hotel.Properties.Resources._031_broom1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 513);
-            this.button3.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.button3.Size = new System.Drawing.Size(250, 48);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "  SERVICIOS            ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Abrir_Servicios);
-            // 
             // Main_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,6 +384,7 @@
             this.Controls.Add(this.panel_principal);
             this.Controls.Add(this.panel_titulo);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_Window";
             this.Text = "Sistema de gestión de habitaciones";
             this.panel1.ResumeLayout(false);
