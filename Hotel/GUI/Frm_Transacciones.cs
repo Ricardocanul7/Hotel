@@ -53,6 +53,9 @@ namespace Hotel.GUI
         {
             if (transaccionDAO.Agregar(RecuperarInformacion()) == 1)
             {
+                int folio = Convert.ToInt32(Txt_folio_reserva.Text);
+                reservaDAO.PagarReserva(folio); // La reserva cambia de estado a pagado
+
                 MessageBox.Show("Se ha registrado la transaccion");
                 this.DialogResult = DialogResult.OK;
             }
@@ -98,6 +101,54 @@ namespace Hotel.GUI
             txt_num_transaccion.Clear();
             txt_num_transaccion.Clear();
             Txt_Descripcion.Clear();
+        }
+
+        private void btn_buscar_id_Click(object sender, EventArgs e)
+        {
+            if(Txt_folio_reserva.Text != string.Empty)
+            {
+                ReservaDAO reserva = new ReservaDAO();
+                DataRow[] res_row = reserva.Buscar().Select(String.Format("folio_reserva = {0}", Txt_folio_reserva.Text));
+
+                if(res_row.Length > 0)
+                {
+                    bool estado = Convert.ToBoolean(res_row[0]["estado_pagado"]);
+                    if (estado == false)
+                    {
+                        int num_habitacion = Convert.ToInt32(res_row[0]["num_habitacion"]); // Numero de habitacion
+                        HabitacionDAO habitacion = new HabitacionDAO();
+                        DataRow[] hab_row = habitacion.Buscar().Select(String.Format("num_habitacion = {0}", num_habitacion));
+
+                        decimal precio = Convert.ToDecimal(hab_row[0]["precio_baja"]);  // Precio Habitacion
+                        DateTime entrada = DateTime.Parse(res_row[0]["fecha_entrada"].ToString());
+                        DateTime salida = DateTime.Parse(res_row[0]["fecha_salida"].ToString());
+
+                        TimeSpan timeSpan = salida.Subtract(entrada);
+                        int num_dias = timeSpan.Days;
+
+                        // OPERACION (PRECIO + IVA) * DIAS
+                        decimal monto = 0.00m;
+                        monto = (precio * 1.16m) * num_dias;
+
+                        txt_monto.Text = monto.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("La reserva ya ha sido pagada");
+                        txt_monto.Clear();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Folio no existente");
+                    txt_monto.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Folio de reserva necesario!");
+            }
+            
         }
     }
 }

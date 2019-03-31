@@ -73,11 +73,7 @@ namespace Hotel.GUI
 
             if (Filaseleccionada_trans >= 0)
             {
-                transaccioBO.Codigo_transaccion = int.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["Codigo"].Value.ToString());
-                transaccioBO.Monto = double.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["monto"].Value.ToString());
-                transaccioBO.Fecha = DateTime.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["fecha"].Value.ToString());
-                transaccioBO.Descripccion = dgv_transacciones.Rows[Filaseleccionada_trans].Cells["Descripccion"].Value.ToString();
-                tipotransaccionBO.Tipo_id = int.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["Tipo"].Value.ToString());
+                transaccioBO.Codigo_transaccion = int.Parse(dgv_transacciones.Rows[Filaseleccionada_trans].Cells["codigo_transaccion"].Value.ToString());
             }
         }
 

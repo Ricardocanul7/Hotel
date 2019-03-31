@@ -119,6 +119,7 @@
             this.btn_buscar_id.Size = new System.Drawing.Size(26, 23);
             this.btn_buscar_id.TabIndex = 28;
             this.btn_buscar_id.UseVisualStyleBackColor = true;
+            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
             // 
             // Txt_folio_reserva
             // 
@@ -165,6 +166,7 @@
             // 
             // txt_monto
             // 
+            this.txt_monto.Enabled = false;
             this.txt_monto.Location = new System.Drawing.Point(115, 58);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(232, 20);
