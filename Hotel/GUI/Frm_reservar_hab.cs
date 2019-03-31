@@ -87,6 +87,8 @@ namespace Hotel.GUI
                 if (reservaDAO.Agregar(Recuperar_Informacion()) == 1)
                 {
                     MessageBox.Show("Se ha registrado la reserva");
+                    ReservasBO reserva = Recuperar_Informacion();
+                    habitacionDAO.ModificarEstado(reserva.Habitacion.Num_habitacion, 1);
                 }
                 else
                 {
