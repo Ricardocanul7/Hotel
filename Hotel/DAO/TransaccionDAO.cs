@@ -25,12 +25,6 @@ namespace Hotel.DAO
 
         }
 
-
-
-        /* public bool Eliminar()
-         {
-             return true;
-         }*/
         public DataTable Buscar()
         {
             string ComandoSQL = string.Format("SELECT * FROM transaccion");
@@ -51,10 +45,12 @@ namespace Hotel.DAO
             return Miconexion.EjecutarSentencia(ComandoSQL);
 
         }
-        /*  -Agregar
-           -Modificar
-           -Eliminar
-           -Buscar  */
+
+        public int Eliminar(int codigo)
+        {
+            string commandSQL = String.Format("DELETE FROM transaccion WHERE codigo_transaccion={0}", codigo);
+            return Miconexion.EjecutarComando(commandSQL);
+        }
     }
 }
 

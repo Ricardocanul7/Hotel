@@ -114,5 +114,29 @@ namespace Hotel.GUI
                 usuarioBO.Id_usuario = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["usuario_id"].Value.ToString());
             }
         }
+
+        private void btn_eliminar_transac_Click(object sender, EventArgs e)
+        {
+            if(Filaseleccionada_trans >= 0)
+            {
+                if(MessageBox.Show("Estas seguro que quieres eliminar la transacción " + transaccioBO.Codigo_transaccion + "?", "Alerta!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (transaccionDAO.Eliminar(transaccioBO.Codigo_transaccion) == 1)
+                    {
+                        MessageBox.Show("Se ha eliminado la transaccion con codigo " + transaccioBO.Codigo_transaccion);
+                        dgv_transacciones.DataSource = transaccionDAO.Buscar_FormatDataGridView();
+                        Filaseleccionada_trans = -1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error!");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("¡Debes seleccionar una registro antes de eliminar!");
+            }
+        }
     }
 }
