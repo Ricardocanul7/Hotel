@@ -31,16 +31,35 @@ namespace Hotel.GUI
         public void CargarDatos()
         {
             decimal total = 0;
+            decimal diferencia = 0;
 
             DataRow[] trans_rows = transaccionDAO.Buscar().Select(String.Format("fecha = '{0}'", DateTime.Now.ToString("yyyy-MM-dd")));
+            DataRow[] caja_rows = cajaDAO.Buscar().Select(String.Format("fecha = '{0}'", DateTime.Now.ToString("yyyy-MM-dd")));
+
+            if(caja_rows.Length > 0)
+            {
+                for(int i = 0; i < caja_rows.Length; i++)
+                {
+                    diferencia += Convert.ToDecimal(caja_rows[i]["monto"]);
+                }
+            }
+
             if (trans_rows.Length > 0)
             {
                 for (int i = 0; i < trans_rows.Length; i++)
                 {
                     total += Convert.ToDecimal(trans_rows[i]["monto"]);
                 }
+
                 // Al terminar de acumular mostrar la cantidad todal cobrado hoy
-                this.txt_monto.Text = total.ToString();
+                if (diferencia != 0)
+                {
+                    this.txt_monto.Text = (total - diferencia).ToString();
+                }
+                else
+                {
+                    this.txt_monto.Text = total.ToString();
+                }
             }
             else
             {
@@ -50,16 +69,23 @@ namespace Hotel.GUI
 
         private void btn_guardar_empresa_Click(object sender, EventArgs e)
         {
-            if (cajaDAO.Agregar(RecuperarInformacion()) == 1)
+            if(txt_monto.Text != string.Empty)
             {
-                MessageBox.Show("Se ha registrado el Corte de Caja");
-                this.DialogResult = DialogResult.OK;
+                if (cajaDAO.Agregar(RecuperarInformacion()) == 1)
+                {
+                    MessageBox.Show("Se ha registrado el Corte de Caja");
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un error al hacer el Corte de Caja");
+                }
             }
             else
             {
-                MessageBox.Show("Ha habido un error al hacer el Corte de Caja");
+                MessageBox.Show("Rellene todos los campos!");
             }
-            Limpiar();
+            
         }
 
         private CajaBO RecuperarInformacion()
