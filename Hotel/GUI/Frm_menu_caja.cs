@@ -45,6 +45,30 @@ namespace Hotel.GUI
             dgv_corte.AllowUserToAddRows = false;
             dgv_corte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_corte.ReadOnly = true;
+
+            this.Set_ColumnHeader_Transac();
+            this.Set_ColumnHeader_Caja();
+        }
+
+        public void Set_ColumnHeader_Transac()
+        {
+            dgv_transacciones.Columns[0].HeaderText = "Código";
+            dgv_transacciones.Columns[1].HeaderText = "Monto";
+            dgv_transacciones.Columns[2].HeaderText = "Descripción";
+            dgv_transacciones.Columns[3].HeaderText = "Fecha";
+            dgv_transacciones.Columns[4].HeaderText = "Hora";
+            dgv_transacciones.Columns[5].HeaderText = "Tipo";
+            dgv_transacciones.Columns[6].HeaderText = "Folio de reserva";
+            dgv_transacciones.Columns[7].HeaderText = "Realizado por:";
+        }
+
+        public void Set_ColumnHeader_Caja()
+        {
+            dgv_corte.Columns[0].HeaderText = "Código";
+            dgv_corte.Columns[1].HeaderText = "Monto";
+            dgv_corte.Columns[2].HeaderText = "Fecha";
+            dgv_corte.Columns[3].HeaderText = "Hora";
+            dgv_corte.Columns[4].HeaderText = "Realizado por:";
         }
 
         private void btn_cerrar_caja_Click(object sender, EventArgs e)
