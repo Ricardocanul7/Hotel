@@ -20,7 +20,7 @@ namespace Hotel
         ReservaDAO reservas;
 
         private DataTable datos;
-        int index;
+        int index = -1;
 
         public Frm_menu()
         {
@@ -147,6 +147,10 @@ namespace Hotel
             if (index >= 0)
             {
                 habitacionBO.Num_habitacion = Convert.ToInt32(dgv_habitaciones.Rows[index].Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un registro antes de continuar");
             }
         }
 

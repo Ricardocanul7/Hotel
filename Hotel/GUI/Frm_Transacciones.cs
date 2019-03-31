@@ -56,6 +56,11 @@ namespace Hotel.GUI
             {
                 int folio = Convert.ToInt32(Txt_folio_reserva.Text);
                 reservaDAO.PagarReserva(folio); // La reserva cambia de estado a pagado
+                DataRow[] res_row = reservaDAO.Buscar().Select(String.Format("folio_reserva = {0}", folio));
+
+                int num_hab = Convert.ToInt32(res_row[0]["num_habitacion"]);
+                HabitacionDAO habDAO = new HabitacionDAO();
+                habDAO.ModificarEstado(num_hab, 4);
 
                 MessageBox.Show("Se ha registrado la transaccion");
                 this.DialogResult = DialogResult.OK;

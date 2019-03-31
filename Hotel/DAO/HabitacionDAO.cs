@@ -31,7 +31,7 @@ namespace Hotel.DAO
         public int Modificar(HabitacionBO habitacionBO)
         {
             string ComandoSQL = string.Format("UPDATE habitacion SET nombre='{1}', max_ninios='{2}', max_adultos='{3}', " +
-                "precio_baja='{4}', tipo_hab='{5}', descripcion='{6}', estado_hab='{7}'  WHERE num_habitacion={0}",
+                "precio_baja='{4}', tipo_hab='{5}', descripcion='{6}', estado_hab='{7}'  WHERE num_habitacion={0};",
                 habitacionBO.Num_habitacion, habitacionBO.Nombre_hab, habitacionBO.Max_ninios, habitacionBO.Max_adultos,
                 habitacionBO.PrecioN, habitacionBO.Tipo.Tipo_id, habitacionBO.DescripHab, habitacionBO.Estado.Estado_id);
             return conexion.EjecutarComando(ComandoSQL);
@@ -39,13 +39,13 @@ namespace Hotel.DAO
 
         public int ModificarEstado(int num_habitacion, int estado)
         {
-            string comandSQL = string.Format("UPDATE habitacion SET estado_hab = '{0}' WHERE num_habitacion = {1}", estado, num_habitacion.ToString());
+            string comandSQL = string.Format("UPDATE habitacion SET estado_hab = {0} WHERE num_habitacion = {1};", estado, num_habitacion);
             return conexion.EjecutarComando(comandSQL);
         }
 
         public int Eliminar(HabitacionBO habitacionBO)
         {
-            string ComandoSQL = string.Format("DELETE FROM habitacion WHERE num_habitacion={0}", habitacionBO.Num_habitacion);
+            string ComandoSQL = string.Format("DELETE FROM habitacion WHERE num_habitacion={0};", habitacionBO.Num_habitacion);
             return conexion.EjecutarComando(ComandoSQL);
         }
 
@@ -63,26 +63,26 @@ namespace Hotel.DAO
             string col5 = "estado";
 
             string selectSQL = String.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5} ", col0, col1, col2, col3, col4,  col5);
-            string fromSQL = "FROM habitacion as a, tipo_habitacion as b, estado_habitacion as c WHERE a.tipo_hab=b.tipo_id and a.estado_hab=c.estado_id";
+            string fromSQL = "FROM habitacion as a, tipo_habitacion as b, estado_habitacion as c WHERE a.tipo_hab=b.tipo_id and a.estado_hab=c.estado_id;";
             string commandSQL = selectSQL + fromSQL;
             return conexion.EjecutarSentencia(commandSQL);
         }
 
         public DataTable BuscarTipoHabitacion()
         {
-            string commandSQL = "SELECT * from tipo_habitacion";
+            string commandSQL = "SELECT * from tipo_habitacion;";
             return conexion.EjecutarSentencia(commandSQL);
         }
 
         public DataTable BuscarEstadoHabitacion()
         {
-            string commandSQL = "SELECT * from estado_habitacion";
+            string commandSQL = "SELECT * from estado_habitacion;";
             return conexion.EjecutarSentencia(commandSQL);
         }
 
         public HabitacionBO Buscar(int numeroHab)
         {
-            string commandSQL = String.Format("SELECT * FROM habitacion WHERE num_habitacion={0}", numeroHab);
+            string commandSQL = String.Format("SELECT * FROM habitacion WHERE num_habitacion={0};", numeroHab);
             DataTable table = conexion.EjecutarSentencia(commandSQL);
 
             if (table.Rows.Count > 0)

@@ -29,7 +29,7 @@ namespace Hotel.DAO
 
         public int Modificar(ReservasBO reserva)
         {
-            string commandSQL = string.Format("UPDATE reservacion SET num_habitacion={0}, fecha_entrada='{1}', fecha_salida='{2}', detalles='{3}', estado_pagado={4}, cliente_id={5} WHERE folio_reserva={6}", 
+            string commandSQL = string.Format("UPDATE reservacion SET num_habitacion={0}, fecha_entrada='{1}', fecha_salida='{2}', detalles='{3}', estado_pagado={4}, cliente_id={5} WHERE folio_reserva={6};", 
                 reserva.Habitacion.Num_habitacion, 
                 reserva.Fecha_entrada.ToString("yyyy-MM-dd"), 
                 reserva.Fecha_salida.ToString("yyyy-MM-dd"), 
@@ -42,7 +42,7 @@ namespace Hotel.DAO
 
         public int Eliminar(ReservasBO reservaBO)
         {
-            string commandSQL = String.Format("DELETE FROM reservacion WHERE folio_reserva={0}", reservaBO.Folio_reserva);
+            string commandSQL = String.Format("DELETE FROM reservacion WHERE folio_reserva={0};", reservaBO.Folio_reserva);
             return conn.EjecutarComando(commandSQL);
         }
 
@@ -63,14 +63,14 @@ namespace Hotel.DAO
 
 
             string selectSQL = String.Format("SELECT {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11} ", col0, col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11);
-            string fromSQL = "FROM reservacion as a, cliente as b where a.cliente_id=b.cliente_id";
+            string fromSQL = "FROM reservacion as a, cliente as b where a.cliente_id=b.cliente_id;";
             string commandSQL = selectSQL + fromSQL;
             return conn.EjecutarSentencia(commandSQL);
         }
 
         public ReservasBO Buscar(int folio_reserva)
         {
-            string commandSQL = String.Format("SELECT * FROM reservacion WHERE folio_reserva={0}", folio_reserva);
+            string commandSQL = String.Format("SELECT * FROM reservacion WHERE folio_reserva={0};", folio_reserva);
             DataTable table = conn.EjecutarSentencia(commandSQL);
 
             if(table.Rows.Count > 0)
@@ -98,7 +98,7 @@ namespace Hotel.DAO
 
         public int PagarReserva(int folio)
         {
-            string commandSQL = String.Format("UPDATE reservacion SET estado_pagado = {1} WHERE folio_reserva = {0}", folio, 1);
+            string commandSQL = String.Format("UPDATE reservacion SET estado_pagado = {1} WHERE folio_reserva = {0};", folio, 1);
             return conn.EjecutarComando(commandSQL);
         }
     }
