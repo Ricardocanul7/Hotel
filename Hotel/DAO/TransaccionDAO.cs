@@ -38,6 +38,13 @@ namespace Hotel.DAO
 
         }
 
+        public DataTable Buscar_FormatDataGridView()
+        {
+            string commandSQL = "SELECT codigo_transaccion, monto, descripcion, fecha, hora, nombre_transaccion, folio_reserva, nombre " +
+                "FROM usuario, transaccion, tipo_transaccion WHERE usuario.usuario_id = transaccion.usuario_id and transaccion.tipo = tipo_transaccion.tipo_id";
+            return Miconexion.EjecutarSentencia(commandSQL);
+        }
+
         public DataTable Buscar_tipoTransaccion()
         {
             string ComandoSQL = string.Format("SELECT * FROM tipo_transaccion");

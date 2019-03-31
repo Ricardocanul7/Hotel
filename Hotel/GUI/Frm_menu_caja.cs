@@ -36,7 +36,7 @@ namespace Hotel.GUI
             tipotransaccionBO = new TipoTransaccionBO();
             tipotransaccionDAO = new TipoTransaccionDAO();
 
-            dgv_transacciones.DataSource = transaccionDAO.Buscar();
+            dgv_transacciones.DataSource = transaccionDAO.Buscar_FormatDataGridView();
             dgv_transacciones.AllowUserToAddRows = false;
             dgv_transacciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_transacciones.ReadOnly = true;
@@ -86,7 +86,7 @@ namespace Hotel.GUI
             Frm_Transacciones transacciones = new Frm_Transacciones();
             if (transacciones.ShowDialog() == DialogResult.OK)
             {
-                dgv_transacciones.DataSource = transaccionDAO.Buscar();
+                dgv_transacciones.DataSource = transaccionDAO.Buscar_FormatDataGridView();
                 dgv_transacciones.Update();
             }
         }
