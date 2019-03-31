@@ -108,10 +108,6 @@ namespace Hotel.GUI
             if (Filaseleccionada_corte >= 0)
             {
                 cajaBO.Corte_id = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["corte_id"].Value.ToString());
-                cajaBO.Monto = double.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["monto"].Value.ToString());
-                cajaBO.Fecha = DateTime.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["fecha"].Value.ToString());
-                cajaBO.Hora = DateTime.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["hora"].Value.ToString());
-                usuarioBO.Id_usuario = int.Parse(dgv_corte.Rows[Filaseleccionada_corte].Cells["usuario_id"].Value.ToString());
             }
         }
 
