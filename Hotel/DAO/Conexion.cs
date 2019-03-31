@@ -27,6 +27,11 @@ namespace Hotel.DAO
             comand = new MySqlCommand();
         }
 
+        public MySqlConnection EstablecerConexion()
+        {
+            return conn;
+        }
+
         public void AbrirConexion()
         {
             this.conn.Open();

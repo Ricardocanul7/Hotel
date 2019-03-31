@@ -21,7 +21,6 @@ namespace Hotel.GUI
         UsuarioBO usuarioBO;
         TipoTransaccionBO tipotransaccionBO;
         TipoTransaccionDAO tipotransaccionDAO;
-        private DataTable datos;
         int Filaseleccionada_trans = -1;
         int Filaseleccionada_corte = -1;
         public Frm_menu_caja()
