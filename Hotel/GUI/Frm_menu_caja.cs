@@ -46,6 +46,11 @@ namespace Hotel.GUI
             dgv_corte.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_corte.ReadOnly = true;
 
+            if(DatosLogin.Tipo_usuario != 1)
+            {
+                this.btn_eliminar_transac.Enabled = false;
+            }
+
             this.Set_ColumnHeader_Transac();
             this.Set_ColumnHeader_Caja();
         }
