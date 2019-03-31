@@ -46,7 +46,6 @@ namespace Hotel.GUI
             if(txt_nombre_empresa.Text == "" || txt_precio_hora.Text == "" || txt_rfc_empresa.Text == "")
             {
                 MessageBox.Show("Debe completar todos los campos");
-
             }
             else
             {
@@ -57,6 +56,7 @@ namespace Hotel.GUI
                     {
 
                         MessageBox.Show("Se ha Agregado el Empleado");
+                        this.DialogResult = DialogResult.OK;
                     }
                     else
                     {
@@ -68,6 +68,7 @@ namespace Hotel.GUI
                     if (empresaDAO.Modificar(RecuperarInformacion()) == 1)
                     {
                         MessageBox.Show("Se ha modificado el Empleado");
+                        this.DialogResult = DialogResult.OK;
                     }
                     else
                     {
