@@ -101,7 +101,7 @@ namespace Hotel.GUI
         }
         public void ValidarTexbox()
         {
-            if(txt_nombrehab.Text =="" | txt_num_habitacion.Text =="" | txt_precioN.Text == "" | txt_max_adultos.Text =="" | txt_max_ninios.Text =="")
+            if(txt_nombrehab.Text =="" | txt_precioN.Text == "" | txt_max_adultos.Text =="" | txt_max_ninios.Text =="")
             {
                 MessageBox.Show("Debe completar todos los campos");
             }

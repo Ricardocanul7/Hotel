@@ -20,10 +20,16 @@ namespace Hotel.GUI
         MantenimientoBO mantenimientoBO = new MantenimientoBO();
         int FilaseleccionadaMant = -1;
         int FilaseleccionadaLimp = -1;
+        private DataTable datos;
+        private DataTable datosLimpieza;
+        
 
         public frm_programar_mantenimiento()
         {
              InitializeComponent();
+
+            datos = mantenimientoDAO.Buscar();
+            datosLimpieza = limpiezaDAO.Buscar();
 
             dgv_Limpieza.DataSource = limpiezaDAO.Buscar();
             dgv_Mantenimiento.DataSource = mantenimientoDAO.Buscar();
@@ -91,6 +97,34 @@ namespace Hotel.GUI
             {
                 limpiezaBO.Limpieza_id = Convert.ToInt32(dgv_Limpieza.Rows[FilaseleccionadaLimp].Cells["limpieza_id"].Value);
             }
+        }
+
+        private void Buscar_Mantenimient(object sender, EventArgs e)
+        {
+            DataView mantenimiento = datos.DefaultView;
+            mantenimiento.RowFilter = string.Empty;
+
+            if (txt_buscarempleados.Text != string.Empty)
+            {
+                mantenimiento.RowFilter = string.Format("Convert(mantenimiento_id,'System.String') LIKE '%{0}%'", txt_buscarempleados.Text);
+
+            }
+
+            dgv_Mantenimiento.DataSource = mantenimiento;
+        }
+
+        private void Buscar_Limpieza(object sender, EventArgs e)
+        {
+            DataView Limpieza = datosLimpieza.DefaultView;
+            Limpieza.RowFilter = string.Empty;
+
+            if (txt_buscar_limpieza.Text != string.Empty)
+            {
+                Limpieza.RowFilter = string.Format("Convert(limpieza_id,'System.String') LIKE '%{0}%'", txt_buscar_limpieza.Text);
+
+            }
+
+            dgv_Limpieza.DataSource = Limpieza;
         }
     }
 }

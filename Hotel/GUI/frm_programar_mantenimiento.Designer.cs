@@ -49,7 +49,7 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_eliminar_limpieza = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.txt_buscar_limpieza = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -170,6 +170,7 @@
             this.btn_buscarempleados.Name = "btn_buscarempleados";
             this.btn_buscarempleados.Size = new System.Drawing.Size(78, 36);
             this.btn_buscarempleados.Text = "Buscar";
+            this.btn_buscarempleados.Click += new System.EventHandler(this.Buscar_Mantenimient);
             // 
             // label6
             // 
@@ -221,7 +222,7 @@
             this.toolStripSeparator6,
             this.btn_eliminar_limpieza,
             this.toolStripSeparator7,
-            this.toolStripTextBox1,
+            this.txt_buscar_limpieza,
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -264,11 +265,11 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 39);
             // 
-            // toolStripTextBox1
+            // txt_buscar_limpieza
             // 
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(150, 23);
+            this.txt_buscar_limpieza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_buscar_limpieza.Name = "txt_buscar_limpieza";
+            this.txt_buscar_limpieza.Size = new System.Drawing.Size(150, 23);
             // 
             // toolStripButton5
             // 
@@ -278,6 +279,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(78, 36);
             this.toolStripButton5.Text = "Buscar";
+            this.toolStripButton5.Click += new System.EventHandler(this.Buscar_Limpieza);
             // 
             // frm_programar_mantenimiento
             // 
@@ -326,7 +328,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton btn_eliminar_limpieza;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox txt_buscar_limpieza;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
