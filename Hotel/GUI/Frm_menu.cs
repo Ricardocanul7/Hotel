@@ -66,6 +66,13 @@ namespace Hotel
                     // Disponible = 4
                     habitacionDAO.ModificarEstado(num_habitacion, 1);
                 }
+                else
+                {
+                    int num_habitacion = Convert.ToInt32(row_reservas[i]["num_habitacion"]);
+                    // No disponible = 1
+                    // Disponible = 4
+                    habitacionDAO.ModificarEstado(num_habitacion, 4);
+                }
             }
 
             LimpiezaDAO limpiezaDAO = new LimpiezaDAO();
