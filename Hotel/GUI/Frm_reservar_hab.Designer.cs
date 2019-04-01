@@ -529,6 +529,7 @@
             this.Controls.Add(this.label6);
             this.Name = "Frm_reservar_hab";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.Frm_reservar_hab_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);

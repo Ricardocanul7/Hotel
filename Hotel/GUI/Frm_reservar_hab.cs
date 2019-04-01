@@ -43,7 +43,7 @@ namespace Hotel.GUI
             cbo_tipohab.SelectedIndex = 0;
             **/
 
-            Set_cbo_habitaciones();
+            
         }
 
         public void LimitDate()
@@ -64,7 +64,14 @@ namespace Hotel.GUI
                 {
                     cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
                 }
-                
+
+                if(reservaBO_mod != null)
+                {
+                    if (reservaBO_mod.Habitacion.Num_habitacion == Convert.ToInt32(rows[i]["num_habitacion"]))
+                    {
+                        cbo_habitaciones.Items.Add(rows[i][0] + "-" + rows[i][1]);
+                    }
+                }
             }
         }
         public void ValidarTexbox()
@@ -333,6 +340,20 @@ namespace Hotel.GUI
         private void Validar_telefono(object sender, KeyPressEventArgs e)
         {
             ValidacionBO.SoloNumeros(e);
+        }
+
+        private void Frm_reservar_hab_Load(object sender, EventArgs e)
+        {
+            Set_cbo_habitaciones();
+
+            if(reservaBO_mod != null)
+            {
+                for (int i = 0; i < cbo_habitaciones.Items.Count; i++)
+                {
+                    if (cbo_habitaciones.Items[i].ToString().Split('-')[0] == reservaBO_mod.Habitacion.Num_habitacion.ToString())
+                        cbo_habitaciones.SelectedIndex = i;
+                }
+            }
         }
     }
 }
