@@ -95,7 +95,7 @@ namespace Hotel.GUI
                 empleadoBO.Puesto = dgv_puestos.Rows[Filaseleccionada].Cells["puesto"].Value.ToString();
 
                 txt_puesto_id.Text = Convert.ToString(empleadoBO.Puesto_id);
-                txt_Buscar_Puesto.Text = empleadoBO.Puesto;
+                txt_Nuevo_Puesto.Text = empleadoBO.Puesto;
 
             }
         }

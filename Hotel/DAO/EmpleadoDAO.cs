@@ -62,7 +62,7 @@ namespace Hotel.DAO
 
         public int Modificar_Puesto(EmpleadoBO empleado)
         {
-            string ComandoSQL = string.Format("UPDATE puesto_empleado SET puesto = '{1}' WHERE puesto_id = '{0}'", empleado.Puesto_id, empleado.Puesto);
+            string ComandoSQL = string.Format("UPDATE puesto_empleado SET puesto = '{1}' WHERE puesto_id = {0}", empleado.Puesto_id, empleado.Puesto);
             return Miconexion.EjecutarComando(ComandoSQL);
         }
 
