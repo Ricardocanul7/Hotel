@@ -40,7 +40,15 @@ namespace Hotel.GUI
                         cbo_num_habitacion.Items.Add(rows[i][0] + "-" + rows[i][1]);
                     }
                 }
-                cbo_num_habitacion.SelectedIndex = 0;
+                if(cbo_num_habitacion.Items.Count > 0)
+                {
+                    cbo_num_habitacion.SelectedIndex = 0;
+                }
+                else
+                {
+                    MessageBox.Show("No se puede agregar mantenimiento,\nTodas las habitaciones estan ocupadas");
+                    this.DialogResult = DialogResult.OK;
+                }
             }
             
         }
