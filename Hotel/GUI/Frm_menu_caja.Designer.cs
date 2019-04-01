@@ -35,16 +35,16 @@
             this.toolStrip0 = new System.Windows.Forms.ToolStrip();
             this.btn_nvatransaccion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_reporte_caja = new System.Windows.Forms.ToolStripButton();
+            this.btn_eliminar_transac = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_imprimir_transac = new System.Windows.Forms.ToolStripButton();
             this.dgv_corte = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.btn_eliminar_transac = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_imprimir_corte = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -120,7 +120,7 @@
             this.toolStripSeparator1,
             this.btn_eliminar_transac,
             this.toolStripSeparator2,
-            this.btn_reporte_caja});
+            this.btn_imprimir_transac});
             this.toolStrip0.Location = new System.Drawing.Point(0, 0);
             this.toolStrip0.Name = "toolStrip0";
             this.toolStrip0.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -144,13 +144,27 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // btn_reporte_caja
+            // btn_eliminar_transac
             // 
-            this.btn_reporte_caja.Image = global::Hotel.Properties.Resources._049_notes1;
-            this.btn_reporte_caja.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_reporte_caja.Name = "btn_reporte_caja";
-            this.btn_reporte_caja.Size = new System.Drawing.Size(137, 22);
-            this.btn_reporte_caja.Text = "imprimir transacción";
+            this.btn_eliminar_transac.Image = global::Hotel.Properties.Resources.close;
+            this.btn_eliminar_transac.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_eliminar_transac.Name = "btn_eliminar_transac";
+            this.btn_eliminar_transac.Size = new System.Drawing.Size(134, 22);
+            this.btn_eliminar_transac.Text = "Eliminar transaccion";
+            this.btn_eliminar_transac.Click += new System.EventHandler(this.btn_eliminar_transac_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_imprimir_transac
+            // 
+            this.btn_imprimir_transac.Image = global::Hotel.Properties.Resources._049_notes1;
+            this.btn_imprimir_transac.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_imprimir_transac.Name = "btn_imprimir_transac";
+            this.btn_imprimir_transac.Size = new System.Drawing.Size(137, 22);
+            this.btn_imprimir_transac.Text = "imprimir transacción";
             // 
             // dgv_corte
             // 
@@ -192,7 +206,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
             this.toolStripSeparator4,
-            this.toolStripButton3});
+            this.btn_imprimir_corte});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -216,27 +230,13 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton3
+            // btn_imprimir_corte
             // 
-            this.toolStripButton3.Image = global::Hotel.Properties.Resources._049_notes1;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(103, 22);
-            this.toolStripButton3.Text = "imprimir corte";
-            // 
-            // btn_eliminar_transac
-            // 
-            this.btn_eliminar_transac.Image = global::Hotel.Properties.Resources.close;
-            this.btn_eliminar_transac.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_eliminar_transac.Name = "btn_eliminar_transac";
-            this.btn_eliminar_transac.Size = new System.Drawing.Size(134, 22);
-            this.btn_eliminar_transac.Text = "Eliminar transaccion";
-            this.btn_eliminar_transac.Click += new System.EventHandler(this.btn_eliminar_transac_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.btn_imprimir_corte.Image = global::Hotel.Properties.Resources._049_notes1;
+            this.btn_imprimir_corte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_imprimir_corte.Name = "btn_imprimir_corte";
+            this.btn_imprimir_corte.Size = new System.Drawing.Size(103, 22);
+            this.btn_imprimir_corte.Text = "imprimir corte";
             // 
             // Frm_menu_caja
             // 
@@ -273,7 +273,7 @@
         private System.Windows.Forms.ToolStrip toolStrip0;
         private System.Windows.Forms.ToolStripButton btn_nvatransaccion;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btn_reporte_caja;
+        private System.Windows.Forms.ToolStripButton btn_imprimir_transac;
         private System.Windows.Forms.DataGridView dgv_transacciones;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
@@ -282,7 +282,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btn_imprimir_corte;
         private System.Windows.Forms.ToolStripButton btn_eliminar_transac;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }

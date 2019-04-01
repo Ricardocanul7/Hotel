@@ -50,6 +50,9 @@ namespace Hotel.GUI
                 this.btn_eliminar_transac.Enabled = false;
             }
 
+            this.btn_imprimir_corte.Visible = false;
+            this.btn_imprimir_transac.Visible = false;
+
             this.Set_ColumnHeader_Transac();
             this.Set_ColumnHeader_Caja();
         }
