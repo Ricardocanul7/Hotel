@@ -69,7 +69,8 @@ namespace Hotel.GUI
                 cbo_estadohab.Items.Add(rows[i]["estado"]);
             }
 
-            cbo_estadohab.SelectedIndex = 0;
+            // 4 == Disponible
+            cbo_estadohab.SelectedIndex = 3;
         }
 
         private HabitacionBO RecuperarInformacion()

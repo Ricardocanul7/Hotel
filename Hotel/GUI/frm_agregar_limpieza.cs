@@ -64,7 +64,7 @@ namespace Hotel.GUI
                     }
 
                 }
-                cbo_num_habitacion.SelectedIndex = 0;
+                //cbo_num_habitacion.SelectedIndex = 0;
             }
             
         }
