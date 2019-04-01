@@ -41,6 +41,10 @@ namespace Hotel.GUI
 
             this.Set_Headers_Limpieza();
             this.Set_Headers_Mantenimiento();
+
+            //------
+            this.btn_eliminar_limpieza.Visible = false;
+            this.btn_Eliminar_Mantenimiento.Visible = false;
         }
 
         private void Set_Headers_Mantenimiento()
